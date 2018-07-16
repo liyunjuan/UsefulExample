@@ -1,0 +1,43 @@
+<script>
+if(!Function.prototype.softBind){
+	Function.prototype.softBind = function(obj){
+		var fn = this;
+		//抓捕所有curried参数
+		//从第二位开始截断，捕捉参数
+		var curried = [].slice.call(arguments,1);
+		var bound = function(){
+			console.log(this)
+			console.log(!this || this === (window||global))
+			console.log(!this)
+			console.log(this === (window||global))
+			console.log(window||global)
+			return fn.apply(
+				(!this || this === (window||global))?obj : this,
+				curried.concat.apply(curried,arguments)
+			);
+		}
+		bound.prototype = Object.create(fn.prototype);
+		return bound;
+	}
+}
+
+function foo(){
+	console.log("name:"+this.name);
+}
+
+var obj = {name:"obj"},
+	obj2 = {name:"obj2"};
+	obj3 = {name:"obj3"};
+
+var fooOBJ = foo.softBind(obj);
+// fooOBJ();
+// console.log("foo.softBind(obj)-----------------")
+
+obj2.foo = foo.softBind(obj);
+obj2.foo();
+
+fooOBJ.call(obj3);
+
+setTimeout(obj2.foo,10000);
+
+</script>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function foo(){
+		console.log("foo");
+	}
+	var someFoo = foo;
+	var myObject = {
+		someFoo:foo
+	}
+
+	foo;
+	someFoo;
+	myObject.someFoo;
+	</script>
+</body>
+</html>

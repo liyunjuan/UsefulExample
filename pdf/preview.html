@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>附件预览 - 6-1-HTML5&#26032;&#22686;&#26631;&#31614;.pdf</title>
+	    	<link href="http://mimg.127.net/xm/all/attpreview/120712/css/preview.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="frame_9e55d19bde3c25a337c6852fa35c768d.css" />
+    
+        <!--[if IE 6]>
+        <script type="text/javascript">
+        document.execCommand("BackgroundImageCache", false, true);
+        </script>
+    <![endif]--> 
+    <script type="text/javascript">
+        function getClientHeight() {
+            if(document.documentElement) {
+                return document.documentElement.clientHeight;
+            } else {
+                return document.body.clientHeight;
+            }
+        };
+        
+        function getClientWidth() {
+            if(document.documentElement) {
+                return document.documentElement.clientWidth;
+            } else {
+                return document.body.clientWidth;
+            }
+        };
+        
+        var lastResize;
+        var resizeCount = 0;
+        var maxResizeCount = 3;
+		function resize() {
+            if(!lastResize) {
+                lastResize = new Date().getTime();
+            }
+            if(new Date().getTime() - lastResize <= 600) {
+                if(resizeCount > maxResizeCount) {
+                    return;
+                }
+            } else {
+                lastResize = new Date().getTime();
+                resizeCount = 0;
+            }
+            ++resizeCount;
+        
+            var iframeDOM = document.getElementById("previewframe");
+            if(iframeDOM) {
+                var headerHeight = 0;
+                var headerDOM = document.getElementById("divHeader");
+                if(headerDOM) {
+                    headerHeight = headerDOM.offsetHeight;
+                }
+                
+                var contentHeight = getClientHeight() - headerHeight;
+                if(contentHeight > 400) {
+                                        iframeDOM.style.height = (contentHeight-1) + "px";
+                }
+            }
+		}
+		window.onresize = resize;
+		
+		var request = GetXmlHttpObject();
+		function GetXmlHttpObject() { 
+			var objXMLHttp = null;
+			if (window.XMLHttpRequest) {
+				objXMLHttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+			 	objXMLHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			return objXMLHttp;
+		}
+		
+		function reserve() {
+    		var reserveURL = "../7-5-音频、视频.html";
+    		request.open("GET", reserveURL, true);
+    		request.send(null);
+		}
+		
+		function sendLog(action, value) {
+    		var logURL = "../7-5-音频、视频.html";
+    		request.open("GET", logURL, true);
+    		request.send(null);
+		}
+        
+        function sendSyncLog(action, value) {
+            var logURL = "log.do?keyfrom=wm163.com&act=" + action + "&value=" + value + "&user=lyj_515@163.com&" + Math.random();
+            request.open("GET", logURL, false);
+            request.send(null);
+        }
+		
+		function loaded() {
+			resize();
+			setInterval('reserve()',300000);
+		}
+        
+        function switchODFEngine(engine) {
+            if(!engine || engine != "ms") {
+                engine = "yozo";
+            }
+            window.location.href = "preview.do?uid=lyj_515@163.com&mid=329%3AxtbBSQDOxVaDwX5EJAACsK&sid=mBEXAvNVqApuURXReCVVcpIsJtTfFvJG&part=3&keyfrom=wm163.com&odfPreviewEngine="+engine;
+        };
+	</script>
+</head>
+<body onload="loaded()">
+        <!--头部-->
+    <div class="header" id="divHeader">
+        
+        
+    <div class="title">
+            <b class="ico ico-file ico-file-pdf"></b>
+        <strong>6-1-HTML5&#26032;&#22686;&#26631;&#31614;.pdf</strong> <span class="filesize">(43.37K)</span>
+                <span class="download">[<a href="download.do?uid=lyj_515@163.com&mid=329%3AxtbBSQDOxVaDwX5EJAACsK&sid=mBEXAvNVqApuURXReCVVcpIsJtTfFvJG&part=3&filename=&keyfrom=wm163.com&keyfrom=wm163.com">下载</a>]</span>
+                </div>
+    <div class="path">
+        <span class="name">文件位置：</span>
+        <a href="preview.do?uid=lyj_515@163.com&mid=329%3AxtbBSQDOxVaDwX5EJAACsK&sid=mBEXAvNVqApuURXReCVVcpIsJtTfFvJG&keyfrom=wm163.com" title="&#35813;&#37038;&#20214;&#38468;&#20214;&#21015;&#34920;">&#35813;&#37038;&#20214;&#38468;&#20214;&#21015;&#34920;</a>
+            </div>
+    <div class="extInfo">
+                <div class="ct">
+                        <p>
+                <a target="_blank" href="http://help.163.com/special/007525G0/163mail_guide.html?id=3203">帮助</a>&nbsp;|&nbsp;<a target="_blank" href="http://help.mail.163.com/feedback.do?m=add&categoryName=%e9%99%84%e4%bb%b6%e9%a2%84%e8%a7%88">意见反馈</a>
+            </p>
+            <p>
+                        <a style="color:#FF3D00;" target="_blank" href="http://mail.163.com/html/111128_fjyl/">国内首家推出，手机读邮件也能预览附件了</a>
+            </p>
+                    </div>
+    </div>
+</div>        <!--主体-->
+    <script type="text/javascript" src="http://mimg.127.net/p/tools/jquery/jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+    var startloadingtime = new Date();
+    
+    function hidePrompt() {
+        $("#switchYOZOPrompt").hide();
+    };
+    function showSwitchPrompt() {
+        $("#switchYOZOPrompt").show();
+    };
+
+            function onConvertDone() {
+                console.log(222)
+           $("#loading_remainder").hide();
+           $("#divContent").show();
+           var now = new Date();
+           sendLog("loadingtime", "" + (now.getTime() - startloadingtime.getTime()));
+        };
+    
+</script>
+<div id="loading_remainder" style="text-align: center;">
+<br/>
+<br/>
+	正在加载，请稍候 ...
+</div>
+<div id="divContent" style="display:none;">
+	<iframe name="previewframe" onload="onConvertDone();" id="previewframe" width="100%" frameborder="0" src="../7-5-音频、视频.pdf"></iframe>
+</div>
+</body>
+</html>

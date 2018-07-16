@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function foo(){
+			console.log(b);
+				return 1;
+			}
+			var a,b,c;
+			c={
+				get bar(){
+					console.log(a);
+					return 1;
+				}
+			}
+
+			a=10;
+			b=30;
+
+			a+=foo();
+			b+=c.bar;
+			console.log(a+b);
+	</script>
+</body>
+</html>

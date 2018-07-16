@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+</body>
+
+<script>
+	var c = document.querySelector('#myCanvas');
+	var ctx = c.getContext("2d");
+	//矩形
+	ctx.fillStyle = "red";
+	ctx.fillRect(0,0,50,50);
+	// 线段
+	ctx.moveTo(0,50);
+	ctx.lineTo(50,100);
+	ctx.strokeStyle = 'green';
+	ctx.stroke();
+	// 画圆饼
+	ctx.beginPath();
+	ctx.arc(50,150,50,0,Math.PI/6*4,false);
+	ctx.lineTo(50,150);
+	ctx.closePath();
+	ctx.strokeStyle = 'orange';
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.arc(50,150,50,Math.PI/6*4,Math.PI,false);
+	ctx.lineTo(50,150);
+	ctx.closePath();
+	ctx.fillStyle="red";
+	ctx.fill();
+
+	ctx.beginPath();
+	ctx.arc(50,150,50,Math.PI,Math.PI/2*3,false);
+	ctx.lineTo(50,150);
+	ctx.closePath();
+	ctx.strokeStyle = 'purple';
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.arc(50,150,50,Math.PI/2*3,Math.PI*2,false);
+	ctx.lineTo(50,150);
+	ctx.closePath();
+	ctx.strokeStyle = '#dfdaed';
+	ctx.stroke();
+	// 画圆
+	ctx.beginPath();
+	ctx.arc(50,250,50,0,Math.PI*2,false);
+	ctx.closePath();
+	ctx.fillStyle = '#adedsf';
+	ctx.fill();
+	// 文本
+	ctx.beginPath();
+	ctx.font = "20px 宋体";
+	ctx.strokeStyle = "#aceade";
+	ctx.strokeText('李云娟',100,30);
+	ctx.closePath();
+	// 渐变-线性渐变：渐变开始的坐标点和接受坐标点
+	ctx.beginPath();
+	var grd = ctx.createLinearGradient(200,0,400,50);
+	grd.addColorStop(0,"red");
+	grd.addColorStop(0.3,"white");
+	grd.addColorStop(0.6,"pink");
+	grd.addColorStop(1,"purple");
+	ctx.fillStyle = grd;
+	ctx.fillRect(200,0,200,50)
+	ctx.closePath();
+
+	// 渐变-径向或圆渐变:渐变开始的圆的坐标及大小，渐变接受的坐标及大小
+	ctx.beginPath();
+	var grd1 = ctx.createRadialGradient(150,150,5,150,150,50);
+	grd1.addColorStop(0,"black");
+	grd1.addColorStop(0.3,"red");
+	grd1.addColorStop(0.6,"orange");
+	grd1.addColorStop(1,"yellow");
+	ctx.fillStyle = grd1;
+	ctx.fillRect(100,100,100,100);
+	ctx.closePath();
+
+</script>
+</html>

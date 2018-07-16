@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.conLeft{
+			width: 250px;height:250px; 
+			float: left; 
+			position: relative; 
+			margin-top:140px;
+			margin-left: 300px;
+			-moz-transition:all 4s;;
+			-ms-transition:all 4s; ;
+			-o-transition:all 4s;;	 
+		    transition:all 4s;	                                   
+		    -webkit-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-moz-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-ms-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-o-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			transform: rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	        -webkit-animation: rotate 6s linear infinite;
+	        -moz-animation: rotate 6s linear infinite;
+			-ms-animation: rotate 6s linear infinite;
+			-o-animation: rotate 6s linear infinite; 
+	        animation: rotate 6s linear infinite; 
+	  }
+	 .conLeft div{ width: 250px; height: 250px;position: absolute;left: 0;top: 0; box-shadow:5px 5px 10px #555;}  
+	 .conLeft div img{width: 100%; height: 100%}
+	 .conLeft .front{
+	  	-webkit-transform:translateZ(135px);
+		-moz-transform:translateZ(135px);
+		-ms-transform:translateZ(135px);
+		-o-transform:translateZ(135px);
+	 	transform: translateZ(135px);
+	 }
+	 .conLeft .back{
+	    -webkit-transform:translateZ(-135px) rotateY(180deg);
+		-moz-transform:translateZ(-135px) rotateY(180deg);
+		-ms-transform:translateZ(-135px) rotateY(180deg);
+		-o-transform:translateZ(-135px) rotateY(180deg);
+	    transform: translateZ(-135px) rotateY(180deg);
+	  }
+	 .conLeft .left{
+	    -webkit-transform:translateX(-135px) rotateY(-90deg);
+		-moz-transform:translateX(-135px) rotateY(-90deg);
+		-ms-transform:translateX(-135px) rotateY(-90deg);
+		-o-transform:translateX(-135px) rotateY(-90deg); 
+	    transform: translateX(-135px) rotateY(-90deg);
+	    }
+	 .conLeft .right{
+	    -webkit-transform:translateX(135px) rotateY(90deg);
+		-moz-transform:translateX(135px) rotateY(90deg);
+		-ms-transform:translateX(135px) rotateY(90deg);
+		-o-transform:translateX(135px) rotateY(90deg);
+	    transform: translateX(135px) rotateY(90deg);}
+
+	     @keyframes rotate {
+            from{
+                transform: rotateY(49deg) rotateX(-20deg);  
+            }
+            to{
+                transform: rotateY(409deg) rotateX(-20deg) ;
+            }
+        }
+	</style>
+</head>
+<body>
+	<div class="conLeft">
+        <div class="front"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/d8c28b2c-6e55-4d9c-b9dd-ced6c2102d94.png" alt=""></div>
+        <div class="back"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/bb6a18dd-0c2e-44e5-8d64-01c1244786c1.png" alt=""></div>
+        <div class="left"><img src="http://pic1.ablesky.cn/content/pic/album/2017/06/02/93987807-b763-40e0-8475-260fa1a411d3.png" alt=""></div>
+        <div class="right"><img src="http://pic1.ablesky.cn/content/pic/album/2018/01/20/43ab10db-6f32-45a5-a963-946e74be0295.png" alt=""></div>
+    </div>
+</body>
+</html>

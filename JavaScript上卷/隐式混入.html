@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var Something = {
+		cool:function(){
+			this.greeting = 'hello world';
+			this.count = this.count ? this.count + 1:1;
+		}
+	};
+	Something.cool();
+	console.log(this);
+	console.log(Something.greeting);
+	console.log(Something.count);
+	console.log('-----------------')
+
+	var Another = {
+		greeting:'aaaaaaaa',
+		count:100,
+		cool:function(){
+			Something.cool.call(this);
+		}
+	};
+	Another.cool();
+	console.log(this);
+	console.log(Another.greeting);
+	console.log(Another.count);
+	</script>
+</body>
+</html>

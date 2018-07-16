@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单选按钮自定义样式</title>
+</head>
+<style>
+	.evelation_select .radio{
+		margin-right:30px;
+	    color: #555;
+	    font-size: 14px;
+	    cursor: pointer;
+	}
+	.evelation_select .radio input{
+		display:none;
+	}
+	.evelation_select .radio .box{
+		background-color: #fff;
+	    border: 1px solid #ddd;
+	    display: inline-block;
+	    height: 14px;
+	    margin-top: -3px;
+	    vertical-align: middle;
+	    width: 14px;
+	    line-height: 1;
+	    border-radius: 8px;
+	}
+	.evelation_select .radio input + .box:after {
+	    background-color: #ff9933;
+	    content: "";
+	    display: inline-block;
+	    height: 8px;
+	    margin: 3px;
+	    width: 8px;
+	    opacity: 0;
+	    border-radius: 4px;
+	    transition: opacity .1s;
+	    -webkit-transition: opacity .1s;
+	}
+	.evelation_select .radio input:checked + .box:after{
+		opacity: 1;
+	}
+</style>
+<body>
+	 <div class="evelation_select">
+	     <label class="radio">
+	     	<input type="radio" name="evaluate_type" checked="checked" class="eval_radio"  data-type="0">
+	     	<span class="box"></span>
+	     	全部评价<span>(666)</span>											     
+	     </label>
+	     <label class="radio">
+	     	<input type="radio" name="evaluate_type" data-type="1"  class="eval_radio">	
+	     	<span class="box"></span>
+	     	好评<span>(666)</span>									     
+	     </label>
+	     <label class="radio">
+	     	<input type="radio" name="evaluate_type" data-type="2" class="eval_radio">
+	     	<span class="box"></span>
+	     	中评<span>(666)</span>											     
+	     </label>
+	     <label class="radio">
+	     	<input type="radio" name="evaluate_type" data-type="3"  class="eval_radio">
+	     	<span class="box"></span>
+	     	差评<span>(666)</span>											     
+	     </label>
+    </div> 			
+</body>
+</html>

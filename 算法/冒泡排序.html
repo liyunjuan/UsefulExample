@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+	var a = [3,5,13,6,2,23,64,343,665,10001],temp;
+	var n = a.length;
+	//核心部分
+	for(var i=0;i<n-1;i++){//n个数排序，循环n-1趟
+		for(var j=0;j<n-i;j++){//从第1位开始比较直到最后一个尚未归位的数，n-i是因为上层没循环一次就有一个归位的数了
+			if(a[j]<a[j+1]){//从大到小排列
+				temp = a[j];
+				a[j] = a[j+1];
+				a[j+1] = temp;
+			}
+		}
+	}
+
+	for(var i=0;i<n;i++){
+		document.write('<p>'+a[i]+'</p>')
+	}
+	</script>
+</body>
+</html>

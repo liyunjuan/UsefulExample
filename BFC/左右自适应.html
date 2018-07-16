@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BFC左右自适应</title>
+</head>
+<style>
+	.content{
+		height: 200px;
+		width: 400px;
+		background: red;
+	}
+	.content .floatLeft{
+		float: left;
+		width: 100px;
+		height: 100%;
+		background: pink;
+	}
+	.content .right{
+		/*width: 100%;*/ /*不能设置宽度，如果设置了宽度就会到下一行，这样会默认继承父元素的宽度*/
+		height: 100%;
+		overflow: hidden;
+		background: orange;
+	}
+	.content1{
+		width: 200px;
+		height: 500px;
+		background: blue;
+		margin-top: 50px;
+		float: left;
+	}
+	.content1 .floatTop{
+		width: 100%;
+		height: 200px;
+		left: 0;
+		top: 0;
+		background: orange;
+	}
+	.content1 .bottom{
+		width: 100%;
+		overflow: hidden;
+		background: pink;
+	}
+</style>
+<body>
+	<div class="content">
+		<div class="floatLeft"></div>
+		<div class="right">啊啊啊啊大顶顶顶顶顶大啊啊啊啊大顶12顶顶顶顶大啊啊啊啊大顶顶顶顶顶大</div>
+	</div>
+
+	<div class="content1">
+		<div class="floatTop"></div>
+		<div class="bottom">啊啊啊啊大顶顶顶顶顶大啊啊啊啊大顶12顶顶顶顶大啊啊啊啊大顶顶顶顶顶大啊啊啊啊大顶顶顶顶顶大啊啊啊啊大顶12顶顶顶顶大啊啊啊啊大顶顶顶顶顶大啊啊啊啊大顶顶顶顶顶大啊</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var currentTime = new Date().getTime();
+    var hours = new Date().getHours();
+    //判断每天凌晨到现在的时间 ---每天凌晨更新
+    var sessionTime = 24-hours;
+    var expiresTime = new Date().getTime() + sessionTime*60*60*1000;
+    var localTime = localStorage.getItem('orgMemberTip');//明天的过期时间
+
+    
+    if(!localTime || currentTime >= localTime){
+    	//操作
+
+    	localStorage.setItem('orgMemberTip', expiresTime);
+    }else{
+    	return;
+    }
+</script>
+</html>
