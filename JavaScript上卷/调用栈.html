@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function baz(){
+		// 当前调用栈：baz，因此当前调用位置是全局作用域
+		console.log('baz');
+		bar(); //bar的调用位置
+	}
+	function bar(){
+		// 当前调用栈：baz->bar，因此当前调用位置在baz中
+		console.log('bar');
+		foo();//foo的调用位置
+	}
+	function foo(){
+		console.log('foo');
+	}
+	baz();
+</script>
+</body>
+</html>

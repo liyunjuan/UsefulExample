@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		console.log(this.a);
+	}
+	var o = {
+		a:22,
+		foo:foo
+	};
+	var bar = o.foo;//虽然是对obj.foo的一个引用，但是实际上引用的是foo函数本身，所以是默认绑定。会打印全局a。
+	var a = 'oops,golbal';
+	o.foo();
+	bar();
+
+	function doFoo(fn){
+		fn();
+	}
+
+	//参数传递其实是一种隐式赋值，因此我们传入函数时也会被隐式赋值，所以结果和之前一样。
+	doFoo(o.foo);
+</script>
+</body>
+</html>

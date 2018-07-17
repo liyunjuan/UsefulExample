@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		console.log(this.a);
+	}
+	var obj = {
+		a:22
+	};
+	foo();
+	foo.call(obj);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		var a = 2;
+		this.bar();
+	}
+	function bar(){
+		console.log(1111)
+		console.log('aa: '+this.a);
+	}
+	foo();
+</script>
+</body>
+</html>

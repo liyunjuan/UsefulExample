@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(num){
+		console.log("foo: "+num);
+		this.count ++;
+	}
+	foo.count = 0;
+	var i = 0;
+	for(i = 0;i<10;i++){
+		if(i>5){
+			// foo(i);
+			// 这里不是this，因为这里的this指的是window。
+			foo.call(foo,i);
+		}
+	}
+	console.log(foo.count);
+	// 打印出来6 7 8  9
+	// 最后打印出0；这个说明从字面意思来理解this是错误的。函数里面的代码的this.count并不是指向的foo函数对象，虽然名字一样，但是根对象不一样。
+	// 增加的函数属性其实是在无意间创建了一个全局变量count。
+
+	// 如果要用foo的属性，可以用这个方法。
+	// foo.call(foo,i).
+</script>
+</body>
+</html>
