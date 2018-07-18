@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(a,b){
+		console.log('a:'+a+'b:'+b);
+	}
+	var oo = Object.create(null);
+	foo.apply(oo,[2,3,4]);
+
+	var bar = foo.bind(oo,2);
+	bar(3);
+</script>
+</body>
+</html>

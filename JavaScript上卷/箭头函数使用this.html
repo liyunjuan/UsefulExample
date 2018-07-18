@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		return (a) => {
+			console.log(this.a);
+		};
+	}
+
+	var obj1 = {
+		a:22
+	};
+	var obj2 = {
+		a:33
+	};
+	var bar = foo.call(obj1);
+	bar();
+	// 下面的结果是打印2；原因，箭头函数的外层this是foo，而foo的this绑定在了obj1上，所以无论bar的this怎么变，都不会影响结果。
+	bar.call(obj2);
+</script>
+</body>
+</html>
