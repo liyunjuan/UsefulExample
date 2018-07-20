@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(el,i){
+		console.log(el,this.id);
+		console.log(i)
+	}
+	var obj = {
+		id:"awesome"
+	};
+	// 调用foo()时把this绑定到obj
+	// 这里传给foo的第一个参数是值，不是索引；第二个参数索引
+	['a','b','c'].forEach(foo,obj);
+</script>
+</body>
+</html>

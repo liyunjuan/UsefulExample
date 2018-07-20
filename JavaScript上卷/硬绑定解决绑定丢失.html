@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		console.log(this.a);
+	}
+	var obj = {
+		a:22
+	};
+	function bar(){
+		foo.call(obj);
+	}
+	bar();
+	setTimeout(bar,1000);
+	bar.call(window);
+</script>
+</body>
+</html>

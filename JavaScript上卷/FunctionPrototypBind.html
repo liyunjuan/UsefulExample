@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(something){
+		console.log(this.a,something);
+		return this.a+something;
+	}
+	var obj = {
+		a:22
+	};
+
+	//直接是 函数名.bind() ;其实内置方法里面是Function.prototype.bind()。
+	var bar = foo.bind(obj);
+	var b = bar(3);
+	console.log(b)
+</script>
+</body>
+</html>
