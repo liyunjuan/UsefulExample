@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function anotherFunction(){}
+	var anotherObject = {
+		c:true
+	};
+	var anotherArray = [];
+
+	var myObject = {
+		a:2,
+		b:anotherObject,
+		c:anotherArray,
+		d:anotherFunction
+	}
+
+	anotherArray.push(anotherObject,myObject)
+
+	console.log(myObject)
+	console.log(anotherArray)
+
+	// 以上的复制就是深复制，是一个无限循环
+
+	//下面是浅复制
+	var newObj = Object.assign({},myObject);
+	console.log(newObj.a);
+	console.log(newObj.b === anotherObject);
+	console.log(newObj.c === anotherArray);
+	console.log(newObj.d === anotherFunction);
+	console.log(newObj.c)
+</script>
+</body>
+</html>

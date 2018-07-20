@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var myArray = ['foo',42,'bar'];
+	console.log(typeof myArray);
+	console.log(Object.prototype.toString.call(myArray));
+
+	myArray.baz = 'baz';
+	myArray.bar = 'barrrrrrrrr';
+	var a = 4;
+	myArray['3'] = '444444'
+	myArray['aaaaa'] = 'aaaaaaaa'
+	console.log(myArray.length);
+	console.log(myArray);
+	console.log(myArray.baz);
+	console.log(myArray['baz']);
+	console.log(myArray.bar)
+	console.log(myArray['3'])
+	console.log(myArray['aaaaa'])
+</script>
+</body>
+</html>
