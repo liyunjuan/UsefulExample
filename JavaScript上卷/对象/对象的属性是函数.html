@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(){
+		console.log('foo'+this.a);
+	}
+	var someFoo = foo;
+	var myObject = {
+		someFoo:foo,
+		a:22
+	};
+	var a = 100;
+
+	someFoo['a'] = 200;
+	console.log(foo);
+	console.log(someFoo);
+	console.log(myObject.someFoo);
+
+	foo();
+	someFoo();
+	myObject.someFoo();
+
+	console.log(someFoo)
+</script>
+</body>
+</html>
