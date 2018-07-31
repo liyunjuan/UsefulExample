@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var myObject = {
+		get a(){
+			return 2;
+		}
+	}
+	myObject.a = 333;
+	myObject.b = 444;
+	console.log(myObject.a);//因为对象里面设置的a的函数，会默认创建一个属性名为a的属性，并且有一个getter方法。
+	console.log(myObject.b);
+</script>
+</body>
+</html>
