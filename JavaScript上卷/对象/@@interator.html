@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// @@iterator === Symbol.iterator
+	// 给对象自定义@@iterator属性，让普通对象可以使用for or
+	var obj = {
+		a:22,
+		b:33
+	};
+	// for(var i of obj){
+	// 	console.log(i);//这里会报错
+	// }
+
+	// 下面的方法也可以通过直接设置Symbol .iterator属性进行设置。
+	Object.defineProperty(obj,Symbol.iterator,{
+		enumerable:false,
+		writable:false,
+		configrable:true,
+		value:function(){
+			var o = this;
+			var idx = 0;
+			var ks = Object.keys(o);
+			return {
+				next:function(){
+					return {
+						value:o[ks[idx++]],
+						done:(idx>ks.length)
+					};
+				}
+			};
+		}
+	});
+	var it = obj[Symbol.iterator]();
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	console.log(it.next());
+	
+	for(var k of obj){
+		console.log(k)
+	}
+</script>
+</body>
+</html>

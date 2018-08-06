@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var arr = ['a','b2','c3'];
+	for(var v of arr){
+		console.log(v);//打印的是属性的值；是用的next()方法遍历的 
+	}
+	for(var k in arr){
+		console.log(k);//结果是：0 1 2打印的是索引，索引是从0开始
+	}
+</script>
+</body>
+</html>
