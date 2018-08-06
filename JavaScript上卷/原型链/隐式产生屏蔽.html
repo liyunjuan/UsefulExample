@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var anotherObject = {
+		a:2
+	};
+
+	var myObject = Object.create(anotherObject); //让myObject关联anotherObject
+
+	console.log(anotherObject.a);//2
+	console.log(myObject.a);//2
+	console.log(myObject.hasOwnProperty('a'));//false
+
+	myObject.a++;
+
+	console.log(anotherObject.a);//2 因为上面是myObject.a++而不是anotherObject.a++，所以还是2
+	console.log(myObject.a);//3
+
+	console.log(myObject.hasOwnProperty('a'));//true
+</script>
+</body>
+</html>

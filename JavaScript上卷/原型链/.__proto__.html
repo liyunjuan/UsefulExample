@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	Object.defineProperty(Object.prototype,"__proto__",{
+		get:function(){
+			return Object.getPropertyOf(this);
+		},
+		set:function(o){
+			Object.setPropertyOf(this,o);
+			return o;
+		}
+	})
+</script>
+</body>
+</html>
