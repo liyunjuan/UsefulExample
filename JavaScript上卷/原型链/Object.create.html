@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	if(!Object.create){
+		Object.create = function(o){
+			function F(){}
+			F.prototype = o;
+			return new F();
+		}
+	}
+	var anotherObject = {a:22};
+	var myObject = Object.create(anotherObject,
+		{
+			b:{
+				enumerable:false,
+				writable:true,
+				configurable:false,
+				value:3
+			},
+			c:{
+				enumerable:true,
+				writable:false,
+				configurable:false,
+				value:4
+			}
+		}
+	);
+	console.log(myObject.hasOwnProperty('a'));//false
+	console.log(myObject.hasOwnProperty('b'));//true
+	console.log(myObject.hasOwnProperty('c'));//true
+
+	console.log(myObject.a);//22
+	console.log(myObject.b);//3
+	console.log(myObject.c);//4
+
+	myObject.b = 33;
+	myObject.c = 44;
+
+	console.log(myObject.b);//33
+	console.log(myObject.c);//4
+	
+</script>
+</body>
+</html>

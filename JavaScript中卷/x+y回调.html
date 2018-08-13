@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function add(getX,getY,cb){
+		var x,y;
+		getX(function(xVal){
+			x = xVal;
+			if(y != undefined){
+				cb(x+y);
+			}
+		});
+		getY(function(yVal){
+			y = yVal;
+			if(xVal != undefined){
+				cb(x+y);
+			}
+		})
+	}
+
+	add(fetchX,fetchy,function(sum){
+		console.log(sum);
+	})
+</script>
+</body>
+</html>
