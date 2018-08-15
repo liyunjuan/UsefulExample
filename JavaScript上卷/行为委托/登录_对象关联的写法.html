@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var LoginController = {
+		errors:[],
+		getUser:function(){
+			return document.getElementById('login_username').value;
+		},
+		getPassword:function(){
+			return document.getElementById('login_password').value;
+		},
+		validateEntry:function(name,pw){
+			user = user || this.getUser();
+			pw = pw || this.getPassword();
+			if(!(user || pw)){
+				return this.failure('please enter a username & password');
+			}else if(user.length < 5){
+				return this.failure('username must be 5+ characters');
+			}
+			return true;
+		},
+		showDialog:function(title,msg){
+			//给用户标题和信息
+		},
+		failure:function(err){
+			Controller.prototype.failure.call(this,'Login invalid' + err);
+		}
+	};
+
+	//让AuthController委托LoginController
+	var AuthController = Object.create(LoginController);
+	AuthController.errors = [];
+	AuthController.checkAuth = function(){
+		var user = this.login.getUser();
+		var pw = this.login.getPassword();
+		if(this.login.validateEntry(user,pw)){
+			this.server('/check-auth',{
+				user:user,
+				pw:pw
+			}).then(this.success.bind(this)).fail(this.failure.bind(this));
+		}
+	};
+	AuthController.server = function(url,data){
+		return $.ajax({
+			url:url,
+			data,data
+		});
+	};
+	AuthController.accepted = function(){
+		this.showDialog('Success','Authenticated!')
+	};
+	AuthController.rejected = function(err){
+		this.failure('Auth Failed'+ err);
+	}
+</script>
+</body>
+</html>

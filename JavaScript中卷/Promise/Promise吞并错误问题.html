@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var p = new Promise(function(resolve,reject){
+		foo.bar();
+		resolve();
+	});
+	p.then(
+		function fulfilled(){
+			console.log('fulfilled');
+		},
+		function rejected(error){
+			console.log('0000000'+error);//上面的错误问题会在这里打印，如果这里没有打印错误，则什么也不显示
+		}
+	)
+</script>
+</body>
+</html>

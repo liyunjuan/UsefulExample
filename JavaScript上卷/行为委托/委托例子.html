@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var Task = {
+		setID : function(ID){
+			this.id = ID;
+		},
+		outputID:function(){
+			console.log(this.id);
+		}
+	};
+	var XYZ = Object.create(Task);
+	XYZ.prepareTask = function(ID,Label){
+		this.setID(ID);
+		this.label = Label;
+	}
+	XYZ.outputTaskDetail = function(){
+		this.outputID();
+		console.log(this.label);
+	}
+
+	var ABC = Object.create(Task);
+	ABC.prepareTask = function(ID,Label){
+		this.setID(ID);
+		this.label = Label;
+	}
+	ABC.outputTaskDetail = function(){
+		this.outputID();
+		console.log('ABC:'+this.label);
+	}
+	XYZ.prepareTask('XYZID','xyzzzz');
+	XYZ.outputTaskDetail();
+
+	ABC.prepareTask('ABCID','abcccc');
+	ABC.outputTaskDetail();
+</script>
+</body>
+</html>
