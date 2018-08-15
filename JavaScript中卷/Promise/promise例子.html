@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(x){
+		//一些耗时的工作
+
+		return new Promise(function(resolve,reject){
+			// 
+			resolve();
+		});
+	}
+
+	//第一种情况
+	var p = foo(42);
+	bar(p);
+	baz(p);
+
+	function bar(fooPromise){
+		fooPromise.then({
+			function(){
+				//完成
+			},
+			function(){
+				//拒绝
+			}
+		});
+	}
+
+	function baz(fooPromise){
+		fooPromise.then({
+			function(){
+				//完成
+			},
+			function(){
+				//拒绝
+			}
+		});
+	}
+
+	p.then(function(){
+		p.then(function(){
+			console.log('C');
+		});
+		console.log('A');
+	})
+	p.then(function(){
+		console.log('B');
+	})
+	// 打印出：A B C 
+	//第二种情况
+	function barSuc(){
+		//完成
+	}
+	function oopsBar(){
+		//拒绝
+	}
+
+	function bazSuc(){
+		//完成
+	}
+	function oopsBaz(){
+		//拒绝
+	}
+	var p1 = foo(22);
+	p1.then(barSuc,oopsBar);
+	p1.then(bazSuc,oopsBaz);
+
+</script>
+</body>
+</html>

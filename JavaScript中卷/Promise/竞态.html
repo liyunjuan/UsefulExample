@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	// 如果Promise本身永远不被决议，Promise提供的解决方案是一种称为竞态的高级抽象机制。
+	function timeoutPromise(delay){
+		return new Promise(function(resolve,reject){
+			setTimeout(function(){
+				reject('Timeout');
+			},delay);
+		})
+	}
+
+	Promise.race([
+		foo(),
+		timeoutPromise(3000)
+	])
+	.then(
+		function(){
+			//完成
+		},
+		function(error){
+			//拒绝
+		}
+	);
+
+
+	function foo(x){
+		//一些耗时的工作
+
+		return new Promise(function(resolve,reject){
+			// 
+			resolve();
+		});
+	}
+</script>
+</body>
+</html>

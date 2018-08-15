@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(x){
+		//创造一个listener事件通知处理对象来返回
+		var listenter = '';
+		if(x<40){
+			listenter = 'completion';
+		}
+		return listenter
+	}
+
+	var evt = foo(42);  //这个即是Promise的模拟
+
+	evt.on('completion',function(){
+		//下一步
+		console.log('下一步');
+	})
+
+	evt.on('failure',function(){
+		//出错了
+		console.log('出错了')
+	})
+</script>
+</body>
+</html>

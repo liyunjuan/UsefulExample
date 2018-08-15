@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	define(["jquery"],function($){
+		var ct = {
+			_html:"",
+			options:{
+				querySelector:"",
+				btnContext:"AAAA",
+				itemWidth:null,
+				keys:{
+					id:"",
+					name:""
+				},
+				data:[],
+				onSelect:function(){}
+			},
+			init:function(opt){
+				var _self = this;
+				$.extend(this.options,opt);
+				_self._generateList();
+			},
+			_generateList:function(){
+				var _self = this;
+				var data = _self.options.data;
+				var qs = _self.options.querySelector;
+				var nodes = $(qs);
+				if(nodes.length === 0){
+					console.log('querySelector error');
+					return false;
+				}
+
+				var tpl = _self._tpl(data);
+				nodes.each(function(){
+					$(this).append(tpl);
+				})
+				_self._bindEvents();
+			},
+			_tpl:function(data){
+				var _self = this;
+				var str = '<input class="catagory-btn" readonly="readonly" data-id="" value="'+_self.options.btnContext+'" >';
+				str += _self._traverse(data);
+				return str;
+			},
+			_traverse:function(data){
+				var _self = this;
+				var keys = _self.options.keys,
+					arr = [],
+					str = '',
+					childTag = '',
+					childIcon = '',
+					childStr = '',
+					item = null;
+				arr.push('<ul class="category-list-box">');
+				_self._html = "";
+				for(var i = 0;i<data.length;i++){
+					item = data[i];
+					if(item['isClass'] == true){
+						continue;
+					}
+					if(item.hasChild){
+						childTag = 'has-child';
+						childIcon = '<span class="child-icon">$gt;</span>';
+						childStr = _self._traverse(item.children.list);
+					}else{
+						childTag = '';
+						childIcon = '';
+						childStr = '';
+					}
+
+					str = '<li class="'+childTag+'" title="'+item[keys.name]+'" data-id="'+item[keys.id]+'"><p class="j-item">'+item[keys.name]+'</p>'+childIcon+childStr+'</li>';
+
+					arr.push(str);
+				}
+				arr.push('</ul>');
+				return arr.join('');
+			},
+			_bindEvents:function(){
+				var _self = this;
+				var nodes = $(_self.options.querySelector);
+
+				nodes.each(function(){
+					var $this = $(this);
+					$this.find("ul:empth").css('display','none');
+					var btn = $this.find(input);
+					$this.find('ul').first().prepend('<li data-id=""><p class="j-item">'+_self.options.btnContext+'</p></li>');
+					var itemNodes = $this.find('li');
+					btn.on('focus',function(){
+						btn.next().css('display','blcok');
+					});
+					itemNodes.on('click',function(e){
+						e.stopPropagation();
+						var text = $(this).find('.j-item').html();
+						var id = $(this).data('id');
+						text = _self._decode(text);
+						btn.val(text);
+						btn.data('id',id);
+						_self.options.onSelect($this[0],this,id);
+					});
+				});
+			},
+			_offsetTop:function(obj){
+				var top = obj.offsetTop;
+				var oParent = obj.offsetParent;
+				while(oParent != null){
+					top += oParent.offsetTop;
+					oParent = oParent.offsetParent;
+				}
+				return top;
+			},
+			_decode:function(s){
+				return s.replace(/&gt;|&lt;|&apos;/g,function(v){
+					switch(v){
+						case '&lt;':
+							return '<';
+							break;
+						case '&gt;':
+							return '>';
+							break;
+						case '&apos;':
+							return "'";
+							break;
+					}
+				});
+			},
+			getCateData:function(conf){
+				var typeStr = 'orgStudent';
+				if(conf.type === 1){
+					typeStr = 'staff';
+				}else if(conf.type === 2){
+					typeStr = 'service';
+				}
+
+				$.get('/organizationCategory.do?action=gerInteriorCategory',{
+					orgInnerCateType:typeStr,
+					organizationId:conf.orgId,
+					showDefault:conf.showDefault || true
+				},function(res){
+					if(res.success){
+						conf.onSuccess(res.resule.list);
+					}
+				},'json');
+			}
+		};
+		return ct;
+	})
+</script>
+</body>
+</html>

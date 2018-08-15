@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function foo(x){
+		//一些耗时的工作
+
+		return new Promise(function(resolve,reject){
+			// 
+		});
+	}
+
+	var p = foo(42);
+
+	//检验是否是真的Promise
+	if(
+		p !== null && (typeof p === 'object' || typeof p === 'function') && typeof p.then === 'function'
+	){
+		//这是一个thenable
+	}else{
+		//这不是一个thenable
+	}
+
+	// 这样的判断有问题，如果刚好有一个函数有then()函数，但是不想当成Promise，就会比较麻烦
+
+</script>
+</body>
+</html>
