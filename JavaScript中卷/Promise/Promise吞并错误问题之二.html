@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var p = new Promise(function(resolve,reject){
+		resolve(42);
+	});
+	p.then(
+		function fulfilled(msg){
+			//这个Promise其实已经执行到这个完成的位置了，只是foo.bar()是错的，所以就停在这里了
+			foo.bar();
+			console.log('fulfilled：'+msg);
+		},
+		function rejected(error){
+			console.log('0000000'+error);//永远不会走到这里
+		}
+	)
+</script>
+</body>
+</html>

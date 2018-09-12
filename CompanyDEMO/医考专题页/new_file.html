@@ -1,0 +1,1243 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>加盟代理专题页</title>
+<style>
+	/*reset样式*/
+	
+	html,
+	body {
+		background: #f2f2f2 !important;
+		font-size: 14px;
+	}
+	
+	body header {
+		font-size: 12px;
+		color: #555;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: "微软雅黑";
+	}
+	
+	a {
+		outline: none;
+		text-decoration: none;
+	}
+	
+	a:active {
+		star: expression(this.onFocus=this.blur());
+	}
+	
+	a:hover {
+		color: #46bd89;
+	}
+	
+	.fl {
+		float: left;
+	}
+	
+	.fr {
+		float: right;
+	}
+	
+	.clearfix:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	
+	table {
+		/*table-layout: fixed;*/
+		empty-cells: show;
+		border-collapse: collapse;
+		margin: 0 auto;
+		color: #555;
+	}
+	
+	#J_fixedTools {
+		display: block;
+		bottom: 330px;
+	}
+	
+	.lay-custom-page {
+		width: 100%!important;
+		margin-top: 0!important;
+	}
+	/*banner样式*/	
+	.banner {
+		position: relative;
+		min-width: 1200px;
+		height: 500px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	
+	.banner .publicize .pub-pagination {
+		position: absolute;
+		bottom: 30px;
+		left: 48%;
+		padding: 4px 10px;
+	}
+	
+	.banner .publicize .pub-pagination li {
+		float: left;
+		margin-right: 10px;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	
+	.banner .publicize .pub-pagination a {
+		width: 30px;
+		height: 4px;
+		background: #c5c5c5;
+		text-indent: -999px;
+	}
+	
+	.banner .publicize .pub-pagination .current a {
+		background: #46bd89;
+	}
+	
+	.banner .pub-slides {
+		/*width: 1200px;*/
+		height: 500px;
+		/*margin: 0 auto;*/
+	}
+	
+	.banner .publicize {
+		position: relative;
+		z-index: 996;
+		text-align: center;
+	}
+	
+	.banner .publicize a {
+		display: block;
+		height: 500px;
+	}
+	
+	.banner .publicize a img {
+		max-width: 100%;
+		/*width: 1200px;*/
+		height: 500px;
+	}
+	/*banner以下的内容*/	
+	.minWidth {
+		min-width: 1200px;
+		height: auto;
+		padding-top: 50px;
+	}
+	
+	.minWidth .tit1 {
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		color: #555555;
+	}
+	
+	.minWidth .tit2 {
+		display: block;
+		margin: 20px auto 10px;
+		width: 40px;
+		height: 4px;
+		border-radius: 2px;
+		background: #46BD89;
+	}
+	
+	.minWidth .tit3 {
+		text-align: center;
+		font-size: 16px;
+		color: #555555;
+	}
+	
+	.minWidth .tit3 span {
+		color: #e33636;
+	}
+	
+	.centerBox {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	/*前景开阔，大有可为*/
+	.part_two{
+		background: #f5f6f7;
+	}
+	
+	.future_contentWrap{
+		width: 1200px;
+		margin: 0 auto 50px;
+	}
+	.future_contentWrap .futureDes{
+		margin-top: 40px;
+		height: 178px;
+		padding: 13px 0;
+		position: relative;
+	}
+	.future_contentWrap .futureDes div{
+		width: 1114px;
+		height: 117px;
+		margin: 0 auto;
+		background: #fff;
+		padding: 30px;
+	}
+	.future_contentWrap .futureDes div p{		
+		font-size: 18px;
+		color: #555555;
+		text-indent: 2em;
+		line-height: 29px;
+	}
+	.future_contentWrap .futureDes .lefttop{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.future_contentWrap .futureDes .rightbottom{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	/*品牌铸造，百万考生医考首选*/
+	.part_three{
+		background: #fff;
+	}
+	
+	.student_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.student_contentWrap{
+		height: 573px;
+		padding: 40px 100px 50px 140px;
+	}
+	.student_contentWrap dl{
+		float: left;
+		width: 200px;
+		height: 260px;
+		border: 1px solid #efefef;
+		border-radius: 6px;
+		margin-right: 38px;
+		margin-bottom: 40px;		
+		-webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	.student_contentWrap dl:hover{		
+		transform: translateY(-5px);
+	    -webkit-transform: translateY(-5px);
+	    -moz-transform: translateY(-5px);
+	   	 box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+	    -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+	    -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+	    -webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+		border-color: #46bd89;
+	    background-color: rgb(244, 255, 250);
+	}
+	.student_contentWrap dl dt{
+		height: 63px;
+		text-align: center;
+		padding-top: 42px;
+	}
+	.student_contentWrap dl dd p{
+		text-align: center;
+		line-height: 28px;
+		color: #aaaaaa;
+		font-size: 14px;
+	}
+	.student_contentWrap dl dd p.title{
+		font-size: 20px;
+		line-height: 40px;
+		color: #46bd89;
+	}
+	/*能力医考独家代理优势*/
+	.part_four{
+		background: #fff;
+	}
+	
+	.advantage_content{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.advantage_contentWrap{
+		color: #555555;
+		font-size: 14px;
+	}
+	.advantage_contentWrap .advantage{
+		margin: 60px auto 45px;
+		width: 330px;
+		height: 179px;
+		text-align: center;
+		background: url(http://pic6.ablesky.cn/content/pic/album/2017/11/27/dc7765b6-f0de-49ef-88fc-35d5bbdbf66f.png) no-repeat;
+	}
+	.advantage_contentWrap .advantage p{
+		line-height: 24px;
+	}
+	.advantage_contentWrap .advantage p.title{
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 64px;		
+	}
+	.advantage_contentWrap .advantageList{
+		position: relative;
+		height: 212px;
+		padding-bottom: 50px;
+		padding-left: 10px;
+	    color: #aaa;
+	}
+	.advantage_contentWrap .advantageList>div{
+		cursor: default;
+		-webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	.advantage_contentWrap .advantageList p.bold{
+		font-weight: bold;
+		color: #555;
+	}
+	.advantage_contentWrap .advantageList .one{
+		position: absolute;
+		left: 0;
+		top: 20px;
+		width: 260px;
+		height: 142px;
+		padding: 50px 0 0 50px;
+		background: url(http://pic5.ablesky.cn/content/pic/album/2017/11/27/3e8c6951-9826-4531-b511-ee8ca797260b.png) no-repeat;
+	}
+	.advantage_contentWrap .advantageList .two{
+		position: absolute;
+		top: 0;
+		left: 289px;
+		width: 270px;
+		height: 142px;
+		padding: 70px 0 0 40px;
+		background: url(http://pic5.ablesky.cn/content/pic/album/2017/11/27/45f3aaba-7726-4084-b60d-7d49a7791a70.png) no-repeat;
+	}
+	.advantage_contentWrap .advantageList .three{
+		position: absolute;
+		top: 20px;
+		left: 578px;
+		width: 280px;
+		height: 122px;
+		padding: 50px 0 0 50px;
+		background: url(http://pic5.ablesky.cn/content/pic/album/2017/11/27/63051cdc-5733-4fdf-b0f5-25909aaf631f.png) no-repeat;
+	}
+	.advantage_contentWrap .advantageList .four{
+		position: absolute;
+		top: 0;
+		left: 887px;
+		width: 245px;
+		height: 142px;
+		padding: 70px 0 0 45px;
+		background: url(http://pic5.ablesky.cn/content/pic/album/2017/11/27/8786b4db-f0bc-4a79-a137-045ebfd7a178.png) no-repeat;
+	}
+	.advantage_contentWrap .advantageList>div:hover{
+		-moz-transform: matrix( 1.12121212121212,0,0,1.11848341232227,0,0);
+	    -webkit-transform: matrix( 1.12121212121212,0,0,1.11848341232227,0,0);
+	    -ms-transform: matrix( 1.12121212121212,0,0,1.11848341232227,0,0);
+	    z-index: 10;
+	    -webkit-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -o-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	}
+	/*合作条件*/
+	.part_five{
+		background: #3e3e3e;
+	}
+	
+	.corporate_wrap{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.corporate_wrap .tit1{
+		color: #efefef;
+	}
+	.corporate_contentWrap{
+		padding: 35px 0 50px 110px;
+	}
+	.corporate_contentWrap p{
+		font-size: 20px;
+		color: #e1e1e1;
+		line-height: 40px;
+	}
+	/*合作流程*/
+	.part_six{
+		background: #fff;
+	}
+	
+	.corporateprocess_wrap{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.corporateprocess_contentWrap{
+		padding: 40px 0 120px;
+	}
+	
+	/*能力医考教育生态圈大事记*/
+	.part_bigEvent{
+		background: #F5F6F7;
+	}
+	.bigEvent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.bigEvent_contentWrap{
+		padding: 20px 0 40px;
+	}
+	.bigEvent_contentWrap .event_con{
+		height: 270px; 
+		overflow:hidden;
+	}
+	.bigEvent_contentWrap .event_con div{ 
+		float: left; 
+	    width:400px; 
+	    height: 270px;
+    }
+	.bigEvent_contentWrap .event_con a {
+		/*display: block;*/ 
+	   color:#333; 
+	   margin:0 auto;
+    }
+
+	.bigEvent_contentWrap .event_con .con .title {
+		font-size:16px; 
+		color: #555555; 
+		line-height:30px;
+	}
+	.bigEvent_contentWrap .event_con .con .title:hover{
+		color: #46BD89;
+	}
+	
+	.bigEvent_contentWrap .event_con .con .img{
+		width:400px; 
+		height:210px 
+	}
+	.bigEvent_contentWrap .event_con .con img{
+		width:400px; 
+		height:210px;
+		border-radius: 6px;
+	}
+	.bigEvent_contentWrap .event_con .con:nth-child(2){
+		margin:0 40px 0 20px;
+	}
+	.bigEvent_contentWrap .event_con .newsAll {
+		margin:0 auto; 
+		width:340px;
+		font-size:14px; 
+		color: #333; 
+		text-align: center;
+		overflow:hidden;
+	}
+	.bigEvent_contentWrap .event_con .newsAll em{
+		display:inline-block;
+		 padding-left:20px; 
+		 margin-top:8px; 
+		 float:left;
+		 height: 4px; 
+		 width:4px; 
+		 background:url(http://pic2.ablesky.cn/content/pic/album/2017/11/28/628e4e9c-90b0-42ef-b3ef-0e702e1d30fd.png)  no-repeat center top;
+	}
+	.bigEvent_contentWrap .event_con .newsAll .newstitle{
+		/*display:inline-block;*/ 
+		color: #555555; 
+		float:left;
+		width:315px; 
+		line-height:20px;
+	    height:24px;
+	    overflow:hidden; 
+	    text-overflow:ellipsis;
+	    white-space:nowrap ; 
+	    text-align:left;
+	    font-size: 16px;
+	}
+	.bigEvent_contentWrap .event_con .newsAll .newstitle:hover{
+		color:#46BD89;
+	}
+	.bigEvent_contentWrap .event_con .newsAll .newsList{
+		position: absolute;
+	}
+	.bigEvent_contentWrap .event_con .newsAll .newsbox{
+		width: 340px;
+		height:90px; 
+		margin:15px auto 20px;
+		position: relative; 
+		overflow:hidden;
+	}
+	.bigEvent_contentWrap .event_con .newsAll p{
+		padding:0;
+		margin:0;
+	}
+	/*.bigEvent_contentWrap .event_con .newsAll .line{
+		height:1; 
+		width:300px;
+		margin:0 auto; 
+		display:inline-block; 
+		line-height:1px; 
+		magin-top:-5px; 
+		float:left;
+		margin: 10px 0 5px 0;
+		padding-left:20px;
+	}
+	.bigEvent_contentWrap .event_con .newsAll .line img{
+		width:100%; 
+		height:100%
+	}*/
+	.bigEvent_contentWrap .event_con .newsAll  .img_box{
+		width: 340px;
+		height: 140px;
+	}
+	.bigEvent_contentWrap .event_con .newsAll  .img_box img{
+		width: 100%;
+		height: 100%;
+	}
+	/*能力医考教育生态圈大事记*/
+	.part_schools{
+		background: #eaeaea;
+	}
+	.schools_wrap{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.course-list .leftdispose{
+		width:20px; 
+		height:360px; 
+		float:left; 
+		cursor: pointer;
+		background:url(http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png) no-repeat left center;
+	}
+	.course-list .rightdispose{
+		width:20px; 
+		height:360px; 
+		float:right; 
+		cursor: pointer;
+		background:url(http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png) no-repeat right center;
+	}
+	/*.course-list .leftdispose:hover{ 
+		background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/7465a96e-03c6-401e-a92d-8ba4c551cdde.png) no-repeat 50px 110px;
+	}
+	.course-list .rightdispose:hover{ 
+		background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/97ffcbc6-418e-497b-b1e8-dffb0e5be0cc.png) no-repeat 0 110px;
+	}*/
+	
+	.school-list{
+		width:1160px; 
+		height:320px; 
+		overflow:hidden; 
+		float:left;
+		margin: 20px 0;
+	}
+	.school-list .teacher li{
+		 width:120px; 
+		 height:300px; 
+		 float:left;
+		 margin: 0 20px;
+	}
+	.school-list .teacher li a{ 
+		width:120px; 
+		height:120px; 
+		/*background:url(http://pic5.ablesky.cn/content/pic/album/2017/06/16/2df6a815-11c0-4ba3-be4b-b3c787d674f4.png) no-repeat;*/ 
+		display:block; 
+		/*padding:4px;*/ 
+		margin:90px auto 0;
+		background: #fff;
+	    border-radius: 50%;
+	    border: 3px solid #6f6f6f;
+	}
+	.school-list .teacher li img{
+		width:120px; 
+		height:120px; 
+		border-radius:50%;
+		display:block;
+	}
+	.school-list .teacher li span{ 
+		display:none;
+	}
+	.school-list .teacher li.on{ 
+		width:160px;
+	}
+	.school-list .teacher li.on a{ 
+		width:160px; 
+		height:160px; 
+		/*background:url(http://pic5.ablesky.cn/content/pic/album/2017/06/16/c4801b5b-7d78-4f41-bd27-e62b557e3704.png) no-repeat;*/
+		display:block; 
+		margin:55px auto 0;
+		border-width: 6px;
+		}
+	.school-list .teacher li.on img{
+		width:160px; 
+		height:160px; 
+		border-radius:50%;
+		 }
+	.school-list .teacher li.on span{ 
+		display:block; 
+		font-size:20px; 
+		font-weight: bold;
+		color: #555555;
+		line-height:40px; 
+		height:40px; 
+		text-align:center; 
+	}	
+	.schools_news{
+		background: #878787;
+		height: 40px;
+	}
+	.schools_news .sch_news{
+		width:1200px;
+		margin: 0 auto; 
+		height: 40px; 
+		color:#fff;  
+		overflow:hidden; 
+		position: relative;
+	}
+	.schools_news .sch_news .newshcool{
+		font-size:18px; 
+		color: #fff; 
+		text-align: center; 
+		line-height:40px;
+		font-weight:normal;  
+		position: absolute; 
+	}
+	
+	.schools_news .sch_news .newshcool li{
+		float:left; 
+		margin-right:40px;
+	}
+	/*footer*/	
+	.footer_wrap {
+		background: #333;
+		color: #dddddd;
+	}
+	
+	.footer_contentWrap {
+		width: 1200px;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	.footer_contentWrap .hotline {
+		font-size: 20px;
+		text-align: center;
+	}
+	
+	.footer_contentWrap .link {
+		padding: 28px 0 38px;
+		text-align: center;
+		font-size: 14px;
+	}
+	/*46bd89*/
+	
+	.footer_contentWrap .link>p {
+		margin-bottom: 10px;
+	}	
+	.footer_contentWrap .link>p>span {
+		display: inline-block;
+		border-bottom: 2px solid #2d2d2d;
+		cursor: pointer;
+		margin-right: 16px;
+		padding: 2px;
+	}
+	.footer_contentWrap .link>p>span.show,
+	.footer_contentWrap .link>p>span:hover {
+		border-bottom-color: #46bd89;
+	}
+	
+	.footer_contentWrap .link .aboutUs {
+		display: none;
+	}
+	
+	.footer_contentWrap .link div a {
+		margin-right: 28px;
+		color: #dddddd;
+	}
+	
+	.footer_contentWrap .link div a:hover {
+		color: #46bd89;
+	}
+	
+	.footer_contentWrap .qrcode {
+		position: absolute;
+		right: 20px;
+		top: -15px;
+		text-align: center;
+	}
+	
+	.footer_contentWrap .qrcode img {
+		width: 100px;
+		height: 100px;
+		margin-bottom: 8px;
+	}
+</style>
+
+<div class="banner">
+	<section id="J_publicize" class="publicize" style="background: #31b3e6;">
+		<div class="pub-slides">
+			<!--如果再加一个数据，就再加一个a标签，要设置data-color-->
+			<a hidefocus="true" href="" data-color="#31b3e6" class="pub-slides-img" target="_blank"><img src="http://pic3.ablesky.cn/content/pic/album/2017/11/29/4478210e-3c57-421b-b64d-df6d7711c4cc.png" /></a>
+			<a hidefocus="true" href="" data-color="#31b3e6" class="pub-slides-img" target="_blank"><img src="http://pic3.ablesky.cn/content/pic/album/2017/11/29/4478210e-3c57-421b-b64d-df6d7711c4cc.png" /></a>
+			<a hidefocus="true" href="" data-color="#31b3e6" class="pub-slides-img" target="_blank"><img src="http://pic3.ablesky.cn/content/pic/album/2017/11/29/4478210e-3c57-421b-b64d-df6d7711c4cc.png" /></a>
+		
+		</div>
+	</section>
+</div>
+<div class="part_two minWidth">
+	<div class="future_contentWrap">
+		<div class="clearfix">
+			<p class="tit1">前景开阔，大有可为 </p>
+			<em class="tit2"></em>
+		</div>	
+		<div class="futureDes">
+			<div>
+				<p>中国是人口大国，随着我国老龄化、疾病年轻化的不断扩大，市场对医、药、护等医务人员的需求极速增加。同时，随着十三五规划的不断推进，我国在医疗、健康领域不断实施新政，严格管控行业准入，严厉打击非法行医，严惩徇私舞弊行为。</p>
+       			<p>据统计，我国每年医学资格类考试（含执业医师、执业药师、护士执业、卫生职称）共有近400万考生，市场份额高达100亿！在政策推动以及通过率整体不足20%的情况下，医考培训市场需求强烈，行业发展机遇空前！</p>
+			</div>
+			<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/27/a6bb53f7-3ce0-41d1-9cf5-ca625901261c.png" alt="" class="lefttop" />
+			<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/27/3193e1c6-171f-450f-9bcc-f6deb6810603.png" alt="" class="rightbottom" />
+		</div>
+	</div>
+</div>
+<div class="part_three minWidth">
+	<div class="student_content">
+		<div class="clearfix">
+			<p class="tit1">品牌铸造，百万考生医考首选 </p>
+			<em class="tit2"></em>
+		</div>
+		<div class="student_contentWrap">
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/4e4e9d28-0000-49ee-9d32-6cd03303ceb3.png"/></dt>
+				<dd>
+					<p class="title">品牌实力</p>
+					<p>国家高新技术企业<br/>十年教育沉淀</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/0c76c213-ba4c-461e-9e33-0aa226eb80d0.png"/></dt>
+				<dd>
+					<p class="title">专业研发</p>
+					<p>资深专业研发团队<br/>集结行业精英</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/5f071a31-4f7b-496f-ad28-060b12b3b2a7.png"/></dt>
+				<dd>
+					<p class="title">匠心教学</p>
+					<p>品质为先<br/>专业打造高质量教学</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/9807f05c-dcf4-4a79-ba44-876cb44a69de.png"/></dt>
+				<dd>
+					<p class="title">独家资料</p>
+					<p>能力独家名师亲编<br/>每一个考点均来自躬亲实践</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/bc73d5fc-dd38-4eb2-a85b-4cbf6f1ca2b2.png"/></dt>
+				<dd>
+					<p class="title">能力名师</p>
+					<p>汇聚行业品牌名师<br/>及能力独家特色名师</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/42b8e103-42d7-41e9-9e66-b20410ad39d3.png"/></dt>
+				<dd>
+					<p class="title">服务领先</p>
+					<p>高标准专业教辅服务<br/>引领教辅风向标</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/6ac9c3f6-4ae4-476e-ba87-5673fb84c346.png"/></dt>
+				<dd>
+					<p class="title">技术支持</p>
+					<p>能力网校+能力直播<br/>+能力医考APP<br/>+在线考试系统</p>
+				</dd>
+			</dl>
+			<dl>
+				<dt><img src="http://pic6.ablesky.cn/content/pic/album/2017/11/27/e132d01d-5827-4410-aa2c-175c5251d9b6.png"/></dt>
+				<dd>
+					<p class="title">高通过率</p>
+					<p>全方位立体式专业教学<br/>通过率高达90%以上</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<div class="part_four minWidth">
+	<div class="advantage_content">
+		<div class="clearfix">
+			<p class="tit1">能力医考独家代理优势 </p>
+			<em class="tit2"></em>
+		</div>	
+		<div class="advantage_contentWrap">
+			<!--<img src=""/>-->
+			<div class="advantage">
+				<p class="title">拥有独立域名网校，自主管理</p>
+				<p>网校包含总部当年全部最新网课，<br/>用户量及运营状况可后台自行查询，<br/>自主经营，所得利润不与总部分成。</p>
+			</div>
+			<div class="advantageList">
+				<div class="one">
+					<p class="bold">可使用自主品牌打造自己的教育品牌</p>
+					<p>告别为他人作嫁衣裳，打造专属自<br/>营品牌，更利于生源推广。</p>
+				</div>
+				<div class="two">
+					<p class="bold">提供一站式解决课程包，教学一步搞定</p>
+					<p>教学安排、师资、服务一步搞定，<br/>根据授课模式及讲师级别灵活分类<br/>自由组合，享受折扣优惠</p>
+				</div>
+				<div class="three">
+					<p class="bold">全方位招生支持，快速抢占市场</p>
+					<p>提供预习班在线直播，协助快速<br/>抢占当地市场可支持当地面授、<br/>直播公开课讲座</p>
+				</div>
+				<div class="four">
+					<p class="bold">全部图书教材享受最低优惠价</p>
+					<p>能力医考精品图书享受全网低价，<br/>骤降成本，收益最大化！</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="part_five minWidth">
+	<div class="corporate_wrap">
+		<div class="clearfix">
+			<p class="tit1">合作条件 </p>
+			<em class="tit2"></em>
+		</div>
+		<div class="corporate_contentWrap">
+			<p>1.热爱教育行业，认同能力医考教育理念。<br/>2.有良好的社会资源和商业信誉，具备业务开展能力，拥有某个地区医药行业客户的业务渠道关系优先。<br/>3.有一定的商业运营经验，有一定的互联网接触经验。<br/>4.熟悉当地地区经济状况和城市规划、发展情况，拥有并能落实考生资源者优先。</p>
+		</div>
+	</div>
+</div>
+<div class="part_six minWidth">
+	<div class="corporateprocess_wrap">
+		<div class="clearfix">
+			<p class="tit1">合作流程 </p>
+			<em class="tit2"></em>
+		</div>
+		<div class="corporateprocess_contentWrap">
+			<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/27/3c9493c0-6795-4cb5-a646-e8d341184717.png"/>	
+		</div>
+	</div>
+</div>
+
+<div class="part_bigEvent minWidth">
+	<div class="bigEvent_wrap">
+		<div class="clearfix">
+			<p class="tit1">能力医考教育生态圈大事记 </p>
+			<em class="tit2"></em>
+		</div>
+		<div class="bigEvent_contentWrap">
+			<div class="event_con">
+				<div class="con">
+					<a class="img" target="_blank" href="http://www.nengliyk.com/org/21139_zx_82503">
+						<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/29/ae9f9e5a-8174-40c7-9305-2a21121fa81f.jpg" alt="">
+					</a>
+					<a class="title" href="http://www.nengliyk.com/org/21139_zx_82503" target="_blank">万千“小”机构，重塑“大”格局——记2017新时代精英交流会</a>
+				</div>
+				<div class="con">
+					<a class="img" target="_blank" href="http://www.nengliyk.com/org/21139_zx_78356">
+						<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/29/356e31d9-d6fa-495d-ac34-19bc9c55ae97.jpg" alt="">
+					</a>
+					<a class="title" href="http://www.nengliyk.com/org/21139_zx_78356" target="_blank">重塑医考行业，能力医考新品发布重磅来袭！</a>
+				</div>
+				<div class="newsAll">
+					<div class="img_box"><img src="" alt="待给图"></div>
+					<div class="newsbox">
+						<ul class="newsList">
+							<li class="first clearfix">
+							   <em></em>
+							   <a href="http://www.nengliyk.com/org/21139_zx_81725" target="_blank">
+							   		<span class="newstitle">乘着互联网+教育的时代大潮，能力医考劈风斩浪领航医考教育</span>
+						   	  </a> 
+					   	   </li>
+							<li class="clearfix">
+							   <em></em>
+							   <a href="http://www.nengliyk.com/org/21139_zx_81725" target="_blank">
+							   		<span class="newstitle">乘着互联网+教育的时代大潮，能力医考劈风斩浪领航医考教育</span>
+						   	  </a> 
+					   	   </li>
+					   	   <li class="clearfix">
+							   <em></em>
+							   <a href="http://www.nengliyk.com/org/21139_zx_81725" target="_blank">
+							   		<span class="newstitle">乘着互联网+教育的时代大潮，能力医考劈风斩浪领航医考教育</span>
+						   	  </a>  
+					   	   </li>
+					   	   <li class="clearfix">
+							   <em></em>
+							   <a href="http://www.nengliyk.com/org/21139_zx_81725" target="_blank">
+							   		<span class="newstitle">乘着互联网+教育的时代大潮，能力医考劈风斩浪领航医考教育</span>
+						   	  </a> 
+					   	   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="part_schools minWidth" style="padding-top: 0;">
+	<div class="clearfix" style="background: #fff;padding-top: 50px;padding-bottom: 35px;">
+		<p class="tit1">数万网校已合作，你却在等蓝海变红 </p>
+		<em class="tit2"></em>
+	</div>
+	<div class="schools_wrap">
+		<div class="schools_contentWrap">
+			<div class="sch_info">
+					<div class="course-list web-school clearfix">
+						<div class="leftdispose dispose"></div>
+						<div class="school-list">
+							<ul class="teacher">
+								<li>
+									<a href="http://bj.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic3.ablesky.cn/content/pic/album/2017/09/26/3d0cf8d0-d20a-45a9-bc4a-c0ecfe37b56b.png">
+									</a>
+									<span>北京能力医考</span>
+								</li>							
+								<li>
+									<a href="http://tree.nengliyk.com" target="_blank" class="teacher-head">
+										<img src="http://pic4.ablesky.cn/content/pic/org_home_page_logo/2017/10/09/f9ebe5e4-93dd-4e53-a9fa-73d772fdd2b8.png">
+									</a>
+									<span>好大一棵树呼和浩特培训中心</span>
+								</li>
+								<li>
+									<a href="http://xinglinqiyuan.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic3.ablesky.cn/content/pic/album/2017/09/26/5351e250-2af4-4d2e-81cb-3f33d2a4e16f.png">
+									</a>
+									<span>杏林启源</span>
+								</li>								
+								<li>
+									<a href="http://peixun.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic3.ablesky.cn/content/pic/album/2017/09/26/5670234e-b0ad-43fe-b2a5-df20688c75bf.png">
+									</a>
+									<span>资格考试培训网</span>
+								</li>
+								<li>
+									<a href="http://boaoyk.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic3.ablesky.cn/content/pic/album/2017/09/26/743d6825-f673-48ea-a1ff-ba92ed484cbd.png">
+									</a>
+									<span>搏傲教育</span>
+								</li>
+								<li>
+									<a href="http://www.ablesky.com/yikaotongjiaoyu" target="_blank" class="teacher-head">
+										<img src="http://pic4.ablesky.cn/content/pic/org_home_page_logo/2016/12/05/3a7c8492-1f98-4bbf-9edf-3f5388a195fa.png">
+									</a>
+									<span>医考通教育</span>
+								</li>							
+								<li>
+									<a href="http://hbsajy.nengliyk.com" target="_blank" class="teacher-head">
+										<img src="http://pic6.ablesky.cn/content/pic/org_home_page_logo/2017/10/10/21de0bf1-5dd8-4e05-8833-e18bab0422b1.png">
+									</a>
+									<span>尚岸教育</span>
+								</li>
+								<li>
+									<a href="http://zhuosheng.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic2.ablesky.cn/content/pic/org_home_page_logo/2017/10/25/3eaccc24-0cad-4234-bfcb-ecaed959db80.png">
+									</a>
+									<span>卓升医考</span>
+								</li>																			
+								<li>
+									<a href="http://wx.xinxuefu.cn/" target="_blank" class="teacher-head">
+										<img src="http://pic6.ablesky.cn/content/pic/org_home_page_logo/2017/10/25/37357ccc-1530-4ea9-b20d-2e136139ed61.png">
+									</a>
+									<span>新学府教育</span>
+								</li>	
+								<li>
+									<a href="http://cyzhongyu.nengliyk.com/" target="_blank" class="teacher-head">
+										<img src="http://pic5.ablesky.cn/content/pic/org_home_page_logo/2017/10/31/0f031a78-e435-4b43-b6e4-32282d32f882.png">
+									</a>
+									<span>朝阳中域教育</span>
+								</li>	
+								<li>
+									<a href="http://kc.bailaoshi.net/" target="_blank" class="teacher-head">
+										<img src="http://pic1.ablesky.cn/content/pic/org_home_page_logo/2016/01/19/b3e846f5-5b6a-4780-ba89-b13aa8c3b24f.png">
+									</a>
+									<span>创新医考培训中心</span>
+								</li>	
+							</ul>
+						</div>
+						<div class="rightdispose dispose"></div>
+					</div>
+
+				</div>
+			</div>
+	</div>
+	<div class="schools_news">
+		<div class="sch_news">
+			<ul class="newshcool">
+				<li><span>恭喜网校bjnengliyk加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校xinglinqiyuan加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校boao加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校peixun100加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校yikaotongjiaoyu加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校hbsajy加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校gzzxjy加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校haodayikeshu加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校xinxuefu加入能力医考,向成功更近一步!</span></li>
+				<li><span>恭喜网校Medicaldream加入能力医考,向成功更近一步!</span></li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+
+<div class="footer_wrap minWidth">
+	<div class="footer_contentWrap">
+		<p class="hotline">全国热线电话：010-62660276</p>
+		<div class="link">
+			<p><span class="show">友情链接</span><span>关于我们</span></p>
+			<div class="friendLink">
+				<a target="_blank" href="http://bj.nengliyk.com">北京能力医考</a>
+				<a target="_blank" href="http://xinglinqiyuan.nengliyk.com">杏林启源</a>
+				<a target="_blank" href="http://boaoyk.nengliyk.com">搏傲教育</a>
+				<a target="_blank" href="http://zhuosheng.nengliyk.com">卓升医考</a>
+				<a target="_blank" href="http://hbsajy.nengliyk.com">尚岸教育</a>
+				<a target="_blank" href="http://wx.xinxuefu.cn">新学府教育</a>
+				<a target="_blank" href="http://cyzhongyu.nengliyk.com">朝阳中域教育</a>
+				<a target="_blank" href="http://www.bailaoshi.net">创新医考培训中心</a>
+			</div>
+			<div class="aboutUs">
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81622">企业历程 </a>
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81625">董事长寄语</a>
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81725">合作代理</a>
+				<a href="javascript:;" class="online_inquire">在线咨询</a>
+			</div>
+		</div>
+
+		<div class="qrcode">
+			<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/23/f770d053-42a6-4f85-8d06-6a9c23baad86.png" alt="" />
+			<p>能力医考官方公众号</p>
+		</div>
+	</div>
+
+</div>
+
+<script src="https://qiyukf.com/script/464d2df4465630688d4cbae8cfed6172.js" defer async></script>
+
+<script>
+	require(['jquery','common/global'], function($) {
+		//在线咨询
+		$('.online_inquire').on('click', function() {
+			if($('#YSF-BTN-HOLDER')) {
+				$('#YSF-BTN-HOLDER').trigger('click')
+			}
+		});
+		//banner轮播
+		var isHover = false;
+		require(['lib/jquery/jquery.slides'], function() {
+			var $publicize = $('#J_publicize');
+			$pubSlides = $('.pub-slides');
+
+			$publicize.slides({
+				hoverPause: true,
+				pause: 1, // pause set value 0 || false, after hoverPause will not make slides 
+				crossfade: true,
+				container: 'pub-slides',
+				pagination: true,
+				currentClass: 'current',
+				paginationClass: 'pub-pagination',
+				play: 3000,
+				effect: 'fade',
+				animationStart: function(e) {
+					if(!isHover) {
+						if($pubSlides.find('.pub-slides-img').length == e) {
+							e = 0;
+						}
+						var color = $pubSlides.find('.pub-slides-img').eq(e).attr('data-color');
+						$publicize.animate({
+							backgroundColor: color
+						}, 350);
+						$publicize.css('background', color)
+					}
+				},
+				animationComplete: function(e) {
+
+				},
+				slidesLoaded: function() {
+				}
+
+			});
+			$('ul.pub-pagination li a', $publicize).each(function() {
+				var $this = $(this),
+					pageNumStr = $this.text();
+				var color = $pubSlides.find('.pub-slides-img').eq(pageNumStr - 1).attr('data-color');
+				$this.attr('data-color', color);
+				if(parseInt(pageNumStr) < 10) {
+					$this.html('0' + pageNumStr);
+				}
+
+				$this.click(function() {
+					var color = $this.attr('data-color');
+					$publicize.animate({
+						backgroundColor: color
+					}, 150);
+				});
+				$this.on('mouseover', function() {
+					isHover = true;
+					$this.click();
+				});
+				$this.on('mouseout', function() {
+					isHover = false;
+				});
+			});
+
+			// 当浏览器窗口大小改变时，设置显示内容的高度
+			var $slidesImg = $pubSlides.find('.pub-slides-img');
+			$slidesImg.css({
+				'width': $(document).width() + 'px'
+			});
+			$(window).on('resize', function() {
+				$slidesImg.css({
+					'width': $(document).width() + 'px'
+				});
+			});
+		});
+		
+		function schoolRecommend(){
+			// 网校推荐	 
+			var repeat,
+				len=$('.teacher li').length,
+			 	marginw=parseInt($('.teacher li:first').css('marginLeft')),
+			 	movew=$('.teacher li:first').outerWidth()+marginw,
+			 	liw=$('.teacher li:first').outerWidth(),
+			 	ulw=liw*len;
+			 	$('.teacher').css({'width':ulw+'px'});
+			 	$('.teacher').find('li').eq(3).addClass('on');
+		
+			function focusPicture(){
+				var w=$('.teacher li:first').width(),
+					len=$('.teacher li').length;
+					$('.teacher').css({'width':w*len+'px'})
+					$('.school-list').hover(function(){
+						clearInterval(repeat)					  
+					},function(){
+						repeat=setInterval(function(){
+							$('.teacher').stop().animate({'marginLeft':-w},1000,function(){
+								$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+								$('.teacher li:first').appendTo($('.teacher'));
+								$('.teacher').css({'margin-left':0})
+							})
+						},3000)
+					}).trigger('mouseleave')	
+					$('.dispose').mouseover(function(){
+						clearInterval(repeat);
+					})
+					$('.dispose').mouseout(function(){
+						repeat=setInterval(function(){
+							$('.teacher').stop().animate({'marginLeft':-w},1000,function(){
+								$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+								$('.teacher li:first').appendTo($('.teacher'));
+								$('.teacher').css({'margin-left':0})
+							})
+						},3000)
+					})
+				}
+				focusPicture();
+				function nextPic(){
+					$('.teacher li:first').stop().animate({'marginLeft':-movew},1000,function(){
+						$(this).css({'marginLeft':marginw}).appendTo($('.teacher'))	;
+					})
+				}
+				function prevPic(){
+					$('.teacher li:last').prependTo($('.teacher'));
+					$('.teacher li:first').css({'marginLeft':-movew}).stop().animate({'marginLeft':marginw},1000);
+					$('.teacher .on').prev('li').addClass('on').siblings().removeClass('on');
+				}
+				$('.leftdispose').click(function(){
+					if(!$('.teacher li:first').is(':animated')){
+						prevPic()
+					}
+				})
+				$('.rightdispose').click(function(){
+					if(!$('.teacher li:first').is(':animated')){
+						nextPic();
+						$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+					}
+				})
+				$('.teacher-head').hover(function(){//鼠标滑过
+		
+					$(this).parent().addClass('on').siblings().removeClass('on');
+				})
+				
+		}
+		function infoShow(){
+		    //新注册网校
+	    	var lis=$('.newshcool').find('li');
+	    	var wid=0,totalwidth=0;
+	    	lis.each(function(){
+	    		wid = $(this).width();
+	    		wid = parseInt(wid);
+	    		totalwidth+=wid;
+	    	})
+	    	$('.newshcool').width(totalwidth);
+	    	$('.newshcool').height(40);
+	    	var targetDistance = totalwidth-$('.newshcool').parent('.sch_news').width();
+	    	
+	    	animate1($('.newshcool')[0],targetDistance);
+	    	 
+			//生态圈大事记
+	    	var firstNew = $('.newsList').find('.first');
+	    	var li = firstNew.clone();
+	        $('.newsList').append(li);
+	    	var  allnews=$('.newsList').find('li'); 
+	    	var height=0,totalheight=0,firstheight=0;
+	    	allnews.each(function(){
+	    		firstheight=$(this).height();
+	    		height = $(this).height();
+	    		height = parseInt(height);
+	    		totalheight += height;
+	    	})
+	    	$('.newsList').height(totalheight);
+	    	var targetDistance = totalheight-$('.newsbox').height();
+	    	
+	    	animate2($('.newsList')[0],targetDistance ,firstheight);
+          	function animate2(obj, target, firstheight) {
+	 			clearInterval(timer);
+	 	        var timer = setInterval(function () {
+	 	            var leader = obj.offsetTop;
+	 	            var step = -firstheight;  
+	 	            step = leader < target ? step : -step;          
+	 	            if (Math.abs(target - leader) >= Math.abs(step)) {
+	 	                leader = leader + step;
+	 	                obj.style.top = leader + "px";
+	 	            } else {
+	 	                obj.style.top = target + "px";
+	 	                clearInterval(timer);
+	 	            }
+	 	            if(leader < -target){
+	
+	 	           	 obj.style.top = 0 + "px";
+	 	           }
+	 	        },4000);
+	 	    }
+	     	    	 
+	    	function animate1(obj, target) {
+				clearInterval(timer);
+		        var timer = setInterval(function () {
+		            var leader = obj.offsetLeft;
+		            var step = -2;  
+		            step = leader < target ? step : -step;          
+		            if (Math.abs(target - leader) >= Math.abs(step)) {
+		                leader = leader + step;
+		                obj.style.left = leader + "px";
+		            } else {
+		                obj.style.left = target + "px";
+		                clearInterval(timer);
+		            }
+		            if(leader < -target){
+		           	 obj.style.left = 0 + "px";
+		           }
+		        },30)
+		    }
+		}
+		infoShow();
+		schoolRecommend();
+		//友情链接切换
+		$('.footer_contentWrap .link>p>span').on('click', function() {
+			var _this = $(this);
+			_this.addClass('show').siblings().removeClass('show');
+			var index = $('.footer_contentWrap .link>p>span').index(this);
+			$('.footer_contentWrap .link div').eq(index).css('display', 'block').siblings('div').css('display', 'none');
+		})
+	})
+</script>

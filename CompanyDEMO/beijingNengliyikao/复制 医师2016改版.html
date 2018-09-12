@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>执业医师</title>
+	<style type="text/css">
+html, body{background:#f2f2f2 !important; font-size: 14px!important;}
+body header{ font-size:14px;}
+.time a:hover{color:#555;}
+.lay-custom-page{width:100%  !important;  margin-top:0 !important; }
+.org-header-wrap{margin-bottom:0 !important;}
+/*.agent-wrap{margin-left:615px !important;}*/
+.fixed-accessories{margin-left:615px;}
+
+*{margin:0; padding:0; list-style:none; font-family:"微软雅黑"; }
+a{outline: none; text-decoration:none; color:#555;}
+a:active {star:expression(this.onFocus=this.blur());}
+a:hover{ color:#63ae1f;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{display:block; content:''; clear:both;}
+table{ empty-cells:show; border-collapse: collapse; margin:0 auto; 
+} 
+#J_fixedTools{ display:none;}
+
+/*改版*/
+.content-wrap{  width:1200px; height:auto; margin:0 auto;}
+.banner{ width:1200px; height:120px; margin:20px 0 0 0;}
+.park1{ width:1200px; margin:20px 0 0 0;}
+.park1 .p1left{ width:295px; height:390px; float:left; margin:0 19px 0 0;}
+.park1 .cutdown{height: 98px;background:url('http://pic5.ablesky.cn/content/pic/album/2016/12/14/9bad7df2-220d-4f8a-b9c9-f6bd615d9818.jpg');text-align: center;font-size: 18px;color:#fff}
+.park1 .cutdown p{margin: 0;padding: 0}
+.park1 .cutdown span{font-size: 25px;color: #ffe400;line-height: 18px;}
+.park1 .cutdown .jineng{padding-top: 16px}
+.park1 .cutdown .yikao{margin-top: 14px}
+.park1 .p1left .p1ltop{ width:275PX; border:#e6e6e6 1px solid; background:#FFF; padding:9PX;margin-top: 16px;}
+.title{ color: #555; height: 22px; line-height: 20px; border-left: 2px solid #63ae1f; margin: 1px 0 10px -10px; padding-left: 11px; font-size:16px;}
+.park1 .p1left .tool{ /*height: 18px;*/ line-height: 18px; margin-bottom: 6px; font-size: 12px; color: #656565; padding-left: 3px;}
+.park1 .p1left .tool a:hover{ color:#63ae1f;}
+.park1 .p1left .tool .tit{ float:left; margin-right: 3px;}
+.park1 .p1left .tool .alink{float:left;margin-left: 10px;}
+.park1 .p1left .tool p{font-size: 14px;font-weight: 700; margin-bottom:3px}
+.park1 .p1left .tool .tit{ width: 36px; text-align: center; height: 18px; line-height: 18px; background: #63ae1f; display: inline-block; color: #fff; position: relative;}
+.park1 .p1left .tool .tit em{ width: 3px; height: 6px; background: url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/cb98c612-88ef-466a-a49d-67509589fca0.png) no-repeat; position: absolute; left: -3px; top: 6px;}
+.park1 .p1left .tel{ margin-top: 10px; width: 275px; text-align: center; background: url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/fc9833d2-3bcf-4adc-9fdf-7ca8c554b8dc.png) no-repeat 26px -180px; height:32 px;}
+.p1center{ width: 590px; height: 388px; float: left; margin-right: 19px; overflow:hidden; position: relative;background-color: #fff;border: 1px solid #e6e6e6;}
+.p1center .topconsult{padding: 20px}
+.p1center .topconsult .csimg{display: block;width: 230px;height: 130px;float:left;}
+.p1center .topconsult .cstext{width:303px;height: 120px;float: left;padding: 10px 5px 0 12px;background-color: #f4f4f4;position: relative;}
+.p1center .topconsult .cstext p{line-height: 17px;font-size: 14px;}
+.p1center .cstext h3{padding-left: 6px;font-weight:blod;font-size: 16px;color: #ff0000;}
+.p1center .cstext .details{position: absolute;right: 12px;bottom:0;}
+.p1center .list{padding:0 10px;}
+.p1center .list h3{ width:548px; text-align:center; font-size:16px; color:#F00; font-weight:blod; line-height:26px;}
+.p1center .list li{width: 570px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.p1center .list li a{ font-size:14px; color:#555; line-height:22px; cursor:pointer;}
+.p1center .list a:hover{color: #63ae1f}
+.p1center .list li em{color: #818181}
+.p1right{ width:253px; height:auto; float:right; padding:10px 10px 13px 10px; border:#e6e6e6 1px solid; background:#fff;}
+.xqurl{ font-size:14px; float:right; display:block; font-weight:normal; cursor:pointer;}
+.xqurl:hover{ color:#63ae1f;}
+.movepic{ width:255px; height:107px; overflow:hidden;}
+.p1right .movepic .picbox{ width:2000px; height:107px; overflow:hidden;}
+.p1right .movepic .picbox li{ float:left; margin-left:0; list-style:none;}
+.p1right .movepic .picbox li img{ width:255px; height:107px; display:block;}
+.p1right .cmtool li{height: 50px;background-color: #f4f4f4;margin-bottom: 10px;}
+.p1right .cmtool span{display: block;width: 50px;height: 50px;float: left;}
+.p1right .cmtool span.ableyk{background:url('http://pic5.ablesky.cn/content/pic/album/2016/12/14/962bf59b-5568-4818-9030-503b71c0aabe.png') no-repeat;}
+.p1right .cmtool span.ablezb{background:url('http://pic5.ablesky.cn/content/pic/album/2016/12/14/f743f234-1f5b-41e8-b724-b40bd7c725a5.png') no-repeat;}
+.p1right .cmtool span.ableplay{background:url('http://pic5.ablesky.cn/content/pic/album/2016/12/14/877faeb1-4633-4d05-b980-1e63765a4aa7.png') no-repeat;}
+.p1right .cmtool a{display: block;padding-left:30px;line-height: 50px;float: left;font-size: 18px;}
+.bz{ font-size:14px; color:#63ae1f; line-height:30px; display:block;}
+
+.park3{margin-top:20px;width:100%; color:#555;}
+.park3 .p3center{width:1200px; margin:0 auto}
+.park3 .p3center .tit{line-height:24px; font-size: 20px; color:#555; border-left: 2px solid #63ae1f; padding-left: 18px; margin:20px 0 0 -1px; font-weight:bold;}
+.left2{width:1200px; padding-bottom:10px; border:1px solid #e6e6e6;background: #fff;}
+.left2 .dttitle{font-size: 16px;margin-top: 22px;margin-left: 20px;color: #c7c7c7;}
+.newleft2{ width:903px;}
+.park3 .options{margin:17px 0 0 30px;font-size:12px;} 
+.park3 .options li{padding:4px 10px 0;text-align:center;cursor:pointer; width:auto; height:auto; border:none; font-size:16px; color:#aaa;}
+.park3 .options li:hover,.park3 .options li.show,.park3 .options li.on{color:#63ae1f; font-weight:bold;}
+.left2 .course .img2{width:273px; height:148px; border:#f2f2f2 1px solid;}
+.left2 .kclist li{width:275px; height:202px; border:1px solid #fff; padding:10px 9px;}
+.left2 .kclist li .aa{ height:40px; overflow:hidden;}
+.left2 .kclist li a:hover,.left2 .kclist li p:hover{ color:#63ae1f;}
+.left2 .kclist li:hover{border:1px solid #63ae1f;} 
+.course .pr-sc{line-height:35px; font-size:14px; margin-top:10px;}
+.course .pr-sc .price{color:#ff0000;}
+.course .name{height:36px; margin-top:7px;line-height:18px; font-size:16px; color:#555;}
+.course .name .n-price{color:#ff0808;font-size: 12px;}
+.course .keshi{font-size:12px; color:#aaa;}
+.course .scool{font-size:14px; color:#aaa;}
+.p3right{width:273px; height:528px; margin-left:10px; border:1px solid #e6e6e6; background:#fff;}
+.p3right .title{ margin: 10px 0 10px -1px;}
+.p3right .xqurl{ padding-right:10px;}
+.p3right dl{ width:233px; height:80px; border:#fff 1px solid; margin:0 auto; padding:10px;}
+.p3right dl:hover{ border:#63ae1f 1px solid;}
+.p3right dl dt{ width:80px; height:80px; float:left;}
+.p3right dl dt img{ width:80px; height:80px;}
+.p3right dl dd{ width:143px; height:80px; float:right;}
+.p3right dl dd h3{ font-size:14px; font-weight:normal; color:#F00; line-height:20px; height:20px; overflow:hidden;}
+.p3right dl dd span{ display:block; /*height:60px; overflow:hidden;*/}
+.p3right dl dd span.zw{ height:20px; overflow:hidden;}
+.p3right dl dd span.intro{ height:40px; overflow:hidden;}
+
+.table{ width:1180px; height:auto; margin:0 auto; padding-bottom:10px;}
+table select{font-size: 12px;}
+.table table{ width:1156px; height:auto; border-left:#e6e6e6 1px solid; border-top:#e6e6e6 1px solid; margin-top:20px;}
+.table table th{ width:auto; height:37px; border-right:#e6e6e6 1px solid; border-bottom:#e6e6e6 1px solid; font-size:18px; color:#63ae1f; padding:10px 3px;}
+.table table td{ border-right:#e6e6e6 1px solid; border-bottom:#e6e6e6 1px solid;text-align:center; padding:10px 3px;}
+/*.table table td a{ display:block; width:76px; height:24px; line-height:24px; color:#63ae1f; background: #FFF url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat; border:#63ae1f 1px solid; margin:10px auto; padding-left:10px;}
+.table table td a.con{ background-position:10px -87px;}
+.table table td a.buy{ background-position:10px -133px;}
+.table table td a:hover{ background: #63ae1f url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat; color:#FFF;}
+.table table td a.con:hover{ background-position:10px 4px;}
+.table table td a.buy:hover{ background-position:10px -42px;}*/
+.table h4{ margin:10px auto 20px; color:#63ae1f; text-align:center; font-size:16px;}
+.table .tbgather table th{ background:none; color:#63ae1f}
+
+.bigtit{ color:#555; width:1200px; text-align:center; clear:both; margin:28px 0 20px 0; font-size:20px;}
+.tit2{ float:right; padding:20px 20px 0 0; font-size:16px;}
+.tit2 em{ color:#F00;}
+
+
+/* 旧版本的tab选项 */
+
+.tab{ width:auto; height:39px; border-left:#63ae1f 1px solid; margin-top:20px;}
+.tab>li{ width:190px; height:38px; line-height:38px; border-top:#63ae1f 1px solid; border-right:#63ae1f 1px solid; text-align:center; border-bottom:#63ae1f 1px solid; float:left; color:#63ae1f; position:relative; cursor:pointer;}
+.tab>li>em{
+	width:16px;
+	height:9px;
+	display:block;
+	position:absolute; 
+	right:10px;
+	top:14px;
+	background:url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/6fdd51a8-f9e0-4b65-beef-20c0c7a48b2e.png) no-repeat;}
+.tab>li>span{ font-size:16px; display:block; height:38px; text-align:center;}
+.tab>li:hover,.tab>li.show{ color:#fff; background: #63ae1f;}
+.tab>li:hover em,.tab>li.show em{ background: url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/6fdd51a8-f9e0-4b65-beef-20c0c7a48b2e.png) no-repeat 0 -31px;}
+.tab li>ul{ display:none; position:absolute; left:0; top:39px; z-index:999;}
+.tab li>ul li{ width:190px; height:30px; line-height:30px; background:#f4f4f4; color:#63ae1f; text-align:center; padding:0; border-top:1px solid #fff; cursor:pointer;}
+.tab li>ul li:hover,.tab li>ul li.cli{ background:#63ae1f; color:#FFF; border:none;}
+.courseTab>li,.liveTab>li{ width:190px; padding:0; color:#63ae1f;}
+
+
+.table .table2 th{ color:#63ae1f; background:#FFF; height:40px; line-height:40px;}
+.tbgather>div{ display:none; position:relative;}
+.tbgather .buyCourse{display:block;text-align:center;padding:30px 0 10px}
+.tbgather div.bigshow{ display:block}
+.tbgather div .check{ position:absolute; right:10px; top:60px;} 
+
+
+.sign{ width:588px; height:228px; border:#e6e6e6 1px solid; background:#FFF; margin-bottom:20px; overflow:hidden;}
+.signcon{ width:538px; margin:0 auto; margin-top:20px;}
+.signcon img{ float:left; margin-right:20px; width:255px; height:150px;}
+.signcon .main{ float:left; width:260px; height:150px; position:relative;}
+.signcon .main h3{ font-size:14px; font-weight:normal; color:#555; padding-bottom:10px;}
+.signcon .main .price{ left:0; bottom:0; position:absolute;}
+.signcon .main .price em{ color:#F00;}
+.signcon .main a.buy{ display:block; width:56px; height:24px; line-height:24px; color:#63ae1f; background: #FFF url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat 10px -133px; border:#63ae1f 1px solid; padding-left:20px; text-align:center; position:absolute; right:0; bottom:0;}
+.signcon .main a.buy:hover{ background: #63ae1f url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat 10px -42px; color:#FFF;}
+
+.coalConter .left{ width:45px; height:40px; background:url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/d6d86eab-d39f-4b74-ad4a-35919dcae958.png) no-repeat 20px 0; float:left; margin-top:100px;cursor:pointer;}
+.coalConter .left:hover{ background-position:20px -230px;}
+.coalConter .right{ width:40px; height:40px; background:url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/d6d86eab-d39f-4b74-ad4a-35919dcae958.png) no-repeat 0 -117px; float:right; margin-top:100px;cursor:pointer;}
+.coalConter .right:hover{ background-position:0 -343px;}
+.coalConter .centre{  width:1110px; height:260px; margin:20px 0; float:left; overflow:hidden;}
+.coalConter .path{ width:2000px; display:none;}
+.coalConter .bookshow{ display:block;}
+.coalConter .path li{ width:210px; height:210px; float:left; padding:0; border:0; margin:0 5px; border:#e6e6e6 1px solid; background:#f4f4f4;}
+.coalConter .path li:hover{ border:#63ae1f 1px solid;}
+.coalConter .path li img{ width:200px; height:200px; padding:5px 0 0 5px;}
+.coalConter .path li span{ width:210px; text-align:center; display:block;}
+.coalConter .path li:hover span{ color:#63ae1f;}
+.coalConter .path li span.post{ line-height:16px; padding-top:16px; font-size:14px;}
+
+.p5notice h3{padding: 12px 9px 0 9px;}
+.p5notice h3 .subtitle{font-size: 22px;float: left;}
+.p5notice h3 .more{font-size: 14px;float: right;margin-top: 12px;font-weight: 400;}
+.p5left{ width:358px; height:420px; margin:20px 10px 0 10px;border:1px solid #e6e6e6;}
+.p5left ul{height: 255px;overflow: hidden;}
+.p5left ul li{width: 328px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+
+.tx{ width:55px; font-size:18px; height:154px; background:#f5ffec; color:#63ae1f; writing-mode:lr-tb}
+.tx span{ width:20px; margin:0 auto; display:block;}
+.dl{ width:340px; height:90px; background:#f4f4f4; margin:0 auto;margin-top: 10px;}
+
+.dl dt{ width:130px;}
+.dl dt img{display: block;width: 130px;height: 90px;}
+.dl dd{ width:210px;height: 90px;font-size: 14px;position: relative;}
+/*.dl dd a{ display:block; float:right; color:#63ae1f; position:absolute; right:10px; bottom:10px;}*/
+.dl dd p{width: 168px;height: 34px;margin: 12px auto;line-height: 18px;}
+.dl dd .ckdetail{display: block;position: absolute;right: 12px;bottom:8px;}
+.list2{padding:10px 18px 0 3px;}
+.list2 li{ height:31px; line-height:31px; border-bottom: 1px dashed #e5e5e5;padding-left: 9px;}
+.list2 li a:hover{ color:#63ae1f;}
+/*.list2 li.lastli{border-bottom: 0 none;}*/
+.p5center{ width:378px; height:408px; padding:0 10px 10px 10px; margin:20px 10px 0 0; border:#e6e6e6 1px solid;}
+.p5center ul {height: 159px;overflow: hidden;}
+.p5center ul li{width: 348px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.p5right ul{height: 159px;overflow: hidden;}
+.p5right ul li{width: 348px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+/*.p5right ul .lastli{border-bottom: none;}*/
+.list3{padding-top: 0;}
+.list3 li{ height:31px; line-height:31px; border-bottom:#e6e6e6 1px dotted;}
+.p5right{width:378px; height:408px; padding:0 10px 10px 10px; margin:20px 10px 0 0; border:#e6e6e6 1px solid;}
+.p5right h3{position: relative;}
+.p5right h3 .question{position: absolute;left: 135px;top:10px;}
+
+.footer{ width:1200px; height:240px; padding-top:60px; margin:0 auto;}
+.footer .fleft{ width:740px; height:240px; float:left;}
+.footer .fleft .logo{ padding:0 50px 0 20px;}
+.footer .fleft .tellogo{ display:block; padding:80px 0 0 20px;}
+.footer .fleft ul{ padding:20px 20px;}
+.footer .fleft ul li{ float:left;}
+.footer .fleft ul li a{ font-size:16px;}
+.footer .fleft ul li span{ padding:0 10px;}
+.footer .fleft ul li.on a,.footer .fleft ul li:hover a{ color:#1ea5ff; font-weight:bold;}
+.footer .fright dl{ width:220px; float:left;}
+.footer .fright dl dt{ width:130px; margin:0 auto;}
+.footer .fright dl dd{ font-size:16px; line-height:40px; text-align:center;}
+.tkmore{ padding:20px 10px;}
+.table table.setTable{ margin-top:0; border-top:none;}
+.hotList3{ height:240px; overflow:hidden; clear:both;}
+.exemList{ height:180px; overflow:hidden; clear:both;}
+.hot1{ display:block;}
+.hot2{ display:none;}
+
+.examTable2{ display:none;}
+.suspend{ width:184px; height:172px; position:fixed; right:0; bottom:100px;} 
+.suspend a{ width:40px; height:40px; background:url(http://pic6.ablesky.cn/content/pic/album/2016/11/21/ec035e94-95cf-45cf-819c-f64f3f421537.png) no-repeat; display:block; margin:0 0 4px 144px;}
+.suspend a.top{ background-position:0px 0px; display:none;}
+.suspend a.top:hover{ background-position:0px -50px;}
+.suspend a.consult{ background-position:0px -102px;}
+.suspend a.consult:hover{ background-position:0px -153px;}
+.suspend a.tel{ background-position:0px -206px; position:relative;}
+.suspend a.tel:hover{ background-position:0px -258px;}
+.suspend a.tel:hover .telpic{ display:block;}
+.suspend a.code{ background-position:0px -311px; position:relative;}
+.suspend a.code:hover{ background-position:0px -369px;}
+.suspend a.code:hover .codepic{ display:block;}
+.suspend a.apply{ background-position:0px -429px;}
+.suspend a.apply:hover{ background-position:0px -496px;}
+.codepic{ width:110px; height:128px; background:url(http://pic4.ablesky.cn/content/pic/album/2016/11/09/807146db-413e-4775-b164-e6b65bd643ef.png) no-repeat; position:absolute; right:44px; bottom:0px; display:none;}
+.telpic{ width:140px; height:40px; background:url(http://pic4.ablesky.cn/content/pic/album/2016/11/09/bd523891-ec14-4370-bbea-2577f803dd26.png) no-repeat; position:absolute; right:44px; bottom:0px; display:none;}
+/*11月改版*/
+/*.maxTab{ width:1176px;}*/
+.maxTab>li.maxWidth{ width:220px;}
+.maxTab>li.maxWidth>span{ width:220px;}
+.maxTab li.maxWidth>ul li{ width:220px;}
+.sternOPtion a{ display: inline-block; width:138px; height:24px; border:#63ae1f 1px solid; text-align:center; line-height:24px; color:#63ae1f;}
+.sternOPtion a:hover{ background:#63ae1f; color:#FFF;}
+.sternOPtion a.con{ margin:50px 0 0 350px;}
+.sternOPtion a.buy{ margin:50px 0 0 150px;}
+.phar{ display:none;}
+
+
+.buyCourse .buycourse_money{display:inline-block;font-size:16px;color:orange;width:60px}
+.buyCourse a{display:inline-block;width:108px;height:24px;border:#63ae1f 1px solid;text-align:center;line-height:24px;color:#63ae1f;margin-left:30px}
+.buyCourse a:hover{background:#63ae1f;color:#FFF}
+.table .colorR{color:red}
+.table .fontW{font-weight:700}
+.go_to_singup{display:block;width:54px;height:24px;line-height:24px;color:#63ae1f;background:#FFF url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat 10px -133px;border:#63ae1f 1px solid;padding-left:20px}
+.go_to_singup:hover{background:#63ae1f url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat 10px -42px;color:#FFF}
+td>div.first_td,td>div.second_td,td>div.third_td{display:none}
+td>div.bigshow{display:block}
+</style>
+</head>
+<body>
+	<div class="content-wrap">
+	<div class="banner">
+		<a target="_blank" href="http://bj.nengliyk.com/org/8980_m_1380280?f=org_coursecenter" />
+        	<img src="http://pic6.ablesky.cn/content/pic/album/2018/01/05/a93b6a8d-32fe-49b5-896f-978bf66ede7c.png" />
+        </a>
+    </div>
+    <div class="park1">
+    	<div class="p1content clearfix">
+        	<div class="p1left">
+        		<!-- 考试时间倒计时 -->
+        		<div class="cutdown">
+        			<p class="jineng">距离2017年技能考试还有<span></span>天</p>
+        			<p class="yikao">距离2017年医考笔试还有<span></span>天</p>
+        		</div>
+                <div class="p1ltop">
+                	<h3 class="title">报考指南</h3>
+                    <div class="tool clearfix">
+                    	<div class="tit">报名<em></em></div>
+                    	<div class="alink">
+                    		<p>报名时间 : 3月22日-3月10日</p>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#tiaojian">报名条件</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#fangshi">报名方式</a>
+                    	</div>
+                    </div>
+                    <div class="tool clearfix">
+                    	<div class="tit">技能考试<em></em></div>
+                    	<div class="alink">
+                    		<p>考试时间 :6月17日-6月23日</p>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#jndg">考试大纲</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#jnnr">考试形式与内容</a>
+                    	</div>
+                    </div>
+                    <div class="tool clearfix">
+                    	<div class="tit">综合笔试<em></em></div>
+                    	<div class="alink">
+                    		<p>考试时间（1） : 8.26-8.27</p>
+                    		<p>考试时间（2） : 11.25-11.26</p>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#bsdg">考试大纲</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65528#bsnr">考试内容</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65527#bstx">考试题型</a>
+                    	</div>
+                    </div>
+                    <div class="tool clearfix">
+                    	<div class="tit">成绩<em></em></div>
+                    	<div class="alink">
+                    		<p>查询时间 : 11月底-12月初</p>
+                    		<a target="_blank" href="http://bj.nengliyk.com/page.do?oid=8980&subject=inquire">成绩查询入口</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/page.do?oid=8980&subject=inquire#biaozhun">通过标准</a>
+                    	</div>
+                    </div>
+                    <div class="tool clearfix">
+                    	<div class="tit">证书<em></em></div>
+                    	<div class="alink">
+                    		<p>领取时间 : 次年3月-6月</p>
+                    		<a target="_blank" href="http://www.ablesky.com/org/8980_zx_67528">证书领取</a>
+                        	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_65527#zhengshu">证书注册</a>
+                    	</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="p1center">
+            	<div class="topconsult clearfix">
+            			<a class="csimg" target="_blank" href="http://bj.nengliyk.com/org/8980_zx_66202">
+            				<img src="http://pic3.ablesky.cn/content/pic/album/2016/12/17/2f5ced90-e67c-457b-8db6-bdfa8e3ac39a.png" alt="执业医师报名">
+            			</a>
+            			<div class="cstext">
+            				<h3>2017年执业医师资格考试VIP品质通关班 高端辅导方案</h3>
+            				<p> 针对每个考生的不同学习状况，进行有针对性的讲解、训练、答疑、模考，并对学习过程进行跟踪、分析、指导，现在报名更有超值优惠，机会难得，欲报从速！</p>
+            				<a class="details" target="_blank" href="http://bj.nengliyk.com/org/8980_zx_66202">查看详情>></a>
+            			</div>
+            		</div>
+                    <div class="list">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_70617"><h3>2017年起执业医师笔试一年可考2次</h3></a>
+                    	<ul>
+                    		<li>
+                        <a  href="http://bj.nengliyk.com/org/8980_zx_70385">【复习】医师报名最后6天，给你说说2017年该怎么复习。</a><em>&nbsp;|</em>
+                    			<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_69976">报名流程</a>
+                    		</li>
+                    		<li>
+                        		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_67354">2016年医师资格考试医学综合笔试成绩发布</a>
+                    		</li>
+                    		<li>
+                    			<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_66230">2016年国家医学考试成绩查询入口</a>
+                    		</li>
+                    		<li>
+                    			<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_64522">【中医】需要天天阅读的200句精华考点</a>
+                    		</li>
+                    	</ul>
+                    	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_67922"><h3>2017年国家执业医师资格考试网络辅导计划</h3></a>
+                    	<ul>
+                    		<li>
+                    			<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_67528">2016年执业医师资格证书领取</a><em>&nbsp;|</em>
+                    			<a target="_blank" href="http://bj.nengliyk.com/page.do?oid=8980&subject=inquire">成绩查询入口</a>
+                    		</li>
+                    		<li>
+                    			<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_66135">【试听课程】临床执业-助理医师-呼吸系统</a>
+                    		</li>
+                    	</ul>
+                    </div>	
+            </div>
+            <div class="p1right"> 
+            	<h3 class="title">通关捷报<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_67464" class="xqurl">查看详情>></a></h3>
+                <div class="movepic">
+                    <ul class="picbox" id="ul2">
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/bbe89a76-c2ee-435c-863c-906ecc8c63fe.png" alt="临床助理医师考试"/></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/0d96b41f-0e05-4907-aba0-f2ed4e7ec159.png" alt="中医执业医师考试"/></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/be3ee415-14f2-43cb-a6d0-263620a2213f.png" alt="中医执业医师考试通过率"/></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/f69e5dde-cc26-4084-adfb-90ca81191821.png"alt="医师考试通过率" /></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/399fad59-8065-45c4-8606-1fa1878656d5.png"alt="临床执业医师考试" /></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/bc634dab-d774-4818-a1ef-412f7ee7adfa.png" alt="中医执业医师考试"/></li>
+                        <li><img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/27ea788c-fa94-462a-81be-80cf68ac909e.png" alt="中西医执业医师考试"/></li>
+                    </ul>
+                </div>
+                <h3 class="title" style="margin-top:10px;">常用工具下载</h3>
+                <ul class="cmtool">
+                	<li>
+                		<span class="ableyk"></span>
+                		<a target="_blank" href="http://bj.nengliyk.com/page.do?oid=8980&subject=app">能力医考APP下载</a>
+                	</li>
+                	<li>
+                		<span class="ablezb"></span>
+                		<a target="_blank" href="http://product.ablesky.com/p/l">能力直播软件下载</a>
+                	</li>
+                	<li>
+                		<span class="ableplay"></span>
+                		<a target="_blank" href="http://product.ablesky.com/p/p">能力播放器下载</a>
+                	</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="park3">
+        <div class="p3center">
+            <div class="p3left clearfix">
+                <!--左二-->
+                <div class="left2 newleft2 fl">
+                	<div class="clearfix">
+		    			<p class="tit fl"><a target="_blank" href="http://bj.nengliyk.com/org/8980/course?serviceType=totalCourse&chargeType=0&categoryId=279935">免费试听课</a></p>
+                         <ul class="options fl" id="tab">
+                            <li class="fl" data-name="288905">临床</li>
+                            <li class="fl" data-name="288907">中医</li>
+                            <li class="fl" data-name="288908">中西医</li>
+                            <li class="fl" data-name="288906">口腔</li>
+                            <li class="fl" data-name="303496">乡村全科</li>
+                        </ul>
+                        <a href="http://bj.nengliyk.com/org/8980_d_288904_0_-1_-1_0_1" class="xqurl" style="padding:20px 10px" target="_blank">更多试听课>></a>
+		    		</div>
+                    <ul class="kclist" style="margin-top:11px;padding:0 9px;">
+                    	
+                    </ul>
+                </div>
+                <!--电子相关 文章-->
+				<div class="p3right fr">
+					<h3 class="title"><a target="_blank" href="http://bj.nengliyk.com/org/8980/teacher">名师团队</a><a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_0_1" class="xqurl">更多名师>></a></h3>
+                    <div class="teacher" style="margin-top:30px; height:418px; overflow:hidden;">
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <div class="banner">
+    	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_67922" />
+        	<img src="http://pic3.ablesky.cn/content/pic/album/2016/12/14/5efd1601-e39c-4512-83b9-189edf6bc9c2.png"alt="网络课程" />
+        </a>
+    </div>
+    <div class="park3">
+		<div class="p3center join">
+			<div class="left2  clearfix">
+				<div class="clearfix">
+					<p class="tit fl">
+						<a target="_blank" href="http://bj.nengliyk.com/org/8980/course?categoryId=288841&serviceType=totalCourse&chargeType=0#orgTab">2018全系列课程热卖中</a>
+					</p>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980/course?serviceType=totalCourse&chargeType=0&categoryId=288842" class="xqurl tkmore">更多套课>></a>
+				</div>
+				<div class="table">
+					<ul class="tab maxTab clearfix" id="netCourseTab">
+						<li class="show">
+                        	<span data-id="1">执业医师</span>
+						</li>
+						<li>
+							<span data-id="2">助理医师</span>
+						</li>
+						<li>
+							<span data-id="3">乡村全科助理医师</span>
+						</li>
+					</ul>
+					<div class="tbgather clearfix">
+						<div class="zhiyeys bigshow">
+							<h3 class="bigtit">2018执业医师资格考试-精品网课</h3>
+
+							<table border="1" cellspacing="0" cellpadding="0" width="1156">
+								<tr>
+									<th width="80">
+										<p align="center"><strong>阶段 </strong></p>
+									</th>
+									<th width="90">
+										<p align="center"><strong>班型 </strong></p>
+									</th>
+									<th width="70">
+										<p align="center"><strong>课时 </strong></p>
+									</th>
+									<th width="">
+										<p align="center"><strong>适用人群</strong></p>
+									</th>
+									<th width="">
+										<p align="center"><strong>授课内容</strong></p>
+									</th>
+									<th width="120">
+										<p align="center"><strong>配套教材<p class="colorR" style="font-size: 13px;">（购买有优惠）</p></strong></p>
+										<select style="text-align= right" class="select_course" name="">
+											<option value="-1">选择科目</option>
+											<option value="0">临床医师</option>
+											<option value="1">中医医师</option>
+											<option value="2">中西医医师</option>
+											<option value="3">口腔医师</option>
+										</select>
+									</th>
+									<th width="90">
+										<p align="center"><strong>价格</strong></p>
+									</th>
+								</tr>
+								<tr>
+									<th rowspan="3">基础</th>
+									<td>技能特训班</td>
+									<td>24</td>
+									<td>基础较好，需技能强化的考生</td>
+									<td>实践技能三站特训，经典病例详解，真人实操演示，名<br/>师指导操作得分点和注意事项</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1002989" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002989" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002989" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002989" data-price="300"/> 300元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>核心考点班</td>
+									<td>204</td>
+									<td>有一定基础，对考试重难点把握不准的考生</td>
+									<td>大纲要求考点全面精讲，突出考试重难点</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374539?f=org_coursecenter">《核心考点》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374632?f=org_coursecenter">《核心考点》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374636?f=org_coursecenter">《核心考点》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374691?f=org_coursecenter">《核心考点》<br/>（口腔）</a>
+										</div>
+										
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427175" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427205" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427270" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427335" data-price="880"/> 880元
+										</div>
+										
+									</td>
+								</tr>
+								<tr>
+									<td>实战珍题班</td>
+									<td>180</td>
+									<td>有一定基础，不熟悉出题思路和解题技巧的考生</td>
+									<td>原题、经典题、必考题、易错题，考点全面覆盖</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">《实战珍题》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">《实战珍题》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">《实战珍题》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">《实战珍题》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427188" data-price="980"/> 980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427239" data-price="980"/> 980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427283" data-price="980"/> 980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427361" data-price="980"/> 980元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="3">冲刺</th>
+									<td>考前冲刺</td>
+									<td>56</td>
+									<td>有一定基础，需在考前冲刺强化的考生</td>
+									<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427197" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427247" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427296" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427348" data-price="880"/> 880元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>考前密卷</td>
+									<td>32</td>
+									<td>任何基础考生，考前绝密送分</td>
+									<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379798?f=org_coursecenter">《考前密卷》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379807?f=org_coursecenter">《考前密卷》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379813?f=org_coursecenter">《考前密卷》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379816?f=org_coursecenter">《考前密卷》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1368269" data-price="568"/> 568元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1368267" data-price="568"/> 568元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427309" data-price="568"/> 568元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427375" data-price="568"/> 568元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>冲刺提分班</td>
+									<td>268</td>
+									<td>有一定基础，需冲刺强化、高效提分的考生</td>
+									<td>实战珍题+考前冲刺+考前密卷<p class="colorR">送3套考前密卷</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379798?f=org_coursecenter">《考前密卷》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379807?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379813?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379816?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427214" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427256" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427322" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427388" data-price="1980"/> 1980元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="3">全程</th>
+									<td>全程班</td>
+									<td>408</td>
+									<td>有一定基础，对考试重点、考点把握不准、不熟悉<br/>出题思路和解题技巧的考生</td>
+									<td>核心考点+实践技能+实战珍题</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374539?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">《实战珍题》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374632?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">《实战珍题》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374636?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">《实战珍题》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374691?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">《实战珍题》</a>											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1002987" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003040" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003044" data-price="1980"/> 1980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002913" data-price="1980"/> 1980元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>vip协议班</td>
+									<td>464</td>
+									<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考<br/>试特点、不会做题的考生</td>
+									<td>大纲解析+核心考点+实践技能+实战珍题+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374539?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374632?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374636?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374691?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a>											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1003023" data-price="2980"/> 2980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003050" data-price="2980"/> 2980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003052" data-price="2980"/> 2980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002955" data-price="2980"/> 2980元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>定制通关班</td>
+									<td>496</td>
+									<td>基础差、没重点、不熟悉命题、自律性不强、想<br/>一次通关的考生</td>
+									<td>大纲解析+核心考点+实战珍题+考前冲刺+考前密卷<br/>+应试技巧<p class="colorR">送2套冲刺卷+3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374539?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379798?f=org_coursecenter">《考前密卷》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374632?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379807?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374636?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379813?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374691?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379816?f=org_coursecenter">《考前密卷》</a>											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1003027" data-price="3980"/> 3980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003059" data-price="3980"/> 3980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003061" data-price="3980"/> 3980元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002970" data-price="3980"/> 3980元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th class="colorR">优惠政策</th>
+									<td colspan="6" style="text-align: left;"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+								</tr>						
+							</table>
+						</div>
+						<div class="zhuliys">
+							<h3 class="bigtit">2018助理医师资格考试-精品网课</h3>
+							<table border="1" cellspacing="0" cellpadding="0" width="1156">
+								<tr>
+									<th width="80">
+										<p align="center"><strong>阶段 </strong></p>
+									</th>
+									<th width="90">
+										<p align="center"><strong>班型 </strong></p>
+									</th>
+									<th width="70">
+										<p align="center"><strong>课时 </strong></p>
+									</th>
+									<th width="">
+										<p align="center"><strong>适用人群</strong></p>
+									</th>
+									<th width="">
+										<p align="center"><strong>授课内容</strong></p>
+									</th>
+									<th width="120">
+										<p align="center"><strong>配套教材<p class="colorR" style="font-size: 13px;">（购买有优惠）</p></strong></p>
+										<select class="select_course" name="">
+											<option value="-1">选择科目</option>
+											<option value="0">临床助理</option>
+											<option value="1">中医助理</option>
+											<option value="2">中西医助理</option>
+											<option value="3">口腔助理</option>
+										</select>
+									</th>
+									<th width="90">
+										<p align="center"><strong>价格</strong></p>
+									</th>
+								</tr>
+								<tr>
+									<th rowspan="3">基础</th>
+									<td>技能特训班</td>
+									<td>24</td>
+									<td>基础较好，需技能强化的考生</td>
+									<td>实践技能三站特训，经典病例详解，真人实操演示，名<br/>师指导操作得分点和注意事项</td>
+									<td>
+										<div class="first_td bigshow">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1002989" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003029" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003032" data-price="300"/> 300元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002917" data-price="300"/> 300元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>核心考点班</td>
+									<td>180</td>
+									<td>有一定基础，对考试重难点把握不准的考生</td>
+									<td>大纲要求考点全面精讲，突出考试重难点</td>
+									<td>
+										<div class="first_td bigshow">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1374545?f=org_coursecenter">《核心考点》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1374626?f=org_coursecenter">《核心考点》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1374633?f=org_coursecenter">《核心考点》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a href="http://bj.nengliyk.com/kecheng/detail_1374637?f=org_coursecenter">《核心考点》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427445" data-price="780"/> 780元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427505" data-price="780"/> 780元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427555" data-price="780"/> 780元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427610" data-price="780"/> 780元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>实战珍题班</td>
+									<td>150</td>
+									<td>有一定基础，不熟悉出题思路和解题技巧的考生</td>
+									<td>原题、经典题、必考题、易错题，考点全面覆盖</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379755?f=org_coursecenter">《实战珍题》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379757?f=org_coursecenter">《实战珍题》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379760?f=org_coursecenter">《实战珍题》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379762?f=org_coursecenter">《实战珍题》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427466" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427518" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427569" data-price="880"/> 880元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427623" data-price="880"/> 880元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="3">冲刺</th>
+									<td>考前冲刺</td>
+									<td>52</td>
+									<td>有一定基础，需在考前冲刺强化的考生</td>
+									<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427474" data-price="680"/> 680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427526" data-price="680"/> 680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427581" data-price="680"/> 680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427631" data-price="680"/> 680元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>考前密卷</td>
+									<td>16</td>
+									<td>任何基础考生，考前绝密送分</td>
+									<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379806?f=org_coursecenter">《考前密卷》<br/>（临床）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379812?f=org_coursecenter">《考前密卷》<br/>（中医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379815?f=org_coursecenter">《考前密卷》<br/>（中西医）</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379817?f=org_coursecenter">《考前密卷》<br/>（口腔）</a>
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427483" data-price="468"/> 468元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427534" data-price="468"/> 468元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427589" data-price="468"/> 468元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427639" data-price="468"/> 468元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>冲刺提分班</td>
+									<td>218</td>
+									<td>有一定基础，需冲刺强化、高效提分的考生</td>
+									<td>实战珍题+考前冲刺+考前密卷<p class="colorR">送3套考前密卷</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379755?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379806?f=org_coursecenter">《考前密卷》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379757?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379812?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379760?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379815?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379762?f=org_coursecenter">《实战珍题》</a><br />
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379817?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1427491" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427542" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427597" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1427647" data-price="1680"/> 1680元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th rowspan="3">全程</th>
+									<td>全程班</td>
+									<td>354</td>
+									<td>有一定基础，对考试重点、考点把握不准、不熟悉<br/>出题思路和解题技巧的考生</td>
+									<td>核心考点+实践技能+实战珍题</td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374545?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379755?f=org_coursecenter">《实战珍题》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374626?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379757?f=org_coursecenter">《实战珍题》</a>
+											
+										</div>
+										<div class="first_td">
+											
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374633?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379760?f=org_coursecenter">《实战珍题》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374637?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379762?f=org_coursecenter">《实战珍题》</a>
+											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1001403" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003046" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003048" data-price="1680"/> 1680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002552" data-price="1680"/> 1680元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>vip协议班</td>
+									<td>406</td>
+									<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考<br/>试特点、不会做题的考生</td>
+									<td>大纲解析+核心考点+实践技能+实战珍题+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374545?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379755?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374626?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379757?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374633?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379760?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374637?f=org_coursecenter">《核心考点》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379762?f=org_coursecenter">《实战珍题》<br/></a>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a>
+											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1003018" data-price="2680"/> 2680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003054" data-price="2680"/> 2680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003056" data-price="2680"/> 2680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002940" data-price="2680"/> 2680元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<td>定制通关班</td>
+									<td>422</td>
+									<td>基础差、没重点、不熟悉命题、自律性不强、想<br/>一次通关的考生</td>
+									<td>大纲解析+核心考点+实战珍题+考前冲刺+考前密卷<br/>+应试技巧<p class="colorR">送2套冲刺卷+3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+									<td>
+										<div class="first_td bigshow">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374545?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379755?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379806?f=org_coursecenter">《考前密卷》</a>
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374626?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379757?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379812?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374633?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379760?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379815?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+										<div class="first_td">
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374637?f=org_coursecenter">《核心考点》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">《技能一本通》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379762?f=org_coursecenter">《实战珍题》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">《学霸笔记》</a><br/>
+											<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379817?f=org_coursecenter">《考前密卷》</a>
+											
+										</div>
+									</td>
+									<td>
+										<div class="second_td bigshow">
+											<input type="checkbox" class="selectCourse" data-courseid="1003025" data-price="3680"/> 3680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003063" data-price="3680"/> 3680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1003065" data-price="3680"/> 3680元
+										</div>
+										<div class="second_td">
+											<input type="checkbox" class="selectCourse" data-courseid="1002958" data-price="3680"/> 3680元
+										</div>										
+									</td>
+								</tr>
+								<tr>
+									<th class="colorR">优惠政策</th>
+									<td colspan="6" style="text-align: left;"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+								</tr>						
+							</table>
+						</div>
+						<div class="xiangcunys">
+							<h3 class="bigtit">2018乡村全科助理医师资格考试-精品网课</h3>
+							<table border="1" cellspacing="0" cellpadding="0" width="1156">
+								<tr>
+									<th width="80">
+										<p align="center"><strong>阶段 </strong></p>
+									</th>
+									<th width="90">
+										<p align="center"><strong>班型 </strong></p>
+									</th>
+									<th width="70">
+										<p align="center"><strong>课时 </strong></p>
+									</th>
+									<th width="">
+										<p align="center"><strong>适用人群</strong></p>
+									</th>
+									<th width="290">
+										<p align="center"><strong>授课内容</strong></p>
+									</th>
+									<th width="120">
+										<p align="center"><strong>配套教材<p class="colorR" style="font-size: 13px;">（购买有优惠）</p></strong></p>
+									</th>
+									<th width="90">
+										<p align="center"><strong>价格</strong></p>
+									</th>
+								</tr>
+								<tr>
+									<th rowspan="3">全程</th>
+									<td>全程班</td>
+									<td>90</td>
+									<td>有一定基础，对考试重点、考点把握不准、不熟悉<br/>出题思路和解题技巧的考生</td>
+									<td>大纲要求考点全面精讲，突出考试重难点</td>
+									<td><a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374702?f=org_coursecenter">《核心考点》</a></td>
+									<td><input type="checkbox" class="selectCourse" data-courseid="1018864" data-price="1680"/> 1680元</td>
+								</tr>
+								<tr>
+									<td>vip协议班</td>
+									<td>118</td>
+									<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考<br/>试特点、不会做题的考生</td>
+									<td>全程班+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+									<td><a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374702?f=org_coursecenter">《核心考点》<br/></td>
+									<td><input type="checkbox" class="selectCourse" data-courseid="1018874" data-price="2680"/> 2680元</td>
+								</tr>
+								<tr>
+									<td>定制通关班</td>
+									<td>134</td>
+									<td>基础差、没重点、不熟悉命题、自律性不强、想<br/>一次通关的考生</td>
+									<td>全程班+考前冲刺+考前密卷<p class="colorR">3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+									<td><a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374702?f=org_coursecenter">《核心考点》</a><br/>
+										<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379818?f=org_coursecenter">《考前密卷》</a>
+									</td>
+									<td><input type="checkbox" class="selectCourse" data-courseid="1428988" data-price="3680"/> 3680元</td>
+								</tr>
+								<tr>
+									<th rowspan="2">冲刺</th>
+									<td>考前冲刺</td>
+									<td>28</td>
+									<td>有一定基础，需在考前冲刺强化的考生</td>
+									<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+									<td> </td>
+									<td><input type="checkbox" class="selectCourse" data-courseid="1428978" data-price="680"/> 680元</td>
+								</tr>
+								<tr>
+									<td>考前密卷</td>
+									<td>16</td>
+									<td>任何基础考生，考前绝密送分</td>
+									<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+									<td><a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379818?f=org_coursecenter">《考前密卷》</a></td>
+									<td><input type="checkbox" class="selectCourse" data-courseid="1428964" data-price="468"/> 468元</td>
+								</tr>								
+								<tr>
+									<th class="colorR">优惠政策</th>
+									<td colspan="6" style="text-align: left;"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+								</tr>						
+							</table>
+						</div>
+						<p class="buyCourse">
+							<span>请点击班次价格前的“□”选课，您本次所选课程优惠总价为<span class="buycourse_money">0</span>元 </span>
+							<a href="http://bj.nengliyk.com/shoppingCartRedirect.do?action=toMyCourseList" class="buy" target="_blank">购买</a>
+						</p>	
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+    	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_66202" />
+        	<img src="http://pic6.ablesky.cn/content/pic/album/2018/01/05/8281065d-bc91-42eb-bcb2-5bd5862eedb2.png" alt="高端班"/>
+        </a>
+    </div>
+    <div class="park3">
+    	<div class="p3center join">
+        	<div class="left2  clearfix">
+            	<div class="clearfix">
+                    <p class="tit fl"><a target="_blank" href="http://bj.nengliyk.com/org/8980_m_0_1">面授班级辅导体系</a></p>
+                    <span class="tit2">了解面授详情，拨打热线电话：<em>4009-953-155</em></span>
+                </div>
+                <div class="table">
+                    <div class="tbgather">
+                    	<div class="t1 bigshow"><!--面授班医师资格-->
+                            <h3 class="bigtit">2017能力医考执业医师-高端班授课体系</h3>
+                            <table>
+                                <tr>
+                                    <th>NEW</th>
+                                    <th colspan="2" style="width:105px;">学习阶段</th>
+                                    <th style="width:75px;">授课方式</th>
+                                    <th style="width:70px;">课时</th>
+                                    <th style="width:75px;">上课时间</th>
+                                    <th style="width:305px;">学习内容</th>
+                                    <th style="width:260px;">课程特色</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5"><span style="font-weight:bold;">VIP品质通关班</span></td>
+                                    <td colspan="2">名师领学</td>
+                                    <td>网络+直播</td>
+                                    <td>200+小时</td>
+                                    <td>1-5月</td>
+                                    <td><div style="text-align:left">1.入学测试，了解学习情况，制定复习计划<br />2.名师直播，引领科学复习。<br />3.临床科目网络课程学习，全面夯实基础。</div></td>
+                                    <td rowspan="5"><div style="text-align:left">1．面授+直播+网课，传统授课模式升级，全面保障通关。<br />2．精准课程定位，阶段式提升。<br />3．高含金量内部辅导资料，引领最实用考试用书。<br />4．能力班主任全程督学，科学指引复习方向。<br />5．能力医考APP、能力直播，专属便携式学习工具，打造全新学习体验。<br />6.秉承诚信、认真、踏实、负责的精神，真正提升学员对生命负责的能力。</div></td>
+                                </tr>
+                                <tr>
+                                	<td rowspan="2">面授集训营</td>
+                                    <td>笔试</td>
+                                    <td>面授</td>
+                                    <td>10天</td>
+                                    <td>3-5月</td>
+                                    <td><div style="text-align:left">1.一线名师现场授课，封闭式管理，集中授课。<br />2.临床科目重点强化，筛选核心考点 。</div></td>
+                                </tr>
+                                <tr>
+                                	<td>技能</td>
+                                    <td>面授</td>
+                                    <td>4天</td>
+                                    <td>6月</td>
+                                    <td><div style="text-align:left">1.权威名师现场实操，手把手辅导练习。<br />2.重点掌握答题模板、操作流程、要点、得分点。<br />3.标准化操作指导，人人参与，各个击破。</div></td>
+                                </tr>
+
+                                <tr>
+                                	<td colspan="2">专属教辅</td>
+                                    <td>网络+直播</td>
+                                    <td colspan="2">班主任监督贯穿全程<br />1-9月</td>
+                                    <td><div style="text-align:left">1.班主任全程监督，指导复习，强化重点内容。<br />2.基础、人文科目重点复习。<br />3.同步习题精解，查漏补缺。<br />4.阶段性测评，检验学习效果，调整学习计划。</div></td>
+                                </tr>
+                                <tr>
+                                	<td colspan="2">冲刺点睛</td>
+                                    <td>面授</td>
+                                    <td>5天</td>
+                                    <td>8-9月</td>
+                                    <td><div style="text-align:left">权威一线名师现场授课，结合历年经典考题，进行核心考点串讲，总结归纳，指导答题技巧、出题思路，把握考试命脉。</div></td>
+                                </tr>
+                                <tr>
+                                	<td>学费</td>
+                                    <td colspan="7"><div style="text-align:left; ">通关A计划：助理医师35000元；执业医师38000元。协议保障：<span style="color: #ff0000;">技能不过，全额退费；笔试不过，全额退费。</span><br />通关B计划：助理医师21800元；执业医师24800元。协议保障：<span style="color: #ff0000;">技能或笔试不过，第二年免费重学。</span></div></td>
+                                </tr>
+                            </table>
+                            <span class="bz">备注：</span>
+							<span class="bz">1.面授地点就近安排，若上课人数低于60人，则统一安排外地（如北京）集中授课。</span>
+							<span class="bz">2.面授时长可能会根据学员学习进度有2天左右的调整。具体课程安排以最终通知为准。</span>
+                            <div class="sternOPtion">
+                                <a href="http://wpa.qq.com/msgrd?v=3&uin=800042429&site=qq&menu=yes" class="con">在线咨询</a>
+                                <a href="http://bj.nengliyk.com/org/8980_m_304021_1" class="buy" target="_blank">查看详细</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           	</div>
+        </div>
+    </div>
+    <div class="park3">
+    	<div class="p3center join clearfix">
+        	<div class="hot1">
+            	
+            	
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+    	<a target="_blank" href="http://bj.nengliyk.com/org/8980_z_304021_0_1" />
+        	<img src="http://pic3.ablesky.cn/content/pic/album/2016/12/14/e523d4ce-166f-4b69-b75e-6361dfbdef5e.png" alt="直播课程"/>
+        </a>
+    </div>
+    <div class="park3">
+    	<div class="p3center join">
+        	<div class="left2  clearfix">
+            	<div class="clearfix">
+                    <p class="tit fl"><a target="_blank" href="http://bj.nengliyk.com/org/8980_z_0_0_1">直播班授课体系</a></p>
+                    <span class="tit2">了解面授详情，拨打热线电话：<em>4009-953-155</em></span>
+                </div>
+                <div class="table">
+                    <div class="table doctor">
+                    	<h3 class="bigtit">2017能力医考医师-能力直播班授课体系</h3>
+                        <table>
+                        	<tr>
+                            	<th style="width:75px">NEW</th>
+                                <th style="width:85px">学习阶段</th>
+                                <th style="width:75px">授课方式</th>
+                                <th style="width:75px">上课时间</th>
+                                <th style="width:85px">课时</th>
+                                <th>学习内容</th>
+                                <th>服务特色</th>
+                            </tr>
+                            <tr>
+                            	<td rowspan="6">能力直播</td>
+                                <td>系统基础精讲</td>
+                                <td>网络课程</td>
+                                <td>随报随学</td>
+                                <td>200小时</td>
+                                <td><div style="text-align:left">充分利用碎片化时间进行网络学习，系统掌握基础知识，突出考试重难点。</div></td>
+                                <td rowspan="5"><div style="text-align:left">1.专业教辅，全程跟踪辅导<br />2.量身定制个性化学习计划<br />3.在线考试，阶段性测评<br />4.报名到考试结束后，尊享全程专业老师答疑解惑</div></td>
+                            </tr>
+                            <tr>
+                            	<td>重难点突破</td>
+                                <td>直播</td>
+                                <td>3-5月</td>
+                                <td>根据学习进度科学安排直播</td>
+                                <td><div style="text-align:left">名师在线直播，强化考试重点，攻克考试难点，各个击破。</td>
+                            </tr>
+                            <tr>
+                            	<td>技能实操</td>
+                                <td>面授</td>
+                                <td>6月</td>
+                                <td>4天</td>
+                                <td><div style="text-align:left">1.权威名师现场实操，手把手辅导练习。<br />2.重点掌握答题模板、操作流程、要点、得分点。<br />3.标准化操作指导，人人参与，各个击破。</div></td>
+                            </tr>
+                            <tr>
+                            	<td>同步练习强化</td>
+                                <td>直播</td>
+                                <td>7-9月</td>
+                                <td>根据学习进度科学安排直播</td>
+                                <td><div style="text-align:left">章节习题强化演练，名师精髓，以点带面，核心考点强化总结.</td>
+                            </tr>
+                            <tr>
+                            	<td>考前冲刺点睛</td>
+                                <td>直播/面授</td>
+                                <td>8-9月</td>
+                                <td>5天</td>
+                                <td><div style="text-align:left">权威一线名师现场授课，结合历年经典考题，进行核心考点串讲，总结归纳，指导答题技巧、出题思路，把握考试命脉。</div></td>
+                            </tr>
+                            <tr>
+                            	<td>配套讲义</td>
+                                <td colspan="5"><div style="text-align:left">医师全套精品教材+绝密内部资料</td>
+                            </tr>
+                            <tr>
+                            	<td>学费</td>
+                                <td colspan="6"><div style="text-align:left">执业医师9800元；助理医师8800元。协议保障：技能或笔试未过，第二年免费重读。</td>
+                            </tr>
+                        </table>
+                        <span class="bz">备注：</span>
+                        <span class="bz">1.考前冲刺点睛阶段，面授课程就近安排，若附近无授课点，则统一集中安排在北京上课，不方便面授的学员可选择在家上直播。</span>
+                        <span class="bz">2.具体课程安排以最终通知为准。</span>
+                        <div class="sternOPtion">
+                        	<a href="http://wpa.qq.com/msgrd?v=3&uin=800042429&site=qq&menu=yes" class="con">在线咨询</a>
+                            <a href="http://bj.nengliyk.com/org/8980_z_304021_0_1" target="_blank" class="buy">立即购买</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+    	<a target="_blank" href="http://bj.nengliyk.com/page.do?oid=8980&subject=public" />
+        	<img src="http://pic3.ablesky.cn/content/pic/album/2016/12/14/3abb0494-09dd-4251-9447-e5a848290e0d.png"alt="执业医师大纲图书" />
+        </a>
+    </div>
+    <div class="park3">
+        <div class="p3center join">
+            <div class="left2  clearfix">
+            	<div class="clearfix">
+                    <p class="tit fl"><a target="_blank" href="http://bj.nengliyk.com/org/8980/post?titleId=15858" target="_blank">精品书库</a></p>
+                    <p class="fl dttitle">报名即送精品图书教材！让学习一路畅通！</p>
+                </div>
+                <div class="coalConter">
+                	<div class="left"></div>
+                    <div class="centre">
+                        <ul class="path bookshow">
+                        	<li>
+                            	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_63355">
+                            	<img src="http://pic1.ablesky.cn/content/pic/album/2016/11/30/0d2a6a63-32df-4f9c-a047-f037694a8366.png" alt="国家临床执业（助理）医师资格考试核心考点精析"/>
+                                <span class="post">国家临床执业（助理）医师资格考试核心考点精析</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_63353">
+                            	<img src="http://pic3.ablesky.cn/content/pic/album/2016/11/30/296eb53a-e96d-4f68-a8e4-d65dd829daac.png" alt="国家临床执业（助理）医师资格考试经典例题精析"/>
+                                <span class="post">国家临床执业（助理）医师资格考试经典例题精析</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a target="_blank" href="http://bj.nengliyk.com/org/post/detail_63350">
+                            	<img src="http://pic6.ablesky.cn/content/pic/album/2016/11/30/a33bdfdb-1acd-44d7-baa6-bdb79b1d1b25.png" alt="国家临床执业（助理）医师资格考试实践技能通关指南"/>
+                                <span class="post">国家临床执业（助理）医师资格考试实践技能通关指南</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_63350">
+                            	<img src="http://pic3.ablesky.cn/content/pic/album/2016/10/19/c6a2eda5-91f8-47db-9473-4fadcc36fd2e.png" alt="国家中医执业（助理）医师资格考试实践技能宝典" />
+                                <span class="post">国家中医执业（助理）医师资格考试实践技能宝典</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a target="_blank" href="http://bj.nengliyk.com/org/post/detail_63355">
+                            	<img src="http://pic3.ablesky.cn/content/pic/album/2016/10/19/9b3cb939-8db4-4a2e-bf4a-df89a4c4a461.png" alt="国家中医中西医执业（助理）医师资格考试核心考点精析"/>
+                                <span class="post">国家中医中西医执业（助理）医师资格考试核心考点精析</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="park3">
+    	<div class="p3center join clearfix">
+        	<div class="left2  clearfix">
+            	<div class="clearfix">
+                    <p class="tit fl">复习指导</p>
+                    <p class="fl dttitle">助力医师资格全程备考！能力提升认准能力医考！</p>
+                </div>
+                <div class="p5notice">
+                    <div class="p5left tableExam fl">
+                    	<h3 class="clearfix">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_15859_2_1" class="subtitle">考试动态</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_15859_2_1" class="more">更多>></a>
+                    	</h3>
+                        <dl class="dl replace hotList1">
+                            
+                        </dl>
+                        <ul class="list2 replace examdt">
+                            
+                        </ul>
+                    </div>
+                    <div class="p5center fl">
+                    	<h3 class="clearfix">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_16439_2_1" class="subtitle">备考资料</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_16439_2_1" class="more">更多>></a>
+                    	</h3>
+                    	<ul class="list2 list3 replace datumList">
+                    		
+                    	</ul>
+                    	<h3 class="clearfix">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_15862_2_1" class="subtitle">试题推荐</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_zx_15862_2_1" class="more">更多>></a>
+                    	</h3>
+                    	<ul class="list2 list3 replace examList">
+                    		
+                    	</ul>
+                    </div>
+                    <div class="p5right fr">
+                        <h3 class="clearfix">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_k_0_0_0_0_0_1" class="subtitle">在线考试</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_k_0_0_0_0_0_1" class="more">更多>></a>
+                    	</h3>
+                    	<ul class="list2 list3 replace examonline">
+                    		<li><a target="_blank" href="http://bj.nengliyk.com/org/8980_k_23375">· 四川临床执业助理消化系统测试题第一阶段</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_k_22123">· 临床执业助理呼吸系统第二阶段测试卷</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_k_28716">· 中医助理真题卷1-1</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_k_28717">· 中医助理真题卷1-2</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_k_28723">· 中西医结合模拟冲刺6-1</a></li>
+                    	</ul>
+                    	<h3 class="clearfix">
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_0_0_1" class="subtitle">在线答疑</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_0_0_1" class="question">
+                    			<img src="http://pic5.ablesky.cn/content/pic/album/2016/12/14/902ceb58-ba61-49ab-a689-59953595ff10.jpg" alt="我要提问！">
+                    		</a>
+                    		<a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_0_0_1" class="more">更多>></a>
+                    	</h3>
+                    	<ul class="list2 list3 replace dayionline">
+                    		<li><a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_119405">· 执业（助理）医师报名条件</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_99522">· 一连听了几个晚上的泌尿系统的课，总算有点进门的感觉</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_98704">· 刘老师讲得太棒了！</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_119405">· 执业（助理）医师报名条件</a></li>
+                            <li><a target="_blank" href="http://bj.nengliyk.com/org/8980_dy_99522">· 一连听了几个晚上的泌尿系统的课，总算有点进门的感觉</a></li>
+                    	</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+    	<a target="_blank" href="http://bj.nengliyk.com/" />
+        	<img src="http://pic5.ablesky.cn/content/pic/album/2016/12/02/886e3e63-4650-4cc4-8bd6-d0531df39c37.png"  alt="能力医考，取证通关的保障！"/>
+        </a>
+    </div>
+    <div class="footer">
+    	<div class="fleft">
+        	<img class="logo" src="http://pic5.ablesky.cn/content/pic/album/2016/10/19/305ff755-246e-4ef6-80d7-4f4fde678091.png" alt="能力天空"/>
+            <img class="yklogo" src="http://pic5.ablesky.cn/content/pic/album/2016/10/19/7599cd2f-5170-4369-a569-279471fbc801.png" alt="能力医考" />
+            <img class="tellogo" src="http://pic5.ablesky.cn/content/pic/album/2016/10/19/1c4e2e12-114b-450e-8b71-48700e7707b3.png" alt="能力医考电话4009-953-155 "/>
+            <ul>
+            	<li class="on"><a target="_blank" href="http://e.ablesky.com/guanyuwomen_01">关于我们</a><span>|</span></li>
+                <li><a target="_blank" href="http://bj.nengliyk.com/community.do?action=toHelpCenter">帮助中心</a><span>|</span></li>
+                <li><a target="_blank" href="http://www.ablesky.com/org/336/post?titleId=9405">能力天空动态</a></li>
+            </ul>
+        </div>
+        <div class="fright">
+        	<dl>
+            	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2016/10/19/e20d6bc0-4aed-492a-947c-60fa69087542.png" /></dt>
+                <dd>能力天空官方公众号</dd>
+            </dl>
+            <dl>
+            	<dt><img src="http://pic5.ablesky.cn/content/pic/album/2016/10/19/9dc4cbb8-cc06-465d-a383-ab0b007bc766.png" /></dt>
+                <dd>能力医考官方公众号</dd>
+            </dl>
+        </div>
+        <div class="suspend">
+            <a href="javascript:;" class="top"></a>
+            <a href="http://wpa.qq.com/msgrd?v=3&uin=800042429&site=qq&menu=yes" class="consult">
+            </a>
+            <a href="javascript:;" class="tel"><div class="telpic"></div></a>
+            <a href="javascript:;" class="apply agent-wrap"></a>
+            <a href="javascript:;" class="code"><div class="codepic"></div></a>
+        </div>
+    </div>
+</div>
+</body>
+<!--<script src="../js/jquery.js"></script>-->
+<script type="text/javascript">
+	require(['jquery','common/global','course/module-cart'], function($,g,module) {
+//$(function() {
+	$('.select_course').on('change',function(){
+			var _self = $(this),
+				_select = _self.find('option:selected'),
+				index = _select.attr('value')=='-1' ? 0 : _select.attr('value');
+				
+			_self.parents('table').find('tr').each(function(){
+				$(this).find('.first_td').eq(index).addClass('bigshow').siblings('.first_td').removeClass('bigshow');
+				$(this).find('.second_td').eq(index).addClass('bigshow').siblings('.second_td').removeClass('bigshow');
+				$(this).find('.third_td').eq(index).addClass('bigshow').siblings('.third_td').removeClass('bigshow');
+			})
+		})
+		
+		$('.tbgather .selectCourse').on('click',function(){
+			var _this = $(this),
+				price = 0;
+			
+			var courseId = _this.data('courseid');
+			
+			if(_this[0].checked){//如果是从没选中到选中，加入选课包
+				module.add(courseId, function(data) {
+					if (data.success) {
+						//更新购物车中物品数量提示消息
+						var numNode = $(".goods-tip .num", $(".shopcart"));
+						var preNum = numNode.html();
+						if (preNum == '') { //原来购物车为空
+							numNode.html("1");
+							//显示购物车信息，当无物品时为隐藏态，所以这里需要显示之
+							$(".goods-tip", $(".shopcart")).show();
+						} else {
+							numNode.html(parseInt(preNum) + 1);
+						}
+						// 更新机构header部分购物车数据
+						$('.org-header-wrap .cart-num').text(data.totalCourseCnt);
+					} else {
+						showDialog(data.message);
+					}
+				})
+			}else{//反之从选课包中移出
+				var coursepkCookieId = "coursePackageCookieID";
+				$.ajax({
+					url:  'shoppingCart.do?action=deleteCartItem&a='+$.now(),	
+					data: {
+						courseId: courseId,	
+					    cookieId: coursepkCookieId
+					},
+					success: function(data) {
+						var numNode = $(".goods-tip .num", $(".shopcart"));
+						var preNum = numNode.html();						
+						if (preNum == 1) { //原来购物车为空
+							//显示购物车信息，当无物品时为隐藏态
+							$(".goods-tip", $(".shopcart")).hide();
+						} else {
+							numNode.html(parseInt(preNum) - 1);
+						}
+						var data = JSON.parse(data);
+						// 更新机构header部分购物车数据
+						$('.org-header-wrap .cart-num').text(data.totalCourseCnt);
+						$('.cart-num').show().text("("+data.totalCourseCnt+")");
+					}
+				});
+			}
+			_this.parents('.tbgather').find('input[type="checkbox"]:checked').each(function(){
+				var $this = $(this);
+				price += $this.data('price');
+			})
+			
+			
+			_this.parents('.tbgather').find('.buycourse_money').html(price);
+		})
+	
+	var orgId = 8980;
+	var domain = $('base').attr('href');
+	
+	$(window).scroll(function(){
+		var top = $(window).scrollTop();
+		if(top > 0){
+			$('.top').css('display','block');
+		}else{
+			$('.top').css('display','none');
+		}
+		$('.top').click(function(){
+			$(window).scrollTop(0);
+		});
+	});
+
+	//倒计时
+	setInterval(function (){
+		 var nTime=new Date();
+		 var jngTime = new Date('2017/6/17 23:59:59');
+		 var ykgTime = new Date('2017/8/26 23:59:59'); 
+         var jndays = Math.floor((jngTime.getTime() - nTime.getTime()) / 1000 / 60 / 60 / 24);
+         var ykdays = Math.floor((ykgTime.getTime() - nTime.getTime()) / 1000 / 60 / 60 / 24);
+         var $jndays = $('.jineng span');
+         var $ykdays = $('.yikao span');
+         if(jndays>=0){
+         	$jndays.html(jndays);
+         }
+         if(ykdays>=0){
+         	$ykdays.html(ykdays);
+         }
+	},1000);
+
+	//课堂实景
+	$(function(){
+		var repeat,w=$('#ul2 li:first').width(),
+			len=$('#ul2 li').length;
+			$('#ul2').css({'width':w*len+'px'})
+			$('.movepic').hover(function(){
+				clearInterval(repeat)					  
+			},function(){
+				repeat=setInterval(function(){
+				$('#ul2').stop().animate({'marginLeft':-w},1000,function(){
+					$('#ul2 li:first').appendTo($('#ul2'));
+					$('#ul2').css({'margin-left':0})
+		  		})
+			},2000)
+	   }).trigger('mouseleave')		   
+	})
+	
+	//免费试听课
+	var type = '288904';
+	function course(type){
+		$.ajax({
+			url : domain +'/course/list/'+ orgId +'?categoryId='+ type,
+			dataType : 'json',
+			data : {
+				pageSize: 6
+			},
+			success : function(data){
+				if(data.isSuccess){
+					$('.kclist').children().remove();
+					var dataList = data.result.list;
+					for(var i=0, len = dataList.length; i<len; i++){
+						var introduce = dataList[i].introduce;
+						if(introduce == null){
+							introduce = '';
+						}
+						var courseHtml = ['<li class="course fl">',
+                            			  	'<a class="coursehref" href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].serviceId +'" target="_blank">',
+                                		  		'<img class="img2" src="'+ dataList[i].coursePhotoUrl +'" />',
+                                		  		 '<div>'+ dataList[i].title +'</div>',
+                            			  	'</a>',
+                        				  '</li>'].join('');
+						$('.kclist').append(courseHtml);
+					}
+				}
+			}
+		});	
+	}
+	course(type);
+	$('#tab li').on('click',function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		var type = $(this).attr('data-name');
+		course(type);
+	});
+	
+	
+	//网络班表格切换
+	$('#netCourseTab>li>span').click(function(){
+		var index = $(this).attr('data-id') - 1;
+		if(index){				
+			$('.tbgather>div').eq(index).addClass('bigshow').siblings().removeClass('bigshow');		
+			$(this).next('ul').toggle();
+			$(this).parent().siblings().find('ul').hide();	
+			$(this).parent().addClass('show').siblings().removeClass('show');
+		}
+	});
+	$('#netCourseTab>li>span').hover(function(){
+		$(this).next('ul').show();
+		$(this).parent().siblings().find('ul').hide();	
+	});
+	$('#netCourseTab>li').mouseleave(function() {
+		$(this).find('ul').hide();
+	});
+	$('.level').click(function(){
+		var index = $(this).attr('data-id') - 1;
+		$(this).parent().parent().addClass('show').siblings().removeClass('show');
+		$('.tbgather>div').eq(index).addClass('bigshow').siblings().removeClass('bigshow');		
+		$(this).parent('ul').css('display','none');
+	})
+	
+	
+	$('.refer').on('click',function(){
+		$.ajax({
+			url : 'http://wpa.qq.com/msgrd?v=3&uin=800042429&site=qq&menu=yes',
+			dataType : 'script',
+			scriptCharset : 'utf-8'
+		}).done(function(){
+			BizQQWPA.addCustom({aty: '2', a: '0', nameAccount: 800042429, selector: 'qq'}); 
+		});
+	});
+	
+	
+	//面授班前两条NEW
+	var doctorId = '304021';//面授医师
+	function hot1(doctorId){
+		$.ajax({
+			url : domain +'/course/faceteach/'+ orgId +'?categoryId='+ doctorId,
+			dataType : 'json',
+			data : {
+				limit: 1
+			},
+			success : function(data){
+				if(data.success){
+					var dataList = data.result.list;
+					console.log(dataList);
+					for(var i=0, len = dataList.length; i<len; i++){
+						var Price = dataList[i].discountPrice;
+						if(Price == null){
+							var Pricehtml = '<span class="price">售价：<span style="color:#63ae1f;">免费</span></span>';
+						}else{
+							var Pricehtml = '<span class="price">售价：<em>'+ Price +'元</em></span>';
+						}
+						var hotHtml = ['<div class="sign doctorSign fl">',
+									   	'<a href="http://bj.nengliyk.com/org/8980_m_0_1" target="_blank"><p class="tit">2017面授班火热报名中</p></a>',
+                							'<div class="signcon clearfix">',
+												'<a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" target="_blank"><img src="'+ dataList[i].coursePhotoUrl +'" /></a>',
+												'<div class="main">',
+													'<h3><a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" target="_blank">'+ dataList[i].title +'</a></h3>',
+													'<span style="display:block; height:60px; overflow:hidden">'+ dataList[i].description +'</span>',
+													Pricehtml,
+													'<a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" class="buy" target="_blank">购买</a>',
+												'</div>',
+                							'</div>',
+										'</div>'].join('');
+						$('.hot1').append(hotHtml).show();
+						$('.aa').children().eq(1).css({'display':'none'});
+					}
+				}
+			}
+		});	
+	}
+	hot1(doctorId);
+	
+	var pharmId = '304025';
+	function hot2(pharmId){
+		$.ajax({
+			url : domain +'/course/faceteach/'+ orgId +'?categoryId='+ pharmId,
+			dataType : 'json',
+			data : {
+				limit: 1
+			},
+			success : function(data){
+				if(data.success){
+					var dataList = data.result.list;
+					for(var i=0, len = dataList.length; i<len; i++){
+						var Price = dataList[i].discountPrice;
+						if(Price == null){
+							var Pricehtml = '<span class="price">售价：<span style="color:#63ae1f;">免费</span></span>';
+						}else{
+							var Pricehtml = '<span class="price">售价：<em>'+ Price +'元</em></span>';
+						}
+						var hotHtml = ['<div class="sign  fr">',
+									   	'<a href="http://bj.nengliyk.com/org/8980_m_0_1" target="_blank"><p class="tit">2017面授班火热报名中</p></a>',
+                							'<div class="signcon clearfix">',
+												'<a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" target="_blank"><img src="'+ dataList[i].coursePhotoUrl +'" /></a>',
+												'<div class="main">',
+													'<h3><a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" target="_blank">'+ dataList[i].title +'</a></h3>',
+													'<span style="display:block; height:60px; overflow:hidden">'+ dataList[i].description +'</span>',
+													Pricehtml,
+													'<a href="http://bj.nengliyk.com/kecheng/detail_'+ dataList[i].id +'" class="buy" target="_blank">购买</a>',
+												'</div>',
+                							'</div>',
+										'</div>'].join('');
+						
+						$('.hot1').append(hotHtml).show();
+						$('.aa').children().eq(1).css({'display':'none'});
+					}
+				}
+			}
+		});	
+	}
+	hot2(pharmId)
+	
+	
+	//名师团队
+	function teacher(){
+		$.ajax({
+			url : domain +'/teacherInfo.do?action=getFamousTeacherList&start=0&keyword=&categoryId=304021&teacherName=&firstLetter=&isSimple=true&_=1475992217865',
+			dataType : 'json',
+			data : {
+				organizationId: orgId,
+	     		limit: 4
+			},
+			success : function(data){
+				if(data.success){
+					var dataList = data.result.list;
+					for(var i=0, len = dataList.length; i<len; i++){
+						var js = dataList[i].expertSubject;
+						if(js == null){
+							js = '';
+						}
+						var intro = dataList[i].description;
+						if(intro == null){
+							intro = '';
+						}
+						var html = ['<dl>',
+                            			'<dt>',
+                                			'<a href="famousTeacherRedirect.do?action=toFamousTeacherDetail&organizationId='+ orgId +'&teacherId='+ dataList[i].id +'" target="_blank"><img src="'+ dataList[i].teacherPhotoPath +'" /></a>',
+                            			'</dt>',
+                            			'<dd>',
+                                			'<h3><a href="famousTeacherRedirect.do?action=toFamousTeacherDetail&organizationId='+ orgId +'&teacherId='+ dataList[i].id +'" target="_blank">'+ dataList[i].name +'</a></h3>',
+                                			'<span class="zw">'+ js +'</span>',
+                                			'<span class="intro">'+ intro +'</span>',
+                            			'</dd>',
+                        			'</dl>'].join(''); 
+						$('.teacher').append(html);
+					}
+				}
+			}
+		});
+	}
+	teacher();
+
+	//面授班
+	$(function(){
+		var repeat,index=1,len=$('.tab li span').length;
+		$('.tab li span').click(function(){
+			var index=$(this).attr('data-id') - 1;
+			$(this).parent().addClass('show').siblings().removeClass();
+			$('.tbgather>div').eq(index).addClass('bigshow').siblings().removeClass('bigshow');
+		})
+	});
+	
+
+	//精品书库
+	var repeat,
+		len=$('.bookshow li').length,
+	 	marginw=parseInt($('.bookshow li:first').css('marginLeft')),
+	 	movew=$('.bookshow li:first').outerWidth()+marginw,
+	 	liw=$('.bookshow li:first').outerWidth()+10,
+	 	ulw=liw*len;
+	 	$('.bookshow').css({'width':ulw+'px'});
+	function nextPic(){
+		$('.bookshow li:first').stop().animate({'marginLeft':-movew},1000,function(){
+			$(this).css({'marginLeft':marginw}).appendTo($('.bookshow'))	;
+		})
+	}
+	function prevPic(){
+		$('.bookshow li:last').prependTo($('.bookshow'));
+		$('.bookshow li:first').css({'marginLeft':-movew}).stop().animate({'marginLeft':marginw},1000);
+	}
+	$('.left').click(function(){
+		if(!$('.bookshow li:first').is(':animated')){
+			prevPic()
+		}
+	})
+	$('.right').click(function(){
+		if(!$('.bookshow li:first').is(':animated')){
+			nextPic();
+		}
+	})
+	
+	//考试信息
+	var examType = '15850';
+	function notice(examType){
+		$.ajax({
+			url : domain +'/organizationPost.do?action=searchpost',
+			dataType : 'json',
+			data : {
+				orgId: orgId,
+				titleId: examType
+			},
+			success : function(data){
+				if(data.success){
+					// $('.replace').children().remove();
+					if(data.knowledgeList != false){//备考资料
+						var datumList = data.knowledgeList.list;
+						var hotLst1 = ['<dt class="fl">',
+										   '<img src="'+ datumList[0].photoUrl +'" />',
+									   '</dt>',
+									   '<dd class="fl">',
+										   '<p>'+ datumList[0].titleName +'</p>',
+										   '<a class="ckdetail" target="_blank" href="http://bj.nengliyk.com/org/post/detail_'+ datumList[0].id +'">查看详情>></a>',
+									   '</dd>'].join('');
+						// $('.hotList2').append(hotLst1);
+						for(var i=0; i<datumList.length; i++){
+							var datumHtml = ['<li><a target="_blank" href="http://bj.nengliyk.com/org/post/detail_'+ datumList[i].id +'" title="'+ datumList[i].titleName +'">· '+ datumList[i].titleName +'</a></li>'].join('');
+							$('.datumList').append(datumHtml);
+						}
+					}
+					
+					
+					if(data.recommendList != false){//试题推荐
+						var exemList = data.recommendList.list;
+						for(var i=0; i<exemList.length; i++){
+							var exemHtml = ['<li><a target="_blank" href="http://bj.nengliyk.com/org/post/detail_'+ exemList[i].id +'" title="'+ exemList[i].titleName +'">· '+ exemList[i].titleName +'</a></li>'].join('');
+							$('.examList').append(exemHtml);
+						}
+					}
+					
+					
+					if(data.infromationList != false){//热点资讯
+						var hotList = data.infromationList.list;
+						var hotLst2 = ['<dt class="fl">',
+										   '<img src="'+ hotList[0].photoUrl +'" />',
+									   '</dt>',
+									   '<dd class="fl">',
+										   '<p>'+ hotList[0].titleName +'</p>',
+										   '<a class="ckdetail" target="_blank" href="http://bj.nengliyk.com/org/post/detail_'+ hotList[0].id +'">查看详情>></a>',
+									   '</dd>'].join('');
+						$('.hotList1').append(hotLst2);
+						for(var i=1; i<hotList.length; i++){
+							var hotList3 = ['<li><a target="_blank" href="http://bj.nengliyk.com/org/post/detail_'+ hotList[i].id +'" title="'+ hotList[i].titleName +'">· '+ hotList[i].titleName +'</a></li>'].join('');
+							$('.examdt').append(hotList3);
+						}
+					}
+				}
+			}
+		});	
+	}
+	notice(examType);	
+});
+</script>
+</script>
+
+<style type="text/css">
+        /* 给飘窗添加一些基础样式，如宽度，高度和背景颜色等等 */
+        .automv{width: 200px;height: 200px;}
+        .automv .mvLink{display: block;}
+        </style>
+        <!-- 飘窗元素 -->
+        <div class="automv">
+            <a href="http://bj.nengliyk.com/page.do?oid=8980&subject=yishi2017" class="mvLink">
+                <img src="http://pic2.ablesky.cn/content/pic/album/2017/02/09/ed0ea5b0-064e-4f76-809c-c17b6c515465.png" alt="2017年护士执业考试通关方案">
+            </a>
+        </div>
+        <script type="text/javascript">
+        //定义插件
+        !function($){
+        /**
+        * Description: jquery飘窗插件，可自适应浏览器宽高的变化
+        * Author: YZCS
+        * CreateTime: 2015-04-25
+        * param: args={startL:default, startT:default, angle:-Math.PI/4, speed: 125} 
+        * 参数说名: startL飘窗初始时距离左边的距离, startT飘窗初始化距离顶部的距离, angle飘窗初始运动方向, speed运动速度(px/s)
+        * CopyRight: GPL 
+        */
+        $.fn.autoMove = function(args){
+            //先定义一些工具函数判断边距
+            function isTop(pos, w_w, w_h, d_w, d_h){//飘窗到达上边距
+                if(pos.top<=0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            function isBottom(pos, w_w, w_h, d_w, d_h){//飘窗到达下边距
+                if(pos.top>=(w_h-d_h)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            function isLeft(pos, w_w, w_h, d_w, d_h){//飘窗到达左边距
+                if(pos.left<=0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            function isRight(pos, w_w, w_h, d_w, d_h){//飘窗到达右边距
+                if(pos.left>=(w_w-d_w)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            return this.each(function(){
+                var w_w = parseInt($(window).width()),
+                    w_h = parseInt($(window).height()),
+                    d_w = parseInt($(this).width()),
+                    d_h = parseInt($(this).height()),
+                    d_l = (w_w-d_w)/2,
+                    d_t = (w_h-d_h)/2,
+                    max_l = w_w - d_w;
+                    max_t = w_h - d_h;
+                    //位置及参数的初始化
+                var setobj = $.extend({startL:d_l, startT:d_t, angle:Math.PI/4, speed:100}, args);
+                $(this).css({position: 'absolute', left: setobj['startL']+'px', top: setobj['startT']+'px'});
+                var position = {left: setobj['startL'], top: setobj['startT']};//飘窗位置对象
+                var that = $(this);
+                var angle= setobj.angle;
+                var time = 10;//控制飘窗运动效果，值越小越细腻
+                var step = setobj.speed * (time/1000);//计算运动步长
+                var decoration = {x:step*Math.cos(angle), y:step*Math.sin(angle)};//计算二维上的运动增量
+                var mvtid;
+                $(window).on('resize', function(){//窗口大小变动时重新设置运动相关参数
+                    w_w = parseInt($(window).width()),
+                    w_h = parseInt($(window).height()),
+                    max_l = w_w - d_w;
+                    max_t = w_h - d_h;
+                });
+                function move(){
+                    position.left += decoration.x;
+                    position.top  += decoration.y;
+                    if(isLeft(position, w_w, w_h, d_w, d_h)||isRight(position, w_w, w_h, d_w, d_h)){
+                        decoration.x = -1*decoration.x;
+                    }
+                    if(isRight(position, w_w, w_h, d_w, d_h)){
+                        position.left = max_l;
+                    }
+                    if(isTop(position, w_w, w_h, d_w, d_h)||isBottom(position, w_w, w_h, d_w, d_h)){
+                        decoration.y = -1*decoration.y;
+                    }
+                    if(isBottom(position, w_w, w_h, d_w, d_h)){
+                        position.top = max_t;
+                    }
+                    //that.css({left:position.left, top:position.top});
+                    that.animate({left:position.left, top:position.top}, time);//改用jquery动画函数使其更加平滑
+                    mvtid = setTimeout(move, time);//递归调用，使飘窗连续运动
+                }
+                move();//触发动作
+                that.on('mouseenter', function(){ clearTimeout(mvtid) });//添加鼠标事件
+                that.on('mouseleave', function(){ move() });
+            });
+        }//end plugin definition
+        }(jQuery);
+        </script>
+        <script type="text/javascript">
+        //测试插件
+        $('.automv').autoMove({angle:-Math.PI/4, speed:120});
+        </script>
+
+
+</html>

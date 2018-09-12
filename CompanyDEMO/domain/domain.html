@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>domain</title>
+</head>
+<body>
+	
+
+	<script>
+	var getFLDomain = function(hostname) {
+		var _hostName = hostname ? hostname : window.location.hostname;
+		var hostnameArray = _hostName.split('.');
+		hostnameArray.shift();
+
+		return hostnameArray.join('.');
+	};
+	console.log(getFLDomain())
+	</script>
+</body>
+</html>

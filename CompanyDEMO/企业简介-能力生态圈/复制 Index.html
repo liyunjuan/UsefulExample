@@ -1,0 +1,2673 @@
+<meta charset="utf-8" />
+	<style>
+		body {
+			padding:0!important;
+			margin:0;
+			width:100%;
+			min-width:1200px;
+			margin:0;
+			padding:0;
+			background-color: #eeeeee;
+			}
+		/* 页面初始化 */
+		.blockPage {
+			display: none;
+		}
+		.blockOverlay{
+			display: none!important;
+		}
+        .org-common-guide{
+   			display: none;
+       	    } 
+	    .as-header-wrap{
+	    	display: none;
+	    }
+	    #J_siteNav{
+	    	display: none;
+	    }
+	    #J_headArea{
+	    	display: none;
+	    }
+	    #J_fixedTools{
+	    	display: none;
+	    }
+       .org-footer-support{
+              display:none;
+         }
+		#J_fixedTools{
+			display:none;
+		}
+        .breadcrumbs{
+			display:none;
+		}
+		.dialog-mask{
+			display: none !important;
+		}
+		.dialog-box{
+			display: none!important;
+		}
+		/* 导航 */
+		.org-header-wrap{
+			margin-bottom: 0;
+		}
+		.org-navbar-wrap{
+			background-color: #333333;
+			margin-bottom: 0;
+		}
+		.org-navbar{
+			height: 76px;
+		}
+		.org-navbar .list {
+			font-size: 18px;
+			color: #ffffff;
+			width: 160px;
+			height: 74px;
+		}
+		.org-navbar .list .text {
+			height: 74px;
+			line-height: 74px;
+			font-size: 18px;
+		}
+		.nav-logo {
+		 	display:block;height:40px; width:112px;margin:18px 0;
+		}
+		.nav-logo img{
+			width:100%;height:100%;
+		}
+		.nav-list{
+			position: absolute;
+			display: none;
+			width: 160px;
+			top: 66px;
+		}
+		.ul-list{
+
+			border: 1px solid #cccccc;
+		}
+		.ul-list li{
+			width: 158px;
+			height: 56px;
+			background-color:#ffffff;
+		}
+		.ul-list li:hover{
+			background-color:#e4e4e4;
+		}
+		.ul-list li a{
+			margin: 0 auto;
+			display: block;
+			height: 55px;
+			width: 126px;
+			border-bottom: 1px solid #cccccc;
+			font-size:18px;
+			line-height: 56px;
+			text-align: center;
+			text-orientation: none;
+		}
+		.p-and-s{
+			position: absolute;
+			top: -10px;
+			left: 1065px;
+		}
+		.about-us{
+			position: absolute;
+			top: -10px;
+			left: 1387px;
+		}
+
+		.lay-custom-page {
+			width: 100% !important;
+			margin-top: 0 !important;
+			position: relative;
+		}
+		a img {
+			border: none;
+			color: #333333;
+		}
+		p,ul,li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		/* 公用css */
+		/* footer */
+		.suspend{
+			position: fixed;
+			right: 30px;
+			bottom: 80px;
+		}
+		.suspend li{
+			height: 50px;
+			width: 50px;
+			margin-bottom: 5px;
+		}
+		.suspend li a{
+			position: relative;
+			display: block;
+			height: 50px;
+			width: 50px;
+			cursor: pointer;
+		}
+		.suspend li .suspend-hover{
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		.suspend li .suspend-hover p{
+			font-size: 16px;
+			color: #fff;
+			text-align: center;
+			line-height: 24px;
+			height: 24px;
+		}
+		.suspend .phone{
+			position: relative;
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/05d667a3-dc7b-4285-aa87-049ab1f76c6a.png') top center no-repeat;
+		}
+		.suspend .phone:hover{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/fdc19575-a119-4655-b04d-2d479caf4de0.png') top center no-repeat;
+		}
+		.suspend .phone:hover .suspend-hover{
+			position: absolute;
+			top: -22px;
+			left:-225px;
+			display: block;
+			height: 52px;
+			width: 220px;
+						padding: 10px 0;
+			background-color: #5c5c5c;
+			border-radius: 5px;
+		}
+		.suspend .phone:hover .suspend-hover p{
+			margin: 0;
+			padding: 0;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.suspend .message{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/efc5a00c-8c80-48fd-8d05-603ec20c9f59.png') top center no-repeat;
+		}
+		.suspend .message:hover{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/4dc50527-f095-49fd-abc4-e0564f15a3c6.png') top center no-repeat;
+		}
+		.suspend .code{
+			position: relative;
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/bc809660-f6ae-4e1f-8955-147cb4f03026.png') top center no-repeat;
+		}
+		.suspend .code:hover{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/23365aa4-136a-4202-add1-b0d18a2ec9fb.png') top center no-repeat;
+		}
+		.suspend .code:hover .suspend-hover{
+			overflow: hidden;
+			position: absolute;
+			top: -80px;
+			left: -225px;
+			display: block;
+			height: 132px;
+			width: 220px;
+			background: url('http://pic5.ablesky.cn/content/pic/album/2017/06/02/a60a63d4-9492-4748-9407-e4671bfe1049.png') top center no-repeat;
+		}
+		.suspend .toTop{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/86bc793d-3f82-4199-a00b-5e477f733ee2.png') top center no-repeat;
+		}
+		.suspend .toTop:hover{
+			background: url('http://pic4.ablesky.cn/content/pic/album/2017/05/25/8c9bcab8-54d4-48f8-8442-39897515cbb7.png') top center no-repeat;
+		}
+		
+		.footer{
+			height: 330px;
+			background-color: #333333;
+		}
+		.footer a{
+			color: #b4b4b4;
+		}
+		.footer a:hover{
+			color: #09f;
+		}
+		.footer .foot-top{
+			width: 1200px;
+			margin: 0 auto;
+			height: 148px;
+			border-bottom: 1px solid #b4b4b4;
+		}
+		.footer .foot-top p.link{
+			margin: 0;
+			font-size: 20px;
+			font-weight: bold;
+			color: #fff;
+			padding: 40px 0 36px 0 ;
+			text-align: left;
+		}
+		.foot-top ul{
+			margin: 0;
+			padding: 0;
+		}
+		.foot-top ul li{
+			float: left;
+			margin-right: 28px;
+		}
+		.foot-top ul li a{
+			color: #b4b4b4;
+			font-size: 18px;
+			line-height: 18px;
+		}
+		.foot-bot {
+			padding-top: 31px;
+		}
+		.foot-bot .as-logo{
+			display: block;
+			width: 130px;
+			height: 47px;
+			margin: 0 auto 20px;
+		}
+		.foot-bot p{
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+			line-height: 30px;
+			color: #b4b4b4;
+			text-align: center;
+		}
+		/* footer结束 */
+		/* 轮播图开始 */
+		.carousel {
+			min-width: 1200px;
+			height: 345px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.screen {
+			width: 1920px;
+			height: 345px;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+            left: 50%;
+            margin-left: -960px;
+		}
+		.screen li {
+			width: 1920px;
+			height: 345px;
+			overflow: hidden;
+			float: left;
+		}
+		.screen li a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.screen li img{
+			width: 100%;
+			height: 100%;
+		}
+		.screen ul {
+			position: absolute;
+			left: 0;
+			top: 0px;
+			width: 5760px;
+		}
+		.carousel ol {
+			position: absolute;
+			left: 50%;
+			margin-left: -25px;
+			bottom: 10px;
+			line-height: 20px;
+			text-align: center;
+		}
+		.carousel ol li {
+			float: left;
+			width: 10px;
+			height: 10px;
+			background: #d3d3d3;
+			margin-left: 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.carousel ol li.current {
+			background: #484848;
+		}
+       #arr {
+        display: none; 
+        width: 1180px;
+        height: 52px;
+        position: absolute;
+		left: 50%;
+		margin-left: -590px;
+		top: 50%;
+		margin-top: -26px;
+    	}
+
+        #arr span {
+            width: 40px;
+            height: 52px;
+            display: block;
+            float: left;
+            background: url('http://pic2.ablesky.cn/content/pic/album/2017/05/31/1bc36d9d-0077-4a07-8279-45c88b6afaa6.png') no-repeat;
+            cursor: pointer;
+        }
+
+        #arr #right {
+	      	background: url('http://pic2.ablesky.cn/content/pic/album/2017/05/31/7ab9d9d2-594f-4c3e-9fdf-07dae314e06c.png') no-repeat;
+            float: right;
+       }
+	/* 轮播图结束 */
+	/************************************************************************************/
+		.eduLoop .module{
+			width:100%;
+		}
+		.eduLoop .wrap{
+			width:1200px;
+			 margin:0 auto;
+			}
+		a.btn:hover{
+		 color:#929292; 
+		 border: 2px solid #929292;
+		  }
+	
+		/* join */
+		.join{
+			height: 658px;
+			overflow: hidden; 
+			min-width:1200px;  
+			background: url(http://pic6.ablesky.cn/content/pic/album/2017/06/19/3b4a06fd-01d1-4782-bb71-06b9ff36e88f.png) no-repeat center top; 
+		}
+		.join .wrap{
+			background: url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/65895995-f621-4182-90d7-01bb66f88793.png) no-repeat right top ;height: 502px; 
+			width:1097px; 
+		}
+		.join .join_title{
+			font-size: 44px; 
+			color: #333; 
+			text-align: left; 
+			font-weight: bold; 
+			padding-top: 112px; 
+			width:1097px; 
+			margin:0 auto; 
+			height:44px;
+			line-height:44px;
+			-webkit-transform:translateY(20%);
+			-moz-transform:translateY(20%);
+			-ms-transform:translateY(20%);
+			-o-transform:translateY(20%);
+			transform:translateY(20%);
+		}
+		.join .join_title.current{
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			-webkit-transform:none;
+			-moz-transform:none;
+			-ms-transform:none;
+			-o-transform:none;
+				transform:none;
+		}
+		.join .wrap:{
+			height:507px;
+		}
+		.join .join_con{
+			margin-top:205px; 
+			opacity: 0.4;  
+		}
+		.join .join_con.current{
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			margin-top:105px;
+			opacity:1;
+		}
+		.join .join_con p{
+			font-size: 24px; 
+			color: #333; 
+			text-align: left; 
+			margin-bottom: 25px; 
+			line-height:24px;
+			 }
+		.join .join_con p.ellipsis{
+			font-size: 30px;
+		}
+		.join .join_con p b{
+		 font-weight: bold;
+		}
+		.join_foot {
+			font-size: 34px;
+			 color: #333; 
+			 text-align: left; 
+			 font-weight: bold; 
+			 padding-top: 84px;  
+			 opacity:0.4
+			}
+		.join_foot.current{
+			-webkit-transition:all 1s 0.5s;
+			-moz-transition:all 1s 0.5s;
+			-ms-transition:all 1s 0.5s;
+			-o-transition:all 1s 0.5s;
+			transition:all 1s 0.5s;
+			padding-top: 0px;
+			opacity:1;
+						}
+		.join_foot p b{
+			font-size: 28px
+		}
+		
+		
+		/* plan */
+		
+		.plan{
+			height:943px;
+			min-width:1200px;  
+			background: url(http://pic1.ablesky.cn/content/pic/album/2017/06/19/3fdad9d7-f92a-4d11-95e5-95e762d6ba24.png) no-repeat center top; overflow:hidden;
+		}
+		.plan .wrap{
+			width:1097px; 
+		    height:943px;}
+		.plan .plan_title1{
+			width:1097px; 
+			height:44px; 
+			font-size: 44px; 
+			color: #333; 
+			text-align: center; 
+			font-weight: bold; 
+			padding-top: 82px; 
+			padding-bottom: 28px; 
+			line-height: 44px;
+		}
+		.plan .plan_title2{
+			width:1097px; 
+			height:30px; 
+			font-size:20px; 
+			color: #333; 
+			text-align: center; 
+			font-weight: normal;
+			line-height:30px; 
+		}
+		.plan_con{
+			width:100%;
+			height:759px;
+		}
+		.plan_pic {  
+			margin: 0 auto; 
+			height:480px;
+			width:1079px; 
+			position: relative;
+		}
+	    .plan_pic .plan_pic1{
+	    	top:103px; 
+	    	left: 68px; 
+	    	position: absolute;  
+	    	height:364px;
+	    	 width:474px;
+	    	}
+		.plan_pic .plan_pic2{
+			top:40px; 
+			left: 263px; 
+			position: absolute; 
+			height:474px; 
+			width:285px; 
+			z-index:100;
+		}
+		.plan_pic .plan_pic3{
+			top:40px; 
+			left: 568px; 
+			position: absolute; 
+			 height:473px; 
+			 width:282px;   
+			 z-index:100;
+			}
+		.plan_pic .plan_pic4{
+			top:103px; 
+			left: 568px; 
+			position: absolute;
+			 height:364px; 
+			 width:474px;   
+			}
+		.plan_pic .plan_pic1 img, .plan_pic .plan_pic2 img, .plan_pic .plan_pic3 img,  .plan_pic .plan_pic4 img{
+			width:100%;
+			 height:100%;
+			}
+		
+		.plan_pic .plan_pic1.current{
+			top:83px;
+		    left: 88px;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			opacity:1;
+		}
+		.plan_pic .plan_pic2.current{
+			top:20px; 
+			left:277px;
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			opacity:1;
+			}
+		.plan_pic .plan_pic3.current{
+			top:20px; 
+			left: 548px;
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			opacity:1;
+			}
+		.plan_pic .plan_pic4.current{
+			top:83px;
+			left: 548px;
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			opacity:1;
+			}
+		
+		.plan_foot{
+			width: 100%; 
+			height:180px;
+		}
+		.plan_foot .loop{ 
+			padding-top: 60px; 
+			font-size: 20px; 
+			color: #333; 
+			text-align: center; 
+			font-weight: normal; 
+			opacity:0;
+			-webkit-transform:translateY(50%);
+			-moz-transform:translateY(50%);
+			-ms-transform:translateY(50%);
+			-o-transform:translateY(50%);
+			transform:translateY(50%);
+		
+		}
+		.plan_foot .loop.current{ 
+			padding-top: 40px; 
+			font-size: 20px; 
+			color: #333; 
+			text-align: left;
+			 font-weight: normal; 
+			 opacity:0;
+			-webkit-transition:all 2s ;
+			-moz-transition:all 2s ;
+			-ms-transition:all 2s ;
+			-o-transition:all 2s ;
+			transition:all 2s ;
+			-webkit-transform:none;
+			-moz-transform:none;;
+			-ms-transform:none;;
+			-o-transform:none;;
+			transform:none;;
+			opacity:1;
+		
+		}
+		
+		.plan_foot .yike{
+			text-align:left; 
+			padding-top: 60px;  
+			font-size: 20px; 
+			color: #333; 
+			text-align: center; 
+			font-weight: normal; 
+			opacity:0; 
+		}
+		.plan_foot .yike.current{ 
+			padding-top: 20px; 
+			text-align:left;  
+			font-size: 20px; 
+			color: #333; 
+			font-weight: normal;
+			-webkit-transition:all 2s ;
+			-moz-transition:all 2s ;
+			-ms-transition:all 2s ;
+			-o-transition:all 2s ;
+			transition:all 2s ;
+			opacity:1;
+		}
+		
+		.plan_foot p b{
+			font-weight: bold;
+		}
+		.plan_join{
+			margin-top:26px; 
+			height:48px;
+		}
+		.plan_join a{
+			display: block;
+			 height:44px; 
+			 width: 240px; 
+			 border:2px solid #e1675f; 
+			 color:#e1675f; 
+			 font-size: 20px; 
+			 text-align: center; 
+			 margin:  0 auto; 
+			 border-radius: 22px;
+			 line-height:44px; 
+			 opacity:0;}
+		.plan_join a.current{display: block; height:44px; width: 240px; border:2px solid #e1675f; color:#e1675f; font-size: 20px; text-align: center; margin:  0 auto; border-radius: 22px;line-height:44px;
+			-webkit-transition:all 2s ;
+			-moz-transition:all 2s ;
+			-ms-transition:all 2s ;
+			-o-transition:all 2s ;
+				transition:all 2s ;
+		opacity:1;}
+		.plan_join a:hover{color:#9e9e9e; border:2px solid #9e9e9e;}
+		/* circle */
+		.circle{height: 791px;min-width:1200px;  overflow:hidden; background: url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/5a1c14a6-7161-43fd-b7cf-7665be7e8ca6.png) no-repeat center top;}
+		.circle .wrap{width: 1142px; height: 791px; margin:0 auto; }
+		.circle .cir_title{width:1142px; height:44px; padding-top: 104px; font-size: 44px; color: #333; text-align: center; font-weight:bold; line-height: 44px;}
+		.circle .cir_con{height:538px; width: 100%; padding-top:108px; opacity:0;
+			-webkit-transform:translateY(50%);
+			-moz-transform:translateY(50%);
+			-ms-transform:translateY(50%);
+			-o-transform:translateY(50%);
+					transform:translateY(50%);
+		}
+		.circle .cir_con.current{
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			-webkit-transform:none;
+			-moz-transform:none;;
+			-ms-transform:none;;
+			-o-transform:none;;
+			transform:none;;
+				opacity:1;
+		}
+		.circle .cir_con ul{
+			height:538px; 
+			width: 100%;
+		}
+		.circle .cir_con li{
+			float: left;  
+		}
+		.circle .cir_con li .logo img{
+			display:block; 
+			margin: 0 auto;
+		}
+		.circle .cir_con li .slogn{
+			font-size:22px; 
+			color: #333; 
+			text-align: center; 
+			font-weight:normal; 
+			padding-top: 50px; 
+			padding-bottom: 44px;
+			line-height: 22px;
+		}
+		.circle .cir_con  .con1{
+			margin-right: 90px;
+			 width:302px;
+			 height:538px;
+			}
+		.circle .cir_con  .con1 .slogn{
+			width:302px; 
+			height:22px;
+		}
+		.circle .cir_con  .con1 p {
+			font-size:20px; 
+			color: #333; 
+			text-align: center; 
+			font-weight:normal;
+			padding-bottom: 23px;
+			line-height:20px; 
+		}
+		.circle .cir_con  .con1 p.firstLine{
+			font-size:30px; 
+			padding-bottom: 13px; 
+			line-height:48px;
+		}
+		.circle .cir_con  .con2{
+			margin-right: 90px;  
+			width:302px;
+			height:538px;
+		}
+		.circle .cir_con  .con2 .slogn{
+			width:302px; 
+			height:22px;
+		}
+		.circle .cir_con  .con2 .text{
+			margin-bottom: 40px;
+		}
+		.circle .cir_con  .con2 .text p{ 
+			font-size:16px; 
+			color: #333; 
+			text-align: center; 
+			line-height:20px;
+			font-weight:normal; 
+		};
+		.circle .cir_con  .con2 .text p.firstLine{
+			font-size:22px; 
+			line-height:48px;
+		}
+		
+		.circle .cir_con  .con3{ 
+			width:342px;
+			height:538px;
+		}
+		.circle .cir_con  .con3 .slogn{
+			width:342px; 
+			height:22px;
+		}
+		.circle .cir_con  .con3 .text{
+			padding-bottom: 22px;
+		}
+		.circle .cir_con  .con3 .text p{
+			font-size:16px; 
+			color: #333; 
+			text-align: center; 
+			line-height:28px;
+			font-weight:normal;
+		}
+
+		.circle .cir_con a{
+			display: block; 
+			width: 216px;
+			height: 36px; 
+			border: 2px solid #ea695f;
+			color: #ea695f; 
+			font-size:16px; 
+			line-height: 36px;
+			text-align: center; 
+			border-radius: 18px; 
+			margin: 0 auto;
+		}
+		.circle .cir_con a:hover{ 
+			border: 2px solid #929292; 
+			color:#929292
+		}
+		/* income */
+		.income{
+			height: 1135px;
+			min-width:1200px;  
+			overflow: hidden; 
+			background:url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/4133009c-c708-4002-a4cd-38c8f3799c1d.png) no-repeat center top;
+		}
+		.income .wrap{
+			width: 1114px; 
+			height: 1135px;
+		}
+		.income_title1{
+			font-size:44px; 
+			color: #333; 
+			text-align: center;
+			line-height:48px;
+			font-weight:bold; 
+			padding-top:55px;
+			}
+		.income_title2{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal; 
+			padding-top:62px ;
+		}
+		.income_img {
+			height: 264px; 
+			margin-top: 63px; 
+			padding-left: 40px; 
+		}
+		.income_img img{
+			display: block;
+			height: 264px; 
+			width: 264px; 
+			float: left; 
+		}
+		.income_img img.imgmid{
+			margin:0 140px;
+		}
+		.income_title3{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			height:32px;
+			font-weight:normal; 
+			padding:148px 0;
+		}
+		.income_other {
+			width:100%; 
+			height:193px;
+			opacity:0;
+			-webkit-transform:translateY(100%);
+			-moz-transform:translateY(100%);
+			-ms-transform:translateY(100%);
+			-o-transform:translateY(100%);
+				transform:translateY(100%);
+			}
+		.income_other.current{
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+			-webkit-transform:none;
+			-moz-transform:none;;
+			-ms-transform:none;;
+			-o-transform:none;;
+			transform:none;;
+			opacity:1;
+		}
+		.income_other li{
+			float: left; 
+			width:190px;  
+			margin-right: 118px;
+		}
+		.income_other li.lastImg{
+			margin-right:0px;
+		}
+		.income_other li .text{
+			font-size:20px; 
+			color: #333; 
+			text-align: center; 
+			line-height:22px;
+			font-weight:normal;
+		}
+		.income_other li .text.text1{
+			margin-top:97px;
+		}
+		.income_other li .text.text2{
+			margin-top:80px;
+		}
+		.income_other li .text.text3{
+			margin-top:68px;
+		}
+		.income_other li .text.text4{
+			margin-top:68px;
+		}
+		.income_other li p .img{
+			margin: 0 auto;
+			 display:block;
+			}
+		
+		/* plate */
+		.plate{
+			height: 1136px; 
+			min-width:1200px; 
+			overflow: hidden; 
+			background: url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/140ce1c6-0792-49b6-b464-476243cc64af.png)  no-repeat center top;
+		}
+		.plate .wrap{
+			width:1200px; 
+			height:1136px;
+		}
+		.plate .plate_title1{
+			font-size:44px; 
+			color: #333; 
+			text-align: center; 
+			line-height:44px; 
+			height:44px;
+			font-weight:bold; 
+			padding-top:57px; 
+			padding-bottom: 83px;
+		}
+		.plate .plate_title2{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			height:32px;
+			font-weight:normal; 
+			padding-bottom: 61px;
+		}
+		.plate .plate_img{ 
+			height: 290px; 
+			width:100%;
+		}
+		.plate .plate_img  li{
+			float:left;  
+			width: 285px; 
+			height:290px; 
+			margin-right:20px 
+		}
+		.plate .plate_img li.last{
+			margin-right:0;
+		}
+		.plate .plate_img li p{
+			font-size:16px; 
+			color: #333; 
+			text-align: center; 
+			line-height:16px;
+			font-weight:normal;
+		    padding: 38px 0 35px;
+		}
+		.plate .registered {
+			display: block; 
+			margin: 0 auto; 
+			width: 218px; 
+			height: 36px; 
+			border: 2px solid #ea695f; 
+			color: #ea695f;
+			border-radius: 18px;
+			text-align: center; 
+			line-height: 36px; 
+			font-size:20px; 
+		}
+		.plate .registered:hover{
+			color:#9e9e9e; 
+			border:2px solid #9e9e9e;
+		}
+		.plate .plate_title3{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			height:32px;
+			font-weight:normal; 
+			padding: 102px 0 65px;
+		}
+		.plate .plate_title4{
+			font-size:24px; 
+			color: #333; 
+			text-align: center; 
+			line-height:24px;
+			height:24px;
+			font-weight:normal; 
+			padding:0px 0 75px;
+		}
+		.plate .plate_logo { 
+			padding-left:43px; 
+			padding-right:43px;
+		}
+		.plate .plate_logo li{
+			float: left; 
+			height:157px;
+		}
+		.plate .plate_logo li.left{ 
+			width:208px;
+		}
+		.plate .plate_logo li.right{ 
+			width:278px;
+		}
+		.plate .plate_logo li.middle{
+			margin-left:200px;
+			margin-right:164px; 
+			width:264px;}
+		.plate .plate_logo li p{
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 
+			line-height:18px;
+			font-weight:normal; 
+			padding-top:50px; 
+		}
+		.plate .plate_logo li.left p{
+			padding-top:60px; 
+		}
+
+		
+		/*  app */
+		
+		.app{
+			height: 1510px;
+			min-width:1200px;  
+			overflow:hidden; 
+			background: url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/52443a76-677e-402c-b04e-b85ab9dac1ac.png) no-repeat center top;
+		}
+		.app .wrap{
+			height: 1510px;
+		}
+		.app .app_title1{ 
+			height:32px; 
+			width:100%; 
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal; 
+			padding: 55px 0 13px;
+		}
+		.app .app_title2{
+			height:16px; 
+			width:100%; 
+			font-size:16px; 
+			color: #333; 
+			text-align: center; 
+			line-height:16px;
+			font-weight:normal; 
+			padding-bottom: 37px;
+		}
+		.app .app_img1{
+			margin: 0 auto;  
+			width: 683px; 
+			overflow:hidden; 
+			position: relative;
+		}
+		.app .app_img1 img{
+			width: 100%; 
+		}
+		.app .app_img1 p{
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+			position: absolute; 
+			bottom:0;left:135px;
+		}
+		.app .app_img2{
+			position: relative; 
+			margin: 0 auto;  
+			width: 1000px; 
+			height:845px;
+		}
+		.app .app_img2 img{ 
+			position: absolute; 
+		}
+		.app .app_img2 .img01{
+			top:0; 
+			left:0 ;
+			display: none; 
+			width:935px; 
+			height:849px;
+		}
+		.app .app_img2 .img02{
+			top:104px; 
+			left:119px; 
+			width:716px; 
+			height:539px; 
+			display: block;
+		}
+		.app .app_img2 .img03{
+			top:98px; 
+			left:208px;
+			width:352px; 
+			height:246px; 
+			display:none ;
+		}
+		.app .app_img2 .img04{
+			top:98px; 
+			left:218px; 
+			width:331px; 
+			height:225px; 
+			display: block;
+		}
+		
+		.app .app_img2.current  .img01{
+			top:0; 
+			left:0 ;
+			display: block;
+			-webkit-transition:all 1s ;
+			-moz-transition:all 1s ;
+			-ms-transition:all 1s ;
+			-o-transition:all 1s ;
+			transition:all 1s ;
+		}
+		.app .app_img2.current  .img02{top:84px; left:119px;display: block;
+				-webkit-transition:all 1s ;
+				-moz-transition:all 1s ;
+				-ms-transition:all 1s ;
+				-o-transition:all 1s ;
+				transition:all 1s ;}
+		.app .app_img2.current  .img03{top:112px; left:203px;display: block;
+				-webkit-transition:all 1s ;
+				-moz-transition:all 1s ;
+				-ms-transition:all 1s ;
+				-o-transition:all 1s ;
+				transition:all 1s ;}
+		.app .app_img2.current  .img04{top:70px; left:210px;display: block;
+				-webkit-transition:all 1s ;
+				-moz-transition:all 1s ;
+				-ms-transition:all 1s ;
+				-o-transition:all 1s ;
+				transition:all 1s ;}
+		.app .app_img2  .app_text{ 
+			height:60px; 
+			width:483px; 
+			position: absolute; 
+			bottom:53px; 
+			left:50%; 
+			margin-left:-262px;
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 	
+			line-height:30px;
+			font-weight:normal;
+		}
+		.app .app_img2  .app_text p {
+			height:30px; 
+			width:483px;
+			}
+	/* open */
+		.open {
+			height: 1240px;
+			min-width:1200px;  
+			background: url(http://pic6.ablesky.cn/content/pic/album/2017/06/19/b04ed6e8-8819-4745-b606-fa29a37b2184.png) no-repeat center top;
+		}
+		.open .wrap{
+			width: 832px;
+}
+		.open  .open_title1{
+			font-size:44px; 
+			color: #333; 
+			text-align: center; 
+			line-height:44px;
+			font-weight:bold; 
+			padding: 50px 0;
+		}
+		.open  .open_title2{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal;
+		}
+		.open .open_con{
+			height:375px; 
+			padding-top:95px; 
+			padding-bottom:156px;
+		}
+		.open .open_con .conLeft{
+			width: 250px;
+			height:250px; 
+			float: left; 
+			position: relative; 
+			margin-top:40px;
+			-moz-transition:all 4s;;
+			-ms-transition:all 4s; ;
+			-o-transition:all 4s;;
+			transition:all 4s;
+			-webkit-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-moz-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-ms-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-o-transform:rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			transform: rotateY(49deg) rotateX(-20deg)  rotateZ(-20deg);
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-animation: rotate 6s linear infinite;
+			-moz-animation: rotate 6s linear infinite;
+			-ms-animation: rotate 6s linear infinite;
+			-o-animation: rotate 6s linear infinite;
+			animation: rotate 6s linear infinite;
+		}
+		.open .open_con .conLeft div{
+			width: 250px; 
+			height: 250px;
+			position: absolute;
+			left: 0;
+			top: 0; 
+			box-shadow:5px 5px 10px #555;
+		}
+		.open .open_con .conLeft div img{
+			width: 100%; 
+			height: 100%
+		}
+		.open .open_con .conLeft .front{
+			-webkit-transform:translateZ(135px);
+			-moz-transform:translateZ(135px);
+			-ms-transform:translateZ(135px);
+			-o-transform:translateZ(135px);
+			transform: translateZ(135px);
+		}
+		.open .open_con .conLeft .back{
+			-webkit-transform:translateZ(-135px) rotateY(180deg);
+			-moz-transform:translateZ(-135px) rotateY(180deg);
+			-ms-transform:translateZ(-135px) rotateY(180deg);
+			-o-transform:translateZ(-135px) rotateY(180deg);
+		transform: translateZ(-135px) rotateY(180deg);
+		}
+		.open .open_con .conLeft .left{
+			-webkit-transform:translateX(-135px) rotateY(-90deg);
+			-moz-transform:translateX(-135px) rotateY(-90deg);
+			-ms-transform:translateX(-135px) rotateY(-90deg);
+			-o-transform:translateX(-135px) rotateY(-90deg);
+		transform: translateX(-135px) rotateY(-90deg);
+		}
+		.open .open_con .conLeft .right{
+			-webkit-transform:translateX(135px) rotateY(90deg);
+			-moz-transform:translateX(135px) rotateY(90deg);
+			-ms-transform:translateX(135px) rotateY(90deg);
+			-o-transform:translateX(135px) rotateY(90deg);
+		transform: translateX(135px) rotateY(90deg);}
+		
+		.open .open_con .conRight{
+			float: right; 
+			width: 456px;
+		}
+		.open .open_con .conRight .con01{
+			padding-left: 56px; 
+			font-size:16px; 
+			color: #333; 
+			text-align: left; 
+			line-height:30px;
+			font-weight:normal;
+		}
+		.open .open_con .conRight .con02{
+			padding-left: 56px; 
+			padding-top:13px; 
+			font-size:22px; 
+			color: #333; 
+			text-align: left; 
+			line-height:40px;
+			font-weight:normal;}
+
+		.open .open_con .conRight .con03{
+			padding-left: 56px; 
+			font-size:22px; 
+			color: #333; 
+			text-align: left; 
+			line-height:40px;
+			font-weight:normal;
+		}
+		.open .open_con .conRight .con05 img{
+			float: left; 
+			height: 109px;
+			 width: 137px; 
+			 display:block;
+			}
+		.open .open_con .conRight .con05 p{ 
+			float: right; 
+			padding-top:19px; 
+			width:310px; 
+			font-size:14px; 
+			color: #333; 
+			text-align: left; 
+			line-height:30px; 
+			font-weight:normal;
+		}
+		
+		.open .open_title3{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal;
+			padding-bottom:10px;
+			 }
+		.open .open_title4{
+			font-size:14px; 
+			color: #333; 
+			text-align: center; 
+			line-height:14px;
+			font-weight:normal; 
+		}
+		.open .open_brand{
+			height: 78px;
+			width: 105px;
+			margin:0 auto;
+			padding-top:52px;
+			}
+		.open .open_brand img{
+			width: 100%; 
+			height: 100%
+		}
+		.open .open_text{
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+			padding:43px 0 40px;  
+		}
+		.open a{
+			display: block;
+			margin: 0 auto; 
+			width: 216px;
+			height: 36px; 
+			border: 2px solid #ea695f;
+			color: #ea695f; 
+			font-size:16px; 
+			line-height: 36px;
+			text-align: center; 
+			border-radius: 18px; 
+		}
+		.open a:hover{
+			color:#9e9e9e; 
+			border:2px solid #9e9e9e;
+		}
+		@keyframes rotate {
+		from{
+		transform: rotateY(49deg) rotateX(-20deg);
+		}
+		to{
+		transform: rotateY(409deg) rotateX(-20deg) ;
+		}
+		}
+	/* team */
+		.team{
+			height:1150px;
+			min-width:1200px;  
+			background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/19/5f55a976-159e-4c7a-9313-ae3d4ee3ad31.png)  no-repeat center top; 
+		}
+		.team .wrap{
+			width: 1164px
+		}
+		.team .team_title1{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal;
+			padding-top:40px; 
+			padding-bottom: 60px;
+		}
+		.team .team_con1{
+			padding-left:97px;
+			padding-right: 8px; 
+			height: 390px; 
+			margin:0 auto;
+		}
+		
+		.team .team_con1 .con1_l{
+			float: left;
+			 width: 336px;
+			}
+		.team .team_con1 .con1_r {
+			float: right;  
+			width: 561px;
+		}
+			
+		
+		.team .team_con1 .con1_l .titl{
+			width: 333px; 
+			font-size:20px;
+			 color: #333; 
+			 text-align: center; 
+			 line-height:20px;
+			 font-weight:normal; 
+			 padding-bottom: 52px;
+			};
+		.team .team_con1 .con1_l img {
+			display:block; 
+			margin:0 auto; 
+			width:295px;
+			height: 195px;
+		}
+		.team .team_con1 .con1_l .text{
+			padding-top: 64px; 
+			font-size:18px; 
+			color: #666; 
+			text-align: center;
+			line-height:30px;
+			font-weight:normal;
+		}
+
+		
+		.team .team_con1 .con1_r .titl{
+			width: 535px; 
+			font-size:20px; 
+			color: #333; 
+			text-align: center; 
+			line-height:20px;
+			font-weight:normal; 
+			padding-bottom: 52px;
+		}
+		.team .team_con1 .con1_r  img{
+			display:block; 
+			margin:0 auto; 
+			width:309px;
+			height: 196px;
+			 }
+		.team .team_con1 .con1_r .text{
+			padding-top:35px;
+			font-size:18px; 
+			color: #666; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+		}
+		
+		.team .team_title2{
+			font-size:32px; 
+			color: #333; 
+			text-align: center; 
+			line-height:32px;
+			font-weight:normal;
+			padding-top:156px; 
+			padding-bottom: 59px; 
+			display:inline-block;
+		}
+		.team .more {
+			display:inline-block; 
+			width:156px; 
+			height:36px;  
+			border: 2px solid #ea695f; 
+			font-size:16px; 
+			color:#ea695f; 
+			text-align:center;
+			line-height:36px;  
+			border-radius: 18px;
+			margin-left:278px
+		}
+		.team .more:hover{
+			color:#9e9e9e; 
+			border:2px solid #9e9e9e;
+		}
+		.team .team_con2 li{
+			float: left; 
+		}
+		.team .team_con2 .con2_l{
+			width:320px;
+		}
+		.team .team_con2 .con2_l img{
+			display:block; 
+			width:54px; 
+			height:35px; 
+			margin:0 auto;
+		}
+		.team .team_con2 .con2_m{
+			width:352px;
+			margin:0 75px;
+			}
+		.team .team_con2 .con2_m img{
+			display:block; 
+			width:50px; 
+			height:36px; 
+			margin:0 auto;
+		}
+		.team .team_con2 .con2_r{
+			width:342px;
+		}
+		.team .team_con2 .con2_r img{
+			display:block; 
+			width:44px; 
+			height:44px; 
+			margin:0 auto;
+		}
+		.team .team_con2 .titl{
+			width:100%; 
+			font-size:20px; 
+			color: #333; 
+			text-align: center; 
+			line-height:20px;
+			font-weight:normal;
+			 padding-bottom: 32px;
+			}
+		.team .team_con2  .text{
+			padding-top:46px; 
+			font-size:16px; 
+			color: #333; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal; 
+		}
+		.team .team_con2 .con2_r .text{
+			padding-top:38px;
+		}
+		.team .team_con2 .details{
+			display:block; 
+			width:96px; 
+			height:36px;  
+			border: 2px solid #ea695f; 
+			font-size:16px; 
+			color:#ea695f; 
+			text-align:center;
+			line-height:36px;  
+			border-radius: 18px; 
+			margin:0 auto;}
+		.team .team_con2 .details:hover{
+			color:#9e9e9e; 
+			border:2px solid #9e9e9e;
+		}
+		.team .team_con2 .con2_l .details{
+			margin-top:55px; 
+		}
+		.team .team_con2 .con2_m .details{
+			margin-top:24px; 
+		}
+		.team .team_con2 .con2_r .details{
+			margin-top:24px;
+		 }
+
+		
+		/* 	event */
+		.event{
+			min-width:1200px;
+			background:url(http://pic3.ablesky.cn/content/pic/album/2017/06/19/3d4af68d-0846-48e0-8a35-d34211ebf5d6.png)  no-repeat center top;
+			 }
+		.event .wrap{
+			width:1186px;
+			height: 623px;
+		}
+		.event  .event_title{
+			font-size:44px; 
+			color: #333; 
+			text-align: center; 
+			line-height:44px;
+			font-weight:bold;
+			padding-top:58px; 
+			padding-bottom: 112px;
+		}
+
+		.event .event_con{
+			height: 320px; 
+			overflow:hidden;
+		}
+		.event .event_con div{ 
+			float: left; 
+		    width:380px; 
+		    height: 320px;
+	    }
+		.event .event_con a {
+			display: block; 
+		   color:#333; 
+		   margin:0 auto;
+	    }
+
+		.event .event_con .con .title {
+			width:280px; 
+			padding:0 20px;
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+			padding-top:46px; 
+			margin:0 auto;   
+		}
+		.event .event_con .con .title.over{
+			width:280px; 
+			padding:0 20px;
+			font-size:18px; 
+			color: #333; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+			padding-top:46px; 
+			margin:0 auto; 
+			max-height:60px; 
+			overflow:hidden; 
+			position:relative;
+		}
+		.event .event_con .con .title.over::after{
+			content:"...";
+			font-size:18px; 
+			color: #333; 
+			position:absolute; 
+			bottom:0; 
+			right:0; 
+			line-height:30px; 
+			padding-top:76px;
+		}
+		.event .event_con .con .title:hover{
+			color:#ea695f;
+		}
+		.event .event_con .con .title.over:hover::after{
+			content:"...";
+			font-size:18px; 
+			color: #ea695f; 
+			position:absolute; 
+			bottom:0; 
+			right:0; 
+			line-height:30px;
+			 padding-top:76px;
+			}
+		
+		.event .event_con .con .img{
+			width:380px; 
+			height:200px 
+		}
+		.event .event_con .con img{
+			width:380px; 
+			height:200px 
+		}
+		.event .event_con .con:nth-child(2){
+			margin:0 20px;
+		}
+		.event .event_con .newsAll {
+			margin:0 auto; 
+			width:380px;
+			font-size:14px; 
+			color: #333; 
+			text-align: center;
+			padding-top:10px; 
+			padding-bottom:10px;
+			background:url(http://www.ablesky-a.com:8080/ableskystatics/images/index/2b/eduEvent03_bg.png)  no-repeat center top; 
+			overflow:hidden;
+		}
+		.event .event_con .newsAll em{
+			display:inline-block;
+			 padding-left:20px; 
+			 margin-top:8px; 
+			 float:left;
+			 height: 4px; 
+			 width:4px; 
+			 background:url(http://www.ablesky-a.com:8080/ableskystatics/images/index/2b/eduEventRed.png)  no-repeat center top;
+			}
+		.event .event_con .newsAll .newstitle{
+			display:inline-block; 
+			color: #333; 
+			float:left;
+			width:330px; 
+			line-height:20px;
+		    height:20px;
+		    overflow:hidden; 
+		    text-overflow:ellipsis;
+		    white-space:nowrap ; 
+		    text-align:left;
+		}
+		.event .event_con .newsAll .newstitle:hover{
+			color:#ea695f;
+		}
+		.event .event_con .newsAll .newsList{
+			padding-top:10px; 
+			position: absolute;
+		}
+		.event .event_con .newsAll .newsbox{
+			height:154px; 
+			margin:10px 0;
+			position: relative; 
+			overflow:hidden;
+		}
+		.event .event_con .newsAll p{
+			padding:0;
+			margin:0;
+		}
+		.event .event_con .newsAll .line{
+			height:1; 
+			width:340px;
+			margin:0 auto; 
+			display:inline-block; 
+			line-height:1px; 
+			magin-top:-5px; 
+			float:left;
+			margin: 10px 0 5px 0;
+			padding-left:20px;
+		}
+		.event .event_con .newsAll .line img{
+			width:100%; 
+			height:100%
+		}
+		
+		
+		/* school	 */
+		.shcool{ 
+			min-width:1200px; 
+			background:url(http://pic1.ablesky.cn/content/pic/album/2017/06/02/598bb501-d41e-4275-b412-8733e7f2fefa.png)  no-repeat center top;
+		}
+		.shcool .wrap{
+			height: 670px;
+		}
+		.shcool .shc_title{
+			font-size:36px; 
+			color: #fff; 
+			text-align: center; 
+			line-height:36px; 
+			font-weight:normal; 
+			padding-top:40px; 
+			padding-bottom: 73px;
+		}
+		.shcool .sch_info{
+			height: 330px; 
+			background:url(http://pic1.ablesky.cn/content/pic/album/2017/06/02/4f3bf00a-94e5-4664-b511-235b89ffaae7.png)  no-repeat center top;
+		}
+		.shcool .sch_num{
+			font-size:30px; 
+			color: #fff; 
+			text-align: center; 
+			line-height:30px;
+			font-weight:normal;
+			padding-top:27px; 
+			padding-bottom: 16px;
+		}
+		.shcool .sch_news{
+			width:100%; 
+			height: 63px; 
+			background:#202429; 
+			color:#fff;  
+			overflow:hidden; 
+			position: relative;
+		}
+		.shcool .sch_news .newshcool{
+			font-size:18px; 
+			color: #fff; 
+			text-align: center; 
+			line-height:63px;
+			font-weight:normal;  
+			position: absolute; 
+		}
+		
+		.shcool .sch_news .newshcool li{
+			float:left; 
+			margin-right:40px;
+		}
+		
+		.course-list .leftdispose{
+			width:105px; 
+			height:300px; 
+			float:left; 
+			background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/b28e45af-c394-4189-82df-b60a98b2bc56.png) no-repeat 50px 110px;
+		}
+		.course-list .rightdispose{
+			width:105px; 
+			height:300px; 
+			float:right; 
+			background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/ceda56c8-f9c9-4002-80a5-1e4fc4866a54.png) no-repeat 0 110px;
+		}
+		.course-list .leftdispose:hover{ 
+			background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/7465a96e-03c6-401e-a92d-8ba4c551cdde.png) no-repeat 50px 110px;
+		}
+		.course-list .rightdispose:hover{ 
+			background:url(http://pic6.ablesky.cn/content/pic/album/2017/06/16/97ffcbc6-418e-497b-b1e8-dffb0e5be0cc.png) no-repeat 0 110px;
+		}
+	    
+		.school-list{
+			width:944px; 
+			height:300px; 
+			overflow:hidden; 
+			float:left
+		}
+		.school-list .teacher li{
+			 width:116px; 
+			 height:300px; 
+			 float:left;
+		}
+		.school-list .teacher li a{ 
+			width:100px; 
+			height:100px; 
+			background:url(http://pic5.ablesky.cn/content/pic/album/2017/06/16/2df6a815-11c0-4ba3-be4b-b3c787d674f4.png) no-repeat; 
+			display:block; 
+			padding:4px; 
+			margin:90px auto 0;
+		}
+		.school-list .teacher li img{
+			width:92px; 
+			height:92px; 
+			border-radius:60px; 
+			display:block;
+		}
+		.school-list .teacher li span{ 
+			display:none;
+		}
+		.school-list .teacher li.on{ 
+			width:250px;
+		}
+		.school-list .teacher li.on a{ 
+			width:214px; 
+			height:214px; 
+			background:url(http://pic5.ablesky.cn/content/pic/album/2017/06/16/c4801b5b-7d78-4f41-bd27-e62b557e3704.png) no-repeat;
+			display:block; 
+			padding:14px;
+			 margin:20px auto 0;
+			}
+		.school-list .teacher li.on img{
+			width:212px; 
+			height:212px; 
+			border-radius:120px;
+			 }
+		.school-list .teacher li.on span{ 
+			display:block; 
+			font-size:22px; 
+			line-height:40px; 
+			height:40px; 
+			text-align:center; 
+			color:#fff;
+		}	
+	</style>
+	<div  class="eduLoop">
+		<!-- 轮播图 -->
+		<div class="carousel" id='box'>
+			<div class="screen">
+				<ul id="ul">
+					<li><a href="http://p.qiao.baidu.com/im/index?siteid=5374193&ucid=6855585&cp=&cr=&cw=" target="_blank"><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/f627ce51-ff96-4dba-b5ae-2265319bacf8.png" /></a></li>
+					<li><a href=""><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/01432b22-2453-413b-98c6-469326e9dc53.png" /></a></li>				
+				</ul>
+				<ol id="ol"></ol>
+			</div>
+			<div id="arr"><span id="left"></span><span id="right"></span></div>
+		</div>
+		<!-- 轮播图结束-->
+	<div class="stq" style="">
+		<div class="module join">
+			<div class="join_title">你是否...</div>
+			<div class="wrap">
+				<div class="join_con">
+					<p>课程优质收益平稳，突破<b>瓶颈</b>犯难？</p>
+					<p>辛苦推广没人买账，学员增长<b>缓慢</b>？？</p>
+					<p>粉丝过万苦心经营，<b>不敢</b>轻易变现？</p>
+					<p>网校维护成本太高，课程收益<b>上交程序员</b>？？</p>
+					<p class="ellipsis">......</p>
+				</div>
+				<div class="join_foot">
+					<p><b>加入</b>能力天空教育生态圈，<b>为你供学员、提收益、降成本&nbsp;!</b></p>
+				</div>
+			</div>
+		</div>
+		<div class="module plan">
+			<div class="wrap">
+				<div class="plan_title1">1+1>3的免费网校合作计划 —— 能力天空教育生态圈</div>
+				<div class="plan_title2">能力天空教育生态圈：能力天空基于能力天空易课平台为各方打造的共创、共享、共赢的网络环境。</div>
+				<div class="plan_con">
+					<div class="plan_pic clearfix">
+						<div class="plan_pic1"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/fd8fd5e4-6dfc-4bea-89c9-9aa86af6978b.png" alt=""></div>
+						<div class="plan_pic2"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/daf931e5-afa3-4be0-a4ba-76d803b3c844.png" alt=""></div>
+						<div class="plan_pic3"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/ca74f6ab-96c0-48d9-b42d-d6125265df36.png" alt=""></div>
+						<div class="plan_pic4"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/cf997bf2-6231-4eac-9d9a-85ab2ce7f995.png" alt=""></div>
+						
+					</div>
+					<div class="plan_foot">
+						<p class="loop"><b>能力天空教育生态圈模式:</b>即签约合作"能力易课"的网校，将享受完全免费的网校解决方案，同时能力天空平台为网校提供课程推荐服务，本网校学员购买本校内自有课程时，本校即坐享<b>100%课程交易额</b>;本网校学员购买其他网校课程时，本校可坐享<b>30%课程交易额</b>;非本网校学员购买本校课程时，本校亦可坐享<b>30%课程交易额</b>。</p>
+						<p class='yike'><b>能力易课:</b>在能力天空平台上各方网校或名师共享课程与服务、共享学员，共同受益的系统。</p>
+					</div>
+					<div class="plan_join">
+						<a class="btn" href="http://p.qiao.baidu.com/im/index?siteid=5374193&ucid=6855585&cp=&cr=&cw=" target="_blank">快速了解，即刻加入</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="module circle">
+			<div class="wrap">
+				<div class="cir_title">加入能力天空教育生态圈&nbsp;&nbsp;&nbsp;一秒给你豪华尊享体验</div>
+				<div class="cir_con">
+					<ul class="clearfix">
+						<li class="con1">
+							<div class="logo"><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/43110d91-7d97-46ac-83ff-f66380a6a24b.png" alt=""></div>
+							<div class="slogn">不花一分钱&nbsp;&nbsp;尽享完善网校技术</div>
+							<p class="firstLine">免费</p>
+							<p>云直播&nbsp;云网校</p>
+							<p>云宽带&nbsp;云考试</p>
+							<p>云存储&nbsp;云点播</p>
+							<p>独立域名&nbsp;APP</p>
+							<a class="btn"  href="http://www.ablesky.com/page.do?oid=18238&subject=plate" target="_blank">全面了解网校功能</a>
+						</li>
+						<li class="con2">
+							<div class="logo"><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/ce627af8-db9d-4821-87be-25672cef3bda.png" alt=""></div>
+							<div class="slogn">不费一份力&nbsp;&nbsp;即刻拥有千万学员</div>
+							<div class="text">
+								<p class="firstLine"><b>10年</b></p>
+								<p>在线教育经验</p>
+							</div>
+							<div class="text">
+								<p class="firstLine"><b>1000多万</b></p>
+								<p>平台学员</p>
+							</div>
+							<div class="text">
+								<p class="firstLine"><b>免费</b>为你提供</p>
+							</div>
+						</li>
+						<li class="con3">
+							<div class="logo"><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/cc3729e7-5299-4d01-8e17-86402ae3991a.png" alt=""></div>
+							<div class="slogn">少操一份心&nbsp;&nbsp;“变现”同时轻松“涨粉”</div>
+							<div class="text">
+								<p>能力易课为你</p>
+								<p>提供海量优质课程</p>
+							</div>
+							<div class="text">
+								<p>粉丝注册</p>
+								<p>变身你的网校学员</p>
+							</div>
+							<div class="text">
+								<p>粉丝买课程</p>
+								<p>大V享收益</p>
+							</div>
+							<a  class="btn" href="http://yike.ablesky.com/"  target="_blank">了解课程情况</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cir_logo"></div>
+			</div>
+		</div>
+		<div class="module income">
+			<div class="wrap">
+				<div class="income_title1">“两位”学员&nbsp;&nbsp;三层收益</div>
+				<div class="income_title2">再也不是一次性消费&nbsp;&nbsp;让收益转起来</div>
+				<div class="income_img clearfix">
+					<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/71c89e65-3e25-4d8b-9c03-cc9f6e040a2a.png" alt="">
+					<img class="imgmid" src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/6db492a1-94d9-4cdf-b401-306fe28f13b0.png" alt="">
+					<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/9c58f88b-b8f0-4898-9b82-6c27bb146e06.png" alt="">
+				</div>
+				<div class="income_title3">多重渠道为你招生 &nbsp;&nbsp;无需再为生源犯愁</div>
+				<div class="income_other clearfix">
+					<ul class="clearfix">
+						<li>
+							<p><img class="img" src="http://pic3.ablesky.cn/content/pic/album/2017/06/02/509991a5-70a5-471f-822a-755f96cb01df.png" alt=""></p>
+							<p class="text text1">平台自有学员</p>
+						</li>
+						<li>
+							<p ><img class="img" src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/fff709f1-32e1-4709-81b6-3b2927bb971f.png" alt=""></p>
+							<p class="text text2">拥有大量粉丝的</p>
+							<p class="text">各界KOL</p>
+							
+						</li>
+						<li>
+							<p><img  class="img" src="http://pic2.ablesky.cn/content/pic/album/2017/06/02/ab1f5d64-613a-40a9-b9d9-ca6ad33ae6a5.png" alt=""></p>
+							<p class="text text3">基于平台搜索的</p>
+							<p class="text">源源不断的求学人士</p>
+						</li>
+						<li class="lastImg">
+							<p><img  class="img" src="http://pic2.ablesky.cn/content/pic/album/2017/06/02/76df188b-00ae-41db-af1b-9648340a8806.png" alt=""></p>
+							<p  class="text text4">其他教育行业学员</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="module plate">
+			<div class="wrap">
+				<div class="plate_title1">平台助推&nbsp;&nbsp;互利共赢</div>
+				<div class="plate_title2">卖课&nbsp;你不再是一个人</div>
+				<div class="plate_img clearfix" >
+					<ul>
+						<li>
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/07da3cd1-a0b2-4e72-bcd2-82c339bd4429.png" alt="">
+							<p>平台精心运营包装&nbsp;优质课程6的飞起</p>
+						</li>
+						<li>
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/06e2e61e-02c6-48a2-9728-faa44069d9e4.png" alt="">
+							<p>大数据定位学员喜好&nbsp;精准挖掘潜在学员</p>
+						</li>
+						<li>
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/16f8f957-ac18-41bc-905d-2b8babd8a7a9.png" alt="">
+							<p>优质推广位置展现&nbsp;直击学员关注热点</p>
+						</li>
+						<li class="last">
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/72a55dcc-6def-41cd-a000-a97fd1c34d7a.png" alt="">
+							<p>定期课程运营推广&nbsp;平台全面推荐扩散</p>
+						</li>
+					</ul>
+				</div>
+				<a  href="http://www.ablesky.com/page.do?oid=18238&subject=plate" class="registered" target="_blank">注册使用免费网校</a>
+				<div class="plate_title3">推课&nbsp;你不止有一种渠道</div>
+				<div class="plate_title4">大平台帮你推课</div>
+				<div class="plate_logo">
+					<ul class="clearfix">
+						<li class="left">
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/5ee66d2c-3ecd-4b4a-b6fe-450ea403070d.png" alt="">
+							<p>能力天空网校平台</p>
+						</li>
+						<li class="middle">
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/0bd2f70b-77f5-4144-b76b-236dde551744.png" alt="">
+							<p>第三方媒体平台</p>
+						</li>
+						<li class="right">
+							<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/bc034cec-b3a1-42a6-9f9f-b465c80d7fb1.png" alt="">
+							<p>第三方合作网站</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="module app">
+			<div class="wrap">
+				<div class="app_title1">能力课堂APP&nbsp;&nbsp;你的推课利器</div>
+				<div class="app_title2">全方位APP推广运作&nbsp;&nbsp;打造千万级APP安装量&nbsp;&nbsp;拉动大量学员买课 </div>
+				<div class="app_img1">
+					<img src="http://pic3.ablesky.cn/content/pic/album/2017/06/02/f69c2a77-f130-420b-950b-3e4ddba241cc.png" alt="">
+					<p>多频道联手推送&nbsp;多角度专题力荐
+					<br>360°玩转课程推荐&nbsp;让你的课最大程度覆盖潜在学员</p>
+				</div>
+				<div class="app_img2">
+					<img  class="img01" src="http://pic3.ablesky.cn/content/pic/album/2017/06/02/419d24ff-a7a7-4f16-8e25-b8af94f9d72b.png" alt="">
+					<img  class="img02" src="http://pic3.ablesky.cn/content/pic/album/2017/06/02/bf48ff3d-13f6-4ce2-9f32-bf559e7d7925.png" alt="">
+					<img  class="img03" src="http://pic3.ablesky.cn/content/pic/album/2017/06/02/7513a193-7afc-4c07-9499-0d09397e2219.png" alt="">
+					<img  class="img04" src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/e18fecb9-fc9b-48a9-9d13-45effed13d4b.png" alt="">
+					<div class="app_text">
+						<p>能力课堂-精品好课考证升学神器</p>
+						<p>移动学习，<b>碎片化时间</b>全利用;&nbsp;<b>多终端覆盖</b>，走着躺着都能学</p>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div class="module open">
+			<div class="wrap">
+				<div class="open_title1">开放课程&nbsp;&nbsp;坐享收益</div>
+				<div class="open_title2">课程不重叠&nbsp;无需担心学员流失</div>
+				<div class="open_con">
+					<div class="conLeft">
+						<div class="front"><img src="http://pic5.ablesky.cn/content/pic/album/2017/06/02/1fc3eb0b-357d-40fd-a09b-f8c70caba971.png" alt=""></div>
+						<div class="back"><img src="http://pic1.ablesky.cn/content/pic/album/2017/06/02/93987807-b763-40e0-8475-260fa1a411d3.png" alt=""></div>
+						<div class="left"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/bb6a18dd-0c2e-44e5-8d64-01c1244786c1.png" alt=""></div>
+						<div class="right"><img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/d8c28b2c-6e55-4d9c-b9dd-ced6c2102d94.png" alt=""></div>
+					</div>
+					<div class="conRight">
+						<p class="con01">仅向学员推送<b>【非同类】&nbsp;【且经过能力天空筛选认证】</b>的<b>【优质课程】</b>;
+						所有推送经由能力天空平台进行，学员信息不向任何同类型网校透露。</p>
+						<p class="con02"><b>基于大数据</b>，根据学员喜好选取课程</p>
+						<p class="con03"><b>推送方式轻柔</b>，不破坏学员看课体验</p>
+						<p class="con03"><b>推送课程优质</b>，提高学员对网校信赖度</p>
+						<div class="con05">
+							<img src="http://pic5.ablesky.cn/content/pic/album/2017/06/02/9fbb6e0b-13e8-4278-9058-ff0f3514d1e2.png" alt="">
+							<p>人力资源管理师培训的学员，我们会筛选商务英语类课程进行推荐;司法考试培训的学员，我们将推荐德语或日语相关课程。</p>
+						</div>
+					</div>
+				</div>
+				<div class="open_title3">学员归属规则</div>
+				<div class="open_title4">为学员打上你的专属标签</div>
+				<div class="open_brand">
+					<img src="http://pic5.ablesky.cn/content/pic/album/2017/06/02/009d7035-c984-4040-9d73-2e747346a3c2.png" alt="">
+				</div>
+				<div class="open_text">
+					<p>网校域名（独立域名或网校AS二级域名）下,
+					<br>通过手机号码实名注册的学员，为本网校学员，永久属于该网校。</p>
+				</div>
+				<a  class="btn" href="http://p.qiao.baidu.com/im/index?siteid=5374193&ucid=6855585&cp=&cr=&cw=" target="_blank" class="btn">更多细节，点击咨询</a>
+			</div>
+		</div>
+		<div class="module team">
+			<div class="wrap">
+				<div class="team_title1">合作共赢&nbsp;&nbsp;1+1>3</div>
+				<div class="team_con1">
+					<ul>
+						<li class="con1_l">
+							<p class="titl">传统模式</p>
+							<img src="http://pic1.ablesky.cn/content/pic/album/2017/06/02/be562a6f-23f0-4dbf-8def-f942915f6447.png" alt="">
+							<p class="text">每位网校学员仅为网校带来1人次收益,两家网校无交集，两家收益总量为 1+1=2</p>
+						</li>
+						<li class="con1_r">
+							<p class="titl">共享模式</p>
+							<img src="http://pic1.ablesky.cn/content/pic/album/2017/06/02/be562a6f-23f0-4dbf-8def-f942915f6447.png" alt="">
+							<p class="text">每位网校学员为该网校带来1人次收益<br>同时交叉消费，购买第二家网校课程，为双方各带来30%收益，<br>两方每位学员带来收益各加60%，即收益总量为 1+1+0.6+0.6=3.2</p>
+						</li>
+					</ul>
+				</div>
+				<div class="team_title2">教育生态圈模式解惑</div>
+				<a  class="btn more" href="http://ablesky.ablesky.com/org/336_zx_19122_2_1" target="_blank" >更多问题&nbsp;>></a>
+				<div class="team_con2">
+					<ul>
+						<li class="con2_l">
+							<p class="titl">模式详述</p>
+							<img src="http://pic2.ablesky.cn/content/pic/album/2017/06/02/5c224cab-229b-4e36-9513-3b6b42794038.png" alt="">
+							<p class="text">能力天空运营人员会根据审核标准，从网校内部选取优质课程，加入能力天空课程共享库，即易课系统，课程可供各方网校代理。</p>
+							<a class="details" href="http://ablesky.ablesky.com/org/336_zx_71372" target="_blank">详情</a>
+						</li>
+						<li class="con2_m">
+							<p class="titl">与谁共享</p>
+							<img src="http://pic2.ablesky.cn/content/pic/album/2017/06/02/285b19e6-5137-46d9-ba74-7cf3bb74b319.png" alt="">
+							<p class="text">非同行网校。能力天空将以优质课程推送形式，向学员推荐课程。同时推荐的优质课程，必定是与该学员所属网校课程不同类型的网校课程，不为网校制造竞争。</p>
+							<a class="details" href="http://ablesky.ablesky.com/org/336_zx_71373" target="_blank">详情</a>
+						</li>
+						<li class="con2_r">
+							<p class="titl">如何产生共享收益</p>
+							<img src="http://pic2.ablesky.cn/content/pic/album/2017/06/02/ce2c1560-8a6a-4244-9678-c7a843039b8c.png" alt="">
+							<p class="text">平台推广+网校内页推广&nbsp;&nbsp;推送位置包括但不限于共享网校内右下部学过的人还学了 板块，视频点播过程中，右下角 猜你喜欢板块，能力天空专题页，及学员个人中心内推荐等位置。</p>
+							<a class="details" href="http://ablesky.ablesky.com/org/336_zx_71374" target="_blank">详情</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="module event" id="event"></div>  
+		<div class="module shcool" id="shcool"></div>  
+		<!--common foot -->
+		<div id="fixedTools">
+			<div class="suspend">
+				<ul>
+					<li><a id="phone" class="f-tools phone"><span class="phoneNum suspend-hover"><p>咨询热线：4009-230-922</p><p>服务时间：9:00至18:00</p></span></a></li>
+					<li class= "qq-wrap" id="qq_wrap"><a id="BizQQWPA4ABLESKTQQ" class="f-tools message qqBtn qqSaleOff qqSale"></a></li>
+					<li><a id="code" class="f-tools code"><span class="codeImg suspend-hover"></span></a></li>
+					<li><a id="toTop" class="f-tools toTop"></a></li>
+				</ul>
+			</div>
+			<div class="footer">
+				<div class="foot-top">
+					<p class="link">站点链接</p>
+					<ul class="clearfix">
+						<li><a target="_blank" href="http://www.ablesky.com">能力天空平台</a></li>
+						<li><a target="_blank" href="http://www.ablesky.com/org/336_b_0_0_1">网校攻略</a></li>
+						<li><a target="_blank" href="http://www.ablesky.com/org/apply/open?organizationProperty=organization">注册开通网校</a></li>
+						<li><a target="_blank" href="http://www.ablesky.com/org/5807_zx_14800">创课样片展示</a></li>
+						<li><a target="_blank" href="http://yike.ablesky.com/ ">易课中心</a></li>
+						<li><a target="_blank" href="http://product.ablesky.com/p/m">产品中心</a></li>
+						<li><a target="_blank" href="http://www.ablesky.com/org/336_zx_71318">产品手册下载</a></li>
+					</ul>
+				</div>
+				<div class="foot-bot">
+					<img class="as-logo" src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/c37675c7-5581-4e53-ba32-cd04182d5962.png" alt="">
+					<p>Copyright ? 2017 Ablesky.All Rights</p>
+					<p>能力天空科技（北京）有限公司 版权所有 | <a  target="_blank" href="http://www.ablesky.com/commonRedirect.do?action=toPrivatePolicy">能力天空服务协议</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- foot结束 -->
+	</div>
+	<script src="../js/jquery.js"></script>
+	<script>
+	
+			/*轮播图*/
+			var timer = null;
+			var box = document.getElementById("box");
+			var screen = box.children[0];
+			var ul = document.getElementById("ul");
+			var ulLis = ul.children;
+			var ol = document.getElementById("ol");
+			var arr = document.getElementById("arr");
+			var left = document.getElementById("left");
+			var right = document.getElementById("right");
+			var imgWidth = 1920;
+			for (var i = 0; i < ulLis.length; i++) {
+				var li = document.createElement("li");
+				ol.appendChild(li);
+			}
+			var olLis = ol.children;
+			olLis[0].className = "current";
+			var firstImg = ulLis[0].cloneNode(true);
+			ul.appendChild(firstImg);
+			for (var j = 0; j < olLis.length; j++) {
+				olLis[j].index = j;
+				olLis[j].onmouseover = function () {
+				for (var k = 0; k < olLis.length; k++) {
+					olLis[k].className = "";
+				}
+				this.className = "current";
+				var target = -this.index * imgWidth;
+				animate(ul, target);
+				pic = square = this.index;
+				};
+			}
+			box.onmouseover = function () {
+				arr.style.display = "block";
+				clearInterval(timer);
+			};
+			box.onmouseout = function () {
+				arr.style.display = "none";
+				timer = setInterval(playNext, 6000);
+			};
+			var pic = 0;
+			var square = 0;
+			right.onclick = function () {
+				if (pic === ulLis.length - 1) {
+					ul.style.left = 0;
+					pic = 0;
+				}
+				pic++;
+				var target = -pic * imgWidth;
+				animate(ul, target);
+				if (square < olLis.length - 1) {
+					square++;
+				} else {
+					square = 0;
+				}
+				for (var i = 0; i < olLis.length; i++) {
+					olLis[i].className = "";
+				}
+				olLis[square].className = "current";
+			};
+			left.onclick = function () {
+				if (pic === 0) {
+						ul.style.left = -(ulLis.length - 1) * imgWidth + "px";
+						pic = ulLis.length - 1;
+					}
+					pic--;
+					var target = -pic * imgWidth;
+					animate(ul, target);
+					if (square > 0) {
+						square--;
+					} else {
+						square = olLis.length - 1;
+					}
+					for (var i = 0; i < olLis.length; i++) {
+						olLis[i].className = "";
+					}
+					olLis[square].className = "current";
+				};
+			timer = setInterval(playNext, 6000);
+			function playNext() {
+				right.onclick();
+			}
+			function animate(obj, target) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function () {
+					var leader = obj.offsetLeft;
+					var step = 80;
+					step = leader < target ? step : -step;
+					if (Math.abs(target - leader) >= Math.abs(step)) {
+					leader = leader + step;
+					obj.style.left = leader + "px";
+					} else {
+					obj.style.left = target + "px";
+					clearInterval(obj.timer);
+					}
+				}, 15);
+			}
+			/*轮播图结束*/
+
+
+		/*右侧导航栏*/
+		$(window).bind("scroll", function () {
+		var sTop = $(window).scrollTop();
+		var sTop = parseInt(sTop);
+		if (sTop >= 200) {
+			$('#toTop').css('display','block');
+		}
+		else {
+			$('#toTop').css('display','none');
+			}
+			});
+
+		//返回顶端
+			$("#toTop").on('click',function(){$("html,body").animate({scrollTop:0},600); return false;});
+
+		//QQ咨询
+		var $ABLESKTQQBtn = $('#BizQQWPA4ABLESKTQQ');
+	    		$qqwrap = $('#qq_wrap');
+	    		
+	    		QQfun('BizQQWPA4ABLESKTQQ' , $ABLESKTQQBtn , $qqwrap ,800042429);   		
+	    		
+	   		function QQfun(selector, btn ,wrap ,QQ){
+	    			
+	    			if(window.BizQQWPA){
+	    				BizQQWPA.addCustom({aty: '2', a: '0', nameAccount: QQ, selector:selector });
+	    				btn.removeClass('qqSaleOff');
+	    			}
+	    			
+	    			wrap.on('mouseover',function(){
+	    				if(window.BizQQWPA){
+	    					if($ABLESKTQQBtn.hasClass('qqSaleOff')){
+	    						BizQQWPA.addCustom({aty: '2', a: '0', nameAccount: QQ, selector: selector});
+	    						btn.removeClass('qqSaleOff');
+	    					}
+	    					return;
+	    				}
+	    				if(this.pms && this.pms.state() === 'padding'){
+	    					return;
+	    				}else{
+	    					this.pms = $.ajax({
+	    						url : 'http://wpa.b.qq.com/cgi/wpa.php',
+	    						dataType : 'script',
+	    						scriptCharset : 'utf-8'
+	    					}).done(function(){
+	    						BizQQWPA.addCustom({aty: '2', a: '0', nameAccount: QQ, selector: selector}); 
+	    						btn.removeClass('qqSaleOff');
+	    					});
+	    				}
+	    			});	
+	    			
+	    			   			
+	    		}
+
+	   setInterval(function(){
+	   	  $('.join_title').addClass('current');
+		  $('.join_con').addClass('current');
+		  $('.join_foot').addClass('current');			
+
+	   }, 500);
+
+	  
+		//入场动画
+		var scoll = 0,t = 0;  	  
+	    $(window).scroll(function(e){  
+	    	scoll = $(this).scrollTop();             
+            if(t <= scoll){//下滚  
+                   //console.log("下滚");
+                   //console.log(scoll);               
+               	if (scoll > 10 && scoll <= 1238 ) { 
+    				//join部分动画
+    			}
+    			if (scoll > 1238) {
+    				$('.join_title').removeClass('current');
+    				$('.join_con').removeClass('current');
+    				$('.join_foot').removeClass('current');
+    			}
+    
+    			if (scoll >800 && scoll <= 2200) {
+    				$('.plan_pic1').addClass('current');
+    				$('.plan_pic2').addClass('current');
+    				$('.plan_pic3').addClass('current');
+    				$('.plan_pic4').addClass('current');
+    				$('.plan_foot').find('.yike').addClass('current');
+       				$('.plan_foot').find('.loop').addClass('current');
+       				$('.plan_join').find('a').addClass('current');
+    
+    			}
+    			if (scoll > 2200) {
+    				$('.plan_pic1').removeClass('current');
+    				$('.plan_pic2').removeClass('current');
+    				$('.plan_pic3').removeClass('current');
+    				$('.plan_pic4').removeClass('current');
+    				$('.plan_foot').find('.yike').removeClass('current');
+       				$('.plan_foot').find('.loop').removeClass('current');
+       				$('.plan_join').find('a').removeClass('current');
+       				
+    			}
+    
+    			if (scoll > 1500 && scoll <= 2863) {
+    				$('.cir_con').addClass('current');
+    			}
+    			if (scoll > 2863) {
+    				$('.cir_con').removeClass('current');
+    			}
+    
+    			if (scoll > 3000 && scoll <= 4091) {
+    				$('.income_other').addClass('current');
+    			}
+    			if (scoll > 4091) {
+    				$('.income_other').removeClass('current');
+    			}
+    
+    			if (scoll > 5250 && scoll<=6691) {
+    				$('.app_img2').addClass('current');
+    			}
+    			if (scoll > 6691) {
+    				$('.app_img2').removeClass('current');
+    			}              
+            }                
+           if(t > scoll){//上滚       
+        	   	//console.log("上滚")
+                // console.log(scoll)
+                
+        	   if (scoll < 200) {
+        		  /* $('.join_title').removeClass('current');
+   				   $('.join_con').removeClass('current');
+   				   $('.join_foot').removeClass('current');   */   				
+   				}
+       			if (scoll>=200&& scoll< 1200) {
+      				
+       				$('.join_title').addClass('current');
+       				$('.join_con').addClass('current');
+       				$('.join_foot').addClass('current');
+       			}
+    
+       			if (scoll < 2200&& scoll >= 700) {
+       				$('.plan_pic1').addClass('current');
+       				$('.plan_pic2').addClass('current');
+       				$('.plan_pic3').addClass('current');
+       				$('.plan_pic4').addClass('current');
+       				$('.plan_foot').find('.yike').addClass('current');
+       				$('.plan_foot').find('.loop').addClass('current');
+       				$('.plan_join').find('a').addClass('current');
+       			}
+       			if (scoll < 700) {
+       				$('.plan_pic1').removeClass('current');
+       				$('.plan_pic2').removeClass('current');
+       				$('.plan_pic3').removeClass('current');
+       				$('.plan_pic4').removeClass('current');
+       				$('.plan_foot').find('.yike').removeClass('current');
+       				$('.plan_foot').find('.loop').removeClass('current');
+       				$('.plan_join').find('a').removeClass('current');
+    
+       			}
+       			if (scoll < 3000 && scoll >= 1400) {
+       				$('.cir_con').addClass('current');
+       			}
+       			if (scoll < 1400) {
+       				$('.cir_con').removeClass('current');
+       			}
+    
+       			if (scoll < 4091 && scoll >= 2890) {
+       				$('.income_other').addClass('current');
+       			}
+       			if (scoll < 2890) {
+       				$('.income_other').removeClass('current');
+       			}
+    
+       			if (scoll < 6191 && scoll>=5500) {
+       				$('.app_img2').addClass('current');
+       			}
+       			if (scoll < 5300) {
+       				$('.app_img2').removeClass('current');
+       			}
+            }  
+            setTimeout(function(){t = scoll;},0);         
+    });
+
+    //*
+    
+      $.ajax({
+                type: "POST",
+                url: "/openApi/companyPublicity",
+                dataType: "json",
+                success: function(data){
+                    renderEvent(data);
+                    renderShcool(data);
+                    schoolRecommend();
+                    infoShow();
+            }
+        });
+
+    function renderEvent(data){
+    var renderStr='';
+    var $event = $('#event');
+    var list = data.orgPostList.list;
+    if(list.length>6){
+    	  renderStr += '<div class="wrap">';
+		  renderStr += '<div class="event_title">能力天空教育生态圈大事记</div>'
+		  renderStr += '<div class="event_con">'
+		
+        $.each(data.orgPostList.list,function(index,ele){
+            if(index<=1){
+            renderStr += '<div class="con">';
+            renderStr += '<a  class="img" href="org/'+data.ableskyId+'_zx_'+ele.id+'"><img src="'+ele.photoUrl+'" alt=""></a>';
+            renderStr += '<a  class="title"  href="org/'+data.ableskyId+'_zx_'+ele.id+'" target="_blank" class="news">'+ele.titleName+'</a>';
+            renderStr += '</div>';
+            }               
+         })
+            renderStr += '<div class="newsAll"> ';
+            renderStr += '<img src="http://pic6.ablesky.cn/content/pic/album/2017/06/02/d8d3d9a6-25b5-4df7-85ef-b65620d6b926.png" alt="">';
+            renderStr += '<div class="newsbox">';
+            renderStr += '<ul class="newsList">';
+        $.each(data.orgPostList.list,function(index,ele){
+            if(index>=2&&index<9){
+                renderStr += '<li class="clearfix">';
+                renderStr += '<em></em>';
+                renderStr += '<a  href="org/'+data.ableskyId+'_zx_'+ele.id+'" target="_blank"><span class="newstitle">'+ele.titleName+'</span></a>';
+                renderStr += ' <img class="line" src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/9e1ba1c7-efa1-4b20-8361-3c32e8e06328.png" alt="">';
+                renderStr += '</li>';
+            }
+            
+         })
+            renderStr +='</ul>';
+            renderStr +='</div>';
+            renderStr +='</div>';
+            $event.html(renderStr);
+	 }else{
+	 	 $event.css("display","none");
+	 }
+	 /*else{
+	 		 $.each(data.orgPostList.list,function(index,ele){
+	            if(index<=2){
+	            renderStr += '<div class="con">';
+	            renderStr += '<a  class="img" href="org/'+data.ableskyId+'_zx_'+ele.id+'"><img src="'+ele.photoUrl+'" alt=""></a>';
+	            renderStr += '<a  class="title"  href="org/'+data.ableskyId+'_zx_'+ele.id+'" target="_blank" class="news">'+ele.titleName+'</a>';
+	            renderStr += '</div>';
+	            }               
+	         })
+
+	 }*/
+	  
+	}  
+
+function renderShcool(data){
+		  var renderStr='';
+		 var $shcool = $('#shcool');
+		 renderStr+='<div class="wrap">';
+	     renderStr+='<div class="shc_title">数万网校已合作&nbsp;&nbsp;你却在等蓝海变红</div>';
+	   	 renderStr+='<div class="sch_info">';
+	     renderStr+='<div class="course-list web-school clearfix">';
+	     renderStr+='<div class="leftdispose dispose"></div>';
+	     renderStr+='<div class="school-list">';
+		 renderStr+='<ul class="teacher">';
+		  $.each(data.index_recommend_organization.list,function(index,ele){
+	            if(index<=15){
+	            renderStr += '<li>';
+	            renderStr += '<a href="'+ele.uname+'" target="_blank" class="teacher-head"><img src="'+ele.photoUrl+'" /></a>';
+	            renderStr += '<span>'+ele.name+'</span>';
+	            renderStr += '</li>';
+	            }               
+	         })
+		 renderStr+='</ul>';
+		 renderStr+='</div>';
+		 renderStr+='<div class="rightdispose dispose"></div>';
+		 renderStr+='</div>';
+		 renderStr+='</div>';
+		 renderStr+='<div class="sch_num">';
+		 renderStr+='<p>'+data.orgCount+'</p>';
+		 renderStr+='<p>网校选择</p>';
+         renderStr+='</div>';
+         renderStr+='<div class="sch_news">';
+         renderStr+='<ul class="newshcool">';
+           $.each(data.newOrg.list,function(index,ele){
+	            renderStr += '<li>';
+	            renderStr += '<span>恭喜'+ele.companyName+'加入能力天空,向成功更近一步!</span>';
+	            renderStr += '</li>';             
+	         })
+
+         renderStr+='</ul>';
+         renderStr+='</div>';
+         renderStr+='</div>';
+         renderStr+='</div>';
+         $shcool.html(renderStr); 
+
+}
+
+function schoolRecommend(){
+		// 网校推荐	 
+	var repeat,
+		len=$('.teacher li').length,
+	 	marginw=parseInt($('.teacher li:first').css('marginLeft')),
+	 	movew=$('.teacher li:first').outerWidth()+marginw,
+	 	liw=$('.teacher li:first').outerWidth(),
+	 	ulw=liw*len;
+	 	$('.teacher').css({'width':ulw+'px'});
+	 	$('.teacher').find('li').eq(3).addClass('on');
+
+	function focusPicture(){
+		//console.log($('.teacher li:first'));
+		var w=$('.teacher li:first').width(),
+			len=$('.teacher li').length;
+			$('.teacher').css({'width':w*len+'px'})
+			$('.school-list').hover(function(){
+				clearInterval(repeat)					  
+			},function(){
+				repeat=setInterval(function(){
+					$('.teacher').stop().animate({'marginLeft':-w},1000,function(){
+						$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+						$('.teacher li:first').appendTo($('.teacher'));
+						$('.teacher').css({'margin-left':0})
+					})
+				},3000)
+			}).trigger('mouseleave')	
+			$('.dispose').mouseover(function(){
+				clearInterval(repeat);
+			})
+			$('.dispose').mouseout(function(){
+				repeat=setInterval(function(){
+					$('.teacher').stop().animate({'marginLeft':-w},1000,function(){
+						$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+						$('.teacher li:first').appendTo($('.teacher'));
+						$('.teacher').css({'margin-left':0})
+					})
+				},3000)
+			})
+		}
+		focusPicture();
+		function nextPic(){
+			$('.teacher li:first').stop().animate({'marginLeft':-movew},1000,function(){
+				$(this).css({'marginLeft':marginw}).appendTo($('.teacher'))	;
+			})
+		}
+		function prevPic(){
+			$('.teacher li:last').prependTo($('.teacher'));
+			$('.teacher li:first').css({'marginLeft':-movew}).stop().animate({'marginLeft':marginw},1000);
+			$('.teacher .on').prev('li').addClass('on').siblings().removeClass('on');
+		}
+		$('.leftdispose').click(function(){
+			if(!$('.teacher li:first').is(':animated')){
+				prevPic()
+			}
+		})
+		$('.rightdispose').click(function(){
+			if(!$('.teacher li:first').is(':animated')){
+				nextPic();
+				$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+			}
+		})
+		$('.teacher-head').hover(function(){//鼠标滑过
+
+			$(this).parent().addClass('on').siblings().removeClass('on');
+		})
+		
+}
+
+function infoShow(){
+
+    //新注册网校
+    	var lis=$('.newshcool').find('li');
+    	var wid=0,totalwidth=0;
+    	lis.each(function(){
+    		wid = $(this).width();
+    		wid = parseInt(wid);
+    		totalwidth+=wid;
+    	})
+    	$('.newshcool').width(totalwidth);
+    	$('.newshcool').height(63);
+    	var targetDistance = totalwidth-$('.newshcool').parent('.sch_news').width();
+    	
+    	 animate1($('.newshcool')[0],targetDistance);
+    	 
+	//生态圈大事记
+    	
+    	 var aaa=$('event_con').children('.con');
+    	 
+    	 
+    	var  allnews=$('.newsList').find('li'); 
+    	var height=0,totalheight=0,firstheight=0;
+    	allnews.each(function(){
+    		firstheight=$(this).height();
+    		height = $(this).height();
+    		height = parseInt(height);
+    		totalheight += height;
+    	})
+    	$('.newsList').height(totalheight);
+    	var targetDistance = totalheight-$('.newsbox').height();
+    	
+    	animate2($('.newsList')[0],targetDistance ,firstheight);
+    	
+    	//多行超出部分变省略号;
+    	var title=$('.title');   
+    	title.each(function(){
+    		
+    		var titeHeight = $(this).height();
+    		if(titeHeight > 60){
+    			$(this).addClass('over');
+    		}
+    	})
+    	   	
+
+    	 function animate2(obj, target, firstheight) {
+ 			clearInterval(timer);
+ 	        var timer = setInterval(function () {
+ 	            var leader = obj.offsetTop;
+ 	            var step = -firstheight;  
+ 	            step = leader < target ? step : -step;          
+ 	            if (Math.abs(target - leader) >= Math.abs(step)) {
+ 	                leader = leader + step;
+ 	                obj.style.top = leader + "px";
+ 	            } else {
+ 	                obj.style.top = target + "px";
+ 	                clearInterval(timer);
+ 	            }
+ 	            if(leader < -target){
+
+ 	           	 obj.style.top = 0 + "px";
+ 	           }
+ 	        },4000);
+ 	    }
+     	    	 
+    	 function animate1(obj, target) {
+			clearInterval(timer);
+	        var timer = setInterval(function () {
+	            var leader = obj.offsetLeft;
+	            var step = -2;  
+	            step = leader < target ? step : -step;          
+	            if (Math.abs(target - leader) >= Math.abs(step)) {
+	                leader = leader + step;
+	                obj.style.left = leader + "px";
+	            } else {
+	                obj.style.left = target + "px";
+	                clearInterval(timer);
+	            }
+	            if(leader < -target){
+	           	 obj.style.left = 0 + "px";
+	           }
+	        },30)
+	    }
+}
+	</script>

@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content1{
+    height: 500px;
+    width: 50%;
+    background: pink;
+}
+.content2{
+    margin-top: 300px;
+    height: 500px;
+    width: 50%;
+    background: orange;
+}
+
+.suspendedBall {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #3071a9;
+    top: 500px;
+    left: 320px;
+    border-radius: 50%;
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .suspendedBall {
+        display: block;
+    }
+}
+
+
+@keyframes SuspendedBallToLeft {
+    100% {
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes SuspendedBallToLeft {
+    100% {
+        left: 0px;
+    }
+}
+
+@-moz-keyframes SuspendedBallToLeft {
+    100% {
+        left: 0px;
+    }
+}
+
+
+.ToLeft {
+    animation: SuspendedBallToLeft 1s normal;
+    -moz-animation: SuspendedBallToLeft 1s normal; /* Firefox */
+    -webkit-animation: SuspendedBallToLeft 1s normal; /* Safari 和 Chrome */
+    animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1; /* Safari 和 Chrome */
+    -webkit-animation-iteration-count: 1; /* Safari 和 Chrome */
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes SuspendedBallToTop {
+    100% {
+        top: 0px;
+    }
+}
+
+@-webkit-keyframes SuspendedBallToTop {
+    100% {
+        top: 0px;
+    }
+}
+
+@-moz-keyframes SuspendedBallToTop {
+    100% {
+        top: 0px;
+    }
+}
+
+
+.ToTop {
+    animation: SuspendedBallToTop 1s normal;
+    -moz-animation: SuspendedBallToTop 1s normal; /* Firefox */
+    -webkit-animation: SuspendedBallToTop 1s normal; /* Safari 和 Chrome */
+    animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1; /* Safari 和 Chrome */
+    -webkit-animation-iteration-count: 1; /* Safari 和 Chrome */
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes SuspendedBallToBottom {
+    100% {
+        top: calc(100% - 50px);
+        top: -webkit-calc(100% - 50px);
+        top: -moz-calc(100% - 50px);
+    }
+}
+
+@-webkit-keyframes SuspendedBallToBottom {
+    100% {
+        top: calc(100% - 50px);
+        top: -webkit-calc(100% - 50px);
+        top: -moz-calc(100% - 50px);
+    }
+}
+
+@-moz-keyframes SuspendedBallToBottom {
+    100% {
+        top: calc(100% - 50px);
+        top: -webkit-calc(100% - 50px);
+        top: -moz-calc(100% - 50px);
+    }
+}
+
+.bbb {
+    animation: SuspendedBallToBottom 1s normal;
+    -moz-animation: SuspendedBallToBottom 1s normal; /* Firefox */
+    -webkit-animation: SuspendedBallToBottom 1s normal; /* Safari 和 Chrome */
+    animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1; /* Safari 和 Chrome */
+    -webkit-animation-iteration-count: 1; /* Safari 和 Chrome */
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes SuspendedBallToRight {
+    100% {
+        left: calc(100% - 50px);
+        left: -webkit-calc(100% - 50px);
+        left: -moz-calc(100% - 50px);
+    }
+}
+
+@-webkit-keyframes SuspendedBallToRight {
+    100% {
+        left: calc(100% - 50px);
+        left: -webkit-calc(100% - 50px);
+        left: -moz-calc(100% - 50px);
+    }
+}
+
+@-moz-keyframes SuspendedBallToRight {
+    100% {
+        left: calc(100% - 50px);
+        left: -webkit-calc(100% - 50px);
+        left: -moz-calc(100% - 50px);
+    }
+}
+
+.ToRight {
+    animation: SuspendedBallToRight 1s normal;
+    -moz-animation: SuspendedBallToRight 1s normal; /* Firefox */
+    -webkit-animation: SuspendedBallToRight 1s normal; /* Safari 和 Chrome */
+    animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1; /* Safari 和 Chrome */
+    -webkit-animation-iteration-count: 1; /* Safari 和 Chrome */
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+

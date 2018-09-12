@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var p = {
+		then:function(cb){
+			cb(42);
+		}
+	};
+
+	p.then(
+		function fulfilled(val){
+			console.log(val);
+		},
+		function rejected(err){
+			//不管是否报错，都不会执行这个函数，因为这个不是一个真正的Promise
+			console.log(err);
+		}
+	)
+</script>
+</body>
+</html>

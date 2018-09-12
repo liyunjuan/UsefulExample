@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>position中的sticky的例子</title>
+	<style type="text/css">
+		.stiky{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0px;
+		}
+		.header{
+			width: 100%;
+			background: pink;
+			padding: 225px 0;
+
+		}
+		p{
+			height: 800px;
+			background: yellow;
+		}
+		h1{
+			width: 100px;
+			height: 50px;
+			background: green;
+		}
+		div.aa{
+			width: 150px;
+			background: orange;
+			overflow: auto;
+			height: 150px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		
+	</div>
+	<div class="aa">
+		哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你
+		<h1 class="stiky"></h1>
+		哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你哈哈哈哈哈哈哈哈哈哈哈哈你
+	</div>
+	
+	<p></p>
+	<script type="text/javascript">
+		var header = document.querySelector('.header');
+		var origOffsetY = header.offsetTop;
+		function onScroll(e){
+			window.scrollY >= origOffsetY ? header.classList.add('stiky') : header.classList.remove('stiky');
+		}
+
+		// document.addEventListener('scroll',onScroll)
+	</script>
+	
+</body>
+</html>

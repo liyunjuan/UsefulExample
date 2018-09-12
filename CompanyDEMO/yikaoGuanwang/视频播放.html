@@ -1,0 +1,557 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		<style>
+			/*reset样式*/
+			
+			html,
+			body {
+				background: #f2f2f2 !important;
+				font-size: 14px;
+			}
+			
+			body header {
+				font-size: 12px;
+				color: #555;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				font-family: "微软雅黑";
+			}
+			
+			a {
+				outline: none;
+				text-decoration: none;
+			}
+			
+			a:active {
+				star: expression(this.onFocus=this.blur());
+			}
+			
+			a:hover {
+				color: #46bd89;
+			}
+			
+			.fl {
+				float: left;
+			}
+			
+			.fr {
+				float: right;
+			}
+			
+			.clearfix:after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+			
+			table {
+				/*table-layout: fixed;*/
+				empty-cells: show;
+				border-collapse: collapse;
+				margin: 0 auto;
+				color: #555;
+			}
+			/*banner以下的内容*/
+			
+			.minWidth {
+				min-width: 1200px;
+				height: auto;
+				padding-top: 50px;
+			}
+			
+			.minWidth .tit1 {
+				text-align: center;
+				font-size: 30px;
+				font-weight: bold;
+				color: #555555;
+			}
+			
+			.minWidth .tit2 {
+				display: block;
+				margin: 20px auto 10px;
+				width: 40px;
+				height: 4px;
+				border-radius: 2px;
+				background: #46BD89;
+			}
+			
+			.minWidth .tit3 {
+				text-align: center;
+				font-size: 16px;
+				color: #555555;
+			}
+			
+			.minWidth .tit3 span {
+				color: #e33636;
+			}
+			
+			.centerBox {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			/*政策咨询*/
+			
+			.information-wrap {
+				background: #f5f6f7;
+			}
+			
+			.information {
+				width: 1200px;
+				height: 315px;
+				margin: 0 auto;
+			}
+			
+			.information>div {
+				float: left;
+				width: 360px;
+				margin-right: 60px;
+			}
+			
+			.information>div h2 {
+				padding-bottom: 14px;
+				border-bottom: 2px solid #46bd89;
+				margin-bottom: 20px;
+				cursor: pointer;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.information>div p {
+				height: 20px;
+				font-size: 14px;
+				margin-top: 14px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.information>div p.first {
+				height: 70px;
+				overflow: hidden;
+			}
+			
+			.information>div p.first img {
+				width: 120px;
+				height: 70px;
+				margin-right: 13px;
+				float: left;
+			}
+			
+			.information a {
+				color: #555555;
+			}
+			
+			.information a:hover {
+				color: #46bd89;
+			}
+			
+			.information>div p.first span {
+				float: left;
+				width: 206px;
+				height: 41px;
+				cursor: pointer;
+				white-space: pre-wrap;
+				overflow: hidden;
+			}
+			
+			.information>div p.first>a {
+				float: right;
+				margin-top: 13px;
+				margin-right: 13px;
+				color: #2f91ff;
+			}
+			
+			.information>div p.first>a:hover {
+				color: #67afff;
+			}
+			/*大咖齐聚名师云集 精彩课程抢先试听*/
+			
+			.teacher_contentWrap {
+				width: 1200px;
+				height: auto;
+				margin: 50px auto;
+				padding-bottom: 1px;
+			}
+			
+			.teacher_contentWrap .teacherVideo {
+				width: 530px;
+				height: 300px;
+				border-radius: 5px;
+				position: relative;
+			}
+			
+			.teacher_contentWrap .teacherVideo img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.teacher_contentWrap .teacherVideo img.play {
+				position: absolute;
+				left: 0;
+				top: 0;
+				cursor: pointer;
+			}
+			
+			.teacher_contentWrap .teacherVideo iframe {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.teacher_contentWrap .web-school {
+				height: 180px;
+			}
+			
+			.teacher_contentWrap .course-list .left {
+				width: 28px;
+				height: 180px;
+				float: left;
+				cursor: pointer;
+				background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png") no-repeat left center;
+			}
+			
+			.teacher_contentWrap .course-list .right {
+				width: 28px;
+				height: 180px;
+				float: right;
+				cursor: pointer;
+				background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png") no-repeat right center;
+			}
+			/*.teacher_contentWrap .course-list .left:hover {
+		background: url("http://pic3.ablesky.cn/content/pic/album/2017/02/10/99826c7b-12dd-4a78-86de-60361fe3fac2.png") no-repeat 50px 110px;
+	}
+	
+	.teacher_contentWrap .course-list .right:hover {
+		background: url(http://www.ablesky-a.com:8080/ableskystatics/images/index/2c/school-right-on.png) no-repeat 0 110px;
+	}*/
+			
+			.teacher_contentWrap .school-list {
+				width: 592px;
+				height: 180px;
+				overflow: hidden;
+				float: left
+			}
+			
+			.teacher_contentWrap .school-list .teacher li {
+				width: 110px;
+				height: 180px;
+				float: left;
+				margin-right: 4px;
+				margin-left: 4px;
+				cursor: pointer;
+			}
+			
+			.teacher_contentWrap .school-list .teacher li a {
+				width: 110px;
+				height: 180px;
+				display: block;
+				/*margin: 30px auto 0;*/
+			}
+			
+			.teacher_contentWrap .school-list .teacher li img {
+				width: 110px;
+				height: 142px;
+				margin-top: 5px;
+				display: block;
+				border: 2px solid transparent;
+			}
+			
+			.teacher_contentWrap .school-list .teacher li:hover img,
+			.teacher_contentWrap .school-list .teacher li.selectTeacher img {
+				border-color: #46bd89;
+			}
+			
+			.teacher_contentWrap .school-list .teacher li p {
+				font-size: 14px;
+				font-weight: bold;
+				color: #555;
+				margin-top: 8px;
+				text-align: center;
+			}
+			
+			.teacher_contentWrap .school-list .teacher li:hover p,
+			.teacher_contentWrap .school-list .teacher li.selectTeacher p {
+				color: #46bd89;
+			}
+			
+			.teacher_contentWrap .teacherIntro {
+				width: 543px;
+				height: 50px;
+				margin-top: 20px;
+				margin-right: 30px;
+				padding: 25px 20px;
+				color: #555;
+				background: #fff;
+			}
+			
+			.teacher_contentWrap .teacherIntro p {
+				font-size: 14px;
+				line-height: 30px;
+			}
+			
+			.teacher_contentWrap .teacher_btn {
+				clear: both;
+				margin-top: 45px;
+				text-align: center;
+			}
+			
+			.teacher_contentWrap .teacher_btn a {
+				display: inline-block;
+				width: 160px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				font-size: 16px;
+				color: #fff;
+				background: #46bd89;
+				border-radius: 6px;
+			}
+			
+			.teacher_contentWrap .teacher_btn a:hover {
+				background: #3bb17e;
+			}
+			
+			#YSF-BTN-HOLDER {
+				/*visibility: hidden;*/
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="information-wrap minWidth">
+			<div class="information">
+
+			</div>
+		</div>
+
+		<div class="teacher_wrap minWidth">
+			<div class="clearfix centerBox">
+				<p class="tit1">大咖齐聚名师云集 精彩课程抢先试听</p>
+				<em class="tit2"></em>
+			</div>
+			<div class="teacher_contentWrap">
+				<div style="overflow: hidden;">
+					<div class="teacherVideo fl">
+						<iframe height="300" width="530" src="" frameborder=0 allowfullscreen></iframe>
+						<img class="play_img" src="http://pic6.ablesky.cn/content/pic/album/2017/11/16/23595396-2876-4db5-b521-693c84a8f4b8.jpg" alt="" />
+						<img class="play J_startPlay" src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/f2507ac9-0ab2-4947-aff8-06735cfe06c9.png" alt="" />
+					</div>
+					<div class="course-list web-school fr clearfix">
+						<div class="left dispose"></div>
+						<div class="school-list">
+							<ul class="teacher">
+								<li class="selectTeacher" data-special="临床执业/助理医师--实践技能、心血管、呼吸、消化系统" data-teachstyle="把握精准、思路清晰、风趣幽默、方法独特" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/23595396-2876-4db5-b521-693c84a8f4b8.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169765&courseId=1075043&emKey=11950c6f988d2c34026f1826ab2a0543">
+									<a target="_blank" class="teacher-head"><img src="http://pic4.ablesky.cn/content/pic/album/2017/11/20/30f33f5b-3d8e-49d0-845c-5700c9a55deb.png" />
+										<p>叶扶光</p>
+									</a>
+								</li>
+								<li data-special="执业药师--中药学专业知识二，中药学综合知识一技能" data-teachstyle="重点突出，化繁为简，通俗易懂" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/e6b5a7e8-3a0e-4781-bc9a-79be1cac1d44.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169852&courseId=1075065&emKey=23e6fc1a4580f7311fbc7fb9757d6ca3">
+									<a target="_blank" class="teacher-head"><img src="http://pic1.ablesky.cn/content/pic/album/2017/11/20/09c93a80-8180-457c-a798-7cc9a2927a66.png" />
+										<p>刘恩钊</p>
+									</a>
+								</li>
+								<li data-special="临床执业（助理）医师、护士资格" data-teachstyle="言简意赅、重点突出、直击考点" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/668122e8-dec5-40ca-afd1-b0845941a030.png" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=3203340&courseId=1369090&emKey=c9e8a8f9882e96e21a44def8cad5c324">
+									<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/577c6d5d-bc2c-4040-8b6f-8543f144a6e7.png" />
+										<p>刘瑾</p>
+									</a>
+								</li>
+								<li data-special="中医执业/助理医师--中药学" data-teachstyle="" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/386e5a8d-d608-4374-8816-4912544ec68b.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169847&courseId=1075063&emKey=73de655fd76437bd4c4ecec57cba6c9d">
+									<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/4a658507-d937-4a09-a42e-8a43b8007795.png" />
+										<p>林志健</p>
+									</a>
+								</li>
+								<li data-special="执业药师--药学专业知识二  临床执业/助理医师" data-teachstyle="循循善诱、亲近随和、生动详实、实战性强" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/8cdcc611-7090-4acc-8a0d-e37e05121922.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=3069686&courseId=1040864&emKey=fd8a566569b463bed7c57bfa478738b3">
+									<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/86716fc8-2934-4df6-a8ed-5d7951a61d40.png" />
+										<p>候应建</p>
+									</a>
+								</li>
+								<li data-special="执业药师--药剂学、药物分析、中药药剂学" data-teachstyle="紧扣考纲、条理清晰、方式灵活、善用口诀" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/2dcd8980-75a6-42bb-a707-44480f8ad844.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2484068&courseId=1040869&emKey=57d6065f87926911d6a9156065704e24">
+									<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/27c10bc7-b1ac-4552-bb98-430676e9d109.png" />
+										<p>白洁</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="right dispose"></div>
+					</div>
+					<div class="teacherIntro fr">
+						<p class="special">擅长科目：<span>临床执业/助理医师--实践技能、心血管、呼吸、消化系统</span></p>
+						<p class="teachStyle">授课风格：<span>把握精准、思路清晰、风趣幽默、方法独特</span></p>
+					</div>
+				</div>
+				<div class="teacher_btn">
+					<a href="http://bj.nengliyk.com/org/8980_d_279935_0_-1_-1_0_1" target="_blank" style="margin-right: 60px;">试听更多课程</a>
+					<a href="http://bj.nengliyk.com/org/8980_ms_0_1" target="_blank">查看更多名师</a>
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="https://qiyukf.com/script/464d2df4465630688d4cbae8cfed6172.js" defer async></script>-->
+		<script src="../js/jquery.js"></script>
+		<script>
+			//	require(['jquery','common/global'], function($) {
+			$(function() {
+				console.log(333343434)
+				//在线咨询
+				$('.online_inquire').on('click', function() {
+					if($('#YSF-BTN-HOLDER')) {
+						$('#YSF-BTN-HOLDER').trigger('click')
+					}
+				});
+
+				function teacher_repeat() {
+					//老师轮播start
+					var repeat,
+						len = $('.teacher li').length,
+						marginw = parseInt($('.teacher li:first').css('marginLeft')),
+						movew = $('.teacher li:first').outerWidth() + marginw,
+						liw = $('.teacher li:first').outerWidth(),
+						ulw = liw * len;
+					$('.teacher').css({
+						'width': ulw + 'px'
+					});
+
+					function focusPicture() {
+						var w = $('.teacher li:first').width() + 8,
+							len = $('.teacher li').length;
+						$('.teacher').css({
+							'width': w * len + 'px'
+						})
+						$('.school-list').hover(function() {
+							clearInterval(repeat)
+						}, function() {
+							repeat = setInterval(function() {
+								$('.teacher').stop().animate({
+									'marginLeft': -w
+								}, 1000, function() {
+									$('.teacher li:first').appendTo($('.teacher'));
+									$('.teacher').css({
+										'margin-left': 0
+									})
+								})
+							}, 3000)
+						}).trigger('mouseleave')
+						$('.dispose').mouseover(function() {
+							clearInterval(repeat);
+						})
+						$('.dispose').mouseout(function() {
+							repeat = setInterval(function() {
+								$('.teacher').stop().animate({
+									'marginLeft': -w
+								}, 1000, function() {
+									$('.teacher li:first').appendTo($('.teacher'));
+									$('.teacher').css({
+										'margin-left': 0
+									})
+								})
+							}, 3000)
+						})
+					}
+					focusPicture();
+
+					function nextPic() {
+						$('.teacher li:first').stop().animate({
+							'marginLeft': -movew
+						}, 1000, function() {
+							$(this).css({
+								'marginLeft': marginw
+							}).appendTo($('.teacher'));
+						})
+					}
+
+					function prevPic() {
+						$('.teacher li:last').prependTo($('.teacher'));
+						$('.teacher li:first').css({
+							'marginLeft': -movew
+						}).stop().animate({
+							'marginLeft': marginw
+						}, 1000);
+					}
+					$('.left').click(function() {
+						if(!$('.teacher li:first').is(':animated')) {
+							prevPic()
+						}
+					})
+					$('.right').click(function() {
+						if(!$('.teacher li:first').is(':animated')) {
+							nextPic();
+						}
+					})
+					//老师轮播end
+					//老师的点击事件start
+					var paly_vedio = "http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169765&courseId=1075043&emKey=11950c6f988d2c34026f1826ab2a0543";
+					$('.teacher li').on('click', function() {
+						var _this = $(this),
+							vedio = _this.data('vedio'),
+							vedio_photo = _this.data('photo'),
+							special = _this.data('special'),
+							teachStyle = _this.data('teachstyle');
+						paly_vedio = vedio;
+						_this.addClass('selectTeacher').siblings().removeClass('selectTeacher');
+						$('.teacherVideo .play_img').attr('src', vedio_photo);
+						$('.J_startPlay').css('z-index', '10');
+						$('.teacherVideo iframe').attr('src', "");
+						$('.teacherIntro .special span').html(special);
+						$('.teacherIntro .teachStyle span').html(teachStyle);
+
+					})
+					$('.J_startPlay').on('click', function() {
+						var _this = $(this);
+						_this.css('z-index', '-1');
+						$('.teacherVideo iframe').attr('src', paly_vedio);
+					});
+					//老师的点击事件end
+				}
+				teacher_repeat();
+
+				console.log(333333)
+
+				var orgId = 21139,
+					titleIds = '21655,21654,21141';
+				$.ajax({
+					url: 'http://www.beta.ablesky.com/organizationPost.do?action=getOrganizationPostByHelpCenterTitleIds&orgId=' + orgId + '&titleIds=' + titleIds,
+					dataType: 'jsonp',
+					success: function(data) {
+						if(data.success) {
+							var htmlstr = '';
+							var divList = data.result.list;
+							for(var i = 0; i < divList.length; i++) {
+								var list = divList[i].listDto.list;
+								var len = list.length > 5 ? 5 : list.length;
+								var pstr = '';
+								for(var j = 1; j < len; j++) {
+									pstr += '<p><a target="_blank" href="org/' + orgId + '_zx_' + list[j].id + '">' + list[j].titleName + '</a></p>'
+								}
+								htmlstr += '<div ' + (i == 2 ? 'style="margin-right:0;"' : '') + '>' +
+									'<h2><a target="_blank" href="org/' + orgId + '_zx_' + divList[i].titleId + '_2_1">' + divList[i].titleName + '</a></h2>' +
+									'<p class="first">' +
+									'	<a target="_blank" href="org/' + orgId + '_zx_' + list[0].id + '"><img src="' + list[0].countPhoto + '"/></a>' +
+									'	<span><a target="_blank" href="org/' + orgId + '_zx_' + list[0].id + '">' + list[0].titleName + '</a></span>' +
+									'	<a class="right" target="_blank" href="org/' + orgId + '_zx_' + list[0].id + '">查看详情></a>' +
+									'</p>' +
+									pstr +
+									'</div>';
+							}
+							$('.information').html(htmlstr)
+						} else {
+							alert(data.message);
+						}
+					}
+				});
+			});
+		</script>
+
+	</body>
+
+</html>

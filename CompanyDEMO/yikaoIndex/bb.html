@@ -1,0 +1,229 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="baidu-site-verification" content="VDDBV3VJbg" />
+<title>无标题文档</title>
+</head>
+<meta name="baidu-site-verification" content="5WI2TAhWho" />
+<style type="text/css">
+html, body{background:#f2f2f2 !important; font-size: 14px;}
+body header{ font-size:12px;}
+.time a:hover{color:#555;}
+.lay-custom-page{width:100%  !important;  margin-top:0 !important; }
+.org-header-wrap{margin-bottom:0 !important;}
+/*.agent-wrap{margin-left:615px !important;}*/
+.fixed-accessories{margin-left:615px;}
+
+*{margin:0; padding:0; list-style:none; font-family:"微软雅黑"; }
+a{outline: none; text-decoration:none; color:#555;}
+a:active {star:expression(this.onFocus=this.blur());}
+a:hover{ color:#63ae1f;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{display:block; content:''; clear:both;}
+table{ table-layout:fixed; empty-cells:show; border-collapse: collapse; margin:0 auto; 
+} 
+#J_fixedTools{ display:none;}
+
+/*改版*/
+.banner {
+	position:relative;
+	min-width: 1200px;
+	height: 360px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/*   banner   */
+.showImg-wrap {
+	width: 100%;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.showImg-main {
+	width: 100%;
+}
+
+.showImg-main li {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.showImg-main li a {
+	display: block;
+	margin: 0 auto;
+}
+
+.showImg-main li img {
+	display: block;
+	width: 100%;
+	height: 300px;
+}
+
+.showImg-pagination {
+	bottom: 20px;
+}
+
+.showImg-wrap .showImg-main{
+	position: relative;
+	z-index: 2;
+}
+
+.showImg-pagination {
+	height: 20px;
+	position: relative;
+	text-align: center;
+	bottom: 30px;
+	z-index: 10;
+	color: #fff;
+	cursor: pointer;
+}
+
+.showImg-pagination ol {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 5px 10px;
+	border-radius: 10px;
+	overflow: hidden;
+	/* background: url("http://www.ablesky-a.com:8080/ableskystatics/images/index/banner-index-bg.png") repeat 0 0px transparent; */
+}
+
+.showImg-wrap ol li {
+	float: left;
+	margin: 0 3px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.showImg-wrap ol li a {
+	display: block;
+	height: 12px;
+	width: 12px;
+	background:pink;
+}
+
+.showImg-wrap ol li a:hover,.showImg-wrap ol li a.currentIndex {
+	background:red;
+}
+
+</style>
+
+<div class="content-wrap">
+	<div class="banner">
+			<div id="J_showImg" class="showImg-wrap upload-wrap" style="height:360px;">
+				<div class="showBigImgBox" style="height:360px;width:100%">
+					<ul class="showImg-main" style="position:relative;">
+						<li >
+							<a style="height:360px;min-width:1200px" target="_blank" href=""><img src="http://pic2.ablesky.cn/content/pic/album/2016/10/19/79ef7af7-7408-4d7d-a48e-1e2f2246f29b.jpg" /></a>
+						</li>
+						<li >
+							<a style="height:360px;min-width:1200px" target="_blank" href=""><img src="http://pic1.ablesky.cn/content/pic/album/2016/10/19/07f8a37f-8a1a-48ff-aa79-f9c83fe41ab9.png" /></a>
+						</li>
+					</ul>
+				</div>
+				<div class="showImg-pagination">
+					<ol class="clearfix">
+						<li><a class="" href="javascript:;"></a></li>
+						<li><a class="" href="javascript:;"></a></li>
+					</ol>
+				</div>
+
+			</div>
+		</div>
+</div>
+
+<script type="text/javascript">
+require(['jquery','common/global'], function($) {	
+	var orgId = 8980;
+
+
+    	var init = function(config){
+			var config = config || {};
+			var $publicize = $(config.id);
+			var start = -1;
+			var showImg = $('.showImg-main a',$publicize);
+			var showImgBtn = $('.showImg-pagination a',$publicize);
+			var showImgLi = $('.showImg-main li',$publicize);
+			var showImgBg = [];
+			for(var i = 0,len = $('.showImg-main li',$publicize).length;i < len;i++){
+				showImgBg.push($('.showImg-main li',$publicize).eq(i).attr('showImg-bg'));
+			}
+			var total = showImg.length;
+			var timer = null;
+			var autoPlay = function(){			
+				if(start < total-1){
+					start++;				
+				}else if(start == total-1){				
+					start = 0;
+				}
+				showImgLi.hide();
+				showImgBtn.removeClass('currentIndex');
+				showImgLi.eq(start).fadeIn('slow');
+				showImgBtn.eq(start).addClass('currentIndex');
+				$publicize.css({background:showImgBg[start]});
+				if(showImgBg[start] =='#ffffff'){
+					$publicize.css({backgroundColor:'transparent'});
+				}
+				
+			}
+			if(total > 1){
+				autoPlay();
+				timer = setInterval(autoPlay,5000);
+				showImg.each(function(index){
+					$(this).on('mouseover',function(){
+						clearInterval(timer);
+						
+					}).on('mouseout',function(){
+						timer = setInterval(autoPlay,5000);
+						
+					});
+				});
+				showImgBtn.each(function(index){
+					$(this).on('mouseover',function(){
+						clearInterval(timer);
+						showImgLi.hide();
+						showImgBtn.removeClass('currentIndex');
+						if((index+1) == start){
+							showImgLi.eq(start-1).fadeIn('slow');
+							showImgBtn.eq(start-1).addClass('currentIndex');
+							
+							$publicize.css({background:showImgBg[start-1]});
+							if(showImgBg[start-1] =='#ffffff'){
+								$publicize.css({backgroundColor:'transparent'});
+							}
+							start = start-1;
+						}else{
+							showImgLi.eq(index).fadeIn('slow');
+							showImgBtn.eq(index).addClass('currentIndex');
+							$publicize.css({background:showImgBg[index]});
+							if(showImgBg[index] =='#ffffff'){
+								
+								$publicize.css({backgroundColor:'transparent'});
+							}
+							start = index;
+						}
+					}).on('mouseout',function(){
+						timer = setInterval(autoPlay,5000);
+					});
+				});
+			}
+			if(total == 1){
+				$('.showImg-pagination',$publicize).hide();
+				$publicize.css({background:showImgBg[0]});
+				if(showImgBg[0] =='#ffffff'){
+					$publicize.css({backgroundColor:'transparent'});
+				}
+			}
+			
+	};
+	init({id:'#J_showImg'});
+
+
+		
+	
+	
+});
+</script>

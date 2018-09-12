@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="lib/jquery-1.8.3.min.js"></script>
+</head>
+<style>
+	* {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+    }
+    .lazyload img {
+        width: 640px;
+      }
+      .lazyload{
+        width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    @media screen and (max-width: 980px) {
+      .lazyload img {
+        width: 100%;
+        height: 480px;
+
+      }
+      .lazyload{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+</style>
+<body>
+	<div class="lazyload">
+  <div>
+  <ul>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher2.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher3.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher4.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher5.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher6.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher7.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher8.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher9.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher6.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher7.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher8.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher9.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher6.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher7.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher8.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+    <li class="item">
+      <a href="javascript:void(0)"><img data-img="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher9.jpg" src="http://h5.sztoda.cn/static/img/loveLetter/teacher/teacher1.jpg"></a>
+    </li>
+  </ul>
+  </div>
+</div>
+
+<script>
+	var lazyLoad = (function(){
+  var clock;
+  // 函数初始化，启动监听
+  function init(){
+      // 监听滚动
+    $(window).on("scroll", function(){
+      // 清楚定时器，当滚动时间位于 200ms 内时，减少不必要的遍历
+      if (clock) {
+        clearTimeout(clock);
+      }
+      // 滚动两百毫秒后遍历一次检查
+      clock = setTimeout(function(){
+        checkShow();
+      }, 3000);
+    })
+     // 检查图片是否处于已视区域
+    checkShow();
+  }
+  // 检查图片是否处于已视区域
+  function checkShow(){
+    $(".lazyload img").each(function(){
+      var $cur =$(this);
+      // 给每个 img 增加一个 isLoaded 属性
+      // 如果 isLoaded 为 true ,则不用再次显示，return 回去
+      if($cur.attr('isLoaded')){
+            return;
+          }
+      // 如果 shouldShow($cur) 为 true,则表示该图片位于已视区域，且 isLoaded 属性还未存在
+      if(shouldShow($cur)){
+      // 展示该图片真正src
+        showImg($cur);
+      }
+    })
+  }
+  // $node 代表 this，表示 img 数组里面对应的每一个 img
+  function shouldShow($node){
+  // 获取距离窗口滚动距离，窗口高度，和图片距离文档顶部的距离
+    var scrollH = $(window).scrollTop(),
+      winH = $(window).height(),
+      top = $node.offset().top;
+   // 如果图片距离文档顶部的距离小于距离窗口滚动距离+窗口高度，那么处于已视区域，否则处于未视区域
+    if(top < winH + scrollH){
+        return true;
+      }else{
+        return false;
+      }
+  }
+  // 展示该图片真正src
+  function showImg($node){
+      // 先将图片隐藏
+      $node.hide()
+      // 设置该图片真正src
+      $node.attr('src', $node.attr('data-img'));
+      // 让图片淡入
+      $node.fadeIn()
+      // 设置 isLoaded 属性为 true
+      $node.attr('isLoaded', true);
+
+  }
+  // 返回 init 方法
+  return {
+    init: init
+  }
+})()
+// 调用lazyLoad.init()方法
+lazyLoad.init();
+</script>
+</body>
+</html>

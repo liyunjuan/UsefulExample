@@ -1,0 +1,1505 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>药师企业定制班</title>
+<style>	
+	/*reset样式*/
+	html,body {
+		font-size: 14px;
+	}	
+	body header {
+		font-size: 12px;
+		color: #555;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: "微软雅黑";
+	}	
+	a {
+		outline: none;
+		text-decoration: none;
+	}	
+	a:active {
+		star: expression(this.onFocus=this.blur());
+	}	
+	a:hover {
+		color: #46bd89;
+	}	
+	.fl {
+		float: left;
+	}	
+	.fr {
+		float: right;
+	}
+	
+	.clearfix:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	
+	table {
+		/*table-layout: fixed;*/
+		empty-cells: show;
+		border-collapse: collapse;
+		margin: 0 auto;		
+		color: #555;
+	}
+	.lay-custom-page {
+		width: 100% !important;
+		margin-top: 0 !important;
+		background: #fff;
+	}
+	/*top*/			
+	.top {
+		width: 100%;
+		min-width: 1200px;
+		height: 50px;
+		background-color: #1ab176;
+	}
+	.tab {
+		width: 1200px;
+		height: 50px;
+		margin: 0 auto;
+	}	
+	.tab>li {
+		width: 300px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		float: left;
+		color: #fff;
+		position: relative;
+		cursor: pointer;
+	}	
+	.tab>li>em {
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #fff;
+		position: absolute;
+		right: 20px;
+		top: 23px;
+	}
+	
+	.tab>li>span {
+		font-size: 18px;
+		display: block;
+		height: 50px;
+		text-align: center;
+	}
+	.tab>li>span>a{
+		color: #fff;
+	}
+	.tab>li:hover,.tab>li.show {
+		color: #fff;
+		background: #11a36a;
+	}	
+	.tab li>ul {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 49px;
+		z-index: 999;
+	}	
+	.tab li>ul li {
+		width: 300px;
+		height: 40px;
+		line-height: 40px;
+		background: #1ab176;
+		color: #fff;
+		text-align: center;
+		padding: 0;
+		border-top: 1px solid #fff;
+		cursor: pointer;
+	}
+	.tab li>ul li a{
+		color: #fff;
+		font-size: 18px;
+	}	
+	.tab li>ul li:hover,.tab li>ul li.cli {
+		background: #11a36a;
+		color: #FFF;
+		border: none;
+	}
+	/*banner*/			
+	.bannerBox {
+		position: relative;
+		width: 100%;
+		min-width: 1200px;
+		overflow: hidden;
+		height: 350px;
+	}	
+	.bannerCon {
+		position: absolute;
+		left: 50%;
+		margin-left: -960px;
+		width: 1920px;
+		overflow: hidden;
+	}
+	.bannerBox a{
+		position: absolute;
+		left: 50%;
+		top: 78%;
+		margin-left: -151px;
+		width: 302px;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		font-size: 20px;
+		color: #fff;
+		border-radius: 4px;
+		background: #1ab176;		
+	}
+	.bannerBox1 {
+		width: 100%;
+		min-width: 1200px;
+		height: 80px;
+		text-align: center;
+		background: #1ab176;
+	}	
+	.bannerBox1>img{
+		margin-top: 25px;
+	}
+	
+	/*标题*/
+	.minWidth{		
+		min-width: 1200px;
+		height: auto;
+		padding-top: 50px;
+	}
+	.minWidth .tit1{
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		color: #333;
+	}
+	.minWidth .tit2{
+		display: block;
+		margin: 18px auto 0;
+		width: 40px;
+		height: 4px;
+		border-radius: 2px;
+		background: #1ab176;
+	}
+	.minWidth .tit3{
+		text-align: center;
+		font-size: 18px;
+		/*font-weight: bold;*/
+		color: #555555;
+		margin-top: 35px;
+	}
+	.minWidth .tit3 span{
+		color: #e33636;
+	}
+	.minWidth .tit4{
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+		margin-top: 35px;
+		line-height: 1.5;
+	}
+	.centerBox{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.dream_content{
+		background: #f5f6f8;
+		padding: 70px 0 60px;
+	}
+	.dreamContent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 15px 0;
+		position: relative;
+	}
+	.dreamContent_wrap>div{
+		width: 1090px;
+		margin: 0 auto;
+		padding: 50px 40px;
+		background: #fff;
+	}
+	.dreamContent_wrap>div h1{
+		font-size: 30px;
+		color: #1ab176;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.dreamContent_wrap>div p{
+		font-size: 18px;
+		color: #555;
+		text-indent: 2rem;
+		line-height: 1.5;
+		margin-bottom: 40px;
+	}
+	.dreamContent_wrap>div p.four{
+		margin-bottom: 0;
+	}
+	.dreamContent_wrap>span{
+		position: absolute;
+		width: 25px;
+		height: 25px;
+	}
+	.dreamContent_wrap>span.left{		
+		border-top: 4px solid #1ab176;
+		border-left: 4px solid #1ab176;
+		left: 0;
+		top: 0;
+	}
+	.dreamContent_wrap>span.right{		
+		border-bottom: 4px solid #1ab176;
+		border-right: 4px solid #1ab176;
+		right: 0;
+		bottom: 0;
+	}	
+	.contentWrap {
+		width: 1200px;
+		height: auto;
+		margin: 0 auto;
+		padding-bottom: 1px;
+	}
+	
+	.contentWrap table {
+		height: auto;
+		border-left: #e6e6e6 1px solid;
+		border-top: #e6e6e6 1px solid;
+		font-size: 14px;
+		margin-top: 60px;
+	}
+	
+	.contentWrap table th {
+		/*height: 59px;*/
+		border-right: #e6e6e6 1px solid;
+		border-bottom: #e6e6e6 1px solid;
+		font-size: 16px;
+		color: #1ab176;
+		font-weight: bold;
+		padding: 10px 2px;
+	}
+	
+	.contentWrap table td {
+		border-right: #e6e6e6 1px solid;
+		border-bottom: #e6e6e6 1px solid;
+		padding: 10px 5px;
+		text-align: center;
+		line-height: 1.5;
+	}
+	
+	.contentWrap table td a{
+		color: #555;
+	}
+	.contentWrap table td a:hover{
+		color: #1ab176;
+	}
+	.contentWrap table td a.go_to_singup{
+		display: inline-block;
+		width: 60px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 5px;
+		font-size: 12px;
+		color: #fff;
+		background: #1ab176;
+	}	
+	.contentWrap table td a.go_to_singup:hover{
+		background: #11a36a;
+	}
+	.contentWrap .title1{
+		padding: 40px 35px;
+		font-size: 0;
+	}
+	.contentWrap .title1 span{
+		display: inline-block;
+		width: 226px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		color: #1ab176;
+	}
+	.sternOPtion{
+		text-align: center;
+		margin: 0px 0 50px;
+		color: #555555;
+	}
+	.sternOPtion h2{
+		font-size: 20px;
+	}
+	.sternOPtion a {
+		display: inline-block;
+		width: 200px;
+		height: 60px;
+		text-align: center;
+		line-height: 65px;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		background: #1ab176;
+		border-radius: 6px;
+		border-bottom: 5px solid #0b8d5a;
+		margin-top: 20px;
+	}	
+	.sternOPtion a:hover {
+		background: #0b8d5a;
+	}
+	.chooseus_wrap{
+		background: #f5f6f8;
+	}
+	.chooseusContent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 80px 0 60px;
+		overflow: hidden;
+	}
+	.chooseusContent_wrap>div{
+		float: left;
+		width: 280px;
+		height: 247px;
+		text-align: center;
+		border-radius: 6px;
+		background: #fff;
+		margin-right: 25px;
+		position: relative;
+	}
+	.chooseusContent_wrap>div.four{
+		margin-right: 0;
+	}
+	.chooseusContent_wrap>div h1{
+		font-size: 18px;
+		color: #555;
+		margin-top: 85px;
+		margin-bottom: 12px;
+	}
+	.chooseusContent_wrap>div p{
+		font-size: 16px;
+		color: #555;
+		line-height: 1.8;
+	}
+	.chooseusContent_wrap>div img{
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		left: 80px;
+		top: -60px;
+	}
+	.advantageContent_wrap{
+		width: 950px;
+		height: 728px;
+		padding: 110px 125px 160px ;
+		background: url(http://pic1.ablesky.cn/content/pic/album/2018/01/31/19efc98a-652b-4b5d-8792-42bb8ef284c3.jpg) no-repeat center center;
+		margin: 80px auto 50px;
+		font-size: 0;
+	}
+	.advantageContent_wrap>div{
+		float: left;
+		width: 235px;
+		height: 145px;
+		border: 1px solid #1ab176;
+		background: #e6fff5;
+		margin-bottom: 50px;
+		border-radius: 8px;
+		text-align: center;
+	}
+	.advantageContent_wrap>div.odd{
+		margin-right: 476px;
+	}
+	.advantageContent_wrap>div h2{
+		font-size: 20px;
+		color: #1ab176;
+		margin-top: 5px;
+		line-height: 2;
+	}
+	.advantageContent_wrap>div p{
+		font-size: 16px;
+		color: #333;
+		line-height: 1.5;
+	}
+	.teacher_wrap{
+		background: #f5f6f8;
+	}
+	.teacherContent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 50px 0 60px;
+		overflow: hidden;
+	}
+	.teacherContent_wrap .left {
+		width: 28px;
+		height: 380px;
+		float: left;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png") no-repeat left center;
+		cursor: pointer;
+	}
+	
+	.teacherContent_wrap .right {
+		width: 28px;
+		height: 380px;
+		float: right;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png") no-repeat right center;
+		cursor: pointer;
+	}
+	.school-list {
+		width: 1144px;
+		height: 380px;
+		overflow: hidden;
+		float: left;
+	}
+	
+	.school-list .teacher li {
+		width: 264px;
+		height: 378px;
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
+		border: 1px solid #e9e9e9;
+	}
+	.school-list .teacher li:hover{
+		border-color: #1ab176;
+	}
+	.school-list .teacher li a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	
+	.school-list .teacher li img {
+		display: block;
+		width: 162px;
+		height: 162px;
+		border-radius: 50%;
+		margin:22px auto 10px;
+	}
+	.school-list .teacher li h2{
+		font-size: 20px;
+		color: #333;
+	}
+	.school-list .teacher li h3{
+		font-size: 14px;
+		color: #1ab176;
+		margin: 12px 0;
+		height: 38px;
+	}
+	.school-list .teacher li p{
+		text-align: left;
+		padding: 0 10px;
+		color: #aaa;
+		line-height: 1.3;
+	}
+	.bookContent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 50px 0 60px;
+		overflow: hidden;
+	}
+	.book-list {
+		width: 1200px;
+		margin: 0 auto;
+		height: 280px;
+		font-size: 0;
+	}	
+	.book-list .book_left {
+		width: 40px;
+		height: 280px;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png") no-repeat left center;
+		float: left;
+		cursor: pointer;
+	}
+	.book-list .book_right {
+		width: 40px;
+		height: 280px;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png") no-repeat right center;
+		float: right;
+		cursor: pointer;
+	}
+	.book-list .centre{
+		float: left;
+		width: 1120px;
+		height: 282px;
+		overflow: hidden;
+	}
+	.book-list li{
+		width: 1120px;
+		height: 302px;
+		float: left;
+	}
+	.book-list li>a{
+		display: inline-block;
+		width: 212px;
+		height: 280px;
+		border: #ededed 1px solid;
+		border-radius: 5px;
+		margin: 0 5px;
+		
+	}
+	.book-list li>a.last{
+		margin-right: 0;
+	}
+	.book-list li img {
+		display: block;
+		width: 95%;
+  		height: 130px;
+  		margin: 40px auto 0;
+	}
+	
+	.book-list li a p {
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		color: #1ab176;
+		height: 60px;
+		overflow: hidden;
+		padding:35px 5px 5px;
+	}
+	.product_wrap{
+		background: #F5F6F8;
+	}
+	.product_contentWrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 30px 0 60px;
+		overflow: hidden;
+	}
+	.product_contentWrap>div{
+		float: left;
+		width: 50%;
+	}
+	.product_contentWrap dl{
+		height: 181px;
+	}
+	.product_contentWrap .one dt{
+		padding-top: 18px;
+	}
+	.product_contentWrap .two dt{
+		padding-left: 41px;
+	}
+	.product_contentWrap dl dt{
+		float: left;
+		margin-right: 18px;
+	}
+	.product_contentWrap dl dd{
+		float: left;
+	}
+	.product_contentWrap dl dd h2{
+		font-size: 20px;
+		margin-bottom: 12px;
+		color: #555;
+	}
+	.product_contentWrap dl dd p{
+		font-size: 14px;
+		line-height: 34px;
+		color: #555;
+	}
+	.product_contentWrap .product_btn{
+		clear: both;
+		text-align: center;
+		margin-top: 45px;
+	}
+	.product_contentWrap .product_btn a{
+		display: inline-block;
+		width: 160px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		font-size: 16px;
+		color: #fff;
+		background: #1ab176;
+		border-radius: 6px;
+	}
+	
+	.product_contentWrap .product_btn a:hover {
+		background: #0b8d5a;
+	}
+	.highscore_content{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 30px 0 90px;
+		text-align: center;
+	}
+	.recollections_wrap{
+		background: #f5f6f8;
+	}
+	.imgContent_wrap{
+		width: 1200px;
+		margin: 0 auto;
+		padding: 50px 0 80px;
+	}
+	.imgContent_wrap img{
+		display: block;
+		margin: 0 auto;
+	}
+	.joinus_wrap{
+		background: #f5f6f8;
+	}
+	.joinusContent_wrap{
+		padding-bottom: 60px;
+	}
+	.qlmain {
+		width: 564px;
+		padding: 35px 0;
+		margin: 20px auto 0;
+		border-radius: 10px;
+		background: #fff;
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+	}	
+	.qlmain h3 {
+		font-size: 15px;
+		color: #555;
+		text-align: center;
+	}
+	.qlmain p.inquire{
+		font-size: 18px;
+		text-align: center;
+		font-weight: bold;
+		color: #1ab176;
+		margin-top: 10px;
+	}
+	.qlmain .info {
+		margin-top: 31px;
+	}	
+	.qlmain .info>span {
+		font-size: 13px;
+		font-weight: bold;
+		color: #555;
+		width: 109px;
+		text-align: right;
+		display: block;
+		float: left;
+		line-height: 39px;
+		padding-right: 5px;
+	}	
+	.qlmain .info .subinfo {
+		width: 350px;
+		padding-left: 5px;
+		height: 39px;
+		font-size: 10px;
+		background: #f8f8f8;
+		border: #e6e6e6 1px solid;
+		border-radius: 6px;
+		line-height: 39px;
+	}
+	.qlmain .slid {
+		display: block;
+		float: left;
+		position: relative;
+	}	
+	.qlmain .slid ul {
+		position: absolute;
+		left: -6px;
+		top: 36px;
+		width: 335px;
+		padding: 20px 10px;
+		border: #f2f2f2 1px solid;
+		background: #FFF;
+		margin: 5px 0 0 4px;
+		display: none;
+		z-index: 10;
+	}	
+	.qlmain .slid ul li {
+		line-height: 34px;
+		color: #555;
+		cursor: pointer;
+	}	
+	.qlmain .slid ul li:hover {
+		background: #f5f6f8;
+	}
+	.qlmain .arrow-down {
+		width: 35px;
+		height: 24px;
+		float: right;
+		border-left: #e6e6e6 1px solid;
+		margin-top: 8px;
+	}	
+	.qlmain .arrow-down span {
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid #555;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		display: block;
+	}
+	.qlmain .state {
+		font-size: 14px;
+		font-weight: bold;
+		color: #fc9b13;
+		display: block;
+		text-align: center;
+		margin: 20px auto 40px;
+	}
+	.qlmain .subquery{
+		display: block;
+		margin: 0 auto;
+		width: 160px;
+		height: 50px;
+		color: #fff;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		line-height: 55px;
+		background: #1ab176;
+		border-radius: 6px;
+		border-bottom: 5px solid #0b8d5a;
+	}	
+	.qlmain .subquery:hover {
+		background: #0b8d5a;
+	}
+	.qlmain .qr {
+		width: 143px;
+		background: #fff;
+		text-align: center;
+		margin: 30px auto 0;
+	}
+	
+	.qlmain .qr img {
+		width: 91px;
+		height: 90px;
+	}	
+	.qlmain .qr dd {
+		font-weight: bolder;
+		font-size: 14px;
+		line-height: 2;
+		color: #1b1b1a;
+	}
+</style>
+<body>
+<div class="top" id="section-top">
+	<ul class="tab maxTab clearfix" id="top_Tab">
+		<li class="show">
+			<em></em>
+			<span>医师资格考试通关方案</span>
+			<ul>
+				<li class="level"><span><a target="_blank" href="">医师资格考试高端面授班</a></span></li>
+				<li class="level"><span><a target="_blank" href="">医师资格考试网络班</a></span></li>
+				<li class="level"><span><a target="_blank" href="">医师资格考试直播课</a></span></li>
+			</ul>
+		</li>
+		<li>
+			<em></em>
+			<span>执业药师考试通关方案</span>
+			<ul>
+				<li class="level"><span><a target="_blank" href="">执业药师考试高端面授班</a></span></li>
+				<li class="level"><span><a target="_blank" href="">执业药师考试网络班</a></span></li>
+			</ul>
+		</li>
+		<li>
+			<span><a target="_blank" href="">护士资格考试通关方案</a></span>
+		</li>
+		<li>
+			<span><a target="_blank" href="">乡村全科执业助理医师通关方案</a></span>
+		</li>
+	</ul>
+</div>
+<div class="bannerBox">
+	<div class="bannerCon"><img src="http://pic1.ablesky.cn/content/pic/album/2018/01/31/ef007734-92d4-44ff-860b-8ba76244bbe6.png" alt="" /></div>
+	<a href="tel:010-62660276">报名咨询电话：010-62660276</a>
+</div>
+<div class="dream_content minWidth">
+	<div class="dreamContent_wrap">
+		<div>
+			<h1>全国执业药师缺口究竟有多大</h1>
+			<p>目前我国执业药师市场僧多粥少，全国有47万家药店，再加上诊所、医院药房以及药企对执业药师的需求，整个市场需要200万名执业药师才能形成平衡，截至2017年10月底，全国执业药师注册人数为402328人，环比增加5235人。但相较于整个市场200万的需求量，缺口依旧十分庞大！</p>
+	      	<p class="four">其中，在社会药房和医疗机构中注册的执业药师有355775名，平均每万人口为2.9人，此数据远低于世界药学联合会公布的每万人口累计拥有执业药师6.2人的标准，与发达国家每万人拥有10~20名执业药师更是相去甚远，可见我国公众对执业药师的需求与执业药师配置数量增长差距依然很大！</p>
+       </div>
+       <span class="left"></span>
+       <span class="right"></span>
+	</div>	
+</div>
+<div class="table_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">量身打造专属通关方案，因材施教协议保过</p>
+		<em class="tit2"></em>
+		<p class="tit3">畅享VIP品质教育，用专业与实力为通关保驾护航</p>
+	</div>
+	<div class="contentWrap">
+		<table border="1" cellspacing="0" cellpadding="0" width="1200">
+			<tr>
+				<th width="100">
+					<p align="center"><strong>班型</strong></p>
+				</th>
+				<th width="150">
+					<p align="center"><strong>学习阶段</strong></p>
+				</th>
+				<th width="220">
+					<p align="center"><strong>授课方式</strong></p>
+				</th>
+				<th width="150">
+					<p align="center"><strong>课时</strong></p>
+				</th>
+				<th width="150">
+					<p align="center"><strong>上课时间</strong></p>
+				</th>
+				<th>
+					<p align="center"><strong>学习内容</strong></p>
+				</th>
+			</tr>	
+			<tr>
+				<th rowspan="4">企业定制</th>
+				<td>名师领学</td>
+				<td>网络+直播</td>
+				<td>200+小时</td>
+				<td>1-9月</td>
+				<td>线上全阶段网课夯实基础，名师在线直播专项提升</td>
+			</tr>						
+			<tr>
+				<td>面授集训营</td>
+				<td>面授</td>
+				<td>9天</td>
+				<td>3-9月</td>
+				<td>金牌讲师现场面授，封闭式管理，重难点全面强化</td>
+			</tr>	
+			<tr>
+				<td>专属教辅</td>
+				<td>网络+直播+作业+题库+测试</td>
+				<td colspan="2">班主任全程辅学<br/>1-10月</td>
+				<td>班主任领学，专业指导，贴心陪伴，线上线下全方位辅导</td>
+			</tr>
+			<tr>
+				<td>冲刺点睛</td>
+				<td>面授</td>
+				<td>5天</td>
+				<td>9-10月</td>
+				<td>5天5夜，直击考点，疯狂抢分</td>
+			</tr>
+			<tr>
+				<th>学费</th>
+				<td colspan="5" style="text-align: left;padding-left: 20px;">全科：35000元，两年未过，全额退费<br/>单科：9800元，当年未过，退不过科目学费</td>
+			</tr>						
+		</table>
+		<p style="color: #ff6c6c;line-height: 2;">备注：最终授课时间会根据当年考试变化情况及招生情况随时调整。</p>
+		<div class="sternOPtion">
+			<a href="http://p.qiao.baidu.com/cps/chat?siteId=11579397&userId=24948300" target="_blank" class="con online_inquire">了解详情</a>
+		</div>
+	</div>
+</div>
+<div class="chooseus_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">VIP企业定制辅导，给你不一样的通关体验</p>
+		<em class="tit2"></em>		
+		<p class="tit3">360°保障学习效果，全面助力高效通关</p>
+	</div>
+	<div class="chooseusContent_wrap">
+		<div>
+			<h1>14天超高端集训</h1>
+			<p>
+				封闭式管理 <br/>分阶段上课<br/>笔试+技能+冲刺
+			</p>
+			<img src="http://pic2.ablesky.cn/content/pic/album/2018/01/31/a44b7b12-a8f3-42b7-8a37-526ab3145292.png"/>
+		</div>
+		<div>
+			<h1>班主任全程督学</h1>
+			<p>
+				专属定制班主任<br />全程学习规划管理<br />学练测评一体化
+			</p>
+			<img src="http://pic2.ablesky.cn/content/pic/album/2018/01/31/a44b7b12-a8f3-42b7-8a37-526ab3145292.png"/>
+		</div>
+		<div>
+			<h1>网络直播APP专属辅导</h1>
+			<p>
+				高清网络课程<br />精准定制直播 <br />能力医考APP
+			</p>
+			<img src="http://pic2.ablesky.cn/content/pic/album/2018/01/31/a44b7b12-a8f3-42b7-8a37-526ab3145292.png"/>
+		</div>
+		<div class="four">
+			<h1>高端专享绝密资料</h1>
+			<p>
+				能力医考倾力打造 <br />浓缩精华直击考点 <br />全面贴合考试需求
+			</p>
+			<img src="http://pic2.ablesky.cn/content/pic/album/2018/01/31/a44b7b12-a8f3-42b7-8a37-526ab3145292.png"/>
+		</div>
+	</div>
+</div>
+<div class="minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">八大优势，全力保障通关</p>
+		<em class="tit2"></em>
+	</div>
+	<div class="advantageContent_wrap">
+		<div class="odd">
+			<h2>科学课程设置</h2>
+			<p>针对零基础学员  <br/>定制专属课程计划 <br/>阶段授课递进式提升</p>
+		</div>
+		<div class="even">
+			<h2>专属高端教辅</h2>
+			<p>班主任制度全程督学  <br/>科学学习管理规划  <br/>全方位提供品质教学服务</p>
+		</div>
+		<div class="odd">
+			<h2>多元化授课模式</h2>
+			<p>面授集训全面强化 <br/>高清网课随时学<br/>互动直播专项提高</p>
+		</div>
+		<div class="even">
+			<h2>便携式学习工具</h2>
+			<p>能力直播  <br/>能力医考APP<br/>随时随地想学就学</p>
+		</div>
+		<div class="odd">
+			<h2>高端VIP专属资料</h2>
+			<p>高端班专享  <br/>浓缩备考精华  <br/>绝密武器助力通关</p>
+		</div>
+		<div class="even">
+			<h2>高质量社交平台</h2>
+			<p>遇到一群志同道合的朋 <br/>友 ，互相分享工作学习 <br/>的苦与乐， 体验一回青<br/>春与拼搏</p>
+		</div>
+		<div class="odd">
+			<h2>一流名师团队</h2>
+			<p>汇聚行业一线名师  <br/>精准把握考试命题  <br/>助你痛快学轻松过</p>
+		</div>
+		<div class="even">
+			<h2>协议保障</h2>
+			<p>签订协议 <br/>保障通关  <br/>不过退费</p>
+		</div>
+	</div>
+</div>
+<div class="teacher_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">超强名师阵容，全力助阵2018药师通关</p>
+		<em class="tit2"></em>
+		<p class="tit3">拨云见日点石成金，简单学轻松过</p>
+	</div>
+	<div class="teacherContent_wrap">
+		<div class="left dispose"></div>
+		<div class="school-list">
+			<ul class="teacher">
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_36700" class="teacher-head">
+						<img src="http://pic6.ablesky.cn/content/pic/teacherphoto/2018/01/03/5cbe5ee6-cd6d-4220-9a4f-1aa3ddb435c9.png" />
+						<h2>熊珮</h2>
+						<h3>北京多家医学辅导机构首席药学授课讲师，药学考试资深辅导专家</h3>
+						<p>授课风格：形象幽默、极富激情，使枯燥的课程内容瞬间变得生动，便于学员迅速融入学习，深得学员拥护喜爱。</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_25704" class="teacher-head">
+						<img src="http://pic5.ablesky.cn/content/pic/teacherphoto/2018/01/03/fe7c3a75-3429-4011-83bb-eb19b1754982.png" />
+						<h2>刘恩钊</h2>
+						<h3>北京中医药大学医学硕士，资深医学考试辅导讲师</h3>
+						<p>授课风格：善于将复杂难懂的知识点对比总结归纳，化繁为简，通俗易懂。</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_25702" class="teacher-head">
+						<img src="http://pic2.ablesky.cn/content/pic/teacherphoto/2018/01/03/7772d65f-78d0-48af-9c9f-d44b2f6bd360.png" />
+						<h2>侯应健</h2>
+						<h3>北大医学部博士，资深医考辅导讲师</h3>
+						<p>授课风格：成熟稳健、层次分明、直击考点。</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_25705" class="teacher-head">
+						<img src="http://pic2.ablesky.cn/content/pic/teacherphoto/2018/01/03/c5d3bb89-2a97-4153-9f63-b5f2be49a600.jpg" />
+						<h2>白朝伟</h2>
+						<h3>医学博士，资深医学考试辅导讲师</h3>
+						<p>授课风格：重点突出、考点明确，讲课通俗易懂，善于分析总结，精准把握重点，考点</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_25708" class="teacher-head">
+						<img src="http://pic2.ablesky.cn/content/pic/teacherphoto/2018/01/05/47d92dfa-51ce-4e5b-aeca-9bd73c181c88.jpg" />
+						<h2>白洁</h2>
+						<h3>资深医学考试辅导讲师</h3>
+						<p>授课风格：生动形象，对考试重点、难点、考点把握精准，善于运用口诀、图片等记忆方法，轻松记忆知识点。</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://bj.nengliyk.com/org/8980_ms_34685" class="teacher-head">
+						<img src="http://pic6.ablesky.cn/content/pic/teacherphoto/2018/01/03/ac732dcb-df3a-4309-86c0-164435d3b7fc.png" />
+						<h2>余淑睿</h2>
+						<h3>资深教研班主任，独家授课讲师</h3>
+						<p>授课风格：深入浅出、直击考点、善于运用口诀、总结对比等多种教学方法，对考生复习痛点把握精准。</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="right dispose"></div>
+	</div>
+</div>
+<div class="minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">高端VIP专享资料 通关无忧</p>
+		<em class="tit2"></em>
+		<p class="tit3">最实用考试实战用书   精准定位核心出题点</p>
+	</div>
+	<div class="bookContent_wrap">
+		<div class="book-list">
+			<div class="book_left"></div>
+			<div class="centre">
+				<ul class="book bookshow">
+					<li>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381769?f=org_coursecenter">
+							<img src="http://pic3.ablesky.cn/content/pic/coursephoto/2017/11/04/54d00d95-7b9a-44cb-8399-8d5c41bd6ef5.jpg" />
+							<p>中药一核心考点</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384995?f=org_coursecenter">
+							<img src="http://pic1.ablesky.cn/content/pic/coursephoto/2017/11/06/3093a7e4-aada-4ef9-97c7-07d3884fc671.jpg" />
+							<p>中药一实战珍题</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384970?f=org_coursecenter">
+							<img src="http://pic6.ablesky.cn/content/pic/coursephoto/2017/11/06/31d47b76-ba1c-4eae-b2ef-bdfdeade0846.jpg" />
+							<p>中药一同步练习</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385096?f=org_coursecenter">
+							<img src="http://pic1.ablesky.cn/content/pic/coursephoto/2017/11/06/e24090ef-4973-4575-ac82-8ec1533f3dbb.jpg" />
+							<p>中药一考前密卷</p>
+						</a>
+						<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385124?f=org_coursecenter">
+							<img src="http://pic1.ablesky.cn/content/pic/coursephoto/2017/11/06/b615e9ce-3912-4687-9677-71bc7cb56f99.jpg" />
+							<p>中药一王者笔记</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381770?f=org_coursecenter">
+							<img src="http://pic5.ablesky.cn/content/pic/coursephoto/2017/11/04/d1d63a65-9251-4dc5-95c6-87a5977d648c.jpg" />
+							<p>中药二核心考点</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384997?f=org_coursecenter">
+							<img src="http://pic1.ablesky.cn/content/pic/coursephoto/2017/11/06/9aa0f98a-d81d-4e44-bd55-1647706101a9.jpg" />
+							<p>中药二实战珍题</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384977?f=org_coursecenter">
+							<img src="http://pic3.ablesky.cn/content/pic/coursephoto/2017/11/06/7b63421a-5f04-4949-847d-caef5ae644be.jpg" />
+							<p>中药二同步练习</p>
+						</a>
+						<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385110?f=org_coursecenter">
+							<img src="http://pic1.ablesky.cn/content/pic/coursephoto/2017/11/06/09a7b4f4-9e76-4cd9-baac-537b3db1e359.jpg" />
+							<p>中药二考前密卷</p>
+						</a>
+						<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385126?f=org_coursecenter">
+							<img src="http://pic3.ablesky.cn/content/pic/coursephoto/2017/11/06/f2b7bbe9-cf69-478d-93a8-d7f4fce3fd07.jpg" />
+							<p>中药二王者笔记</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="book_right"></div>
+		</div>
+	</div>
+</div>
+<div class="product_wrap minWidth">
+	<div class="centerBox clearfix">
+		<p class="tit1">能力直播、能力APP，充分利用碎片化时间 </p>
+		<em class="tit2"></em>
+		<p class="tit3">打破时间空间界限，学习更便捷</p>
+	</div>		
+	<div class="product_contentWrap">
+		<div class="one">
+			<dl>
+				<dt><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/21/009aeee9-0d22-4d68-93d6-f79aa6acd1f3.png"/></dt>
+				<dd>
+					<h2>能力直播：</h2>
+					<p>● 多终端直播观看无限，PC客户端，网页端，<br/>手机，APP端，手机WAP端。</p>
+					<p>● 授课形式丰富多样，教学互动精彩纷呈。</p>
+					<p>● 名师坐镇，互动答疑，笔记截图随时保存</p>
+				</dd>
+			</dl>
+			<div class="product_btn">
+				<a target="_blank" href="http://bj.nengliyk.com/p/l">一键下载能力直播</a>
+			</div>					
+		</div>
+		<div class="two">
+			<dl>
+				<dt><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/21/18599583-37db-4aee-bd92-10d1ffb3f8a6.png"/></dt>
+				<dd>
+					<h2>能力APP：</h2>
+					<p>● 支持离线视频下载。</p>
+					<p>● 视频，在线考试，同步练习，闹钟提醒，群组讨论，<br/>多项功能，实用方便。</p>
+					<p>● 高清课件与网上辅导课同步更新，品质保证。</p>
+				</dd>
+			</dl>
+			<div class="product_btn">
+				<a href="http://stat.ablesky.com/client/android/nlyk/nlyk_V5.3_20170518_sign.apk" style="margin-right: 20px;">安卓端下载</a>
+				<a href="https://itunes.apple.com/cn/app/neng-li-yi-kao/id1078520555?l=zh&mt=8" target="_blank">苹果端下载</a>
+			</div>	
+		</div>		
+	</div>
+</div>
+<div class="minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">能力医考执业药师历年通过率一览</p>
+		<em class="tit2"></em>
+		<p class="tit3">实力呈现，远超全国平均水平</p>
+	</div>
+	<div class="highscore_content">
+		<img src="http://pic1.ablesky.cn/content/pic/album/2018/02/01/a523598b-fc38-4844-ae9e-eba9aa455ac0.jpg" alt="" />
+	</div>
+</div>
+<div class="recollections_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">高端教育培训领路人，数万学员的放心选择</p>
+		<em class="tit2"></em>
+	</div>
+	<div class="imgContent_wrap">
+		<img src="http://pic5.ablesky.cn/content/pic/album/2018/01/23/e091879a-5bd0-4baa-8b1b-aa0ceae2ee51.png"/>
+	</div>
+</div>
+<div class="minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">加入2018年能力提升计划</p>
+		<em class="tit2"></em>
+	</div>
+	<div class="joinusContent_wrap">
+		<div class="park1 dis">
+			<div class="qlmain">
+				<h3>能力医考2018&nbsp;价值399元名师公开课免费预约</h3>
+				<p class="inquire">咨询热线：010-62660276</p>
+				<div class="info">
+					<span>姓名：</span>
+					<input type="text" class="subinfo  makeName" maxlength="20" />
+				</div>
+				<div class="info clearfix">
+					<span>科目：</span>
+					<div class="subinfo slid">
+						<span class="first">临床执业（助理）医师</span>
+						<ul class="typeList">
+							<li>临床执业（助理）医师</li>
+							<li>中医执业（助理）医师</li>
+							<li>中西医执业（助理）医师</li>
+							<li>口腔执业（助理）医师</li>
+							<li>乡村全科助理医师</li>
+							<li>执业（中）药师</li>
+							<li>执业（西）药师</li>
+							<li>护士执业资格</li>
+						</ul>
+						<div class="arrow-down J_arrowdown">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="info">
+					<span>手机号：</span>
+					<input type="text" class="subinfo Phone makePhone" maxlength="11" />
+				</div>
+				<span class="state">预约成功后，我们将在72小时内与您取得联系，请保持电话畅通！</span>
+				<span class="state" style="margin:-30px auto 25px;">备注：公开课开课时间以最终电话通知为准</span>
+				<a href="javascript:;" class="subquery makeSub">提交预约</a>
+				<dl class="qr">
+					<dt><img src="http://pic1.ablesky.cn/content/pic/album/2018/01/22/f09fb68d-068a-48e2-9ad3-44ef458a6f60.png" /></dt>
+					<dd>关注微信公众号</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<script src="../../js/jquery.js"></script>-->
+<script type="text/javascript">
+//	$(function(){
+	require(['jquery','common/global'], function($) {
+		//顶部的菜单栏
+		function topTab(){
+			var index = $('#top_Tab>li.show').index();
+			$('#top_Tab>li>span').click(function() {
+				index = $('#top_Tab>li').index($(this).parent());
+				$(this).next('ul').toggle();
+				$(this).parent().siblings().find('ul').hide();
+				$(this).parent().addClass('show').siblings().removeClass('show');
+			});
+			$('#top_Tab>li>span').hover(function() {
+				$(this).next('ul').show();
+				$(this).parent().siblings().find('ul').hide();
+				$(this).parent().addClass('show').siblings().removeClass('show');
+			});
+			$('#top_Tab>li').mouseleave(function() {
+				$(this).find('ul').hide();
+				$('#top_Tab>li').eq(index).addClass('show').siblings().removeClass('show');
+			});				
+		}
+		topTab();
+		
+		
+		function teacher_repeat(){
+			//学员成绩轮播start
+			var repeat,
+				len = $('.teacher li').length,
+				marginw = parseInt($('.teacher li:first').css('marginLeft')),
+				movew = $('.teacher li:first').outerWidth() + marginw,
+				liw = $('.teacher li:first').outerWidth(),
+				ulw = liw * len;
+			$('.teacher').css({
+				'width': ulw + 'px'
+			});	
+			function focusPicture() {
+				var w = $('.teacher li:first').width()+marginw*2,
+					len = $('.teacher li').length;
+				$('.teacher').css({
+					'width': w * len + 'px'
+				})
+				$('.school-list').hover(function() {
+					clearInterval(repeat)
+				}, function() {
+					repeat = setInterval(function() {
+						$('.teacher').stop().animate({
+							'marginLeft': -w
+						}, 1000, function() {
+							$('.teacher li:first').appendTo($('.teacher'));
+							$('.teacher').css({
+								'margin-left': 0
+							})
+						})
+					}, 3000)
+				}).trigger('mouseleave')
+				$('.dispose').mouseover(function() {
+					clearInterval(repeat);
+				})
+				$('.dispose').mouseout(function() {
+					repeat = setInterval(function() {
+						$('.teacher').stop().animate({
+							'marginLeft': -w
+						}, 1000, function() {
+							$('.teacher li:first').appendTo($('.teacher'));
+							$('.teacher').css({
+								'margin-left': 0
+							})
+						})
+					}, 3000)
+				})
+			}
+			focusPicture();
+	
+			function nextPic() {
+				$('.teacher li:first').stop().animate({
+					'marginLeft': -movew
+				}, 1000, function() {
+					$(this).css({
+						'marginLeft': marginw
+					}).appendTo($('.teacher'));
+				})
+			}
+	
+			function prevPic() {
+				$('.teacher li:last').prependTo($('.teacher'));
+				$('.teacher li:first').css({
+					'marginLeft': -movew
+				}).stop().animate({
+					'marginLeft': marginw
+				}, 1000);
+			}
+			$('.left').click(function() {
+				if (!$('.teacher li:first').is(':animated')) {
+					prevPic()
+				}
+			})
+			$('.right').click(function() {
+				if (!$('.teacher li:first').is(':animated')) {
+					nextPic();
+				}
+			})
+			//学员成绩轮播end		
+		}
+		teacher_repeat();	
+		//图书repeat
+		function book_repeat(){
+			var repeat,
+			len = $('.bookshow li').length,
+			marginw = parseInt($('.bookshow li:first').css('marginLeft')),
+			movew = $('.bookshow li:first').outerWidth() + marginw,
+			liw = $('.bookshow li:first').outerWidth() + 10,
+			ulw = liw * len;
+			$('.bookshow').css({
+				'width': ulw + 'px'
+			});
+	
+			function nextPic() {
+				$('.bookshow li:first').stop().animate({
+					'marginLeft': -movew
+				}, 1000, function() {
+					$(this).css({
+						'marginLeft': marginw
+					}).appendTo($('.bookshow'));
+				})
+			}
+	
+			function prevPic() {
+				$('.bookshow li:last').prependTo($('.bookshow'));
+				$('.bookshow li:first').css({
+					'marginLeft': -movew
+				}).stop().animate({
+					'marginLeft': marginw
+				}, 1000);
+			}
+			$('.book_left').click(function() {
+				if(!$('.bookshow li:first').is(':animated')) {
+					prevPic()
+				}
+			})
+			$('.book_right').click(function() {
+				if(!$('.bookshow li:first').is(':animated')) {
+					nextPic();
+				}
+			})
+		}
+		book_repeat();
+			
+		//学员成绩
+		function highscore_repeat(){
+			var repeat,
+				len = $('.highscore li').length,
+				marginw = parseInt($('.highscore li:first').css('marginLeft')),
+				movew = $('.highscore li:first').outerWidth() + marginw,
+				liw = $('.highscore li:first').outerWidth(),
+				ulw = liw * len;
+			$('.highscore').css({
+				'width': ulw + 'px'
+			});	
+			function focusPicture() {
+				var w = $('.highscore li:first').width()+marginw*2,
+					len = $('.highscore li').length;
+				$('.highscore').css({
+					'width': w * len + 'px'
+				})
+				$('.highscore-list').hover(function() {
+					clearInterval(repeat)
+				}, function() {
+					repeat = setInterval(function() {
+						$('.highscore').stop().animate({
+							'marginLeft': -w
+						}, 1000, function() {
+							$('.highscore li:first').appendTo($('.highscore'));
+							$('.highscore').css({
+								'margin-left': 0
+							})
+						})
+					}, 3000)
+				}).trigger('mouseleave')
+				$('.dispose').mouseover(function() {
+					clearInterval(repeat);
+				})
+				$('.dispose').mouseout(function() {
+					repeat = setInterval(function() {
+						$('.highscore').stop().animate({
+							'marginLeft': -w
+						}, 1000, function() {
+							$('.highscore li:first').appendTo($('.highscore'));
+							$('.highscore').css({
+								'margin-left': 0
+							})
+						})
+					}, 3000)
+				})
+			}
+			focusPicture();
+	
+			function nextPic() {
+				$('.highscore li:first').stop().animate({
+					'marginLeft': -movew
+				}, 1000, function() {
+					$(this).css({
+						'marginLeft': marginw
+					}).appendTo($('.highscore'));
+				})
+			}
+	
+			function prevPic() {
+				$('.highscore li:last').prependTo($('.highscore'));
+				$('.highscore li:first').css({
+					'marginLeft': -movew
+				}).stop().animate({
+					'marginLeft': marginw
+				}, 1000);
+			}
+			$('.left').click(function() {
+				if (!$('.highscore li:first').is(':animated')) {
+					prevPic()
+				}
+			})
+			$('.right').click(function() {
+				if (!$('.highscore li:first').is(':animated')) {
+					nextPic();
+				}
+			})
+			//highscore轮播end		
+		}
+		highscore_repeat();
+		//预约
+		$('.J_arrowdown').click(function() {
+			$('.typeList').toggle();
+			$('.typeList li').click(function() {
+				var type = $(this).text();
+				$('span.first').text(type);
+				$('.typeList').hide();
+			})
+		});
+		$('.makeSub').click(function() {
+			var error = $(this).next();
+			var makeName = $('.makeName').val();
+			var makeType = $('.first').text();
+			var makePhone = $('.makePhone').val();
+			var $width = $(window).width();
+			if (makeName == '') {
+				$('.makeName').css('border', '#f00 1px solid');
+			} else if (makePhone == '') {
+				$('.makePhone').css('border', '#f00 1px solid');
+			} else {
+				$.ajax({
+					url: HTTP_SERVER + '/yikao/search?username=nengliyk&subject=399公开课预约&msg=' + makeName + makeType + makePhone,
+					dataType: 'jsonp',
+					success: function(data) {
+						if (data.success) {
+							$('.subinfo').attr('value', '');
+							if ($width <= 1000) {
+								$('.dialog').show();
+								$('.words').text('恭喜您预约成功！我们将在72小时内与您取得联系，请保持电话畅通！');
+								$('.button').click(function() {
+									$('.dialog').hide();
+								});
+							} else {
+								$settingDialog = $.dialog({
+									title: '预约',
+									content: '<div style="text-align:center;padding:20px 0;">恭喜您预约成功！我们将在72小时内与您取得联系，请保持电话畅通！</div>',
+									width: 450,
+									modal: true,
+									buttons: [{
+										text: '确定',
+										css: {
+											backgroundColor: '#09f'
+										},
+										click: function() {
+											$settingDialog.close();
+											$settingDialog = null;
+										}
+									}],
+									close: function() {
+										$settingDialog = null;
+									}
+								});
+							}
+						} else {
+							if ($width <= 1000) {
+								$('.dialog').show();
+								$('.words').text('预约失败，请稍后再试！');
+								$('.button').click(function() {
+									$('.dialog').hide();
+								});
+							} else {
+								$settingDialog = $.dialog({
+									title: '预约',
+									content: '<div style="text-align:center;padding:20px 0;">预约失败，请稍后再试！</div>',
+									width: 450,
+									modal: true,
+									buttons: [{
+										text: '确定',
+										css: {
+											backgroundColor: '#09f'
+										},
+										click: function() {
+											$settingDialog.close();
+											$settingDialog = null;
+										}
+									}],
+									close: function() {
+										$settingDialog = null;
+									}
+								});
+							}
+						}
+					}
+				});
+			}
+		})
+		
+		
+	})
+</script>
+	
+</body>
+

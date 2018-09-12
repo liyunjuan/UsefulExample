@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.12.1.js"></script>
+</head>
+<body>
+<script>
+	function ajax(url,call){
+		$.ajax({
+			type:"GET",
+			url:url,
+			success:function(data){
+				console.log(data)
+				call();
+			}			
+		})
+	}
+
+	function request(url){
+		return new Promise(function(resolve,reject){
+			ajax(url,resolve);
+		})
+	}
+
+	request('http://localhost:8888/data/1.json')
+	.then(function(respons1){
+		console.log(respons1)
+		return request('http://localhost:8888/data/2.json')
+	})
+	.then(function(respons2){
+		console.log(respons2);
+	})
+</script>
+</body>
+</html>

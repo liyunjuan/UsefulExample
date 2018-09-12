@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>网校后台9.0: 问题</title>
+  <link href="http://git.ablesky.com/projects/back-stage-9/issues.atom?c%5B%5D=tracker&amp;c%5B%5D=status&amp;c%5B%5D=priority&amp;c%5B%5D=subject&amp;c%5B%5D=assigned_to&amp;c%5B%5D=author&amp;c%5B%5D=updated_on&amp;f%5B%5D=status_id&amp;f%5B%5D=&amp;group_by=&amp;key=2498c9453c347e95c6c1e6a16f18640f657cf624&amp;op%5Bstatus_id%5D=%3D&amp;set_filter=1&amp;sort=assigned_to%2Cstatus%2Cpriority%3Adesc&amp;utf8=%E2%9C%93&amp;v%5Bstatus_id%5D%5B%5D=1" rel="self"/>
+  <link href="http://git.ablesky.com/projects/back-stage-9/issues?c%5B%5D=tracker&amp;c%5B%5D=status&amp;c%5B%5D=priority&amp;c%5B%5D=subject&amp;c%5B%5D=assigned_to&amp;c%5B%5D=author&amp;c%5B%5D=updated_on&amp;f%5B%5D=status_id&amp;f%5B%5D=&amp;group_by=&amp;op%5Bstatus_id%5D=%3D&amp;set_filter=1&amp;sort=assigned_to%2Cstatus%2Cpriority%3Adesc&amp;utf8=%E2%9C%93&amp;v%5Bstatus_id%5D%5B%5D=1" rel="alternate"/>
+  <id>http://git.ablesky.com/</id>
+  <updated>2017-07-20T02:17:11Z</updated>
+  <author>
+    <name>AbleSky项目管理和缺陷跟踪系统</name>
+  </author>
+  <generator uri="http://www.redmine.org/">
+Redmine  </generator>
+  <entry>
+    <title>错误 #23855 (新建): cms:点击二级导航编辑按钮，一级导航显示请选择项   预期：一级导航显示当前二级导航所在导航</title>
+    <link href="http://git.ablesky.com/issues/23855" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23855</id>
+    <updated>2017-07-20T02:17:11Z</updated>
+    <author>
+      <name>魏 楠</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>错误 #23852 (新建): cms:点击一级导航下移按钮，模块遮挡样式问题          预期：模块内容显示正常</title>
+    <link href="http://git.ablesky.com/issues/23852" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23852</id>
+    <updated>2017-07-20T01:57:50Z</updated>
+    <author>
+      <name>魏 楠</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+  <entry>
+    <title>错误 #23851 (新建): 更新公告标题里有&lt;a&gt;显示不正确，见截图</title>
+    <link href="http://git.ablesky.com/issues/23851" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23851</id>
+    <updated>2017-07-19T11:46:32Z</updated>
+    <author>
+      <name>依侬 马</name>
+      <email>yma@ablesky.com</email>
+    </author>
+    <content type="html">
+&lt;p&gt;v510test   1234&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>错误 #23850 (新建): cms权限：基本管理-app定制，只有查看权限，但是可以修改编辑申请信息（线上问题）      预期：只能查看权限</title>
+    <link href="http://git.ablesky.com/issues/23850" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23850</id>
+    <updated>2017-07-19T11:23:55Z</updated>
+    <author>
+      <name>魏 楠</name>
+    </author>
+    <content type="html">
+&lt;p&gt;账号：chakan123     123qwe&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>错误 #23844 (新建): 旧数据：管理员合并之前一个页面有查看/编辑权限，一个页面有查看/删除权限，合并后页面有查看/编辑权限（线上问题）                      预期：...</title>
+    <link href="http://git.ablesky.com/issues/23844" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23844</id>
+    <updated>2017-07-19T09:17:56Z</updated>
+    <author>
+      <name>魏 楠</name>
+    </author>
+    <content type="html">
+&lt;p&gt;账号：gamma1-s7      123qwe&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>错误 #23817 (新建): IE11浏览器，访问机构后台提示浏览器版本过低，改成 不提示</title>
+    <link href="http://git.ablesky.com/issues/23817" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23817</id>
+    <updated>2017-07-19T03:34:31Z</updated>
+    <author>
+      <name>依侬 马</name>
+      <email>yma@ablesky.com</email>
+    </author>
+    <content type="html">
+&lt;p&gt;v55  1234&lt;/p&gt;    </content>
+  </entry>
+  <entry>
+    <title>错误 #23814 (新建): 基本管理--网校信息：基本信息，填写二级域名，点击提交不能保存成功</title>
+    <link href="http://git.ablesky.com/issues/23814" rel="alternate"/>
+    <id>http://git.ablesky.com/issues/23814</id>
+    <updated>2017-07-19T03:11:26Z</updated>
+    <author>
+      <name>魏 楠</name>
+    </author>
+    <content type="html">
+    </content>
+  </entry>
+</feed>

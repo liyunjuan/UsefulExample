@@ -1,0 +1,105 @@
+body, td, pre {
+    color: #000;
+    font-family: Verdana,Arial,Microsoft YaHei,Helvetica,sans-serif;
+    font-size: 14px;
+    margin: 5px;
+    word-wrap: break-word;
+}
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    line-height: 1.5;
+    padding: 5px;
+}
+body.mceForceColors {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000;
+}
+p{
+	margin: 0 0 10px 0;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.17em;
+}
+h4 {
+    font-size: 1em;
+}
+h5 {
+    font-size: 0.83em;
+}
+h6 {
+    font-size: 0.75em;
+}
+.mceItemTable, .mceItemTable td, .mceItemTable th, .mceItemTable caption, .mceItemVisualAid {
+    border: 1px dashed #BBBBBB;
+}
+a.mceItemAnchor {
+    background: url("img/items.gif") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 11px !important;
+    width: 11px !important;
+}
+span.mceItemNbsp {
+    background: none repeat scroll 0 0 #DDDDDD;
+}
+td.mceSelected, th.mceSelected {
+    background-color: #3399FF !important;
+}
+img {
+    border: 0 none;
+}
+table {
+    cursor: default;
+}
+table td, table th {
+    cursor: text;
+}
+ins {
+    border-bottom: 1px solid green;
+    color: green;
+    text-decoration: none;
+}
+del {
+    color: red;
+    text-decoration: line-through;
+}
+cite {
+    border-bottom: 1px dashed blue;
+}
+acronym {
+    border-bottom: 1px dotted #CCCCCC;
+    cursor: help;
+}
+* html body {
+}
+img:-moz-broken {
+    -moz-force-broken-image-icon: 1;
+    height: 24px;
+    width: 24px;
+}
+font[face="mceinline"] {
+    font-family: inherit !important;
+}
+ol, ul {
+    list-style: disc outside none;
+    margin: 0;
+    padding-left: 30px;
+}
+ol {
+    list-style-type: decimal;
+}
+em {
+    font-style: italic;
+}
+img.emotion {
+    margin-right: 2px;
+}
+
+/**
+ * ablesky reset
+ */

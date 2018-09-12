@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	var p = {
+		then:function(cb,errcb){
+			cb(42);
+			errcb('evil laugh');
+		}
+	};
+
+	p.then(
+		function fulfilled(val){
+			console.log(val);
+		},
+		function rejected(err){
+			// 这里不管怎样，都会执行，因为这是实参
+			console.log(err);
+		}
+	)
+
+	// 用Promise.resolve()之后，就会返回真正的Promise的结果
+	Promise.resolve(p)
+	.then(
+		function fulfilled(val){
+			// 这里只会打印出42，同时也验证了当resolve有多个参数的时候，只会执行第一个，如果想要多个参数，要将这多个参数合并在同一个里面
+			console.log(val);
+		},
+		function rejected(err){
+			// 这里不管怎样，都会执行，因为这是实参
+			console.log(err);
+		}
+	)
+</script>
+</body>
+</html>

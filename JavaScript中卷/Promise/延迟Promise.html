@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	function delay(time){
+		return new Promise(function(resolve,reject){
+			setTimeout(resolve,time);
+		})
+	}
+
+	Promise.resolve(delay(1000))
+	.then(function step2(){
+		console.log('step2 (after 1000ms)');
+		return delay(3000);
+	})
+	.then(function step3(){
+		console.log('step3 (after another 3000sm)');
+	})
+	.then(function step4(){
+		console.log('step4 (next Job)');
+		return delay(5000);
+	})
+	.then(function step5(){
+		console.log('step5 (after another 5000ms)');
+	})
+</script>
+</body>
+</html>

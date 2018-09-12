@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;	
+	}
+	a{
+		text-decoration: none;
+	}
+	.clearfix{
+		overflow: hidden;
+	}
+	.minWidth {
+		min-width: 1200px;
+		height: auto;
+		padding-top: 50px;
+	}
+	
+	.minWidth .tit1 {
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		color: #555555;
+	}
+	
+	.minWidth .tit2 {
+		display: block;
+		margin: 20px auto 10px;
+		width: 40px;
+		height: 4px;
+		border-radius: 2px;
+		background: #46BD89;
+	}
+	.teacher_wrapper{
+		width: 100%;
+		height: 635px;
+		background: #ff7376;
+	}
+	.teacher_wrapper .teacher_content{
+		width: 1200px;
+		padding-top: 50px;
+		font-size: 0;
+		margin: 0 auto;
+	}
+	.teacher_wrapper .teacher_content .tit1 {
+		text-align: center;
+		font-size: 24px;
+		color: #fffefe;
+	}
+	.teacher_wrapper .teacher_content .tit2 {
+		display: block;
+		margin: 6px auto 50px;
+		width: 90px;
+		height: 4px;
+		border-radius: 2px;
+		background: #fff;
+	}
+	.teacher_wrapper .teacher_content .content{
+		overflow: hidden;
+	}
+	.teacher_wrapper .teacher_content .teacher{
+		width: 220px;
+		float: left;
+	}
+	.teacher_wrapper .teacher_content .teacher:nth-of-type(even){
+		margin: 0 25px;
+	}
+	.teacher_wrapper .teacher_content .teacher dt{
+		height: 250px;
+	}
+	.teacher_wrapper .teacher_content .teacher dt img{
+		width: 100%;
+		height: 100%;
+		background: orange;
+	}
+	.teacher_wrapper .teacher_content .teacher dd{
+		margin-top: 1px;
+		padding: 10px 20px;
+		width: 100%;
+		font-size: 14px;
+		background: #fff;
+		box-sizing: border-box;
+	}
+	.teacher_wrapper .teacher_content .teacher dd .name{
+		font-size: 18px;
+		font-weight: bold;
+		color: #5b4f4f;
+	}
+	.teacher_wrapper .teacher_content .teacher dd .desc{
+		color: #988a8a;
+	}
+	.teacher_wrapper .teacher_content .get_moreTeacher{
+		display: block;
+		width: 258px;
+		height: 58px;
+		border: 1px solid #fff;
+		border-radius: 29px;
+		margin: 50px auto 0;
+		color: #4d3b3c;
+		font-size: 14px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 60px;
+	}
+	
+	.info_wrapper{
+		width: 1200px;
+		padding-top: 75px;
+		margin: 0 auto;
+		overflow: hidden;
+		margin-bottom: 65px;
+	}
+	.info_wrapper .tit1 {		
+		font-size: 24px;
+		color: #5b4f4f;
+	}
+	.info_wrapper .tit2 {
+		display: block;
+		margin: 6px 0 30px;
+		width: 50px;
+		height: 4px;
+		border-radius: 2px;
+		background: #ff7376;
+	}
+	.info_wrapper .info_resent{
+		float: left;
+		width: 898px;
+		margin-right: 20px;
+		
+	}
+	.info_wrapper .info_resent .d_left{
+		float: left;
+		margin-right: 5px;
+	}
+	.info_wrapper .info_resent .d_right{
+		float: left;
+		margin-top: 10px;
+	}
+	.info_wrapper .info_resent .d_right a{
+		display: inline-block;
+		margin-left: 30px;
+		width: 98px;
+		height: 28px;
+		text-align: center;
+		line-height: 28px;
+		color: #5b4f4f;
+		border: 1px solid #4d3b3c;
+		border-radius: 15px;
+	}
+	.info_wrapper .info_resent .d_right a.active{
+		color: #fff;
+		background: #4d3b3c;
+	}
+	.info_wrapper .info_resent .info_content{
+		border: 1px solid #e6e6e6;
+	}
+	.info_wrapper .info_resent .info_content dl{
+		padding: 19px 20px;
+		border-bottom: 1px solid #e6e6e6;
+		overflow: hidden;
+	}
+	.info_wrapper .info_resent .info_content dl dt{
+		float: left;
+		width: 240px;
+		height: 130px;
+		margin-right: 15px;
+	}
+	.info_wrapper .info_resent .info_content dl dt img{
+		width: 100%;
+		height: 100%;
+		background: pink;
+	}
+	.info_wrapper .info_resent .info_content dl dd{
+		float: left;
+		width: 600px;
+	}
+	.info_wrapper .info_resent .info_content dl dd .title{
+		font-size: 16px;
+		color: #000;
+		margin-bottom: 15px;
+	}
+	.info_wrapper .info_resent .info_content dl dd .content{
+		font-size: 14px;
+		color: #666666;
+	    height: 62px;
+	    line-height: 31px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	}
+	.info_wrapper .info_resent .info_content dl dd .time{
+		margin-top: 11px;
+		font-size: 14px;
+		color: #999;
+	}
+	.info_wrapper .info_resent .info_content .get_moreInfo{
+		display: block;
+		width: 258px;
+		height: 48px;
+		border: 1px solid #4d3b3c;
+		border-radius: 24px;
+		margin: 31px auto 32px;
+		color: #4d3b3c;
+		font-size: 14px;
+		text-decoration: none;
+		text-align: center;
+		line-height: 48px;
+	}
+	.info_wrapper .info_study{
+		float: left;
+		width: 278px;		
+	}
+	.info_wrapper .info_study .study_content{
+		border: 1px solid #f0f0f0;
+	}
+	.info_wrapper .info_study .study_content dl{
+		padding: 14px 0 14px 20px;
+		border-bottom: 1px solid #e6e6e6;
+		overflow: hidden;
+	}
+	.info_wrapper .info_study .study_content dl:nth-child(10){
+		border-bottom: none;
+	}
+	.info_wrapper .info_study .study_content dl dt{
+		float: left;
+		width: 112px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.info_wrapper .info_study .study_content dl dt span{
+		display: inline-block;
+		width: 30px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		color: #999;
+		margin: 0 14px 0 0;
+		vertical-align: middle;
+	}
+	.info_wrapper .info_study .study_content dl dt span.first{
+		height: 36px;
+		background: url(http://pic3.ablesky.cn/content/pic/album/2018/09/07/d7e30d79-1045-41c2-b555-f5b214edab59.png) no-repeat;
+	}
+	.info_wrapper .info_study .study_content dl dt span.second{
+		height: 36px;
+		background: url(http://pic3.ablesky.cn/content/pic/album/2018/09/07/a1263125-1a45-476a-bf47-dbe109aa3a06.png) no-repeat;
+	}
+	.info_wrapper .info_study .study_content dl dt span.third{
+		height: 36px;
+		background: url(http://pic2.ablesky.cn/content/pic/album/2018/09/07/9afda6a7-ae29-400f-a9c7-b5e658812744.png) no-repeat;
+	}
+	.info_wrapper .info_study .study_content dl dt img{
+		width: 50px;
+		height: 100%;
+		border-radius: 50%;
+		background: pink;
+		vertical-align: top;
+	}
+	.info_wrapper .info_study .study_content dl dd{
+		float: left;
+		width: 142px;
+	}
+	.info_wrapper .info_study .study_content dl dd .title{
+		font-size: 14px;
+		color: #919191;
+		margin-bottom: 10px;
+	}
+	.info_wrapper .info_study .study_content dl dd .count{
+		font-size: 14px;
+		color: #333;
+	}
+	.friend_wrapper{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.friend_wrapper .frinds_content{
+		margin: 25px 0;
+	}
+	.friend_wrapper .frinds_content a{
+		margin-right: 50px;
+	}
+</style>
+<body><!--http://pic6.ablesky.cn/content/pic/album/2018/09/07/42607eb5-c455-4991-8eeb-c6f9e14851af.png
+	http://pic6.ablesky.cn/content/pic/album/2018/09/07/c14b7b0b-c02c-42f5-8d41-d97d1bbf2507.png
+-->
+	<div class="teacher_wrapper">
+		<div class="teacher_content">
+			<div class="clearfix">
+				<p class="tit1">金牌名师</p>
+				<em class="tit2"></em>
+			</div>	
+			<div class="content">
+				<dl class="teacher">
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="name">姓名名名</p>
+						<p class="desc">描述描述描述描述描述描述</p>
+					</dd>
+				</dl>
+				<dl class="teacher">
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="name">姓名名</p>
+						<p class="desc">描述描述描述描述描述描述</p>
+					</dd>
+				</dl>
+				<dl class="teacher">
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="name">姓名名</p>
+						<p class="desc">描述描述描述描述描述描述</p>
+					</dd>
+				</dl>
+				<dl class="teacher">
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="name">姓名名</p>
+						<p class="desc">描述描述描述描述描述描述</p>
+					</dd>
+				</dl>
+				<dl class="teacher">
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="name">姓名名</p>
+						<p class="desc">描述描述描述描述描述描述</p>
+					</dd>
+				</dl>
+			</div>
+			<a href="" class="get_moreTeacher">查看更多优秀老师</a>
+		</div>
+	</div>
+	<div class="info_wrapper">
+		<div class="info_resent">
+			<div class="clearfix">
+				<div class="d_left">					
+					<p class="tit1">最新动态</p>
+					<em class="tit2"></em>
+				</div>
+				<div class="d_right">
+					<a href="javascript:;" class="active">最新动态</a>
+					<a href="javascript:;">社区快讯</a>
+				</div>
+			</div>	
+			<div class="info_content">
+				<dl>
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="title">“精彩人生女性终身学习计划—亲子悦读分享会”在绵阳市图书馆举行</p>
+						<p class="content">11月4日，“精彩人生女性终身学习计划——亲子悦读分享会”在市图书馆举行，约70名亲子阅读爱好者参加了本次分享会。本次活动由四川省妇联主办，市妇联、市图书馆联合承办，绵阳的点点滴滴</p>
+						<p class="time">2017/11/4  17:44:00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="title">“精彩人生女性终身学习计划—亲子悦读分享会”在绵阳市图书馆举行</p>
+						<p class="content">11月4日，“精彩人生女性终身学习计划——亲子悦读分享会”在市图书馆举行，约70名亲子阅读爱好者参加了本次分享会。本次活动由四川省妇联主办，市妇联、市图书馆联合承办，绵阳的点点滴滴</p>
+						<p class="time">2017/11/4  17:44:00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="title">“精彩人生女性终身学习计划—亲子悦读分享会”在绵阳市图书馆举行</p>
+						<p class="content">11月4日，“精彩人生女性终身学习计划——亲子悦读分享会”在市图书馆举行，约70名亲子阅读爱好者参加了本次分享会。本次活动由四川省妇联主办，市妇联、市图书馆联合承办，绵阳的点点滴滴</p>
+						<p class="time">2017/11/4  17:44:00</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt><img src=""/></dt>
+					<dd>
+						<p class="title">“精彩人生女性终身学习计划—亲子悦读分享会”在绵阳市图书馆举行</p>
+						<p class="content">11月4日，“精彩人生女性终身学习计划——亲子悦读分享会”在市图书馆举行，约70名亲子阅读爱好者参加了本次分享会。本次活动由四川省妇联主办，市妇联、市图书馆联合承办，绵阳的点点滴滴</p>
+						<p class="time">2017/11/4  17:44:00</p>
+					</dd>
+				</dl>
+				<a href="" class="get_moreInfo">查看更多资讯</a>
+			</div>
+			
+		</div>
+		<div class="info_study">
+			<div class="clearfix">
+				<p class="tit1">学习排行榜</p>
+				<em class="tit2"></em>
+			</div>
+			<div class="study_content">
+				<dl>
+					<dt>
+						<span class="first"></span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span class="second"></span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span class="third"></span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<span>1</span>
+						<img src=""/>
+					</dt>
+					<dd>
+						<p class="title">高点地点</p>
+						<p class="count">观看课程次数：999+</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<div class="friend_wrapper">
+		<p>友情链接</p>
+		<div class="frinds_content">
+			<a href=""><img src="http://pic6.ablesky.cn/content/pic/album/2018/09/07/42607eb5-c455-4991-8eeb-c6f9e14851af.png"/></a>
+			<a href=""><img src="http://pic6.ablesky.cn/content/pic/album/2018/09/07/c14b7b0b-c02c-42f5-8d41-d97d1bbf2507.png"/></a>
+		</div>
+	</div>
+</body>
+<script src="../js/jquery.js"></script>
+<script type="text/javascript">
+	console.log(3333)
+	//	机构id
+	var orgId = '1018';
+	function sendAjax(url, _data,call) {
+        $.ajax({
+            type:'get',
+            url : url,
+            dataType:'jsonp',
+            data: _data ? _data : {},
+            success : function(data) {
+                if (data.success) {
+                    console.log(data)
+                } else {
+                    console.log(data.message);
+                }
+            }
+        });
+    }
+	sendAjax('http://www.beta.ablesky.com/ajax/orgdata/getTeacherData',{orgId:orgId,start:0,limit:5});
+</script>
+</html>

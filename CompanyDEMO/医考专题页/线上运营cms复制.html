@@ -1,0 +1,955 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" >
+<style>
+
+	.interest-dialog,
+	.foot-system-tip,
+	.cpl-dialog-box,
+	.consult-popup{
+		display: none !important;
+	}
+	.m-res-footer{
+		display: block;
+	}
+	.m-res-footer footer section.site-map .weibo{
+		top: 21px;
+	}
+	
+	html{
+		font-size: 12px;
+	}
+	body, h1, h2, p, ol, li, button{
+		line-height: 1;
+		padding: 0;
+		margin: 0;
+		font-family: 'Microsoft YaHei';
+	}
+	
+	body{
+		background-color: #42158b;
+	}
+	
+	.mh{
+		padding-top: 7rem;
+		background-image: url(http://pic1.ablesky.cn/content/pic/album/2017/12/22/ee79fce9-8d8f-4a69-bcb5-3ec992546279.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	.mh img{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.md-t{
+		/*padding-top: 3rem;*/
+		/*margin-bottom: -6rem;*/
+	}
+	.md-t img{
+		display: block;
+		margin: 2rem auto;
+	}
+	.md-t img.m-w{
+		margin: 0 auto;
+	}
+	
+	.md-con{
+		height: 40rem;
+	}
+	.md-con.auto{
+		height: auto;
+		padding: 3rem 1rem;
+	}
+	.md-con .wrap{
+		max-width: 85rem;
+		height: 100%;
+		margin: 0 auto;
+	}
+	
+	
+	.md-con.even .img{
+		float: right;
+	}
+	.md-con.even .card{
+		float: left;
+	}
+	
+	.m-join{
+		max-width: 40rem;
+		margin: 0 auto;
+		color: #fff;
+	}
+	.m-join .err{
+		visibility: hidden;
+		min-height: 1.5rem;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.5rem;
+		word-break: break-all;
+		color: #ff2b2b;
+	}
+	.m-join .err.show{
+		visibility: visible;
+	}
+	.m-join button{
+		width: 100%;
+		height: 4.5rem;
+		line-height: 4.5rem;
+		text-align: center;
+		background: #ffd38f;
+		border: none;
+		border-radius: 1rem;
+		color: #451f85;
+		font-weight: bold;
+		font-size: 2rem;
+		cursor: pointer;
+	}
+	.m-join button:focus{
+		outline: none;
+	}
+	.m-join .icon{
+		display: inline-block;
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	.m-join .icon img{
+		max-width: 100%;
+	}
+	
+	.share-info{
+		max-width: 40rem;
+		margin: 2rem auto 0 auto;
+	}
+	.share-info img{
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
+	.share-info .detail{
+		position: relative;
+		padding: 1rem 1.5rem;
+		background-color: #4d288b;
+		border-radius: 1rem;
+		line-height: 1.5;
+		font-size: 1.5rem;
+		color: #fff;
+	}
+	.share-info .i{
+		position: absolute;
+		left: 1.5rem;
+		top: 1rem;
+		width: 2rem;
+	}
+	.share-info .more{
+		margin-left: 2.5rem;
+		text-align: justify;
+	}
+	
+	.fm-rule{
+		width: 25rem;
+		margin-left: 30%;
+		padding: 2rem 0;
+		color: #fff;
+		font-size: 1.5rem;
+	}
+	.fm-rule p{
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+		color: #ecc995;
+	}
+	.fm-rule li{
+		line-height: 1.5;
+		font-size: 1.5rem;
+	}
+	.fm-rule ol{
+		list-style: decimal;
+		list-style-position: inside;
+	}
+	.md-t-gostart{
+		width: 85.66666666666667rem;
+		margin: 0 auto;
+	}
+	.md-t-gostart dl{
+		float: left;
+		width: 50%;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+	.md-t-gostart dl dt{
+		margin-bottom: 3rem;
+	}
+	.md-t-gostart dl dt img{
+		display: block;
+		margin: 0 auto;
+	}
+	.md-t-gostart dl dd{
+		font-size: 3rem;
+		color: #ffe5a5;
+		margin-left: 0;
+	}
+	.md-t-gostart dl dd p{
+		line-height: 1.4;
+	}
+	.md-t-gostart dl dd p.pc{
+		font-size: 2rem;
+	}
+	.md-t-teacher .teacher_con{
+		width: 85.66666666666667rem;
+		height: auto;
+		margin: 0 auto 3rem; 
+	}
+	.md-t-teacher .teacher_con .teacher-head{
+		width: 100%;
+		position: relative;
+	}
+	.md-t-teacher .teacher_con .teacher-head img{
+		display: block;
+		width: 79.5%;
+		margin: 0 auto;
+	}
+	.md-t-teacher .teacher_con .teacher-head img.flower{
+		position: absolute;
+		width: 458px;
+		height: 325px;
+		right: 0;
+		bottom: -63px;
+		z-index: 2;
+	}
+	.md-t-teacher .teacher_con .teacher-tec{
+		position: relative;
+		width: 79.5%;
+		height: 364px;
+		margin: 0 auto;
+		font-size: 32px;
+		color: #ff692a;
+		text-align: center;
+		border: 6px solid #ff8b5a;
+		border-radius: 20px;
+		background: #f6ede1;
+		
+	}
+	.md-t-teacher .teacher_con .teacher-tec p{
+		line-height: 1.5;
+	}
+	.md-t-teacher .teacher_con .teacher-tec .title{
+		width: 77%;
+		margin: 40px auto;
+		line-height: 1.5;
+		font-size: 54px;
+		border-bottom: 2px solid #3e0a92;
+	}
+	.md-t-teacher .teacher_con .teacher-tec .title span{
+		font-size: 58px;
+		color: #3e0a92;
+	}
+	.md-t-teacher .teacher_con .teacher-tec .fivestar{
+		position: absolute;
+		right: -80px;
+		top: -70px;
+		z-index: 10;
+	}
+	
+	@media screen and (max-width: 1080px) {
+		.md-t-teacher .teacher_con .teacher-head img.flower,.md-t-gostart dl dd p.pc{
+			display: none;
+		}
+		.md-con .wrap{
+			padding: 0 4rem;
+		}
+		.md-t img{
+			width: 90%;
+		}
+		.md-t img.m-w{
+			width: 60%;
+		}
+	}
+	
+	@media screen and (max-width: 800px) {
+		.fm-rule{
+			margin: 0 auto;
+		}
+		.fm-rule p{
+			font-size: 1.6rem;
+		}
+		.fm-rule li{
+			font-size: 1.3rem;
+		}
+		.md-t-gostart,.md-t-teacher .teacher_con{
+			width:100%;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .fivestar{
+			right: -6rem;;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			height: 24.333333333333332rem;
+			border-width: 3px;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			font-size: 2.1rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			font-size: 3.5833333333333335rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title span{
+			font-size: 3.8333333333333335rem;
+		}
+		header.site-nav{
+			display: none;
+		}
+		.m-res-footer{
+			display: none;
+		}
+		.fiexed-tools{
+			display: none;
+		}
+		body{
+			padding-top: 0 !important;
+		}
+		
+		.mh{
+			padding-top: 5rem;
+		}
+		.mh img{
+			
+		}
+		.md-t{
+			margin-bottom: 0;
+		}
+		.md-con{
+			height: auto;
+			padding: 3rem 0;
+		}
+		.md-con .wrap{
+			height: auto;
+			padding: 0;
+		}
+		.md-con.even .img{
+			float: none;
+		}	
+
+	}
+	
+	@media screen and (max-width: 600px) {
+		.md-t-gostart dl dt{
+			margin-bottom: 2rem;
+		}
+		.md-t-gostart dl dt img{
+			width: 18.055555555555554rem;
+			height: 14.61111111111111rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			height: 18.333333333333332rem;
+			border-width: 3px;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .fivestar{
+			width: 9.125rem;
+			height: 7.5rem;
+			right: -4rem;
+			top: -4rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			font-size: 1.6rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			font-size: 2.7rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			margin: 2rem auto;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title span{
+			font-size: 2.9rem;
+		}
+		.mh{
+			padding-top: 15%;
+		}
+		.mh img{
+			max-width: 90%;
+		}
+	}
+	
+	@media screen and (max-width: 414px) {
+		.md-t-teacher .teacher_con{
+			margin: 0 auto 2rem;
+		}
+		.md-con.auto{
+			padding: 1rem;
+		}
+		.md-t-gostart dl{
+			margin-bottom: 3rem;
+		}
+		.md-t-gostart dl dt img{
+			width: 12.055555555555554rem;
+			height: 9.61111111111111rem;
+		}
+		.md-t-gostart dl dd{
+			font-size: 2rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			height: 12.333333333333332rem;
+			border-width: 3px;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .fivestar{
+			width: 6.7rem;
+			height: 5.5rem;
+			right: -3rem;
+			top: -3rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			font-size: 1.2rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			font-size: 1.8rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			margin: 1rem auto;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title span{
+			font-size: 2rem;
+		}				
+		
+		.m-join button{
+			height: 3.5rem;
+			line-height: 3.5rem;
+			font-size: 1.5rem;
+		}
+		.m-join .icon img{
+			margin-bottom: -10%;
+		}
+		
+	}
+	
+	@media screen and (max-width: 375px) {
+		.md-t-gostart dl dt img{
+			width: 12.055555555555554rem;
+			height: 9.61111111111111rem;
+		}
+		.md-t-gostart dl dd{
+			font-size: 1.7rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			height: 10.333333333333332rem;
+			border-width: 3px;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			font-size: 1.1rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title{
+			font-size: 1.5rem;
+			margin: 0.6rem auto;
+		}
+		.md-t-teacher .teacher_con .teacher-tec .title span{
+			font-size: 1.7rem;
+		}
+		
+		.m-join button,.fm-rule li{
+			font-size: 1.25rem;
+		}
+		.fm-rule p{
+			font-size: 1.5rem;
+		}
+	}
+	@media screen and (max-width: 320px) {
+		.md-t-teacher .teacher_con .teacher-tec .fivestar{
+			width: 6.1rem;
+			height: 5rem;
+			right: -1.8rem;
+			top: -3rem;
+		}
+		.md-t-teacher .teacher_con .teacher-tec{
+			font-size: 1rem;
+		}
+	}
+	
+	/*微博引导的样式*/
+	#weibo_guide{
+		position: fixed;
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		background:rgba(0,0,0,.6);
+		z-index:9999;
+	}
+</style>
+
+<input id="shareImg" type="hidden" value="http://pic6.ablesky.cn/content/pic/album/2017/12/28/d2b21e5b-25bf-46a1-9989-10b5105a263d.jpg">
+<input id="shareTitle" type="hidden" value="能力天空免费会员，抓紧领取，上万会员课程免费看！">
+<input id="shareDes" type="hidden" value="1万多套课程，总价值480万元，限时领取，3天后过期。">
+
+<div class="mh">
+	<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/18/fd190513-47be-4f88-8aa5-cf0e90386625.png" alt="能力天空会员15天免费体验">
+</div>
+
+<div class="md-con auto even">
+	<div class="m-join">
+		<p id="" class="err res_info"></p>
+		<p>
+			<button class="get_member_btn">
+				<span>立即领取，免费学习万门好课</span>
+				<span class="icon"><img src="http://pic1.ablesky.cn/content/pic/album/2017/12/22/3e180c37-29ab-4b56-8db2-31b8a3ff8542.png"></span>
+			</button>
+			<button class="leave_this_page" style="display: none;">
+				<span class="leave_text"></span>
+				<span class="icon"><img src="http://pic1.ablesky.cn/content/pic/album/2017/12/22/3e180c37-29ab-4b56-8db2-31b8a3ff8542.png"></span>
+			</button>
+		</p>
+	</div>
+	
+	<div id="" class="share-info share_info" style="display: none;">
+		<img src="http://pic6.ablesky.cn/content/pic/album/2017/12/28/ac032ae6-71ee-482f-a008-21b33fea244f.png" alt="点击右上角分享，邀请好友，好友参与后所有消费的30%归你！">
+		<div class="detail">
+			<div class="i">例：</div>
+			<div class="more">你邀请了10个好友，如每人购买服务消费2000元（能力天空学员平均消费值为2000元），购买会员年费为169元，你将分享收益为6507元 (2169元/人x10人X30%)</div>
+		</div>
+	</div>
+</div>
+
+<p class="md-t">
+    <img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/93117b40-355b-4cfd-9597-3349922b0184.png"	alt="VIP特权赢在起跑线" />
+</p>
+<div class="md-t-gostart">
+    <dl>
+    	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/f18bfe47-0f6a-4a38-85c5-dbff68c5139e.png" alt="" /></dt>
+    	<dd>
+    		<p>低价共享</p>
+    		<p class="pc">年费低至14元/月，分享召唤伙<br/>伴，学习不孤单！</p>
+    	</dd>
+    </dl>
+    <dl>
+    	<dt><img src="http://pic4.ablesky.cn/content/pic/album/2018/01/18/ffc67a8b-a0d3-4f6c-94ac-d1e87bbcb6e2.png" alt="" /></dt>
+    	<dd>
+    		<p>海量好课</p>
+    		<p class="pc">干货！新课同步更新，月省过千<br/>不是梦！</p>
+    	</dd>
+    </dl>
+    <dl>
+    	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/bd0254b0-7eb5-4644-bb01-519222bdb1f4.png" alt="" /></dt>
+    	<dd>
+    		<p>优惠专享</p>
+    		<p class="pc">“惠券“在手，购课折上折！</p>
+    	</dd>
+    </dl>
+    <dl>
+    	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/37de1ac5-4d76-4454-8381-c6a8e6bea28e.png" alt="" /></dt>
+    	<dd>
+    		<p>精品回放</p>
+    		<p class="pc">直播课、点播课，不限次不限<br/>时，任性！</p>
+    	</dd>
+    </dl>
+    <dl>
+    	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/a0ea2c68-1986-43f9-ae93-070e4d3b2ff9.png" alt="" /></dt>
+    	<dd>
+    		<p>专属客服</p>
+    		<p class="pc">贴心服务，即时回复解决您的<br/>疑难问题！</p>
+    	</dd>
+    </dl>
+    <dl>
+    	<dt><img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/95fed459-5db5-489e-b0a3-ddec7c44699d.png" alt="" /></dt>
+    	<dd>
+    		<p>荣耀标识</p>
+    		<p class="pc">专属学霸标识，彰显尊贵<br/>身份！</p>
+    	</dd>
+    </dl>
+</div>
+<p class="md-t">
+    <img src="http://pic3.ablesky.cn/content/pic/album/2018/01/17/25a7edf4-6311-4c78-8169-474db0812f98.png"	alt="" />
+</p>
+<div class="md-t-teacher">
+	<div class="teacher_con">
+		<div class="teacher-head">
+			<img src="http://pic2.ablesky.cn/content/pic/album/2018/01/17/32f72c60-0198-4d88-9d26-e47127124a37.png" alt="陈文登：升学考试代言人，考研数学第一人" />
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/b697d222-3e82-431d-97cb-032f459e0b4b.png" alt="" class="flower" />
+		</div>
+		<div class="teacher-tec">
+			<p class="title">
+				升学考试·学霸<span>培养摇篮</span>
+			</p>
+			<p>
+				教师资格、会计考试、公务员、医药师、考研、<br/>小学、初中、高中等课程，<br/>从K12到大学一站式学习，能力会员足矣！
+			</p>
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/047237bc-64c3-43f9-a3a8-e6faf290f69e.png" alt="五星推荐" class="fivestar" />
+		</div>
+	</div>
+	<div class="teacher_con">
+		<div class="teacher-head">
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/6da182b3-b598-4df2-962a-fe8a819a9ef1.png" alt="徐丽华：语言留学代言人" />
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/b697d222-3e82-431d-97cb-032f459e0b4b.png" alt="" class="flower" />
+		</div>
+		<div class="teacher-tec">
+			<p class="title">
+				    语言学习·轻松<span>高效</span>
+			</p>
+			<p>
+				四六级、职场英语、德韩日法小语种、<br/>雅思、托福、托业等课程，<br/>学语言也可以轻松高效！
+			</p>
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/047237bc-64c3-43f9-a3a8-e6faf290f69e.png" alt="五星推荐" class="fivestar" />
+		</div>
+	</div>
+	<div class="teacher_con">
+		<div class="teacher-head">
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/ec2fe108-0b54-43fb-bc50-94c95b9d437e.png" alt="秦川：职场技能代言人" />
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/b697d222-3e82-431d-97cb-032f459e0b4b.png" alt="" class="flower" />
+		</div>
+		<div class="teacher-tec">
+			<p class="title">
+				      职场修炼·魅力<span>升级</span>
+			</p>
+			<p>
+				办公技能、求职应聘、谈判沟通、营销推广、<br/>摄影绘画、艺术健身等课程，<br/>娱乐加薪两不误！
+			</p>
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/047237bc-64c3-43f9-a3a8-e6faf290f69e.png" alt="五星推荐" class="fivestar" />
+		</div>
+	</div>
+	<div class="teacher_con">
+		<div class="teacher-head">
+			<img src="http://pic5.ablesky.cn/content/pic/album/2018/01/17/183046d4-05ba-4b50-bb85-e7c9862954cf.png" alt="小妍：设计创作代言人" />
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/b697d222-3e82-431d-97cb-032f459e0b4b.png" alt="" class="flower" />
+		</div>
+		<div class="teacher-tec">
+			<p class="title">
+				设计创作·速成<span>大牛</span>
+			</p>
+			<p>
+				平面设计、动漫设计、淘宝美工、<br/>网页制作、C++JAVA等研发课程，<br/>助你效率加倍速成大牛！
+			</p>
+			<img src="http://pic1.ablesky.cn/content/pic/album/2018/01/17/047237bc-64c3-43f9-a3a8-e6faf290f69e.png" alt="五星推荐" class="fivestar" />
+		</div>
+	</div>
+</div>
+<p class="md-t">
+    <img class="m-w" src="http://pic1.ablesky.cn/content/pic/album/2018/01/18/d93d1274-e522-4ed6-8cea-5aa8ee4b12e1.png"	alt="" />
+</p>
+
+<div class="md-con auto even">
+	<div class="m-join">
+		<p id="" class="err res_info"></p>
+		<p>
+			<button class="get_member_btn">
+				<span>立即领取，免费学习万门好课</span>
+				<span class="icon"><img src="http://pic1.ablesky.cn/content/pic/album/2017/12/22/3e180c37-29ab-4b56-8db2-31b8a3ff8542.png"></span>
+			</button>
+			<button class="leave_this_page" style="display: none;">
+				<span class="leave_text"></span>
+				<span class="icon"><img src="http://pic1.ablesky.cn/content/pic/album/2017/12/22/3e180c37-29ab-4b56-8db2-31b8a3ff8542.png"></span>
+			</button>
+		</p>
+	</div>
+	
+	<div id="" class="share-info share_info" style="display: none;">
+		<img src="http://pic6.ablesky.cn/content/pic/album/2017/12/28/ac032ae6-71ee-482f-a008-21b33fea244f.png" alt="点击右上角分享，邀请好友，好友参与后所有消费的30%归你！">
+		<div class="detail">
+			<div class="i">例：</div>
+			<div class="more">你邀请了10个好友，如每人购买服务消费2000元（能力天空学员平均消费值为2000元），购买会员年费为169元，你将分享收益为6507元 (2169元/人x10人X30%)</div>
+		</div>
+	</div>
+</div>
+
+<div class="fm-rule">
+	<p>活动规则：</p>
+	<ol>
+		<li>本活动仅限会员专区新用户领取；</li>
+		<li>每个用户仅能领取一次。</li>
+	</ol>
+</div>
+
+<!--[if IE 8]> 
+<style>
+	
+	.mh{
+		padding-top: 84px;
+	}
+	
+	.md-t{
+		padding-top: 36px;
+	}
+	
+	.md-con{
+		height: 480px;
+	}
+	.md-con .wrap{
+		width: 1000px;
+	}
+	
+	
+	
+	.m-join{
+		max-width: 480px;
+		padding: 36px 0 60px 0;
+	}
+	.m-join .err{
+		min-height: 18px;
+		margin-bottom: 18px;
+		font-size: 18px;
+	}
+	.m-join button{
+		
+		height: 54px;
+		line-height: 54px;
+		font-size: 24px;
+	}
+	.m-join .icon{
+		height: 18px;
+		width: 18px;
+	}
+	
+	.fm-rule{
+		width: 300px;
+		padding: 24px 0;
+		font-size: 18px;
+	}
+	.fm-rule p{
+		margin-bottom: 18px;
+	}
+	
+	.share-info{
+		width: 48px;
+		margin: 24px auto 0 auto;
+	}
+	.share-info img{
+		margin-bottom: 12px;
+	}
+	.share-info .detail{
+		padding: 12px 18px;
+		font-size: 18px;
+	}
+	.share-info .i{
+		position: absolute;
+		left: 18px;
+		top: 12px;
+		width: 24px;
+	}
+	.share-info .more{
+		margin-left: 30px;
+	}
+
+</style>
+<![endif]-->
+
+
+
+<script type="text/javascript">
+	
+function init() {
+
+	var selfURL = location.href;
+	var loginURL = HTTP_SERVER + 'login.do?fromurl=' + encodeURIComponent(selfURL);
+	var memberPageURL = HTTP_SERVER + 'account/member/myMember?ct=' + +new Date();
+   	var  memberPageURLPc  = HTTP_SERVER + 'members';
+	var appURL = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.ablesky.ui.activity';
+
+	var ua = navigator.userAgent.toLowerCase();
+	var loading = false;
+	var isApp = false;
+	var isFromAppUserCenter = false;
+	var isWX = false;
+	var isMobile = false;
+	var isIOS = false;
+	var isSafari = (ua.indexOf("safari")>-1);
+    var isWeibo = (ua.indexOf('weibo')>-1);	
+	
+	var canLeave = true;
+	
+	if (/ableskyapp/i.test(navigator.userAgent)) {
+		isApp = true;
+	}
+	
+	if (/micromessenger/i.test(navigator.userAgent)) {
+		isWX = true;
+	}
+	
+	if (/iPhone|iPod|iPad|Android/.test(navigator.userAgent)) {
+		isMobile = true;
+	}
+	
+	if (/\(i[^;]+;( U;)? CPU.+Mac OS X/.test(navigator.userAgent)) {
+		isIOS = true;
+	}
+	
+	if (location.href.indexOf('nl-personal-center') > -1) {
+		isFromAppUserCenter = true;
+	}
+
+	document.title = "免费会员体验";	
+	
+	function holdSuccess(btn) {
+		canLeave = false;
+		setTimeout(function() {
+			$(btn).hide();
+			$('.leave_text').text('领取成功，开始精彩会员之旅');
+			$('.leave_this_page').show();
+			$('.res_info').removeClass('show');
+		}, 500);
+		setTimeout(function() {
+			canLeave = true;
+		}, 700);
+	}
+	
+	function holdFail(btn, msg) {
+		canLeave = false;
+		setTimeout(function() {
+			$(btn).hide();
+			if (isApp || !isMobile) {
+				$('.leave_text').text('进入会员频道，了解更多');
+			} else {
+				$('.leave_text').text('打开能力天空APP，了解更多');
+			}
+			$('.leave_this_page').show();
+			$('.res_info').text(msg).addClass('show');
+		}, 500);
+		setTimeout(function() {
+			canLeave = true;
+		}, 700);
+	}
+	
+	function hold() {
+		
+		var btn = $('.get_member_btn');
+		
+		if (loading) {
+			return;
+		}
+
+		loading = true;
+		$('.res_info').text('正在准备您的会员...').addClass('show');
+
+		//17 or 8
+		$.get('/buyMember/demo', {
+			id: '8',
+			u: '',
+		}, function (res) {		
+			if (res.success) {
+				holdSuccess(btn);
+			} else {
+				holdFail(btn, res.message);
+			}
+			loading = false;
+		}, 'json');
+	}
+	
+	$('.get_member_btn').click(function () {
+		var btn = this;
+		if (AUI.curUserInfo.isGuest) {
+			sessionStorage.setItem('autoholdfreemember', 1);
+			location.href = loginURL;
+		} else {
+			hold();
+		}
+	});
+	
+	var SHM = 'ablesky://com.ablesky?url=';
+	var schemeStr = SHM + encodeURIComponent(memberPageURL);
+    var wbMask = null;
+    if(isWeibo && isIOS){
+        wbGuide();
+    }
+
+	$('.leave_this_page').click(function () {
+		
+		if (!canLeave) {
+			return;
+		}
+		
+		if (isApp) {
+			location.href = memberPageURL;
+			return;
+		}
+		if (isMobile) {
+			addCopyEle();
+			if(isWX){
+				copy2Clipper();
+				location.href = appURL;
+			}else{
+				if(isIOS && !isSafari){
+					if(isWeibo){
+						webGuideShow();
+					}else{
+						copy2Clipper();
+						location.href = appURL;
+					}
+				}else{
+					ableAppStart(schemeStr + '&ct='+Date.now());
+				}				
+			}
+		}else {
+			location.href = memberPageURLPc;
+		}
+
+	});	
+	
+	function addCopyEle(){
+        var sInput = '<input id="J_schemeStr" readonly="readonly" style="position:absolute;z-index:-9999;opacity:0;" value="">';
+        $("body")[0].insertAdjacentHTML('afterBegin',sInput);
+    }
+	function copy2Clipper(){
+        var copyEle = document.querySelector('#J_schemeStr');
+        if(!copyEle){
+            return;
+        }
+        updateCopyEleVal(copyEle);
+        if (isIOS) {
+            copyEle.setSelectionRange(0, copyEle.value.length);
+        } else {
+            copyEle.select();
+        }
+        document.execCommand('copy');
+    }
+	function updateCopyEleVal(ele){
+        var s = '&ct='+Date.now();
+        ele.value = schemeStr + s;
+   }	
+   function ableAppStart(s){
+   	   	//在华为荣耀中，如果没有下载app，则跳转到一个错误页面
+        location.href = s;
+        setTimeout(function(){
+            location.href='/app/download/toLoad?appType=ableCourse';
+        },5000);
+    }
+   //微博引导
+    function wbGuide(){
+        var s = [
+            '<div class="wb-guide-mask" id="weibo_guide" style="display:none;">',
+                '<div class="guide-content">',
+                    '<img src="http://pic4.ablesky.cn/content/pic/album/2018/01/24/2378aaa5-c66d-4449-8281-0b900962a1f4.png" width="100%">',
+                '</div>',
+            '</div>'
+        ].join('');
+        $('body')[0].insertAdjacentHTML('beforeEnd',s);
+        wbMask = document.querySelector('#weibo_guide');
+        wbMask.addEventListener('click',function(e){
+            var t = e.target;
+            if(t.classList.contains('wb-guide-mask')){
+                webGuideHide();
+            }
+        });
+    }
+	function webGuideShow(){
+        if(wbMask){
+            wbMask.style.display = 'block';
+        }
+   }	
+    function webGuideHide(){
+        if(wbMask) {
+            wbMask.style.display = 'none';
+        }
+    }
+	
+	if (sessionStorage.getItem('autoholdfreemember')) {
+		hold();
+		sessionStorage.removeItem('autoholdfreemember');
+	}
+
+}
+	
+if (document.addEventListener) {
+	document.addEventListener('DOMContentLoaded', init);
+} else {
+	window.onload = init;
+}
+	
+</script>
+
+
+

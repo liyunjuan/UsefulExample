@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.content{
+			overflow: hidden;
+			width: 400px;
+			margin: 0 auto;
+			border:1px solid pink;
+		}
+		.content li{
+			list-style: none;
+			margin-top: 35px;
+			overflow: hidden;
+		}
+		.content li.one{
+			margin-top: 0;
+		}
+
+		.content>li>div{
+			float: left;
+			margin-right: 40px;
+		}
+		.content .odd{
+			background: orange;
+		}
+		.content .even{
+			background: purple;
+		}
+	</style>
+</head>
+<body>
+	<ul class="content">
+		<li class="odd one">
+			<div>标题1</div>
+			<div>标题2</div>
+			<div>标题3</div>
+			<div>标题4</div>
+		</li>
+		<li class="even">
+			<div>内容1</div>
+			<div>内容2</div>
+			<div>内容3</div>
+			<div>内容4</div>
+		</li>
+		<li class="odd">
+			<div>内容1</div>
+			<div>内容2</div>
+			<div>内容3</div>
+			<div>内容4</div>
+		</li>
+	</ul>
+</body>
+</html>

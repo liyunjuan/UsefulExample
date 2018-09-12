@@ -1,0 +1,2734 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>医考官网首页</title>
+<style>	
+	/*reset样式*/
+	html,body {
+		background: #f2f2f2 !important;
+		font-size: 14px;
+	}	
+	body header {
+		font-size: 12px;
+		color: #555;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: "微软雅黑";
+	}	
+	a {
+		outline: none;
+		text-decoration: none;
+	}	
+	a:active {
+		star: expression(this.onFocus=this.blur());
+	}	
+	a:hover {
+		color: #46bd89;
+	}	
+	.fl {
+		float: left;
+	}	
+	.fr {
+		float: right;
+	}
+	
+	.clearfix:after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+	
+	table {
+		/*table-layout: fixed;*/
+		empty-cells: show;
+		border-collapse: collapse;
+		margin: 0 auto;		
+		color: #555;
+	}
+	
+	#J_fixedTools {
+		display: none;
+	}
+	.lay-custom-page{
+		width: 100%!important;
+	}
+	/*banner样式*/
+	.banner {
+		position:relative;
+		min-width: 1200px;
+		height: 500px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.showImg-wrap {
+		width: 100%;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		z-index: 0;
+	}
+	
+	.showImg-main {
+		width: 100%;
+	}
+	
+	.showImg-main li {
+		width: 100%;
+		height: 100%;
+		float: left;
+	}
+	
+	.showImg-main li img {
+		display: block;
+		width: 100%;
+		height: 500px;
+	}
+	
+	.showImg-pagination {
+		bottom: 20px;
+	}
+	
+	.showImg-wrap .showImg-main{
+		position: relative;
+		z-index: 2;
+	}
+	
+	.showImg-pagination {
+		height: 20px;
+		position: relative;
+		text-align: center;
+		bottom: 30px;
+		z-index: 10;
+		color: #fff;
+		cursor: pointer;
+	}
+	
+	.showImg-pagination ol {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		padding: 5px 10px;
+		border-radius: 10px;
+		overflow: hidden;
+		/* background: url("http://www.ablesky-a.com:8080/ableskystatics/images/index/banner-index-bg.png") repeat 0 0px transparent; */
+	}
+	
+	.showImg-wrap ol li {
+		float: left;
+		margin-right: 10px;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	
+	.showImg-wrap ol li a {
+		display: block;
+		width: 30px;
+		height: 4px;
+		background:#c5c5c5;
+	}
+	
+	.showImg-wrap ol li a:hover,.showImg-wrap ol li a.currentIndex {
+		background:#46bd89;
+	}
+	/*banner以下的内容*/	
+	.minWidth{		
+		min-width: 1200px;
+		height: auto;
+		padding-top: 50px;
+	}
+	.minWidth .tit1{
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		color: #555555;
+	}
+	.minWidth .tit2{
+		display: block;
+		margin: 20px auto 10px;
+		width: 40px;
+		height: 4px;
+		border-radius: 2px;
+		background: #46BD89;
+	}
+	.minWidth .tit3{
+		text-align: center;
+		font-size: 16px;
+		color: #555555;
+	}
+	.minWidth .tit3 span{
+		color: #e33636;
+	}
+	.centerBox{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	/*政策咨询*/
+	.information-wrap{
+		background: #f5f6f7;
+	}
+	.information{
+		width: 1200px;
+		height: 315px;
+		margin: 0 auto;
+	}
+	.information>div{
+		float: left;
+		width: 360px;
+		margin-right: 60px;
+	}
+	.information>div h2{
+		padding-bottom: 14px;
+		border-bottom: 2px solid #46bd89;
+		margin-bottom: 20px;
+		cursor: pointer;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.information>div p{
+		height: 20px;
+		font-size: 14px;
+		margin-top: 14px;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.information>div p.first{
+		height: 70px;
+		overflow: hidden;
+	}
+	.information>div p.first img{
+		width: 120px;
+		height: 70px;
+		margin-right: 13px;
+		float: left;
+	}
+	.information a{
+		color: #555555;
+	}
+	.information a:hover{
+		color: #46bd89;
+	}
+	.information>div p.first span{
+		float: left;
+		width: 206px;
+		height: 41px;
+		cursor: pointer;
+		white-space: pre-wrap;
+		overflow: hidden;
+	}
+	.information>div p.first>a{
+		float: right;
+		margin-top: 13px;
+		margin-right: 13px;
+		color: #2f91ff;
+	}
+	.information>div p.first>a:hover{
+		color: #67afff;
+	}
+	
+	
+	
+	
+	/*2018新课程体系一览 科学辅导阶段提升*/
+	.newCourseSys_wrap{
+		background: #fff; 
+	}
+	.newCourseSys{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.tab {
+		width: auto;
+		margin-top: 20px;
+		padding: 0 178px;
+		height: 52px;
+	}
+	
+	.tab>li {
+		width: 188px;
+		height: 52px;
+		line-height: 52px;
+		border-radius: 30px;
+		border: #ededed 1px solid;
+		text-align: center;
+		float: left;
+		color: #46bd89;
+		position: relative;
+		/*cursor: pointer;*/
+		margin-right: 20px;
+	}
+	.tab>li.last{
+		margin-right: 0;
+	}
+	
+	.tab>li>span {
+		font-size: 20px;
+		display: block;
+		height: 38px;
+		text-align: center;
+		font-weight: bold;
+	}
+	/*箭头向下*/
+	.arrow_down {
+	    width:0; 
+	    height:0; 
+	    border-left:6px solid transparent;
+	    border-right:6px solid transparent;
+	    border-top:6px solid #46bd89;
+	    position: absolute;
+	    top: 50%;
+	    margin-top: -3px;
+	    margin-left: 6px;
+	}
+	
+	.tab>li:hover{
+		border-color: #46BD89;
+		
+	}
+	.tab>li.show {
+		color: #fff;
+		background: #46BD89;
+	}
+	.tab>li.show .arrow_down{
+		border-top-color: #fff;
+	}
+	
+	.tab li>ul {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 54px;
+		background: #fff;
+		z-index: 999;
+	}
+	
+	.tab li>ul li {
+		width: 190px;
+		height: 50px;
+		line-height: 50px;
+		color: #46bd89;
+		text-align: center;
+		padding: 0;
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+	
+	.tab li>ul li:hover,
+	.tab li>ul li.cli {
+		background: #f2f2f2;
+	}
+	
+	
+	.contentWrap .table2 th {
+		color: #63ae1f;
+		background: #FFF;
+		height: 40px;
+		line-height: 40px;
+	}
+	.tbgather{
+		clear: both;
+		margin-top: 40px;
+	}
+	.tbgather .bigtit{
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+		color: #555;
+		margin-bottom: 20px;
+	}
+	
+	.tbgather>div {
+		display: none;
+		position: relative;
+	}
+	
+	.tbgather div.bigshow {
+		display: block
+	}
+	
+	.tbgather div .check {
+		position: absolute;
+		right: 10px;
+		top: 60px;
+	}
+	
+	.contentWrap {
+		width: 1200px;
+		height: auto;
+		margin: 0 auto;
+		padding-bottom: 1px;
+	}
+	
+	.contentWrap table {
+		height: auto;
+		border-left: #e6e6e6 1px solid;
+		border-top: #e6e6e6 1px solid;
+		margin-top: 20px;
+		font-size: 14px;
+	}
+	
+	.contentWrap table th {
+		/*height: 59px;*/
+		border-right: #e6e6e6 1px solid;
+		border-bottom: #e6e6e6 1px solid;
+		font-size: 16px;
+		color: #46bd89;
+		font-weight: bold;
+		padding: 10px 2px;
+	}
+	
+	.contentWrap table td {
+		border-right: #e6e6e6 1px solid;
+		border-bottom: #e6e6e6 1px solid;
+		padding: 10px 5px;
+		text-align: center;
+	}
+	
+	.contentWrap table td a {
+		display: block;
+		width: 76px;
+		height: 24px;
+		line-height: 24px;
+		color: #63ae1f;
+		background: #FFF url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat;
+		border: #63ae1f 1px solid;
+		margin: 10px auto;
+		padding-left: 10px;
+	}
+	
+	.contentWrap table td a.buy {
+		background-position: 10px -133px;
+	}
+	
+	.contentWrap table td a:hover {
+		background: #63ae1f url(http://pic3.ablesky.cn/content/pic/album/2016/10/19/539cdf15-7c3b-4c19-8619-33fa0c2856a7.png) no-repeat;
+		color: #FFF;
+	}	
+	
+	.contentWrap table td a.buy:hover {
+		background-position: 10px -42px;
+	}
+	
+	.contentWrap h4 {
+		margin: 10px auto 20px;
+		color: #63ae1f;
+		text-align: center;
+		font-size: 16px;
+	}
+	.contentWrap .colorR{
+		color:red;
+	}
+	.contentWrap .fontW{
+		font-weight: bold;
+	}
+	
+	.sternOPtion{
+		text-align: center;
+		margin: 50px 0;
+	}
+	.sternOPtion a {
+		display: inline-block;
+		width: 200px;
+		height: 65px;
+		text-align: center;
+		line-height: 65px;
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		background: #46bd89;
+		border-radius: 6px;
+	}
+	
+	.sternOPtion a:hover {
+		background: #3bb17e;
+	}
+	/*大咖齐聚名师云集 精彩课程抢先试听*/
+	.teacher_contentWrap{
+		width: 1200px;
+		height: auto;
+		margin: 50px auto;
+		padding-bottom: 1px;
+	}
+	.teacher_contentWrap .teacherVideo{
+		width: 530px;
+		height: 300px;
+		border-radius: 5px;
+		position: relative;
+	}
+	.teacher_contentWrap .teacherVideo img{
+		width: 100%;
+		height: 100%;
+	}
+	.teacher_contentWrap .teacherVideo img.play{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.teacher_contentWrap .teacherVideo iframe{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.teacher_contentWrap .web-school {
+		height: 225px;
+	}
+	
+	.teacher_contentWrap .course-list .left {
+		width: 28px;
+		height: 225px;
+		float: left;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png") no-repeat left center;
+	}
+	
+	.teacher_contentWrap .course-list .right {
+		width: 28px;
+		height: 225px;
+		float: right;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png") no-repeat right center;
+	}
+	
+	/*.teacher_contentWrap .course-list .left:hover {
+		background: url("http://pic3.ablesky.cn/content/pic/album/2017/02/10/99826c7b-12dd-4a78-86de-60361fe3fac2.png") no-repeat 50px 110px;
+	}
+	
+	.teacher_contentWrap .course-list .right:hover {
+		background: url(http://www.ablesky-a.com:8080/ableskystatics/images/index/2c/school-right-on.png) no-repeat 0 110px;
+	}*/
+	
+	.teacher_contentWrap .school-list {
+		width: 592px;
+		height: 225px;
+		overflow: hidden;
+		float: left
+	}
+	
+	.teacher_contentWrap .school-list .teacher li {
+		width: 140px;
+		height: 225px;
+		float: left;
+		margin-right: 4px;
+		margin-left: 4px;
+		/*margin-left: 18px;*/
+	}
+	
+	.teacher_contentWrap .school-list .teacher li a {
+		width: 140px;
+		height: 225px;
+		display: block;
+		/*margin: 30px auto 0;*/
+	}
+	
+	.teacher_contentWrap .school-list .teacher li img {
+		width: 140px;
+		height: 180px;
+		margin-top: 5px;
+		display: block;
+	}
+	.teacher_contentWrap .school-list .teacher li p{
+		font-size: 20px;
+		font-weight: bold;
+		color: #555;
+		margin-top: 8px;
+		text-align: center;
+	}
+		
+	.teacher_contentWrap .teacherIntro{
+		width: 543px;
+		/*height: 70px;*/
+		margin-right: 30px;
+		padding: 25px 20px;
+		color: #555;
+		background: #fff;
+	}
+	.teacher_contentWrap .teacherIntro p{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.teacher_contentWrap .teacher_btn{
+		clear: both;
+		margin-top: 45px;
+		text-align: center;
+	}
+	.teacher_contentWrap .teacher_btn a{
+		display: inline-block;
+		width: 160px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		font-size: 16px;
+		color: #fff;
+		background: #46bd89;
+		border-radius: 6px;
+	}
+	
+	.teacher_contentWrap .teacher_btn a:hover {
+		background: #3bb17e;
+	}
+	
+	/*精品图书实战宝典 精准定位核心出题点*/
+	.book_wrap{
+		background: #fff; 
+	}
+	.book_contentWrap{
+		width: 1200px;
+		height: auto;
+		margin: 0 auto;
+		padding: 50px 0;
+		overflow: hidden;
+	}
+	.book_contentWrap .options {
+		font-size: 12px;
+		overflow: hidden;
+	}
+	
+	.book_contentWrap .options li {
+		width: 185px;
+		height: 52px;
+		border: 1px solid #ededed;
+		text-align: center;
+		line-height: 52px;
+		font-size: 20px;
+		font-weight: bold;
+		color: #46bd89;
+		border-radius: 30px;
+		margin-right: 15px;
+		cursor: pointer;
+	}
+	.book_contentWrap .options li.last{
+		margin-right: 0;
+	}
+	
+	.book_contentWrap .options li.show,
+	.book_contentWrap .options li.on {
+		color: #fff;
+    	background: #46BD89;
+	}
+	.book_contentWrap .options li:hover{
+		border-color: #46BD89;
+	}
+	.book_contentWrap .coalConter .book_left {
+		width: 40px;
+		height: 404px;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/feab16e3-c24e-4c37-be4b-75bcd3308d37.png") no-repeat left center;
+		float: left;
+		cursor: pointer;
+		margin-top: 20px;
+	}
+	
+	
+	.book_contentWrap .coalConter .book_right {
+		width: 40px;
+		height: 404px;
+		background: url("http://pic2.ablesky.cn/content/pic/album/2017/11/20/21f769b3-1d8c-4f53-af89-ed071832a6cf.png") no-repeat right center;
+		float: right;
+		cursor: pointer;
+		margin-top: 20px;
+	}
+	
+	
+	.book_contentWrap .coalConter .centre {
+		width: 1120px;
+		height: 404px;
+		margin-top: 20px;
+		float: left;
+		overflow: hidden;
+	}
+	
+	.book_contentWrap .coalConter .path {
+		display: none;
+	}
+	
+	.book_contentWrap .coalConter .bookshow {
+		display: block;
+	}
+	
+	.book_contentWrap .coalConter .path li {
+		width: 1120px;
+		height: 404px;
+		float: left;
+		font-size: 0;
+		
+	}
+	
+	.book_contentWrap .coalConter .path li:hover {
+		/*border: #63ae1f 1px solid;*/
+	}
+	
+	.book_contentWrap .coalConter .path li>a{
+		display: inline-block;
+		width: 206px;
+		height: 402px;
+		border: #ededed 1px solid;
+		border-radius: 5px;
+		margin-right: 20px;
+		
+	}
+	.book_contentWrap .coalConter .path li>a.last{
+		margin-right: 0;
+	}
+	.book_contentWrap .coalConter .path li img {
+		width: 100%;
+  		height: 310px;
+	}
+	
+	.book_contentWrap .coalConter .path li a p {
+		text-align: center;
+		font-size: 20px;
+		color: #555;
+		height: 60px;
+		overflow: hidden;
+		padding:20px 5px 5px;
+	}
+	/*能力直播，能力APP，开启编写学习新时代*/
+	.products{
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.product_contentWrap{
+		padding: 82px 0 96px;
+		overflow: hidden;
+	}
+	.product_contentWrap>div{
+		float: left;
+		width: 50%;
+	}
+	.product_contentWrap dl{
+		height: 181px;
+	}
+	.product_contentWrap .one dt{
+		padding-top: 18px;
+	}
+	.product_contentWrap .two dt{
+		padding-left: 41px;
+	}
+	.product_contentWrap dl dt{
+		float: left;
+		margin-right: 18px;
+	}
+	.product_contentWrap dl dd{
+		float: left;
+	}
+	.product_contentWrap dl dd h2{
+		margin-bottom: 12px;
+		color: #555;
+	}
+	.product_contentWrap dl dd p{
+		font-size: 14px;
+		line-height: 34px;
+		color: #555;
+	}
+	.product_contentWrap .product_btn{
+		clear: both;
+		text-align: center;
+		margin-top: 45px;
+	}
+	.product_contentWrap .product_btn a{
+		display: inline-block;
+		width: 160px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		font-size: 16px;
+		color: #fff;
+		background: #46bd89;
+		border-radius: 6px;
+	}
+	
+	.product_contentWrap .product_btn a:hover {
+		background: #3bb17e;
+	}
+	
+	/*footer*/
+	.footer_wrap{
+		background: #333;
+		color: #dddddd;
+	}
+	.footer_contentWrap{
+		width: 1200px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.footer_contentWrap .hotline{
+		font-size: 20px;
+		text-align: center;
+	}
+	.footer_contentWrap .link{
+		padding: 28px 0 38px;
+		text-align: center;
+		font-size: 14px;
+	}/*46bd89*/
+	.footer_contentWrap .link>p{
+		margin-bottom: 10px;
+	}
+	.footer_contentWrap .link>p>span{
+		display: inline-block;
+		border-bottom: 2px solid #2d2d2d;
+		cursor: pointer;
+		margin-right: 16px;
+		padding: 2px;
+	}
+	.footer_contentWrap .link>p>span.show,.footer_contentWrap .link>p>span:hover{
+		border-bottom-color: #46bd89;
+	}
+	.footer_contentWrap .link .aboutUs{
+		display: none;
+	}
+	.footer_contentWrap .link div a{
+		margin-right: 28px;
+		color: #dddddd;
+	}
+	.footer_contentWrap .link div a:hover{
+		color: #46bd89;
+	}
+	.footer_contentWrap .qrcode{
+		position: absolute;
+		right: 20px;
+		top: -15px;
+		text-align: center;
+	}
+	.footer_contentWrap .qrcode img{
+		width: 100px;
+		height: 100px;
+		margin-bottom: 8px;
+	}
+	
+	
+	
+	/*在线客服*/
+	#YSF-BTN-HOLDER{
+		visibility: hidden;
+	}
+</style>
+<div class="banner">
+	<div id="J_showImg" class="showImg-wrap upload-wrap">
+		<div class="showBigImgBox">
+			<ul class="showImg-main" style="position:relative;">
+				<li >
+					<a><img src="http://pic4.ablesky.cn/content/pic/album/2017/11/21/bca8426b-9f5d-435a-a743-4d4383aba648.png" /></a>
+				</li>
+				<li >
+					<a><img src="http://pic4.ablesky.cn/content/pic/album/2017/11/21/bca8426b-9f5d-435a-a743-4d4383aba648.png" /></a>
+				</li>
+			</ul>
+		</div>
+		<div class="showImg-pagination">
+			<ol class="clearfix">
+				<li><a class="" href="javascript:;"></a></li>
+				<li><a class="" href="javascript:;"></a></li>
+			</ol>
+		</div>
+
+	</div>
+</div>
+<div class="information-wrap minWidth">
+	<div class="information">
+		<!--<div>
+			<h2><a>政策咨询</a></h2>
+			<p class="first">
+				<img src="../html/img/course1.png"/>
+				<span><a>能力医考2018标题能力医考2018啊啊啊啊啊啊啊啊啊啊啊啊啊啊标题能力医考2018标题能力医</a></span>
+				<a href="####">查看详情></a>
+			</p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018aaaaaa标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaaaaaa018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaa018标</a></p>
+		</div>
+		<div>
+			<h2><a>政策咨询</a></h2>
+			<p class="first">
+				<img src="../html/img/course1.png"/>
+				<span><a>能力医考2018标题能力医考2018啊啊啊啊啊啊啊啊啊啊啊啊啊啊标题能力医考2018标题能力医</a></span>
+				<a href="####">查看详情></a>
+			</p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018aaaaaa标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaaaaaa018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaa018标</a></p>
+		</div>
+		<div style="margin-right: 0;">
+			<h2><a>政策咨询</a></h2>
+			<p class="first">
+				<img src="../html/img/course1.png"/>
+				<span><a>能力医考2018标题能力医考2018啊啊啊啊啊啊啊啊啊啊啊啊啊啊标题能力医考2018标题能力医</a></span>
+				<a href="####">查看详情></a>
+			</p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018aaaaaa标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaaaaaa018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2018标</a></p>
+			<p><a href="">能力医考2018标题能力医考2018标题能能力医考2aaaaaaa018标</a></p>
+		</div>-->
+	</div>	
+</div>
+<div class="newCourseSys_wrap minWidth">
+	<div class="newCourseSys">
+		<div class="clearfix">
+			<p class="tit1">2018新课程体系一览 科学辅导阶段提升</p>
+			<em class="tit2"></em>
+			<p class="tit3">了解面授详情，拨打热线电话：<span>010-62660276</span></p>
+		</div>
+		<div class="contentWrap">
+			<ul class="tab courseTab" id="courseTab">
+				<li class="show">
+					<span><span>精品网络班</span><em class="arrow_down"></em></span>
+					<ul>
+						<li><span data-id="1">医师</span></li>
+						<li><span data-id="2">药师</span></li>
+						<li><span data-id="3">护士</span></li>
+					</ul>
+				</li>
+				<li>
+					<span><span>品质面授班</span><em class="arrow_down"></em></span>
+					<ul>
+						<li><span data-id="4">医师</span></li>
+						<li><span data-id="5">药师</span></li>
+						<li><span data-id="6">护士</span></li>
+					</ul>
+				</li>
+				<li>
+					<span><span>VIP高端班</span><em class="arrow_down"></em></span>
+					<ul>
+						<li><span data-id="7">医师</span></li>
+						<li><span data-id="8">药师</span></li>
+						<li><span data-id="9">护士</span></li>
+					</ul>
+				</li>
+				<li class="last">
+					<span><span>企业定制</span><em class="arrow_down"></em></span>
+					<ul>
+						<li><span data-id="10">医师</span></li>
+						<li><span data-id="11">药师</span></li>
+						<li><span data-id="12">护士</span></li>
+					</ul>
+				</li>
+
+			</ul>
+			<div class="tbgather clearfix">
+				<div class="tab_yisnet bigshow">
+					<!--企业定制医师资格-->
+					<p class="bigtit">2018执业 （助理）医师资格考试-精品网课</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="70" rowspan="2">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="90" rowspan="2">
+								<p align="center"><strong>班型 </strong></p>
+							</th>
+							<th colspan="2">
+								<p align="center"><strong>课时 </strong></p>
+							</th>
+							<th rowspan="2">
+								<p align="center"><strong>适用人群</strong></p>
+							</th>
+							<th  rowspan="2">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="120" rowspan="2">
+								<p align="center"><strong>配套教材<p class="colorR">（购买有优惠）</p></strong></p>
+							</th>
+							<th colspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>
+						<tr>
+							<th width="50">助理</th>
+							<th width="80">执业</th>
+							<th width="80">助理</th>
+							<th width="80">执业</th>
+						</tr>
+						<tr>
+							<th rowspan="3">基础</th>
+							<td>技能特训班</td>
+							<td>24</td>
+							<td>24</td>
+							<td>基础较好，需技能强化的考生</td>
+							<td>实践技能三站特训，经典病例详解，真人实操演示，名师指导操作得分点和注意事项</td>
+							<td>《技能一本通》</td>
+							<td>300元</td>
+							<td>300元</td>
+						</tr>
+						<tr>
+							<td>核心考点班</td>
+							<td>180</td>
+							<td>204</td>
+							<td>有一定基础，对考试重难点把握不准的考生</td>
+							<td>大纲要求考点全面精讲，突出考试重难点</td>
+							<td>《核心考点》</td>
+							<td>780元</td>
+							<td>880元</td>
+						</tr>
+						<tr>
+							<td>实战珍题班</td>
+							<td>150</td>
+							<td>180</td>
+							<td>有一定基础，不熟悉出题思路和解题技巧的考生</td>
+							<td>原题、经典题、必考题、易错题，考点全面覆盖</td>
+							<td>《实战珍题》</td>
+							<td>880元</td>
+							<td>980元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>考前冲刺</td>
+							<td>52</td>
+							<td>56</td>
+							<td>有一定基础，需在考前冲刺强化的考生</td>
+							<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+							<td>《学霸笔记》</td>
+							<td>680元</td>
+							<td>880元</td>
+						</tr>
+						<tr>
+							<td>考前密卷</td>
+							<td>16</td>
+							<td>32</td>
+							<td>任何基础考生，考前绝密送分</td>
+							<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+							<td>《考前密卷》</td>
+							<td>468元</td>
+							<td>568元</td>
+						</tr>
+						<tr>
+							<td>冲刺提分班</td>
+							<td>218</td>
+							<td>268</td>
+							<td>有一定基础，需冲刺强化、高效提分的考生</td>
+							<td>实战珍题+考前冲刺+考前密卷<p class="colorR">送3套考前密卷</p></td>
+							<td>《实战珍题》<br />《学霸笔记》<br/>《考前密卷》</td>
+							<td>1680元</td>
+							<td>1980元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">全程</th>
+							<td>全程班</td>
+							<td>352</td>
+							<td>408</td>
+							<td>有一定基础，对考试重点、考点把握不准、不熟悉出题思路和解题技巧的考生</td>
+							<td>核心考点+实践技能+实战珍题</td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》</td>
+							<td>1680元</td>
+							<td>1980元</td>
+						</tr>
+						<tr>
+							<td>vip协议班</td>
+							<td>406</td>
+							<td>464</td>
+							<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考试特点、不会做题的考生</td>
+							<td>大纲解析+核心考点+实践技能+实战珍题+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》</td>
+							<td>2680元</td>
+							<td>2980元</td>
+						</tr>
+						<tr>
+							<td>定制通关班</td>
+							<td>422</td>
+							<td>496</td>
+							<td>基础差、没重点、不熟悉命题、自律性不强、想一次通关的考生</td>
+							<td>大纲解析+核心考点+实战珍题+考前冲刺+考前密卷+应试技巧<p class="colorR">送2套冲刺卷+3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》</td>
+							<td>3680元</td>
+							<td>3980元</td>
+						</tr>
+						<tr>
+							<th class="colorR">优惠政策</th>
+							<td colspan="8"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+						</tr>
+						
+					</table>
+				</div>
+				<div class="tab_yaosnet">
+					<p class="bigtit">2018执业药师资格考试-精品网课</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="70" rowspan="2">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="90" rowspan="2">
+								<p align="center"><strong>班型 </strong></p>
+							</th>
+							<th colspan="2">
+								<p align="center"><strong>课时 </strong></p>
+							</th>
+							<th width="300" rowspan="2">
+								<p align="center"><strong>适用人群</strong></p>
+							</th>
+							<th width="300" rowspan="2">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="120" rowspan="2">
+								<p align="center"><strong>配套教材<p class="colorR">（购买有优惠）</p></strong></p>
+							</th>
+							<th colspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>
+						<tr>
+							<th width="70">单科</th>
+							<th width="70">全科</th>
+							<th width="80">单科</th>
+							<th width="80">全科</th>
+						</tr>
+						<tr>
+							<th rowspan="3">基础</th>
+							<td>核心考点班</td>
+							<td>32</td>
+							<td>128</td>
+							<td>有一定基础，对考试重难点把握不准的考生</td>
+							<td>大纲要求考点全面精讲，突出考试重难点</td>
+							<td>《核心考点》</td>
+							<td>280元</td>
+							<td>880元</td>
+						</tr>
+						<tr>
+							<td>同步练习班</td>
+							<td>28</td>
+							<td>114</td>
+							<td>有一定基础，需通过同步习题强化考点的考生</td>
+							<td>章节考点同步习题精讲，重难点全面强化</td>
+							<td>《同步练习》</td>
+							<td>298元</td>
+							<td>980元</td>
+						</tr>
+						<tr>
+							<td>实战珍题班</td>
+							<td>12</td>
+							<td>48</td>
+							<td>有一定基础，不熟悉出题思路和解题技巧的考生</td>
+							<td>原题、经典题、必考题、易错题，考点全面覆盖</td>
+							<td>《实战珍题》</td>
+							<td>298元</td>
+							<td>980元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>考前冲刺</td>
+							<td>10</td>
+							<td>40</td>
+							<td>有一定基础，需在考前冲刺强化的考生</td>
+							<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+							<td>《王者笔记》</td>
+							<td>280元</td>
+							<td>880元</td>
+						</tr>
+						<tr>
+							<td>考前密卷</td>
+							<td>8</td>
+							<td>32</td>
+							<td>任何基础考生，考前绝密送分</td>
+							<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+							<td>《考前密卷》</td>
+							<td>200元</td>
+							<td>568元</td>
+						</tr>
+						<tr>
+							<td>冲刺提分班</td>
+							<td>30</td>
+							<td>120</td>
+							<td>有一定基础，需冲刺强化、高效提分的考生</td>
+							<td>实战珍题+考前冲刺+考前密卷<p class="colorR">送3套考前密卷</p></td>
+							<td>《实战珍题》<br />《王者笔记》<br/>《考前密卷》</td>
+							<td>600元</td>
+							<td>1980元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">全程</th>
+							<td>全程班</td>
+							<td>60</td>
+							<td>242</td>
+							<td>有一定基础，对考试重点、考点把握不准、不熟悉出题思路和解题技巧的考生</td>
+							<td>核心考点+同步练习</td>
+							<td>《核心考点》<br/>《同步练习》</td>
+							<td>550元</td>
+							<td>1680元</td>
+						</tr>
+						<tr>
+							<td>vip协议班</td>
+							<td>70</td>
+							<td>280</td>
+							<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考试特点、不会做题的考生</td>
+							<td>大纲解析+核心考点+实践技能+实战珍题+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《同步练习》<br/>《王者笔记》</td>
+							<td>880元</td>
+							<td>2980元</td>
+						</tr>
+						<tr>
+							<td>定制通关班</td>
+							<td>90</td>
+							<td>360</td>
+							<td>基础差、没重点、不熟悉命题、自律性不强、想一次通关的考生</td>
+							<td>大纲解析+核心考点+实战珍题+考前冲刺+考前密卷+应试技巧<p class="colorR">送2套冲刺卷+3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《同步练习》<br/>《实战珍题》<br/>《王者笔记》<br/>《考前密卷》</td>
+							<td>1180元</td>
+							<td>3980元</td>
+						</tr>
+						<tr>
+							<th class="colorR">优惠政策</th>
+							<td colspan="8"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+						</tr>						
+					</table>
+				</div>
+				<div class="tab_husnet">
+					<p class="bigtit">2018护士执业资格考试-精品网课</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="70">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="90">
+								<p align="center"><strong>班型 </strong></p>
+							</th>
+							<th width="90">
+								<p align="center"><strong>课时 </strong></p>
+							</th>
+							<th width="258">
+								<p align="center"><strong>适用人群</strong></p>
+							</th>
+							<th width="258">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>配套教材<p class="colorR">（购买有优惠）</p></strong></p>
+							</th>
+							<th width="100">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>
+						<tr>
+							<th rowspan="2">基础</th>
+							<td>核心考点班</td>
+							<td>92</td>
+							<td>有一定基础，对考试重难点把握不准的考生</td>
+							<td>大纲要求考点全面精讲，突出考试重难点</td>
+							<td>《核心考点》</td>
+							<td>500元</td>
+						</tr>
+						<tr>
+							<td>实战珍题班</td>
+							<td>32</td>
+							<td>有一定基础，需通过同步习题强化考点的考生</td>
+							<td>原题、经典题、必考题、易错题，考点全面覆盖</td>
+							<td>《实战珍题》</td>
+							<td>400元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>考前冲刺</td>
+							<td>32</td>
+							<td>有一定基础，需在考前冲刺强化的考生</td>
+							<td>核心考点串讲，归纳总结，强化记忆，冲刺抢分</td>
+							<td>《天使笔记》</td>
+							<td>400元</td>
+						</tr>
+						<tr>
+							<td>考前密卷</td>
+							<td>16</td>
+							<td>任何基础考生，考前绝密送分</td>
+							<td>高含金量冲刺密卷，考前绝密送分<p class="colorR">送3套考前密卷</p></td>
+							<td>《考前密卷》</td>
+							<td>300元</td>
+						</tr>
+						<tr>
+							<td>冲刺提分班</td>
+							<td>80</td>
+							<td>有一定基础，需冲刺强化、高效提分的考生</td>
+							<td>实战珍题+考前冲刺+考前密卷<p class="colorR">送3套考前密卷</p></td>
+							<td>《实战珍题》<br />《天使笔记》<br/>《考前密卷》</td>
+							<td>880元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">全程</th>
+							<td>全程班</td>
+							<td>124</td>
+							<td>有一定基础，对考试重点、考点把握不准、不熟悉出题思路和解题技巧的考生</td>
+							<td>核心考点+实战珍题</td>
+							<td>《核心考点》<br/>《实战珍题》</td>
+							<td>800元</td>
+						</tr>
+						<tr>
+							<td>vip协议班</td>
+							<td>156</td>
+							<td>基础薄弱，复习无头绪、抓不住重点、不熟悉考试特点、不会做题的考生</td>
+							<td>大纲解析+核心考点+实践技能+实战珍题+考前冲刺<p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《实战珍题》<br/>《天使笔记》</td>
+							<td>1280元</td>
+						</tr>
+						<tr>
+							<td>定制通关班</td>
+							<td>172</td>
+							<td>基础差、没重点、不熟悉命题、自律性不强、想一次通关的考生</td>
+							<td>大纲解析+核心考点+实战珍题+考前冲刺+考前密卷+应试技巧<p class="colorR">送2套冲刺卷+3套考前密卷</p><p class="colorR">全程教辅跟踪辅导</p><p class="colorR">协议保障：次年重学</p></td>
+							<td>《核心考点》<br/>《实战珍题》<br/>《天使笔记》<br/>《考前密卷》</td>
+							<td>1680元</td>
+						</tr>
+						<tr>
+							<th class="colorR">优惠政策</th>
+							<td colspan="6"><p class="colorR">凡报名网课学员，当年报名审核不过，次年免费重学；网课学员购买教材尊享7折优惠。</p></td>
+						</tr>						
+					</table>
+				</div>
+				<div class="tab_yisface">
+					<p class="bigtit">2018执业（助理）医师资格考试-面授课程</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="70">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="110">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="80">
+								<p align="center"><strong>面授时间</strong></p>
+							</th>
+							<th width="80">
+								<p align="center"><strong>面授课时</strong></p>
+							</th>
+							<th width="158">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="258">
+								<p align="center"><strong>面授课程简介</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>赠送教材</strong></p>
+							</th>
+							<th width="100">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>
+						<tr>
+							<th rowspan="2">技能</th>
+							<td>技能速成班</td>
+							<td>5-6月</td>
+							<td>3天</td>
+							<td>面授+技能一对一（共3天<p class="colorR">送实践技能网课</p><p class="colorR">送200元笔试课程优惠券</p></td>
+							<td>技能实操现场演练，名师一对一手把手辅导练习<br/>赠送技能网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《技能一本通》</td>
+							<td>1000元</td>
+						</tr>
+						<tr>
+							<td>技能保过班</td>
+							<td>5-6月</td>
+							<td>3天</td>
+							<td>面授+技能一对一（共3天）<p class="colorR">送实践技能网课+班主任</p><p class="colorR">送500元笔试课程优惠券</p><p class="colorR fontW">不过退费，扣100元资料费</p></td>
+							<td>技能实操现场演练，名师一对一手把手辅导练习<br/>赠送技能网课，课前课后随时充电，充分利用碎片化时间<p class="colorR">全程班主任领学，制定专属通关计划，不过退费</p></td>
+							<td>《技能一本通》</td>
+							<td>1800元</td>
+						</tr>
+						<tr>
+							<th rowspan="2">基础</th>
+							<td>学霸速成班</td>
+							<td>3-7月</td>
+							<td>11天</td>
+							<td>大纲解析+11天笔试精讲面授<br/><span class="colorR">赠送330课时网课</span>（核心考点+实战珍题）</td>
+							<td>根据最新大纲要求，考点全面精讲，突出考试重难点<br/>赠送高清网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》</td>
+							<td>4680元</td>
+						</tr>
+						<tr>
+							<td>通关面授班</td>
+							<td>3-7月</td>
+							<td>11天</td>
+							<td>大纲解析+11天笔试精讲面授+3天技能面授<br/><span class="colorR">赠送354课时全程班网课</span>（核心考点+实践技能+实战珍题）<p class="colorR fontW">技能未过次年重学</p></td>
+							<td>考点全面精讲，突出考试重难点，技能实操现场演练，保障通关<br/>赠送高清网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》</td>
+							<td>5280元</td>
+						</tr>
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>战神集训</td>
+							<td>7-8月</td>
+							<td>6天</td>
+							<td>6天冲刺面授+送录播回放+应试技巧</td>
+							<td>6天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关</td>
+							<td>《学霸笔记》</td>
+							<td>3000元</td>
+						</tr>
+						<tr>
+							<td>学霸点石A计划</td>
+							<td>7-8月</td>
+							<td>6天</td>
+							<td>6天冲刺面授+应试技巧<br/><span class="colorR">赠送218课时冲刺提分网课</span>（考前冲刺+实战珍题+考前密卷）</td>
+							<td>6天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障</td>
+							<td>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》</td>
+							<td>3980元</td>
+						</tr>
+						<tr>
+							<td>学霸点石B计划</td>
+							<td>7-8月</td>
+							<td>6天</td>
+							<td>6天冲刺面授+应试技巧<span class="colorR">+班主任</span><br/><span class="colorR">赠送218课时冲刺提分网课</span>（考前冲刺+实战珍题+考前密卷）<p class="colorR fontW">不过退费，扣200元资料费</p></td>
+							<td>6天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障<p class="colorR">全程班主任领学，制定专属通关计划，不过退费</p></td>
+							<td>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》</td>
+							<td>7800元</td>
+						</tr>
+						<tr>
+							<th>全程</th>
+							<td>全程决胜班</td>
+							<td>3-8月</td>
+							<td>20天</td>
+							<td>大纲解析+11天笔试精讲面授+3天技能面授<br/><span class="colorR">赠送354课时全程班网课</span>（核心考点+实践技能+实战珍题）<p class="colorR fontW">技能未过次年重学</p></td>
+							<td>考点全面精讲，突出考试重难点，技能实操现场演练，保障通关<br/>赠送高清网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》</td>
+							<td>8000元</td>
+						</tr>						
+						<tr>
+							<td colspan="8" style="text-align: left;">注：授课时间及课时会根据当年考试变化情况及招生情况随时调整，如有变化，以最终实际为准。</td>
+						</tr>						
+					</table>
+				</div>				
+				<div class="tab_yaosface">
+					<p class="bigtit">2018执业药师资格考试-面授课程</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="70" rowspan="2">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="90" rowspan="2">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>面授时间</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>面授课时</strong></p>
+							</th>
+							<th width="158" rowspan="2">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="258" rowspan="2">
+								<p align="center"><strong>面授课程简介</strong></p>
+							</th>
+							<th width="120" rowspan="2">
+								<p align="center"><strong>赠送教材</strong></p>
+							</th>
+							<th colspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>
+						<tr>
+							<th width="60">单科</th>
+							<th width="60">全科</th>
+						</tr>						
+						<tr>
+							<th>基础</th>
+							<td>王者速成班</td>
+							<td>3-8月</td>
+							<td>9天</td>
+							<td>大纲解析+9天基础精讲面授（单科2-3天/科）<br/><span class="colorR">赠送242课时全程班网课</span>（核心考点+同步练习）</td>
+							<td>根据最新大纲要求，考点全面精讲，突出考试重难点<br/>赠送高清网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》<br/>《同步练习》</td>
+							<td>1380元</td>
+							<td>4680元</td>
+						</tr>						
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>战神集训</td>
+							<td>9-10月</td>
+							<td>5天</td>
+							<td>5天冲刺面授（单科1-2天/科）+送录播回放+应试技巧</td>
+							<td>5天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关</td>
+							<td>《王者笔记》</td>
+							<td>999元</td>
+							<td>3000元</td>
+						</tr>
+						<tr>
+							<td>王者A计划</td>
+							<td>9-10月</td>
+							<td>5天</td>
+							<td>5天冲刺面授（单科1-2天/科）+送录播回放+应试技巧<br/><span class="colorR">赠送120课时冲刺提分网课</span>考前冲刺+实战珍题+考前密卷）</td>
+							<td>5天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障</td>
+							<td>《实战珍题》<br>《王者笔记》<br/>《考前密卷》</td>
+							<td>1180元</td>
+							<td>3980元</td>
+						</tr>
+						<tr>
+							<td>王者B计划</td>
+							<td>9-10月</td>
+							<td>5天</td>
+							<td>5天冲刺面授（单科1-2天/科）+送录播回放+应试技巧<span class="colorR">+班主任</span><br/><span class="colorR">赠送120课时冲刺提分网课</span>考前冲刺+实战珍题+考前密卷）<p class="colorR">不过退费，扣400元资料费（单科扣100元）</p></td>
+							<td>5天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障<p class="colorR">全程班主任领学，制定专属通关计划，不过退费</p></td>
+							<td>《实战珍题》<br>《王者笔记》<br/>《考前密卷》</td>
+							<td>2280元</td>
+							<td>7800元</td>
+						</tr>
+						<tr>
+							<th>全程</th>
+							<td>全程决胜班</td>
+							<td>3-10月</td>
+							<td>14天</td>
+							<td>大纲解析+9天基础精讲面授（单科2-3天/科）+5天冲刺面授（单科1-2天/科）+应试技巧<br/><span class="colorR">赠送290课时高清网课</span>（核心考点+同步练习+实战珍题）</td>
+							<td>考点全面精讲，突出考试重难点，技能实操现场演练，保障通关<br/>赠送高清网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》<br/>《同步练习》<br/>《实战珍题》<br/>《王者笔记》<br/>《考前密卷》</td>
+							<td>2280元</td>
+							<td>8000元</td>
+						</tr>						
+					</table>
+				</div>					
+				<div class="tab_husface">
+					<p class="bigtit">2018护士执业资格考试-面授课程</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1158">
+						<tr>
+							<th width="70">
+								<p align="center"><strong>阶段 </strong></p>
+							</th>
+							<th width="100">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="80">
+								<p align="center"><strong>面授时间</strong></p>
+							</th>
+							<th width="80">
+								<p align="center"><strong>面授课时</strong></p>
+							</th>
+							<th width="158">
+								<p align="center"><strong>授课内容</strong></p>
+							</th>
+							<th width="250">
+								<p align="center"><strong>面授课程简介</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>赠送教材</strong></p>
+							</th>
+							<th width="90">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+						</tr>					
+						<tr>
+							<th>基础</th>
+							<td>天使速成班</td>
+							<td>3-4月</td>
+							<td>6天</td>
+							<td>大纲解析+6天基础精讲面授<br/><span class="colorR">赠送242课时全程班网课</span>（核心考点+实战珍题）</td>
+							<td>从基础精讲到考前冲刺提分，一站式提升计划，全程通关保障<br/>赠送全程班网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》</td>
+							<td>1880元</td>
+						</tr>						
+						<tr>
+							<th rowspan="3">冲刺</th>
+							<td>战神集训</td>
+							<td>4-5月</td>
+							<td>2天</td>
+							<td>2天冲刺面授+送录播回放+应试技巧</td>
+							<td>2天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关</td>
+							<td>《天使笔记》</td>
+							<td>980元</td>
+						</tr>
+						<tr>
+							<td>天使点金A计划</td>
+							<td>4-5月</td>
+							<td>2天</td>
+							<td>2天冲刺面授+应试技巧<br/><span class="colorR">赠送80课时冲刺提分网课</span>（考前冲刺+实战珍题+考前密卷）</td>
+							<td>2天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障</td>
+							<td>《实战珍题》<br>《天使笔记》<br/>《考前密卷》</td>
+							<td>1280元</td>
+						</tr>
+						<tr>
+							<td>天使点金B计划</td>
+							<td>4-5月</td>
+							<td>2天</td>
+							<td>2天冲刺面授+应试技巧<span class="colorR">+班主任</span><br/><span class="colorR">赠送80课时冲刺提分网课</span>考前冲刺+实战珍题+考前密卷）<p class="colorR">不过退费，扣100元资料费</p></td>
+							<td>2天做完必考题、经典题、易错题，以题带点，强化提升，快速抢分，高效通关<br/>赠送冲刺提分网课，为通关加一道保障<p class="colorR">全程班主任领学，制定专属通关计划，不过退费</p></td>
+							<td>《实战珍题》<br>《天使笔记》<br/>《考前密卷》</td>
+							<td>2280元</td>
+						</tr>
+						<tr>
+							<th>全程</th>
+							<td>全程决胜班</td>
+							<td>3-5月</td>
+							<td>8天</td>
+							<td>大纲解析+6天基础精讲面授+2天冲刺面授+应试技巧<br/><span class="colorR">赠送124课时高清网课</span>（核心考点+实战珍题）</td>
+							<td>从基础精讲到考前冲刺提分，一站式提升计划，全程通关保障<br/>赠送全程班网课，课前课后随时充电，充分利用碎片化时间</td>
+							<td>《核心考点》<br/>《实战珍题》<br/>《天使笔记》<br/>《考前密卷》</td>
+							<td>2680元</td>
+						</tr>						
+						<tr>
+							<td colspan="8" style="text-align: left;">注：授课时间及课时会根据当年考试变化情况及招生情况随时调整，如有变化，以最终实际为准。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_yisbest">
+					<p class="bigtit">2018执业（助理）医师资格考试-高端班</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>退费/重读</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>明细</strong></p>
+							</th>
+							<th colspan="8">
+								<p align="center"><strong>教学服务</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th width="60">入学测试</th>
+							<th width="90">专业学科班主任</th>
+							<th width="80">定制个性化学习任务</th>
+							<th width="100">跟进学习进度，查漏补缺</th>
+							<th width="">配套教材资料</th>
+							<th width="70">能力测试</th>
+							<th width="80">疑问解答</th>
+							<th width="80">能力密卷</th>
+						</tr>
+						<tr>
+							<th rowspan="2">至尊高端</th>
+							<td>26800元</td>
+							<td>协议保障：当年未<br/>过，全额退费</td>
+							<td rowspan="2">20天面授+30次直<br/>播+全套网课+班主任</td>
+							<td rowspan="2">建立学习档<br/>案</td>
+							<td rowspan="2">全程辅学、<br/>陪学、督学</td>
+							<td rowspan="2">每日</td>
+							<td rowspan="2">全程</td>
+							<td rowspan="2">《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td rowspan="2">阶段性</td>
+							<td rowspan="2">24小时以内</td>
+							<td rowspan="2">2套</td>
+						</tr>						
+						<tr>
+							<td>16800元</td>
+							<td>协议保障：当年未<br/>过，第二年免费重学</td>
+						</tr>	
+						<tr>
+							<th>定制一对一</th>
+							<td>10800元</td>
+							<td>协议保障：当年未<br/>过，全额退费</td>
+							<td>全套网课+技能面<br/>授+班主任</td>
+							<td>建立学习档<br/>案</td>
+							<td>全程辅学、<br/>陪学、督学</td>
+							<td>每日</td>
+							<td>全程</td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td>阶段性</td>
+							<td>24小时以内</td>
+							<td>2套</td>
+						</tr>	
+						<tr>
+							<th>课程特色</th>
+							<td colspan="11" style="text-align: left;">
+								1．传统授课模式升级，协议保障，全面保障通关<br/>
+								2．精准课程定位，阶段式提升<br/>
+								3．高含金量内部辅导资料，引领最实用考试用书<br/>
+								4．能力班主任全程辅学、陪学、督学，科学指引复习方向<br/>
+								5．能力医考APP、能力直播，专属便携式学习工具，打造全新学习体验<br/>
+								6.秉承诚信、认真、踏实、负责的精神，真正提升学员对生命负责的能力
+							</td>
+						</tr>
+						<tr>
+							<td colspan="12" style="text-align: left;">注：授课时间及课时会根据当年考试变化情况及招生情况随时调整，如有变化，以最终实际为准。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_yaosbest">
+					<p class="bigtit">2018执业药师资格考试-高端班</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="140" rowspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>退费/重读</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>明细</strong></p>
+							</th>
+							<th colspan="8">
+								<p align="center"><strong>教学服务</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th width="60">入学测试</th>
+							<th width="90">专业学科班主任</th>
+							<th width="80">定制个性化学习任务</th>
+							<th width="100">跟进学习进度，查漏补缺</th>
+							<th width="">配套教材资料</th>
+							<th width="70">能力测试</th>
+							<th width="80">疑问解答</th>
+							<th width="80">能力密卷</th>
+						</tr>
+						<tr>
+							<th rowspan="4">至尊高端</th>
+							<td>全科退费：26800元</td>
+							<td>协议保障：当年未<br/>过，全额退费</td>
+							<td rowspan="4">14天面授（单科<br/>3-4天/科）+60<br/>次直播+全套网<br/>课+班主任</td>
+							<td rowspan="4">建立学习档案</td>
+							<td rowspan="4">全程辅学、<br/>陪学、督学</td>
+							<td rowspan="4">每日</td>
+							<td rowspan="4">全程</td>
+							<td rowspan="4">《核心考点》<br/>《同步练习》<br/>《实战珍题》<br/>《王者笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td rowspan="4">阶段性</td>
+							<td rowspan="4">24小时以内</td>
+							<td rowspan="4">2套</td>
+						</tr>						
+						<tr>
+							<td>单科退费：6800元</td>
+							<td>协议保障：当年未<br/>过，退不过科目学费</td>
+						</tr>	
+						<tr>
+							<td>全科重学：16800元</td>
+							<td>协议保障：两年未<br/>过，第三年免费重学</td>
+						</tr>	
+						<tr>
+							<td>单科重学：4800元</td>
+							<td>协议保障：当年未<br/>过，不过科目第二<br/>年免费重学</td>
+						</tr>	
+						<tr>
+							<th rowspan="2">定制一对一</th>
+							<td>全科退费：10800元</td>
+							<td rowspan="2">协议保障：当年未<br/>过，退不过科目学费</td>
+							<td rowspan="2">全套网课+班主任</td>
+							<td rowspan="2">建立学习档案</td>
+							<td rowspan="2">全程辅学、<br/>陪学、督学</td>
+							<td rowspan="2">每日</td>
+							<td rowspan="2">全程</td>
+							<td rowspan="2">《核心考点》<br/>《同步练习》<br/>《实战珍题》<br/>《王者笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td rowspan="2">阶段性</td>
+							<td rowspan="2">24小时以内</td>
+							<td rowspan="2">2套</td>
+						</tr>												
+						<tr>
+							<td>单科退费：3800元</td>
+						</tr>	
+						<tr>
+							<th>课程特色</th>
+							<td colspan="11" style="text-align: left;">
+								1．传统授课模式升级，协议保障，全面保障通关<br/>
+								2．精准课程定位，阶段式提升<br/>
+								3．高含金量内部辅导资料，引领最实用考试用书<br/>
+								4．能力班主任全程辅学、陪学、督学，科学指引复习方向<br/>
+								5．能力医考APP、能力直播，专属便携式学习工具，打造全新学习体验<br/>
+								6.秉承诚信、认真、踏实、负责的精神，真正提升学员对生命负责的能力
+							</td>
+						</tr>
+						<tr>
+							<td colspan="12" style="text-align: left;">注：授课时间及课时会根据当年考试变化情况及招生情况随时调整，如有变化，以最终实际为准。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_husbest">
+					<p class="bigtit">2018护士执业资格考试-高端班</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>价格</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>退费/重读</strong></p>
+							</th>
+							<th width="80" rowspan="2">
+								<p align="center"><strong>明细</strong></p>
+							</th>
+							<th colspan="8">
+								<p align="center"><strong>教学服务</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th width="60">入学测试</th>
+							<th width="90">专业学科班主任</th>
+							<th width="80">定制个性化学习任务</th>
+							<th width="100">跟进学习进度，查漏补缺</th>
+							<th width="">配套教材资料</th>
+							<th width="70">能力测试</th>
+							<th width="80">疑问解答</th>
+							<th width="80">能力密卷</th>
+						</tr>
+						<tr>
+							<th rowspan="2">至尊高端</th>
+							<td>9800元</td>
+							<td>协议保障：当年未<br/>过，全额退费</td>
+							<td rowspan="2">8天面授+10次<br/>直播+全套网课<br/>+班主任</td>
+							<td rowspan="2">建立学习档案</td>
+							<td rowspan="2">全程辅学、<br/>陪学、督学</td>
+							<td rowspan="2">每日</td>
+							<td rowspan="2">全程</td>
+							<td rowspan="2">《核心考点》<br/>《实战珍题》<br/>《天使笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td rowspan="2">阶段性</td>
+							<td rowspan="2">24小时以内</td>
+							<td rowspan="2">2套</td>
+						</tr>						
+						<tr>
+							<td>4800元</td>
+							<td>协议保障：当年未<br/>过，第二年免费重学</td>
+						</tr>	
+						<tr>
+							<th>定制一对一</th>
+							<td>3800元</td>
+							<td>协议保障：当年未<br/>过，全额退费</td>
+							<td>全套网课+班主任</td>
+							<td>建立学习档案</td>
+							<td>全程辅学、<br/>陪学、督学</td>
+							<td>每日</td>
+							<td>全程</td>
+							<td>《核心考点》<br/>《技能一本通》<br/>《实战珍题》<br/>《学霸笔记》<br/>《考前密卷》<br/>高端班专享</td>
+							<td>阶段性</td>
+							<td>24小时以内</td>
+							<td>2套</td>
+						</tr>	
+						<tr>
+							<th>课程特色</th>
+							<td colspan="11" style="text-align: left;">
+								1．传统授课模式升级，协议保障，全面保障通关<br/>
+								2．精准课程定位，阶段式提升<br/>
+								3．高含金量内部辅导资料，引领最实用考试用书<br/>
+								4．能力班主任全程辅学、陪学、督学，科学指引复习方向<br/>
+								5．能力医考APP、能力直播，专属便携式学习工具，打造全新学习体验<br/>
+								6.秉承诚信、认真、踏实、负责的精神，真正提升学员对生命负责的能力
+							</td>
+						</tr>
+						<tr>
+							<td colspan="12" style="text-align: left;">注：授课时间及课时会根据当年考试变化情况及招生情况随时调整，如有变化，以最终实际为准。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_ysdz">
+					<p class="bigtit">2018执业（助理）医师资格考试辅导-企业定制</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="100" colspan="2">
+								<p align="center"><strong>学习阶段</strong></p>
+							</th>
+							<th width="200">
+								<p align="center"><strong>授课方式</strong></p>
+							</th>
+							<th width="100">
+								<p align="center"><strong>课时</strong></p>
+							</th>
+							<th width="100">
+								<p align="center"><strong>上课时间</strong></p>
+							</th>
+							<th>
+								<p align="center"><strong>学习内容</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th rowspan="5">企业定制</th>
+							<td colspan="2">名师领学</td>
+							<td>网络+直播</td>
+							<td>200+小时</td>
+							<td>1-7月</td>
+							<td>线上全阶段网课夯实基础，名师在线直播专项提升</td>
+						</tr>						
+						<tr>
+							<td rowspan="2">名师领学</td>
+							<td>笔试</td>
+							<td>面授</td>
+							<td>11天</td>
+							<td>3-7月</td>
+							<td>金牌讲师现场面授，封闭式管理，重难点全面强化</td>
+						</tr>	
+						<tr>
+							<td>技能</td>
+							<td>面授</td>
+							<td>3天</td>
+							<td>5月</td>
+							<td>权威名师现场实操，手把手辅导练习</td>
+						</tr>	
+						<tr>
+							<td colspan="2">专属教辅</td>
+							<td>网络+直播+作业+题库+测试</td>
+							<td colspan="2">班主任全程辅学<br/>1-8月</td>
+							<td>班主任领学，专业指导，贴心陪伴，线上线下全方位辅导</td>
+						</tr>
+						<tr>
+							<td colspan="2">冲刺点睛</td>
+							<td>面授</td>
+							<td>6天</td>
+							<td>7-8月</td>
+							<td>6天6夜，直击考点，疯狂抢分</td>
+						</tr>
+						<tr>
+							<th>学费</th>
+							<td colspan="6" style="text-align: left;">学费35000元。技能不过，全额退费；笔试不过，全额退费</td>
+						</tr>
+						<tr>
+							<th>备注</th>
+							<td colspan="6" style="text-align: left;">注：最终授课时间会根据当年考试变化情况及招生情况随时调整。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_yaosdz">
+					<p class="bigtit">2018执业药师资格考试辅导-企业定制</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="130">
+								<p align="center"><strong>学习阶段</strong></p>
+							</th>
+							<th width="200">
+								<p align="center"><strong>授课方式</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>课时</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>上课时间</strong></p>
+							</th>
+							<th>
+								<p align="center"><strong>学习内容</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th rowspan="4">企业定制</th>
+							<td>名师领学</td>
+							<td>网络+直播</td>
+							<td>200+小时</td>
+							<td>1-9月</td>
+							<td>线上全阶段网课夯实基础，名师在线直播专项提升</td>
+						</tr>						
+						<tr>
+							<td>面授集训营</td>
+							<td>面授</td>
+							<td>9天</td>
+							<td>3-9月</td>
+							<td>金牌讲师现场面授，封闭式管理，重难点全面强化</td>
+						</tr>	
+						<tr>
+							<td>专属教辅</td>
+							<td>网络+直播+作业+题库+测试</td>
+							<td colspan="2">班主任全程辅学<br/>1-10月</td>
+							<td>班主任领学，专业指导，贴心陪伴，线上线下全方位辅导</td>
+						</tr>
+						<tr>
+							<td>冲刺点睛</td>
+							<td>面授</td>
+							<td>5天</td>
+							<td>9-10月</td>
+							<td>5天5夜，直击考点，疯狂抢分</td>
+						</tr>
+						<tr>
+							<th>学费</th>
+							<td colspan="5" style="text-align: left;">全科：35000元，两年未过，全额退费<br/>单科：9800元，当年未过，退不过科目学费</td>
+						</tr>
+						<tr>
+							<th>备注</th>
+							<td colspan="5" style="text-align: left;">注：最终授课时间会根据当年考试变化情况及招生情况随时调整。</td>
+						</tr>						
+					</table>
+				</div>	
+				<div class="tab_hsdz">
+					<p class="bigtit">2018护士执业资格考试辅导体系-企业定制</p>
+					<table border="1" cellspacing="0" cellpadding="0" width="1200">
+						<tr>
+							<th width="80">
+								<p align="center"><strong>班型</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>学习阶段</strong></p>
+							</th>
+							<th width="200">
+								<p align="center"><strong>授课方式</strong></p>
+							</th>
+							<th width="200">
+								<p align="center"><strong>上课时间</strong></p>
+							</th>
+							<th width="120">
+								<p align="center"><strong>课时</strong></p>
+							</th>
+							<th>
+								<p align="center"><strong>学习内容</strong></p>
+							</th>
+						</tr>	
+						<tr>
+							<th rowspan="4">企业定制</th>
+							<td>名师领学</td>
+							<td>网络+直播</td>
+							<td>随报随学</td>
+							<td>100+小时</td>
+							<td>线上全阶段网课夯实基础，名师在线直播专项提升</td>
+						</tr>						
+						<tr>
+							<td>面授集训</td>
+							<td>面授</td>
+							<td rowspan="2">3-4月</td>
+							<td>6天</td>
+							<td>权威一线名师坐镇，集中面授，封闭式管理核心考点精讲，结合历年考题，把握命题规律</td>
+						</tr>	
+						<tr>
+							<td>冲刺点睛</td>
+							<td>面授</td>
+							<td>2天</td>
+							<td>核心考点归纳总结、经典考题精解、深度剖析命题规律、提高应试技巧</td>
+						</tr>
+						<tr>
+							<td>专属教辅</td>
+							<td>网络+直播+作业+题库+测试</td>
+							<td colspan="2">班主任全程辅学<br/>12-5月</td>
+							<td>班主任领学，专业指导，贴心陪伴，线上线下全方位辅导</td>
+						</tr>
+						<tr>
+							<th>学费</th>
+							<td colspan="5" style="text-align: left;">9800元，协议保障：考试不过，全额退费。</td>
+						</tr>
+						<tr>
+							<th>备注</th>
+							<td colspan="5" style="text-align: left;">注：最终授课时间会根据当年考试变化情况及招生情况随时调整。</td>
+						</tr>						
+					</table>
+
+					
+				</div>	
+				
+			</div>
+			<div class="sternOPtion">
+				<a href="javascript:;" class="con online_inquire">在线咨询</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="teacher_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">大咖齐聚名师云集 精彩课程抢先试听</p>
+		<em class="tit2"></em>
+	</div>
+	<div class="teacher_contentWrap">
+		<div style="overflow: hidden;">
+			<div class="teacherVideo fl">
+				<iframe height="300" width="530" src="" frameborder=0 allowfullscreen></iframe>
+				<img class="play_img" src="http://pic6.ablesky.cn/content/pic/album/2017/11/16/23595396-2876-4db5-b521-693c84a8f4b8.jpg" alt="" />
+				<img class="play J_startPlay" src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/f2507ac9-0ab2-4947-aff8-06735cfe06c9.png" alt="" />
+			</div>
+			<div class="course-list web-school fr clearfix">
+				<div class="left dispose"></div>
+				<div class="school-list">
+					<ul class="teacher">
+						<li data-special="临床执业/助理医师--实践技能、心血管、呼吸、消化系统" data-teachstyle="把握精准、思路清晰、风趣幽默、方法独特" data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/23595396-2876-4db5-b521-693c84a8f4b8.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169765&courseId=1075043&emKey=11950c6f988d2c34026f1826ab2a0543">
+							<a target="_blank" class="teacher-head"><img src="http://pic4.ablesky.cn/content/pic/album/2017/11/20/30f33f5b-3d8e-49d0-845c-5700c9a55deb.png" />
+							<p>叶扶光</p></a>
+						</li>
+						<li data-special="执业药师--中药学专业知识二，中药学综合知识一技能" data-teachstyle="重点突出，化繁为简，通俗易懂"  data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/e6b5a7e8-3a0e-4781-bc9a-79be1cac1d44.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169852&courseId=1075065&emKey=23e6fc1a4580f7311fbc7fb9757d6ca3">
+							<a target="_blank" class="teacher-head"><img src="http://pic1.ablesky.cn/content/pic/album/2017/11/20/09c93a80-8180-457c-a798-7cc9a2927a66.png" />
+							<p>刘恩钊</p></a>
+						</li>
+						<li data-special="临床执业（助理）医师、护士资格" data-teachstyle="言简意赅、重点突出、直击考点"  data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/668122e8-dec5-40ca-afd1-b0845941a030.png" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=3203340&courseId=1369090&emKey=c9e8a8f9882e96e21a44def8cad5c324">
+							<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/577c6d5d-bc2c-4040-8b6f-8543f144a6e7.png" />
+							<p>刘瑾</p></a>
+						</li>
+						<li data-special="中医执业/助理医师--中药学" data-teachstyle=""  data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/386e5a8d-d608-4374-8816-4912544ec68b.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169847&courseId=1075063&emKey=73de655fd76437bd4c4ecec57cba6c9d">
+							<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/4a658507-d937-4a09-a42e-8a43b8007795.png" />
+							<p>林志健</p></a>
+						</li>
+						<li data-special="执业药师--药学专业知识二  临床执业/助理医师" data-teachstyle="循循善诱、亲近随和、生动详实、实战性强"  data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/8cdcc611-7090-4acc-8a0d-e37e05121922.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=3069686&courseId=1040864&emKey=fd8a566569b463bed7c57bfa478738b3">
+							<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/86716fc8-2934-4df6-a8ed-5d7951a61d40.png" />
+							<p>候应建</p></a>
+						</li>
+						<li data-special="执业药师--药剂学、药物分析、中药药剂学" data-teachstyle="紧扣考纲、条理清晰、方式灵活、善用口诀"  data-photo="http://pic6.ablesky.cn/content/pic/album/2017/11/16/2dcd8980-75a6-42bb-a707-44480f8ad844.jpg" data-vedio="http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2484068&courseId=1040869&emKey=57d6065f87926911d6a9156065704e24">
+							<a target="_blank" class="teacher-head"><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/20/27c10bc7-b1ac-4552-bb98-430676e9d109.png" />
+							<p>白洁</p></a>
+						</li>
+					</ul>
+				</div>
+				<div class="right dispose"></div>
+			</div>
+			<div class="teacherIntro fr">
+				<p class="special">擅长科目：<span>医学硕士，资深讲师</span></p>
+				<p class="teachStyle">授课风格：<span>风格形容，风格形容</span></p>
+			</div>
+		</div>
+		<div class="teacher_btn">
+			<a href="http://bj.nengliyk.com/org/8980_d_279935_0_-1_-1_0_1" target="_blank" style="margin-right: 60px;">试听更多课程</a>
+			<a href="http://bj.nengliyk.com/org/8980_ms_0_1" target="_blank">查看更多名师</a>
+		</div>			
+	</div>
+</div>
+<div class="book_wrap minWidth">
+	<div class="clearfix centerBox">
+		<p class="tit1">精品图书实战宝典 精准定位核心出题点 </p>
+		<em class="tit2"></em>
+	</div>
+	<div class="book_contentWrap">
+			<ul class="options" id="options">
+				<li class="fl show J_first">核心考点系列</li>
+				<li class="fl">实战珍题系列</li>
+				<li class="fl">实践技能系列</li>
+				<li class="fl">同步练习</li>
+				<li class="fl">口袋笔记系列</li>
+				<li class="fl last">考前密卷系列</li>
+			</ul>
+			<div class="coalConter">
+				<div class="book_left"></div>
+				<div class="centre">
+					<ul class="path bookshow">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374539?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/06/6a42e901-0a5d-4784-b3b6-9e80e88ed333.png" />
+								<p>临床核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374632?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/06/89f29d66-f2c5-4e65-a642-0f2cde86732e.png" />
+								<p>中医核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374636?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/06/c1ade0bd-a908-4d3c-8933-6660a0281703.png" />
+								<p>中西医核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1374691?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/06/d189e444-3fb5-438c-b3cf-8395cfd5cfa9.png" />
+								<p>口腔核心考点</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381769?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2016/12/21/fc4e2ddb-61d0-4650-b695-5fbe027efeb1.png" />
+								<p>中药一核心考点</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381770?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2016/12/21/7e4ec08e-e177-4f36-9ccd-310a548b2079.png" />
+								<p>中药二核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381773?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2016/12/21/31787dad-220d-4dc8-8eab-cbb52d9c8baa.png" />
+								<p>中药综合核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381962?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2016/12/21/21822a3a-c6bb-48c0-b536-0dffdc0ae385.png" />
+								<p>法规核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381938?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2016/12/21/c042dc76-6199-4368-b005-ce52b4d42064.png" />
+								<p>西药一核心考点</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381900?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2016/12/21/05c40321-7e1d-4b2c-bf89-29cb787539e2.png" />
+								<p>西药二核心考点</p>
+							</a>							
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1381876?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2016/12/21/1e79692a-c3ee-46c0-9277-b083988590aa.png" />
+								<p>西药综合核心考点</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379822?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/07/bac2ecb3-c2de-47b3-bd9b-623ad1bcc665.png" />
+								<p>护士核心考点</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="path">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379628?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/06/60e0810c-cade-4c01-a689-f9cf9ffe648d.png" />
+								<p>临床实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379756?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/06/d8274bce-25fd-4786-831b-56548d142c20.png" />
+								<p>中医实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379758?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/06/17cea780-9c09-4987-acc0-bd78a35bced0.png" />
+								<p>中西医实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379761?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/06/22db560a-73a4-48fa-8f1d-17b7c4645292.png" />
+								<p>口腔实战珍题</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384995?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/be41d0e2-b0b0-4fd4-8dba-574c06987634.png" />
+								<p>中药一实战珍题</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384997?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/c8a662c7-eb00-4688-9b50-55f0d1908f39.png" />
+								<p>中药二实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384999?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/56ed56cd-9fe3-4071-a410-8a87b0a00a20.png" />
+								<p>中药综合实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385014?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/07/3ed36add-60e6-4741-8e27-e34650848b12.png" />
+								<p>法规实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385000?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/3f002f07-6050-4b24-b79d-62925a7840de.png" />
+								<p>西药一实战珍题</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385010?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/25ad143e-3ac9-4bc5-b669-57d9c67286ce.png" />
+								<p>西药二实战珍题</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385013?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/f4083101-9e1f-40b9-96f1-32d2e130f10e.png" />
+								<p>西药综合实战珍题</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379829?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/07/8503140b-f5e1-4c62-8619-dc4c36de6449.png" />
+								<p>护士实战珍题</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="path">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379558?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/06/385b904b-ce5a-4a11-a74d-0fecbedbc00a.png" />
+								<p>临床实践技能一本通</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379571?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/06/3047d1a8-a271-4ec0-afcc-c0a61ec57f63.png" />
+								<p>中医实践技能一本通</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379580?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/06/a0af0788-07a2-49d5-bab4-4615128103b9.png" />
+								<p>中西医实践技能一本通</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379584?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/06/d189e444-3fb5-438c-b3cf-8395cfd5cfa9.png" />
+								<p>口腔实践技能一本通</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="path">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384987?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/8153bba3-0207-4cca-a4ff-6fd2b7d5d57d.png" />
+								<p>西药综合同步练习</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384984?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/07/5e27e0ca-9907-49f8-b2de-5375df733da1.png" />
+								<p>西药二同步练习</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384980?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/2a6527aa-8b7c-4f01-b3c8-9a4883ab166b.png" />
+								<p>西药一同步练习</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384988?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/3b8a62ca-c092-4754-adfc-735f53d6a8bb.png" />
+								<p>法规同步练习</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384970?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/710134f1-22a3-4b39-8289-5cb790b3941f.png" />
+								<p>中药一同步练习</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384977?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/f3866f21-6a94-4871-aca5-cb986337303b.png" />
+								<p>中药二同步练习</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1384978?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/d0cdc3b9-a19a-4498-a973-632689c6d07b.png" />
+								<p>中药综合同步练习</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="path">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385124?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/de8b4a30-40f9-48de-b5ea-b6a0ae9c6649.png" />
+								<p>中药一王者笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385126?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/81a87b7b-b543-444d-817c-e6b87cadacd6.png" />
+								<p>中药二王者笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385129?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/7da13fab-1fa7-4f72-9735-864cf0707fa8.png" />
+								<p>中药综合王者笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385138?f=org_coursecenter">
+								<img src="http://pic4.ablesky.cn/content/pic/album/2017/11/07/c1345769-b421-4a2c-9bcd-855326a28007.png" />
+								<p>法规王者笔记</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385133?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/07/378fa1b6-2d7b-4ea7-8126-1f8155f0f94c.png" />
+								<p>西药一王者笔记</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385136?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/07/e46003ee-ce7c-4408-bcea-9fefcc69423c.png" />
+								<p>西药二王者笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385137?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/a936346c-4130-439d-8da2-2815912c7ea2.png" />
+								<p>西药综合王者笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379763?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/06/74fb929e-8c94-406f-bf9a-017792627f8e.png" />
+								<p>临床学霸笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379765?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/06/63229bac-7fe8-4145-89f0-52a36421900a.png" />
+								<p>中医学霸笔记</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379766?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/06/bed092ce-a39f-4964-9658-5a27256ef32b.png" />
+								<p>中西医学霸笔记</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379770?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/06/22db560a-73a4-48fa-8f1d-17b7c4645292.png" />
+								<p>口腔学霸笔记</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379836?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/07/ffe7017c-b728-4525-8904-2385e0cd9686.png" />
+								<p>护士天使笔记</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="path">
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379798?f=org_coursecenter">
+								<img src="http://pic6.ablesky.cn/content/pic/album/2017/11/06/5a75d790-dc7c-40fc-91bf-0818b9db44bb.png" />
+								<p>临床考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379807?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/06/d326fb5d-f269-423a-af0d-6cf98ec1d01a.png" />
+								<p>中医考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379813?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/06/1cd8885c-38e8-4892-8ac3-642a62db7a4b.png" />
+								<p>中西医考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379816?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/06/f2f0a632-9dbb-4ef8-ac59-002d1441c5ae.png" />
+								<p>口腔考前密卷</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379816?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/95b31e8e-16bb-4df6-baf1-fb6de41c9492.jpg" />
+								<p>中药一考前密卷</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385110?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/c2149bf9-3c40-4180-b9cd-e78b65fefd69.jpg" />
+								<p>中药二考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385111?f=org_coursecenter">
+								<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/07/82fbd211-56db-4243-a22f-0a66ec20fb18.jpg" />
+								<p>中药综合考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385120?f=org_coursecenter">
+								<img src="http://pic2.ablesky.cn/content/pic/album/2017/11/07/0b38b807-3292-403b-b3d7-0cd084b861df.jpg" />
+								<p>法规考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385117?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/3d489e58-4ec4-4613-9370-6858421fc60b.jpg" />
+								<p>西药一考前密卷</p>
+							</a>
+							<a class="last" target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385114?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/c3cebe44-0719-456d-ae23-502913cc9688.jpg" />
+								<p>西药二考前密卷</p>
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1385113?f=org_coursecenter">
+								<img src="http://pic5.ablesky.cn/content/pic/album/2017/11/07/d3608202-34b1-43ce-abb1-10670118fd94.jpg" />
+								<p>西药综合考前密卷</p>
+							</a>
+							<a target="_blank" href="http://bj.nengliyk.com/kecheng/detail_1379831?f=org_coursecenter">
+								<img src="http://pic1.ablesky.cn/content/pic/album/2017/11/07/ab5677b8-6973-4184-a41a-d0c139c69e6f.png" />
+								<p>护士考前密卷</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="book_right"></div>
+			</div>
+		</div>
+	
+</div>
+<div class="product_wrap minWidth">
+	<div class="products">
+		<div class="clearfix">
+			<p class="tit1">精品图书实战宝典 精准定位核心出题点 </p>
+			<em class="tit2"></em>
+			<p class="tit3">一键下载，把学习管家带在您身边</p>
+		</div>		
+		<div class="product_contentWrap">
+			<div class="one">
+				<dl>
+					<dt><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/21/009aeee9-0d22-4d68-93d6-f79aa6acd1f3.png"/></dt>
+					<dd>
+						<h2>能力直播：</h2>
+						<p>● 多终端直播观看无限，PC客户端，网页端，<br/>手机，APP端，手机WAP端。</p>
+						<p>● 授课形式丰富多样，教学互动精彩纷呈。</p>
+						<p>● 名师坐镇，互动答疑，笔记截图随时保存</p>
+					</dd>
+				</dl>
+				<div class="product_btn">
+					<a href="http://stat.ablesky.com/client/AbleShare/AS_SetUp_3_0_4_8.exe">一键下载能力直播</a>
+				</div>					
+			</div>
+			<div class="two">
+				<dl>
+					<dt><img src="http://pic2.ablesky.cn/content/pic/album/2017/11/21/18599583-37db-4aee-bd92-10d1ffb3f8a6.png"/></dt>
+					<dd>
+						<h2>能力APP：</h2>
+						<p>● 支持离线视频下载。</p>
+						<p>● 视频，在线考试，同步练习，闹钟提醒，群组讨论，<br/>多项功能，实用方便。</p>
+						<p>● 高清课件与网上辅导课同步更新，品质保证。</p>
+					</dd>
+				</dl>
+				<div class="product_btn">
+					<a href="http://stat.ablesky.com/client/android/nlyk/nlyk_V5.3_20170518_sign.apk" style="margin-right: 20px;">安卓APP下载</a>
+					<a href="https://itunes.apple.com/cn/app/neng-li-yi-kao/id1078520555?l=zh&mt=8" target="_blank">苹果APP下载</a>
+				</div>	
+			</div>		
+		</div>
+	</div>
+</div>
+<div class="footer_wrap minWidth">
+	<div class="footer_contentWrap">
+		<p class="hotline">全国热线电话：010-62660276</p>
+		<div class="link">
+			<p><span class="show">友情链接</span><span>关于我们</span></p>
+			<div class="friendLink">
+				<a target="_blank" href="bj.nengliyk.com">北京能力医考</a>
+				<a target="_blank" href="xinglinqiyuan.nengliyk.com">杏林启源</a>
+				<a target="_blank" href="boaoyk.nengliyk.com">搏傲教育</a>
+				<a target="_blank" href="zhuosheng.nengliyk.com">卓升医考</a>
+				<a target="_blank" href="hbsajy.nengliyk.com">尚岸教育</a>
+				<a target="_blank" href="wx.xinxuefu.cn">新学府教育</a>
+				<a target="_blank" href="cyzhongyu.nengliyk.com">朝阳中域教育</a>
+				<a target="_blank" href="www.bailaoshi.net">创新医考培训中心</a>
+			</div>
+			<div class="aboutUs">
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81622">企业历程 </a>
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81625">董事长寄语</a>
+				<a target="_blank" href="http://www.nengliyk.com/org/21139_zx_81725">合作代理</a>
+				<a href="javascript:;" class="online_inquire">在线咨询</a>
+			</div>
+		</div>
+		
+		<div class="qrcode">
+			<img src="http://pic3.ablesky.cn/content/pic/album/2017/11/23/f770d053-42a6-4f85-8d06-6a9c23baad86.png" alt="" />
+			<p>能力医考官方公众号</p>
+		</div>
+	</div>
+	
+</div>
+
+<script src="https://qiyukf.com/script/464d2df4465630688d4cbae8cfed6172.js" defer async></script>
+<script src="../js/jquery.js"></script>
+<script>
+//require(['jquery','common/global'], function($) {
+$(function(){		
+	$('.online_inquire').on('click',function(){
+		if($('#YSF-BTN-HOLDER')){
+			$('#YSF-BTN-HOLDER').trigger('click')
+		}
+	})
+	//banner轮播
+	var init = function(config){
+		var config = config || {};
+		var $publicize = $(config.id);
+		var start = -1;
+		var showImg = $('.showImg-main a',$publicize);
+		var showImgBtn = $('.showImg-pagination a',$publicize);
+		var showImgLi = $('.showImg-main li',$publicize);
+		
+		var total = showImg.length;
+		var timer = null;
+		var autoPlay = function(){			
+			if(start < total-1){
+				start++;				
+			}else if(start == total-1){				
+				start = 0;
+			}
+			showImgLi.hide();
+			showImgBtn.removeClass('currentIndex');
+			showImgLi.eq(start).fadeIn('slow');
+			showImgBtn.eq(start).addClass('currentIndex');
+			
+		}
+		if(total > 1){
+			autoPlay();
+			timer = setInterval(autoPlay,8000);
+			showImg.each(function(index){
+				$(this).on('mouseover',function(){
+					clearInterval(timer);
+					
+				}).on('mouseout',function(){
+					timer = setInterval(autoPlay,8000);
+					
+				});
+			});
+			showImgBtn.each(function(index){
+				$(this).on('mouseover',function(){
+					clearInterval(timer);
+					showImgLi.hide();
+					showImgBtn.removeClass('currentIndex');
+					if((index+1) == start){
+						showImgLi.eq(start-1).fadeIn('slow');
+						showImgBtn.eq(start-1).addClass('currentIndex');
+						
+						
+						start = start-1;
+					}else{
+						showImgLi.eq(index).fadeIn('slow');
+						showImgBtn.eq(index).addClass('currentIndex');
+						start = index;
+					}
+				}).on('mouseout',function(){
+					timer = setInterval(autoPlay,8000);
+				});
+			});
+		}
+		if(total == 1){
+			$('.showImg-pagination',$publicize).hide();
+		}
+		
+	};
+	init({id:'#J_showImg'});
+	
+	//科学辅导阶段提升 表格切换start
+	var flag = false;
+//	$('#courseTab li span').click(function() {
+//		flag = true;
+//		index = $(this).attr('data-id') - 1;
+//		$(this).parent().addClass('show').siblings().removeClass('show');
+//		$('.tbgather>div').eq(index).addClass('bigshow').siblings().removeClass('bigshow');
+//	});
+	
+	$('#courseTab li>ul>li span').click(function() {
+		$(this).parent().parent().css('display', 'none');
+		flag = true;
+		index = $(this).attr('data-id') - 1;
+		$(this).parent().parent().parent().addClass('show').siblings().removeClass('show');
+		$('.tbgather>div').eq(index).addClass('bigshow').siblings().removeClass('bigshow');
+	});
+	$('#courseTab>li>span').hover(function() {
+		$(this).next('ul').show();
+		$(this).parent().siblings().find('ul').hide();
+	});
+	$('#courseTab>li').mouseleave(function() {
+		$(this).find('ul').hide();
+	});
+	$('.tab>li>ul').mouseleave(function() {
+		$(this).css('display', 'none');
+	});
+	//表格切换end
+	
+	function teacher_repeat(){
+		//老师轮播start
+		var repeat,
+			len = $('.teacher li').length,
+			marginw = parseInt($('.teacher li:first').css('marginLeft')),
+			movew = $('.teacher li:first').outerWidth() + marginw,
+			liw = $('.teacher li:first').outerWidth(),
+			ulw = liw * len;
+		$('.teacher').css({
+			'width': ulw + 'px'
+		});
+//		$('.teacher').find('li').eq(3).addClass('on');
+
+		function focusPicture() {
+			var w = $('.teacher li:first').width()+8,
+				len = $('.teacher li').length;
+			$('.teacher').css({
+				'width': w * len + 'px'
+			})
+			$('.school-list').hover(function() {
+				clearInterval(repeat)
+			}, function() {
+				repeat = setInterval(function() {
+					$('.teacher').stop().animate({
+						'marginLeft': -w
+					}, 1000, function() {
+//						$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+						$('.teacher li:first').appendTo($('.teacher'));
+						$('.teacher').css({
+							'margin-left': 0
+						})
+					})
+				}, 3000)
+			}).trigger('mouseleave')
+			$('.dispose').mouseover(function() {
+				clearInterval(repeat);
+			})
+			$('.dispose').mouseout(function() {
+				repeat = setInterval(function() {
+					$('.teacher').stop().animate({
+						'marginLeft': -w
+					}, 1000, function() {
+//						$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+						$('.teacher li:first').appendTo($('.teacher'));
+						$('.teacher').css({
+							'margin-left': 0
+						})
+					})
+				}, 3000)
+			})
+		}
+		focusPicture();
+
+		function nextPic() {
+			$('.teacher li:first').stop().animate({
+				'marginLeft': -movew
+			}, 1000, function() {
+				$(this).css({
+					'marginLeft': marginw
+				}).appendTo($('.teacher'));
+			})
+		}
+
+		function prevPic() {
+			$('.teacher li:last').prependTo($('.teacher'));
+			$('.teacher li:first').css({
+				'marginLeft': -movew
+			}).stop().animate({
+				'marginLeft': marginw
+			}, 1000);
+//			$('.teacher .on').prev('li').addClass('on').siblings().removeClass('on');
+		}
+		$('.left').click(function() {
+			if (!$('.teacher li:first').is(':animated')) {
+				prevPic()
+			}
+		})
+		$('.right').click(function() {
+			if (!$('.teacher li:first').is(':animated')) {
+				nextPic();
+//				$('.teacher .on').next('li').addClass('on').siblings().removeClass('on');
+			}
+		})
+		//老师轮播end
+		//老师的点击事件start
+		var paly_vedio = "http://www.ablesky.com/orgContentUrlAccess.do?action=getContentUrlEmbeddedPage&id=2169765&courseId=1075043&emKey=11950c6f988d2c34026f1826ab2a0543";
+		$('.teacher li').on('click',function(){
+			var _this = $(this),
+			    vedio = _this.data('vedio'),
+			    vedio_photo = _this.data('photo'),
+			    special = _this.data('special'),
+			    teachStyle = _this.data('teachstyle');
+			paly_vedio = vedio;
+		    $('.teacherVideo .play_img').attr('src',vedio_photo);
+			$('.J_startPlay').css('z-index','10');
+			$('.teacherVideo iframe').attr('src',"");
+			$('.teacherIntro .special span').html(special);
+			$('.teacherIntro .teachStyle span').html(teachStyle);
+			
+		})
+		$('.J_startPlay').on('click',function(){
+			var _this = $(this);
+			_this.css('z-index','-1');
+			$('.teacherVideo iframe').attr('src',paly_vedio);
+		});
+		//老师的点击事件end
+		}
+		teacher_repeat();
+		
+		
+		//
+		//精品书库
+		$('#options li').click(function() {
+			var index = $('#options li').index(this);
+			$(this).addClass('show').siblings().removeClass('show');
+			$('.centre ul').eq(index).addClass('bookshow').siblings().removeClass('bookshow');
+			book_repeat();
+		})
+		$('#options .J_first').trigger('click')
+		function book_repeat(){
+		var repeat,
+		len = $('.bookshow li').length,
+		marginw = parseInt($('.bookshow li:first').css('marginLeft')),
+		movew = $('.bookshow li:first').outerWidth() + marginw,
+		liw = $('.bookshow li:first').outerWidth() + 10,
+		ulw = liw * len;
+		$('.bookshow').css({
+			'width': ulw + 'px'
+		});
+
+		function nextPic() {
+			$('.bookshow li:first').stop().animate({
+				'marginLeft': -movew
+			}, 1000, function() {
+				$(this).css({
+					'marginLeft': marginw
+				}).appendTo($('.bookshow'));
+			})
+		}
+
+		function prevPic() {
+			$('.bookshow li:last').prependTo($('.bookshow'));
+			$('.bookshow li:first').css({
+				'marginLeft': -movew
+			}).stop().animate({
+				'marginLeft': marginw
+			}, 1000);
+		}
+		$('.book_left').click(function() {
+			if(!$('.bookshow li:first').is(':animated')) {
+				prevPic()
+			}
+		})
+		$('.book_right').click(function() {
+			if(!$('.bookshow li:first').is(':animated')) {
+				nextPic();
+			}
+		})
+	}
+		
+		//友情链接切换
+		$('.footer_contentWrap .link>p>span').on('click',function(){
+			var _this = $(this);
+			_this.addClass('show').siblings().removeClass('show');
+			var index = $('.footer_contentWrap .link>p>span').index(this);
+			$('.footer_contentWrap .link div').eq(index).css('display','block').siblings('div').css('display','none');
+		})
+		
+		$.ajaxSetup({
+		    jsonp: 'jsonp',
+		    cache: false,
+		    jsonpCallback: function() {
+			    return 'ablesky_' + jQuery.now();
+		    }
+		});
+		
+		$.ajax({
+//          url: 'organizationPost.do?action=getOrganizationPostByHelpCenterTitleIds&orgId=21139&titleIds=21655,21654,21141',
+			url:'http://www.beta.ablesky.com/organizationPost.do?action=getOrganizationPostByHelpCenterTitleIds&orgId=8980&titleIds=15850,15856,15857',
+            dataType: 'jsonp',
+            success: function (data) {
+                if (data.success) {
+                	var htmlstr = '';
+                    var divList = data.result.list;
+                    for(var i = 0;i<divList.length;i++){
+                    	var list = divList[i].listDto.list;
+                    	var len = list.length>5 ? 5 : list.length;
+                    	var pstr = '';
+                    	for(var j=1;j<len;j++){
+                    		pstr += '<p><a target="_blank" href="org/2249_zx_'+list[j].id+'">'+list[j].titleName+'</a></p>'
+                    	}
+                    	htmlstr += '<div '+(i==2?'style="margin-right:0;"':'')+'>'+
+										'<h2><a target="_blank" href="org/2249_zx_'+divList[i].titleId+'_2_1">'+divList[i].titleName+'</a></h2>'+
+										'<p class="first">'+
+										'	<img src="'+list[0].photoUrl+'"/>'+
+										'	<span><a target="_blank" href="org/2249_zx_'+list[0].id+'">'+list[0].titleName+'</a></span>'+
+										'	<a target="_blank" href="org/2249_zx_'+list[0].id+'">查看详情></a>'+
+										'</p>'+
+										pstr+
+									'</div>';
+                    }
+                    $('.information').html(htmlstr)
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+});
+</script>

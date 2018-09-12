@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>font</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.big{
+			width: 100%;
+			height: 500px;
+			background: pink;
+		}
+		.big input{
+			border: none;
+    		background: transparent;
+		    outline: none;
+		}
+		textarea{
+		    -webkit-appearance: none;
+		     resize: none; 
+		    border: none;
+		    background: no-repeat;
+		    outline: none;
+		}
+		.tab{
+			display: flex;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+		.tab>div{
+			flex:1;
+			background: orange;
+			text-align: center;
+			position: relative;
+		}
+		.tab>div>ul{
+			background: pink;
+			list-style: none;
+			position: absolute;
+			width: 100%;
+			bottom: 20px;
+			left: 0;
+			display: none;
+		}
+		.tab>div>ul>li{
+			/*cursor: pointer;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="big">
+
+	</div>
+	<div class="tab">
+		<div>
+			<p>横文本</p>
+			<ul>
+				<li class="horizon">横文本</li>
+				<li class="vertical">竖文本</li>
+			</ul>
+		</div>
+		<div>
+			<p>红色</p>
+			<ul class="colorF" style="background:#ffeb3b">
+				<li color="yellow">黄色</li>
+				<li color="red">红色</li>
+				<li color="orange">橙色</li>
+				<li color="purple">紫色</li>
+				<li color="white">白色</li>
+			</ul>
+		</div>
+		<div>
+			<p>字体</p>
+			<ul class="fontF" style="background:green;">
+				<li>方正启笛简体</li>
+				<li>北方行书</li>
+				<li>方正启笛简体</li>
+				<li>汉仪行楷繁</li>
+				<li>方正清...悦宋简</li>
+				<li>汉仪行楷简</li>
+				<li>汉仪颜楷繁</li>
+				<li>方正吕建德</li>
+				<li>宋体</li>
+				<li>黑体</li>
+			</ul>
+		</div>
+		<div>
+			<p>大小</p>
+			<ul class="fontsF" style="background:#ffeb3b">
+				<li fontS="12">12px</li>
+				<li fontS="14">14px</li>
+				<li fontS="16">16px</li>
+				<li fontS="18">18px</li>
+				<li fontS="20">20px</li>
+				<li fontS="22">22px</li>
+				<li fontS="23">24px</li>
+				<li fontS="25">25px</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){			
+
+			$('.vertical').on('click',function(){
+				$('.big').append($('<textarea name="" cols="1" rows="1"></textarea>'));
+				
+				add('vertical')
+				$('textarea').last().trigger('focus')
+			})
+			$('.horizon').on('click',function(){
+				$('.big').append($('<input name="" type="text" />'));
+				
+				add('horizon')
+				$('input').last().trigger('focus');
+			})
+			function add(str){
+				if(str == 'vertical'){
+					$('textarea').last().on('keyup',function(){
+						var _this = $(this);
+						var v = $(this).val();
+						_this.attr('rows',v.length)
+					})
+				}else if(str == 'horizon'){
+					$('input').last().on('keyup',function(){
+						var _this = $(this);
+						var v = $(this).val();
+						// _this.attr('cols',v.length+1);
+						var fw = parseFloat(_this.css('font-size'))
+						_this.css('width',v.length*fw+1);
+					})
+				}
+				$('textarea').on('focus',function(){
+					$(this).addClass('fcus').siblings().removeClass('fcus');
+				})
+				// $('textarea').on('blur',function(){
+				// 	$(this).removeClass('fcus');
+				// })
+				$('input').on('focus',function(){
+					$(this).addClass('fcus').siblings().removeClass('fcus');
+				})
+				// $('input').on('blur',function(){
+				// 	$(this).removeClass('fcus');
+				// })
+			}
+
+			$('.fontF li').on('click',function(){
+				var v = $(this).text();
+				$('textarea.fcus').css('font-family',v);
+				$('input.fcus').css('font-family',v);
+			})
+			$('.colorF li').on('click',function(){
+				var v = $(this).attr("color");
+				$('textarea.fcus').css('color',v);
+				$('input.fcus').css('color',v);
+			})
+			$('.fontsF li').on('click',function(){
+				var v = parseFloat($(this).attr("fontS"));
+				$('textarea.fcus').css({'font-size':v});
+				var va = $('input.fcus').val()?$('input.fcus').val().length:1;
+				$('input.fcus').css({'font-size':v,'width':v*va});
+			})
+			
+
+			$('.tab>div>p').on('click',function(){
+				
+				if(!$(this).hasClass('ff')){
+					$(this).addClass('ff').parent().siblings().find('p').removeClass('ff');
+					$(this).siblings('ul').css('display','block').parent().siblings().find('ul').css('display','none');
+				}else{
+					$(this).removeClass('ff');
+					$(this).siblings('ul').css('display','none')
+				}
+			})
+
+		})
+	</script>
+</body>
+</html>

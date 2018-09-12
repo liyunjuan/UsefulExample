@@ -1,0 +1,201 @@
+/* 轮播图开始 */
+		.carousel {
+			min-width: 1200px;
+			height: 345px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.screen1 {
+			width: 1920px;
+			height: 345px;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+            left: 50%;
+            margin-left: -960px;
+		}
+		.screen1 li {
+			width: 1920px;
+			height: 345px;
+			overflow: hidden;
+			float: left;
+		}
+		.screen1 li a{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.screen1 li img{
+			width: 100%;
+			height: 100%;
+		}
+		.screen1 ul {
+			position: absolute;
+			left: 0;
+			top: 0px;
+			width: 5760px;
+		}
+		.carousel ol {
+			position: absolute;
+			left: 50%;
+			margin-left: -25px;
+			bottom: 10px;
+			line-height: 20px;
+			text-align: center;
+		}
+		.carousel ol li {
+			float: left;
+			width: 10px;
+			height: 10px;
+			background: #d3d3d3;
+			margin-left: 10px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.carousel ol li.current1 {
+			background: #484848;
+		}
+       #arr {
+        display: none; 
+        width: 1180px;
+        height: 52px;
+        position: absolute;
+		left: 50%;
+		margin-left: -590px;
+		top: 50%;
+		margin-top: -26px;
+    	}
+
+        #arr span {
+            width: 40px;
+            height: 52px;
+            display: block;
+            float: left;
+            background: url('http://pic2.ablesky.cn/content/pic/album/2017/05/31/1bc36d9d-0077-4a07-8279-45c88b6afaa6.png') no-repeat;
+            cursor: pointer;
+        }
+
+        #arr #right {
+	      	background: url('http://pic2.ablesky.cn/content/pic/album/2017/05/31/7ab9d9d2-594f-4c3e-9fdf-07dae314e06c.png') no-repeat;
+            float: right;
+       }
+	/* 轮播图结束 */
+	/************************************************************************************/
+	
+	
+<!-- 轮播图 -->
+		<div class="carousel" id='book_box'>
+			<div class="screen1">
+				<ul id="ul">
+					<li><a href="http://p.qiao.baidu.com/im/index?siteid=5374193&ucid=6855585&cp=&cr=&cw=" target="_blank"><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/f627ce51-ff96-4dba-b5ae-2265319bacf8.png" /></a></li>
+					<li><a href=""><img src="http://pic4.ablesky.cn/content/pic/album/2017/06/02/01432b22-2453-413b-98c6-469326e9dc53.png" /></a></li>				
+				</ul>
+				<ol id="ol"></ol>
+			</div>
+			<div id="arr"><span id="left"></span><span id="right"></span></div>
+		</div>
+		<!-- 轮播图结束-->
+			
+			
+		function book_lunbo(){
+			/*轮播图*/
+			var timer = null;
+			var book_box = document.getElementById("book_box");
+			var screen1 = book_box.children[0];
+			var ul = document.getElementById("ul");
+			var ulLis = ul.children;
+			var ol = document.getElementById("ol");
+			var arr = document.getElementById("arr");
+			var left = document.getElementById("left");
+			var right = document.getElementById("right");
+			var imgWidth = 1920;
+			for (var i = 0; i < ulLis.length; i++) {
+				var li = document.createElement("li");
+				ol.appendChild(li);
+			}
+			var olLis = ol.children;
+			olLis[0].className = "current1";
+			var firstImg = ulLis[0].cloneNode(true);
+			ul.appendChild(firstImg);
+			for (var j = 0; j < olLis.length; j++) {
+				olLis[j].index = j;
+				olLis[j].onmouseover = function () {
+				for (var k = 0; k < olLis.length; k++) {
+					olLis[k].className = "";
+				}
+				this.className = "current1";
+				var target = -this.index * imgWidth;
+				animate(ul, target);
+				pic = square = this.index;
+				};
+			}
+			book_box.onmouseover = function () {
+				arr.style.display = "block";
+				clearInterval(timer);
+			};
+			book_box.onmouseout = function () {
+				arr.style.display = "none";
+				timer = setInterval(playNext, 6000);
+			};
+			var pic = 0;
+			var square = 0;
+			right.onclick = function () {
+				if (pic === ulLis.length - 1) {
+					ul.style.left = 0;
+					pic = 0;
+				}
+				pic++;
+				var target = -pic * imgWidth;
+				animate(ul, target);
+				if (square < olLis.length - 1) {
+					square++;
+				} else {
+					square = 0;
+				}
+				for (var i = 0; i < olLis.length; i++) {
+					olLis[i].className = "";
+				}
+				olLis[square].className = "current1";
+			};
+			left.onclick = function () {
+				if (pic === 0) {
+						ul.style.left = -(ulLis.length - 1) * imgWidth + "px";
+						pic = ulLis.length - 1;
+					}
+					pic--;
+					var target = -pic * imgWidth;
+					animate(ul, target);
+					if (square > 0) {
+						square--;
+					} else {
+						square = olLis.length - 1;
+					}
+					for (var i = 0; i < olLis.length; i++) {
+						olLis[i].className = "";
+					}
+					olLis[square].className = "current1";
+				};
+			timer = setInterval(playNext, 6000);
+			function playNext() {
+				right.onclick();
+			}
+			function animate(obj, target) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function () {
+					var leader = obj.offsetLeft;
+					var step = 80;
+					step = leader < target ? step : -step;
+					if (Math.abs(target - leader) >= Math.abs(step)) {
+					leader = leader + step;
+					obj.style.left = leader + "px";
+					} else {
+					obj.style.left = target + "px";
+					clearInterval(obj.timer);
+					}
+				}, 15);
+			}
+			/*轮播图结束*/
+		}
+		book_lunbo();
+		
