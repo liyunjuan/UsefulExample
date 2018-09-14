@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var p = Promise.reject('Oopsdfadfsf').defer();
+
+		p.then(
+			function fulfilled(){
+				//不会到这
+			},
+			function rejected(err){
+				console.log(err);
+			}
+		);
+
+		var p1 = Promise.resolve(42);
+		p1.then(
+			function fulfilled(msg){
+				console.log(msg.toLowerCase());
+			},
+			function rejected(err){
+				// 不会到这，因为resolve决议是成功的，在fulfilled里面执行
+			}
+		)
+		// .catch(function(e){
+		// 	console.log(e);
+		// })
+		// 另一种方式
+		// .done(null,function(e){
+		// 	console.log(e)
+		// })
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../lib/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<script>
+	function request(url){
+		$.ajax({
+			url:url,
+			type:'get',
+			dataType:'jsonp',
+			jsonp:'jsonp',
+			// contentType:'text/html',
+			success:function(res){
+				console.log(res)
+			},
+			error:function(res){
+				console.log(res)
+			},
+			completed:function(){
+				console.log(555)
+			}
+		})
+	}
+	request('http://www.ablesky.com/s//indexSearch.do?action=searchCourse');
+	var p2 = request('http://localhost:8888/data/2.json');
+
+	// Promise.race([p1,p2])
+	// 	.then(function(msg){
+	// 		// return request('http://localhost:8888/data/3.json');
+	// 	})
+		// .then(function(msg){
+		// 	console.log(msg);
+		// })
+</script>
+</body>
+</html>
