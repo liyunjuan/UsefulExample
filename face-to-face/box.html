@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#big{
+				width: 100px;
+				padding: 20px;
+				border: 30px solid pink;
+				margin: 50px;
+			}
+			#small{
+				width: 100%;
+				height: 20px;
+				background: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="big">
+			<div id="small"></div>
+		</div>
+		
+		<script type="text/javascript">
+			var big = document.getElementById('big'),
+				small = document.getElementById('small');
+				
+			console.log(big.currentStyle.width)
+			console.log(window.getComputedStyle(big).width)
+				
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,3491 @@
+<link rel="stylesheet"  type="text/css" href="https://css.ablesky.cn/stata/css_optimize/wap/nengli/swiper_5e6021c8.css">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+</head>
+<style>
+
+/* global.css */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,form, fieldset, legend, button, input, textarea,th, td{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+@media screen and (-webkit-min-device-pixel-ratio:1),screen and (min-device-pixel-ratio:1){
+	html{font-size: 12px}
+}
+@media screen and (-webkit-min-device-pixel-ratio:2),screen and (min-device-pixel-ratio:2){
+	html{font-size: 12px}
+}
+@media screen and (-webkit-min-device-pixel-ratio:3),screen and (min-device-pixel-ratio:3){
+	html{font-size: 12px}
+}
+
+@media screen and (min-width:320px) and (max-width:340px){html{font-size:10px}}
+@media screen and (min-width:341px) and (max-width:370px){html{font-size:11px}}
+@media screen and (min-width:371px) and (max-width:400px){html{font-size:12px}}
+@media screen and (min-width:401px) and (max-width:430px){html{font-size:13px}}
+@media screen and (min-width:431px) and (max-width:480px){html{font-size:14px}}
+@media screen and (min-width:481px) and (max-width:570px){html{font-size:15px}}
+@media screen and (min-width:640px) {html{font-size:16px}}
+
+body{
+    /* max-width: 50rem; */
+    margin: 0 auto;
+	background-color: #f5f5f5;
+}
+ul{
+    list-style: none;
+}
+em{
+    font-style: normal;
+}
+a, input{
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    text-decoration: none;
+    outline: none;
+}
+a:hover{
+    opacity: 0.8;
+}
+a.blue{
+	color: #4993fa;
+}
+
+/*font icon 201703*/
+[class^="u-icon-"], [class*=" u-icon-"]{
+    font-family: ablesky;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+}
+
+.c-mod{
+	margin-bottom: 12px;
+	background-color: #fff;
+}
+
+.m-head{
+    display: -webkit-box;
+    display: flex;
+    height: 84px;
+    line-height: 24rem;
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+}
+.m-head .title{
+    -webkit-box-flex: 1;
+    font-size:1.43rem;
+    flex: 1;
+    height:3.5rem;
+    line-height:3.5rem;
+    text-align: center;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+a.login-io{
+	color:#b3b3b3;
+	height:3.5rem;
+	line-height:3.5rem;
+	margin-right:1.25rem;
+	font-size:1rem;
+}
+.m-head .title.margin-r{
+	margin-right:4rem;
+}
+.m-head .btn{
+	display: block;
+	padding:0  1.25rem;
+	height:3.5rem;
+	line-height:3.5rem;
+	font-size:1.5rem;
+}
+.m-head .search-wrap{
+	 -webkit-box-flex: 1;
+    flex: 1;
+    padding: .5rem 0;
+    text-align: center;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-right:1.25rem;
+	margin-left:-.5rem;
+}
+.m-head .search-input{
+	display:block;
+	width:100%;
+	height:2.5rem;
+	line-height:2.5rem;
+	border-radius:1.25rem;
+	background:#f2f3f6;
+	border:none;
+	color:#c4c7d1;
+	text-indent:1.25rem;
+}
+.m-head .opt{
+	position: relative;
+	width: auto;
+	
+}
+.m-head .opt > ul{
+	position: absolute;
+	top: 3.5rem;
+	/* right: 0.5rem; */
+	z-index: 1000;
+	display: none;
+	width: 8rem;
+	padding: 0.5rem 0;
+	background-color: rgba(35, 181, 235, 0.9);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+	overflow: hidden;
+	color: #fff;
+	border-radius: 0.5rem;
+}
+.m-head .opt > ul.show{
+	display: block;
+}
+.m-head .opt > ul.center{
+	text-align: center;
+}
+.m-head .opt > ul li{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.m-head .opt > ul i{
+	margin-right: 0.4rem;
+	font-size: 1.5rem;
+    vertical-align: sub;
+}
+.m-head .opt > ul a{
+	display: block;
+	padding: 0.5rem 1rem;
+	color: inherit;
+}
+.m-head .opt > ul li:last-child{
+	border-bottom: none;
+}
+.m-head .opt.usr > ul{
+	right: 0.5rem;
+}
+.m-head .opt.opts > ul{
+	left: 0.5rem;
+	text-align: center;
+}
+.m-nav-wrap{
+	top:3.5rem;
+	left:0;
+	background:#fff;
+	z-index:99;
+}
+.m-nav-wrap.nav-sticky{
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: sticky;
+
+}
+.m-nav-wrap.nav-fixed{
+	position:fixed;
+	width:100%;
+}
+.m-nav{
+	display: -webkit-box;
+	display: flex;
+	color:#fff;
+}
+.m-nav .nav-item{
+	-webkit-box-flex: 1;
+	flex: 1;
+}
+.m-nav .nav-item .nav-link{
+    display: block;
+    line-height: 3.041rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 1.25rem;
+}
+.m-nav .nav-item .nav-link.active{
+    color: #ffebb6;
+    border-bottom: 2px solid #ffebb6;
+  
+}
+
+.m-list-bar{
+    display: -webkit-box;
+    display: flex;
+    border-top: #e3e3e3 1px solid;
+    border-bottom: #e3e3e3 1px solid;
+    color: #5c5c5c;
+    background: #fff;
+}
+.m-list-bar li{
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.m-list-bar li.selected{
+    color: #4993fa;
+    border-bottom: #4993fa 3px solid;
+}
+
+.m-search-bar{
+    display: -webkit-box;
+    display: flex;
+    padding: 0.5rem;
+}
+.m-search-bar .s{
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: flex;
+    line-height: 2.5rem;
+    margin-right: 0.5rem;
+    border: #e8e8e8 1px solid;
+    background: #fff;
+    border-radius: 0.4rem;
+}
+.m-search-bar .s::before{
+    display: block;
+    width: 2rem;
+    text-align: center;
+    color: #ccc;
+}
+.m-search-bar .key{
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    height: 1.5rem;
+    margin-top: 0.4rem;
+    line-height: normal;
+    border: none;
+}
+.m-search-bar .key::-webkit-input-placeholder{
+    color: #ccc;
+}
+.m-search-bar .del{
+    display: none;
+    width: 2rem;
+    text-align: center;
+    color: #ccc;
+}
+.m-search-bar .del.show{
+	display: block;
+}
+.m-search-bar .btn{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    background: #d0d0d0;
+    color: #fff;
+    border-radius: 0.4rem;
+}
+.m-search-bar .btn.active{
+	background: #23b5eb;
+}
+
+/* S add by web_zw @time 150728 */
+.clearfix:after {
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    content: "."
+}
+.hide{display: none}
+/* E add by web_zw @time 150728 */
+
+.m-body-mask{
+	overflow: hidden;
+}
+.m-mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.1);
+	
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+.m-loading{
+	width: 10rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	color: #555;
+	background-color: #efefef;
+	border-radius: 0.5rem;
+	box-shadow: rgba(0,0,0,0.2) 0.2rem 0.2rem 0.5rem;
+	overflow: hidden;
+}
+.m-loading .text{
+	
+}
+.m-loading .cancel{
+	display: block;
+    float: right;
+    border-left: #ccc 1px solid;
+    padding: 0 0.5rem;
+    background-color: #23b5eb;
+    color: #fff;
+}
+
+.m-quick-bar{
+	position: fixed;
+	z-index: 900;
+	bottom: 3.5rem;
+	right: -3.5rem;
+	-webkit-transition: all 0.2s ease-in;
+}
+.m-quick-bar.show{
+	right: 0.5rem;
+}
+.m-quick-bar span{
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 0.5rem;
+	color: #ddd;
+}
+.m-quick-bar .top::before{
+	content: 'TOP';
+}
+.m-no-info{
+	line-height: 4rem;
+	text-align: center;
+	color: #555;
+}
+.m-foot{
+	/* position: absolute;
+	bottom: 0;
+	width: 100%; */
+	line-height:1.5rem;
+	text-align:center;
+}
+.switch-platform-box{
+	line-height:2rem;
+}
+.switch-platform-box a{
+	color:#adadad;
+	font-size:1rem;
+}
+.m-foot #toPC{
+	width:100%;
+	height:3.4rem;
+	line-height:3.4rem;
+	text-align:center;
+	font-size:.92rem;
+ 	background:#f2f4f7; 
+}
+.m-foot #toPC a{
+	color:#4993fa;
+}
+/*m-data-loading*/
+.m-data-loading{
+	text-align: center;
+	line-height:2rem;
+	vertical-align: middle;
+	display: none;
+}
+.m-data-loading.loading{
+	display: block;
+}
+.m-data-loading .pic{
+	
+}
+.m-data-loading .msg{
+	line-height: 2rem;
+	font-size:.75rem;
+	color:#555;
+	margin-left:1rem;
+}
+/*data-load*/
+#m-data-load{
+	
+}
+#m-data-load .data-load-item{
+	text-align: center;
+	line-height: 2rem;
+	color:#8c8c8c;
+	font-size:.875rem;
+	display:none;
+}
+#m-data-load.error .data-load-error,
+#m-data-load.loading .data-load-loading,
+#m-data-load.noMore .data-load-noMore,
+#m-data-load.empty .data-load-empty{
+	display:block;
+}
+
+/*暂无信息*/
+.none-info{
+	display: none;
+	padding: 1rem 0;   
+	text-align: center;
+	color: #999;
+}
+.none-info.evalute{
+    padding: 4.33333333rem 0;
+}
+.none-info.show{
+	display: block;
+}
+
+.member-tip{
+	display:block;
+	position:absolute;
+	height:1.5rem;
+	line-height:1.5rem;
+	width:4.5rem;
+	top:0;
+	left:0;
+    font-style: normal;
+    text-align:center;
+	background-color:#f65757;
+	background: -webkit-linear-gradient(-45deg,#e63941 0,#f35a46 100%);
+	border-radius: 3px;
+	color:#fff;
+	font-size:1rem;
+	z-index:2;
+}
+
+.member-tip:before{
+	content:'\4f1a\5458\514d\8d39';
+}
+
+
+/* global.css  end */
+
+.as-wap{
+	font-size:1rem;
+}
+.as-banner{
+	width:100%;
+	height: 15.625rem;
+    min-height: 15.625rem;
+}
+
+.m-nav-wrap{
+    top:6rem;
+    width: 100%;
+    background-color: #c72a2a;
+    margin-top: -0.1rem;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal>.swiper-pagination-bullets{
+    left: 80%;
+    bottom: 10px;
+    width: 100%;
+}
+
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+    display:block;
+    float: left;
+    width: 0.42rem;
+    height: 0.42rem;
+    opacity: 1;
+    border-radius: 0.21rem;
+    background: #fff;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet-active{
+    width: 1.08rem;
+     background: #fff;
+}
+
+.u-mod-topic{
+	font-size:1.25rem;
+	color:#262626;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	padding: 1rem 0 1.25rem 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.u-mod-topic i{
+    display: inline-block;
+    width: 7.5rem;
+    height: 0.15rem;
+    vertical-align: middle;
+    background: #ff7376;
+}
+.u-mod-topic span{
+	display:inline-block;
+	max-width:11rem;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    vertical-align: middle;
+    margin: 0 0.8rem;
+}
+a.getMore{
+    display: block;
+    margin: 1.25rem auto 1.5rem;
+    width: 10rem;
+    height: 2.9166666666666665rem;
+    text-align: center;
+    line-height: 2.9166666666666665rem;
+    border-radius: 1.4583333333333333rem;
+    font-size: 1rem;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.moudule-content{
+    height: 11.42rem;
+    padding: 1.67rem 1.25rem 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.moudule-content::-webkit-scrollbar {
+        display: none;
+    }
+.moudule-content dl{
+    display: inline-block;
+    width: 5.416666666666667rem;
+    height: 10.67rem;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    line-height: 3.54rem;
+    margin-right: 3.375rem;
+/*     margin-top: 1.67rem; */
+}
+.view-wrapper{
+	overflow: hidden;
+}
+.moudule-content dl dt{
+    height: 5.416666666666667rem;
+    margin-top: 1.75rem;
+}
+.moudule-content dl dt:last-child a{
+	display: block;
+    width: 5.42rem;
+    height: 5.42rem;
+}
+.moudule-content dl dt img{
+    display: block;
+    margin: 0 auto;
+    width: 5.42rem;
+    height: 5.42rem;
+    border-radius: 50%;
+}
+.moudule-content dl dd{
+    height: 5.4rem;
+    overflow: hidden;
+}
+.moudule-content dl dd .name{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4c4c4c;
+    margin: 0.5rem 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.moudule-content dl dd .name a{
+    color: #4c4c4c;
+}
+.d_right{
+    text-align: center;
+    margin: 1rem 0 1.5rem;
+}
+.d_right a{
+    display: inline-block;
+    width: 5.833333333333333rem;
+    height: 1.9166666666666667rem;
+    text-align: center;
+    line-height: 1.9166666666666667;
+    color: #ff6d6d;
+    border: 1px solid #fe6767;
+    border-radius: 0.9583333333333334rem;
+}
+.d_right a.active{
+    color: #fff;
+    background: #fe6767;
+}
+.d_right a:hover{
+    opacity: 1;
+}
+.d_right a:first-of-type{
+    margin-right: 1.6666666666666667rem;
+}
+.notice-content{
+    padding: 0 1.25rem;
+}
+.notice-content dl{
+    width: 100%;
+    height: 5.833333333333333rem;
+    background: #fff;
+}
+.notice-content dl dt{
+    float: left;
+    width: 34.7%;
+    height: 5.416666666666667rem;
+    margin-right: 3%;
+}
+.notice-content dl dt img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.notice-content dl dd{
+    float: left;
+    width: 60%;
+}
+.notice-content dl dd .title{
+    font-size: 1.16666rem;
+    color: #4c4c4c;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.notice-content dl dd .title a{
+    color: #4c4c4c;
+}
+.notice-content dl dd .content{
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 1rem;
+    color: #808080;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 0.3rem;
+}
+.notice-content dl dd .content a{
+    color: #808080;
+}
+.notice-content dl dd .time{
+    font-size: 0.8333333333333334rem;
+    color: #d0d0d0;
+    margin-top: 1rem;
+}
+.notice-content dl dd .time a{
+    color: #d0d0d0;
+}
+
+
+.m-school-head{
+	background: #fff;
+}
+
+.m-scroll-img{
+	position: relative;
+	height: 12rem;
+	min-height:12rem;
+	background-color: #333;
+}
+.m-scroll-img img{
+	width: 100%;
+}
+.m-scroll-img .img-con{
+	/* max-height: 12rem; */
+	height: 100%;
+	overflow: hidden;
+}
+.m-scroll-img .img-nav-con{
+	position: absolute;
+	bottom: 0.5rem;
+	z-index: 2;
+	width: 100%;
+}
+.m-scroll-img .img-nav{
+	display: none;
+	width: 2rem;
+	height: 0.4rem;
+	padding: 0.4rem;
+	line-height: 0.2rem;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 0.5rem;
+	text-align: center;
+	overflow: hidden;
+}
+.m-scroll-img .img-nav span{
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	margin: 0 0.1rem;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 0.2rem;
+	text-align: center;
+	overflow: hidden;
+}
+.m-scroll-img .img-nav span.sel{
+	background-color: #0af;
+}
+.m-bigimg-list{
+	position: relative;
+	display: none;
+	transition: all 1s;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
+}
+.m-bigimg-list > li{
+	position: absolute;
+	top: 0;
+}
+.m-bigimg-list a{
+	display: block;
+}
+
+.m-mod-nav{
+	display: -webkit-box;
+    display: flex;
+    padding: 1rem 0;
+}
+.m-mod-nav > a{
+	display: block;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+    color: inherit;
+}
+.m-mod-nav img{
+	display: block;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 2rem;
+	margin: 0 auto;
+	margin-bottom: 0.5rem;
+}
+.m-mod-nav span{
+	display: inline-block;
+}
+
+.m-course{
+    margin-top: 1.67rem;
+    padding: 0 1.25rem 0 1.25rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+.m-c-list{
+	margin-bottom: 1rem;
+	overflow: hidden;
+}
+.m-c-list li.long-custom{
+	display:block;
+	width:100%;
+	float:none;
+}
+.m-c-list li{
+    width: 50%;
+    /* min-height: 6rem; */
+    line-height: 1.5;
+    display: -webkit-box;
+    display: flex;
+}
+.m-c-list li.custom-track{
+	padding-top:0.5rem;
+}
+.m-c-list li.long-custom{
+	padding-top:0.5rem;
+}
+.m-c-list li:nth-child(odd){
+	float: left;
+}
+.m-c-list li:nth-child(odd)::after{
+    content: "";
+    display: block;
+    width: 0.5rem;
+}
+.m-c-list li:nth-child(even){
+	float: right;
+}
+.m-c-list li:nth-child(even)::before{
+    content: "";
+    display: block;
+    width: 0.5rem;
+}
+.m-c-list a{
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    color: #555;
+    overflow: hidden;
+}
+.m-c-list .img-con{
+	position: relative;
+	display: block;
+    min-height:76px;
+    border:1px solid #eee;
+    border-radius:3px;
+}
+.m-c-list .tag{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	line-height:2rem;
+	border-top-left-radius:1rem;
+	border-bottom-right-radius:3px;
+	background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    padding: 0 .5rem 0 1rem;
+}
+.m-c-list img{
+	display: block;
+    width: 100%;
+    /*height: auto;*/
+}
+.m-c-list span.title{
+	display: -webkit-box;
+	max-width: 100%;
+	margin-top: 5px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	overflow: hidden;
+	padding-top: 0;
+}
+
+.m-org-module{
+	padding: 0.5rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.m-org-module li{
+	margin-bottom: 0.5rem;
+}
+.m-org-module a{
+	background-color: #e8e8e8;
+	border-radius: 0.5rem;
+}
+
+.m-cate-list{
+	background-color: #fff;
+	padding-top:.525rem;
+}
+.m-cate-list li{
+	width:33.333%;
+	float:left;
+	margin-top: 0.825rem;
+	line-height: 2rem;
+}
+.m-cate-list a{
+	display: block;
+	padding: 0 1rem;
+	margin:0 1.25rem;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+	background-color: #fff;
+	border-radius: 3px;
+	color:#555;
+	border:1px solid #c2c7cc;
+}
+
+#listWrap{
+	padding:0 1.25rem;
+	background-color: #fff;
+}
+.m-list > li{
+	padding:1rem 0;
+	border-bottom:1px solid #e6e6e6;
+}
+#listWrap .mark .title{
+	color: red;
+}
+#listWrap .has-cover-notic {
+	display: -webkit-box;
+	display: flex;
+}
+#listWrap .has-cover-notic .img-wrapper{
+	width:7.75rem;
+	height:4.17rem;
+	border:1px solid #e6e6e6;
+	border-radius:4px;
+	overflow:hidden;
+}
+#listWrap .has-cover-notic .con{
+	-webkit-box-flex: 1;
+	flex: 1;
+}
+#listWrap .img-wrapper img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+#listWrap  .con .title{
+	display: -webkit-box;
+	font-size:1rem;
+	line-height:1.5rem;
+	color:#404040;
+	margin:0 .9rem;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	overflow: hidden;
+}
+#listWrap .has-cover-notic .con .title{
+	height:3rem;
+	margin:0 1rem;
+}
+#listWrap .no-cover-notic .con .title{
+	margin:0 .5rem;
+}
+#listWrap .con .time{
+	color:#b6b6b6;
+	font-size:.8rem;
+	text-align:right;
+	margin-top:5px;
+}
+ #listWrap{
+	/*position:absolute;
+	bottom:0;
+	left:0;
+	right:0;*/
+	overflow: auto;
+	background:#fff;
+	z-index:1;
+}
+/*课程列表样式*/
+.m-list{
+	/*padding-top:.5rem;*/
+}
+.c-list-item{
+	display: -webkit-box;
+	display: flex;
+	margin-left:1.25rem;
+	padding:.8rem 1.25rem .8rem 0;
+	border-bottom:1px solid #e6e6e6;
+}
+
+.c-list-item .img-cover{
+	width:10.41rem;
+	height:5.83rem;
+	border:1px solid #eee;
+	border-radius:4px;
+}
+.c-list-item .img-cover img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.c-list-item .course-des{
+	display: block;
+	position:relative;
+	-webkit-box-flex: 1;
+	flex: 1;
+	margin-left:.8rem;
+}
+.c-list-item .course-des .title{
+	display: -webkit-box;
+	font-size:1rem;
+	line-height:1.5rem;
+	color:#404040;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	overflow: hidden;
+}
+.c-list-item .course-des .title .separate{
+	display:inline-block;
+	vertical-align:middle;
+	height:8px;
+	margin:0 4px 1px 4px;
+	border-right:1px solid #5e5e5e;
+}
+
+.c-list-item .course-des .title .package{
+	color:#e75b30;
+}
+.c-list-item .course-des .title .presell_package{
+	color:#3f80d1;
+}
+.c-list-item .course-des .title .faceteach{
+	color:#1aac62;
+}
+.c-list-item .course-des .course-info{
+	position:absolute;
+	width:100%;
+	bottom:.25rem;
+}
+.c-list-item .course-des .course-info span{
+	color:#999;
+	font-size:.8rem;
+}
+.c-list-item .course-des .course-info .price{
+	color:#ff970f;
+	float:right;
+}
+/*****live-course-list  style*****/
+.l-list-item{
+	margin-left:1.25rem;
+	padding:.8rem 1.25rem .8rem 0;
+	border-bottom:1px solid #eee;
+}
+.l-list-item .course-wrap{
+	display: -webkit-box;
+	display: flex;
+}
+.l-list-item .course-wrap .img-cover{
+	width:10.41rem;
+	height:5.83rem;
+	border:1px solid #eee;
+	border-radius:4px;
+
+}
+.l-list-item .course-wrap .img-cover img{
+	height:100%;
+	width:100%;
+}
+.l-list-item .course-wrap .des{
+	display: block;
+	position:relative;
+	-webkit-box-flex: 1;
+	flex: 1;
+	margin-left:.8rem;
+}
+.l-list-item .des .title{
+	display: -webkit-box;
+	font-size:1rem;
+	line-height:1.2rem;
+	height:2.4rem;
+	color:#404040;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	overflow: hidden;
+}
+.l-list-item .des .prmt{
+	color:#999;
+	font-size:.8rem;
+	margin:.25rem 0;
+}
+.l-list-item .des .info{
+	position:absolute;
+	left:0;
+	bottom:.5rem;
+	width:100%;
+
+}
+.l-list-item .des .info .contentCnt{
+	color:#999;
+	font-size:.8rem;
+}
+.l-list-item .des .info .price{
+	float:right;
+	font-size:.8rem;
+	color:#ff970f;
+}
+.l-list-item .live-info{
+	margin-top:.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.l-list-item .live-info .live-status{
+	margin-right:.5rem;
+}
+.l-list-item .live-info .live-status mark{
+	display:inline-block;
+	vertical-align:middle;
+	height:6px;
+	width:6px;
+	border-radius:3px;
+	margin:0 .5rem .2rem 0;
+}
+.l-list-item .live-info .live-status.over{
+	color:#999;
+}
+.l-list-item .live-info .live-status.over mark{
+	background:#999;
+}
+.l-list-item .live-info .live-status.living{
+	color:#e75b30;
+}
+.l-list-item .live-info .live-status.living mark{
+	background:#e75b30;
+}
+.l-list-item .live-info .live-status.begin{
+	color:#1aac62;
+}
+.l-list-item .live-info .live-status.begin mark{
+	background:#1aac62;
+}
+.l-list-item .live-info .first-lesson{
+	color:#999;
+}
+.m-masking{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow:auto;
+	z-index:99;
+	background:rgba(0,0,0,.6);
+}
+/*cate-mask*/
+#cateMasking .cate-wrapper{
+	background:#fff;
+	overflow:auto;
+	max-height:30rem;
+}
+/*#cateMasking .mask-bottom{
+	position:absolute;
+	left:0;
+	right: 0;
+	bottom:3rem;
+}*/
+#cateMasking .cate-wrapper .cate-item{
+	margin:0 1rem;
+	padding:0 .5rem;
+	line-height:4rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-bottom:1px solid #e6e6e6;
+}
+#cateMasking .cate-wrapper .cate-item.hasChild{
+	background:url(http://www.ablesky-a.com:8080/ableskystatics/images/icon_v10/arrow-right.png) no-repeat  right center ;
+	background-size:4.5px 7px;
+}
+#cateMasking .cate-wrapper .cate-item:last-child{
+	border-bottom:none;
+}
+
+/*****sortMask  filterMask*****/
+.mask-hidden{
+	display: none;
+}
+.mask-content{
+	background:#fff;
+}
+.m-mask-list .m-list-item{
+	height:4rem;
+	line-height:4rem;
+	border-bottom:1px solid #ccc;
+	margin:0 1.5rem;
+	font-size:1rem;
+	text-indent:1rem;
+
+}
+.m-mask-list .m-list-item.active{
+	color:#ff7376;
+}
+.m-mask-list .m-list-item:last-child{
+	border-bottom:none;
+}
+/*filter component*/
+
+.m-filter-box{
+	position:relative;
+}
+.m-filter-box .m-filter-wrap{
+	display: -webkit-box;
+	display: flex;
+	border-bottom:1px solid #e6e6e6;
+	background:#fff;
+}
+.m-filter-box .m-filter-wrap li{
+	flex:1;
+	height:2rem;
+	line-height:2rem;
+	padding:1rem 0;
+	text-align:center;
+
+}
+.m-filter-box .m-filter-wrap li a{
+	display:block;
+	border-right:1px solid #ececec;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.m-filter-box .m-filter-wrap li.disabled a{
+	color:#999;
+}
+
+.m-filter-box .m-filter-wrap li:last-child a{
+	border-right:none;
+}
+.m-filter-box .m-filter-wrap li.active a,.m-filter-box .m-filter-wrap li.active{
+	color:#ff7376;
+}
+.m-filter-box .m-filter-wrap li.active .m-filter-icon{
+	background-position:center -1.05rem;
+}
+.m-filter-box .m-filter-wrap li:last-child a{
+	border:none;
+}
+.m-filter-box .m-filter-wrap li:last-child{
+	border-right:none;
+}
+.m-filter-box .m-filter-wrap .m-filter-icon{
+	display:inline-block;
+	width:.7rem;
+	height:.7rem;
+	background:url(//img.ablesky.cn/stats/images/mobile/icon/arrow-icon_87a9da3b.png) no-repeat  center .1rem ;
+	background-size:100% auto;
+	margin-left:.5rem;
+	vertical-align:middle;
+}
+.m-filter-box .m-filter-wrap .text{
+	display:inline-block;
+	max-width:90px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	vertical-align:middle;
+}
+
+/*****sortMask end*****/、
+.swiper-wrap{
+	width: auto;
+	padding:1rem 0;
+	overflow: hidden;
+	border-bottom:1px solid #e6e6e6;
+}
+.swiper-wrap .swiper-slide{
+	width:60%;
+}
+.swiper-slide img{
+	display:block;
+}
+.swiper-slide{
+}
+
+/* schoolHomeWoman.css  end*/
+	.module-wrapper{
+	    border-bottom: 0.833rem solid #f5f5f5;
+	    background-color: #fff;
+	}
+	.top{
+		width: 100%;
+		height: 3.92rem;
+		background: url('http://pic4.ablesky.cn/content/pic/album/2018/11/15/411b5a39-1c99-4778-9298-cf0cd841f373.png') top center no-repeat;
+		background-size: 100% 100%;
+		padding-top: 2rem;
+		  /*   margin-top: 2rem; */
+	}
+	.top .name-img{
+		float: left;
+		width: 11.375rem;
+		height: 2.5rem;
+		background: url('http://pic2.ablesky.cn/content/pic/album/2018/11/15/a4a56263-b8e1-46af-820e-5db9a2e5ef6d.png') top center no-repeat;
+		background-size: 100% 100%;
+		margin-left: 1.29rem;
+		
+	}
+	.top .login-info{
+		float: right;
+	}
+	.top .login-info a{
+		display: block;
+		float: left;
+		height: 2.08rem;
+		font-size: 1rem;
+		color: #fff;
+		line-height: 2.08rem;
+		margin-top: 0.375rem;
+	}
+	.top .login-info a.isGuest,.top .login-info a.isUser{
+		height: 2rem;
+		width: 2rem;
+		margin-right: 1.25rem;
+		margin-left: 0.625rem;
+	}
+	.top .login-info a img{
+		width: 100%;
+		height: 100%;
+	}
+	.top .login-info a.j-classCenter{
+		display:none;
+	}
+	.top .login-info a.isUser{
+		display: none;
+	}
+   
+   .view-wrapper  .swiper-slide a{
+   		display: block;
+	   	width: 100%;
+	   	height: 100%
+   }
+   .view-wrapper  .swiper-slide a img{
+   		display: block;
+	   	width: 100%;
+	   	height: 100%
+   }
+
+   .title {
+   		padding-top: 1.833rem;
+   		line-height: 1.25rem;
+   		color: #333333;
+   }
+    .title p{
+    	float: left;
+    	width: 50%;
+    	font-size: 1.25rem;
+    }
+    .title p span{
+    	display: inline-block;
+    	height: 1rem;
+    	width: 1rem;
+    	margin-left: 1.25rem;
+    	margin-right: 0.5rem;
+    	background: url('http://pic4.ablesky.cn/content/pic/album/2018/11/15/b99f975c-cee9-4016-b2da-8b77195faf64.png') no-repeat;
+    	background-size: 100% 100%;
+    }
+    .title .checkMore{
+    	display: block;
+    	float: right;
+    	color: #666666;
+		margin-right: 1rem;
+    }
+    .postCenter  .postBtn{
+    	margin-top: 1.625rem;
+    }
+    .postCenter  .postBtn a{
+    	display: block;
+    	height: 1.833rem;
+    	width: 5.75rem;
+    	float: left;
+    	border: 1px solid #e44a4a;
+    	color: #e44a4a;
+    	font-size: 1rem;
+    	line-height: 1.833rem;
+    	text-align: center;
+    	border-radius: 2px;
+    	margin-left: 1.25rem;
+    }
+    .postCenter  .postBtn a.current{
+		background-color: #e44a4a;
+		color: #fff;
+    }
+	
+	.postCenter .postCon{
+		margin: 1.25rem 1.25rem 0;
+	}
+	.postCenter .postCon a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.postCenter .firstCon{
+		float: left;
+		/* width: 17rem; */
+	    width: 60%;
+		height: 9.42rem;
+	}
+	.postCenter .firstCon img{
+		width: 100%;
+		height: 100%;
+	}
+	.postCenter .firstCon p{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 1.8rem;
+		padding:  0 2%;
+		width: 96%;
+		color: #fff;
+		font-size: 1.167rem;
+		line-height:  1.8rem;
+		background: url('http://pic1.ablesky.cn/content/pic/album/2018/11/15/acc71d8d-aa6b-46f7-a6b2-8ea75cf111c7.png') bottom center repeat-x;
+		background-size: 100% 100%;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;
+	}
+	.postCenter .seconedCon{
+		float: left;
+		/* width: 10rem; */
+		width: 35%;
+		height: 9.42rem;
+		margin-left: 3%;
+		/* margin-left: 0.833rem; */
+		background-color: #f5f5f5;
+	}
+	.postCenter .seconedCon a{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.postCenter .seconedCon img{
+		display: block;
+		height: 5.67rem;
+		width: 100%;
+	}
+	.postCenter .seconedCon p{
+		margin-top:0.833rem ;
+		height: 2.5rem;
+		line-height: 1.3rem;
+		font-size: 1rem;
+		color: #505050;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    word-break: break-all;
+	    overflow: hidden;
+		/* overflow: hidden;
+		text-overflow:ellipsis;
+		white-space: nowrap;	 */
+	}
+	.postCenter .otherCon a{
+		padding:1.25rem 0;
+		height: 4rem;
+		border-bottom: 1px solid #e6e6e6;
+	}
+	.postCenter .otherCon a:last-child{
+		border-bottom: none;
+	}
+	.postCenter .otherCon a{
+		display: -webkit-box;
+    	display: flex;
+		width: 100%;
+
+	}
+	.postCenter .otherCon img{
+		display: block;
+		width: 7.708rem;
+		height: 4.167rem;
+	}
+	.postCenter .text{
+		-webkit-box-flex: 1;
+  		 flex: 1;
+	}
+	.postCenter .text .post-title{
+		padding: 0 0.5rem;
+		margin-bottom: 0.2rem;
+		font-size: 1.167rem;
+		line-height: 1.467rem;
+		color: #4c4c4c;
+		display: -webkit-box;
+	    -webkit-line-clamp: 1;
+	    -webkit-box-orient: vertical;
+	    word-break: break-all;
+	    overflow: hidden;
+	}
+	.postCenter .text .post-con{
+		padding: 0 0.5rem;
+		font-size: 1rem;
+		line-height: 1.25rem;
+		color: #808080;
+		display: -webkit-box;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    word-break: break-all;
+	    overflow: hidden;
+	}
+
+	.ad_banner{
+		width: 100%;
+		height: 8.33rem;
+	}
+	.ad_banner a{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.ad_banner a img{
+		width: 100%;
+		height: 100%;
+	}
+	.school .J_school{
+		padding:  0 1.25rem;
+		   
+	}
+	.school .J_school ul{
+	    height: 10.75rem;
+		white-space: nowrap;
+		overflow-x: scroll;
+	}
+	.school .J_school li{
+		display: inline-block;
+		margin-right: 1.25rem;
+	}
+	.school .J_school li a{
+		display: block;
+		width:9.5rem ;
+		height:3.25rem;
+		margin-bottom:0.83rem;
+		border: 1px solid #e6e6e6;
+	}
+   .school .J_school li a img{
+   		width: 100%;
+   		height: 100%;
+   }
+    .school .J_school ul::-webkit-scrollbar {
+    display: none;
+}
+.c-list-item .title,.m-list .title{
+	padding-top: 0;
+}
+
+/* ---------------------dataList.css------------------ */
+.m-data-load .data-load-item {
+	text-align: center;
+	line-height: 2rem;
+	color: #8c8c8c;
+	font-size: .875rem;
+	display:none;
+}
+.data-load-empty .load-empty-wrapper{
+	display:table;
+	width:100%;
+	height:100%;
+	background:#f7f7f7;
+}
+.data-load-empty .load-empty-wrapper .load-empty-content{
+	display:table-cell;
+	vertical-align: middle;
+}
+
+.data-load-empty .empty-img{
+	width:100%;
+	height:60px;
+	background:url(//img.ablesky.cn/stata/images/mobile/empty_pic_a966915d.png) no-repeat  center center ;
+	background-size:50px auto;
+}
+.m-data-load.error .data-load-error,
+.m-data-load.loading .data-load-loading,
+.m-data-load.noMore .data-load-noMore,
+.m-data-load.offline .data-load-offline,
+.m-data-load.empty .data-load-empty{
+	display:block;
+}
+
+/* ------------teacherList.css---------- */
+.t-list-item{
+	position:relative;
+	height:6.67rem;
+	border-bottom:1px solid #c8c7cc;
+	margin-left:1.67rem;
+}
+.t-list-item:last-child{
+	border-bottom:none;
+}
+.t-list-item .avatar{
+	height:3.33rem;
+	width:3.33rem;
+	border-radius:1.67rem;
+	overflow:hidden;
+	margin-top:1.67rem;
+	background:#ccc;
+	float:left;
+	margin-top:1.67rem;
+}
+.t-list-item .avatar img{
+	height:100%;
+	width:100%;
+}
+.t-list-item .info{
+	position:absolute;
+	left:4.33rem;
+	top:0;
+	right:0;
+	bottom:0;
+	padding-right:1.67rem;
+	
+}
+.t-list-item .info .name{
+	font-size:1.16rem;
+	color:#333;
+	margin-top:1rem;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.t-list-item .info p{
+	font-size:1.08rem;
+	color:#333;
+	margin-top:0.42rem;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display:-webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient: vertical;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+</style>
+<div class="top">
+  	<div class="name-img"></div>
+  	<div class="login-info">
+  		<a href="javascript:;" class="jump-link j-login-item" id="J_login" >登录/注册</a>
+  		<a href="/wap/my" class="j-classCenter">学习中心</a>
+  		<a href="javascript:;" class="isGuest"><img src="http://pic4.ablesky.cn/content/pic/album/2018/11/15/fcb28550-4052-4a60-ba93-1c93afcec566.png" alt=""></a>
+  		<a href="javascript:;" class="isUser"><img src="http://pic4.ablesky.cn/content/pic/album/2018/11/15/0e60b6ca-b5c0-434c-9dd3-0df206d6f3d6.png" alt=""></a>
+  	</div> 
+  </div>
+
+<div class="m-nav-wrap" id="navBar" >
+    <ul class="m-nav clearfix" id="navWrap">
+        <li class="nav-item">
+            <a href="#" class="J_navSwitch nav-link active" tab="index">首页</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="J_navSwitch nav-link" tab="post">资讯中心</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="J_navSwitch nav-link" tab="course">思政课程</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="J_navSwitch nav-link" tab="teacher" id="J_tab_teacher">思政名师</a>
+        </li>
+    </ul>
+</div>
+
+<div class="view-wrapper" id="indexView">
+	
+  	 <section class="as-banner swiper-container" id="bannerWrap">
+  	        <div class='swiper-wrapper'>
+              	<div class="swiper-slide">
+              		<a href="">
+              			<img src="http://pic4.ablesky.cn/content/pic/album/2018/11/15/45aab687-efc4-45ea-8bce-1d201ea9fae9.png" alt="">
+              		</a>
+              	</div>
+              	<div class="swiper-slide">
+              		<a href="">
+              			<img src="http://pic5.ablesky.cn/content/pic/album/2018/11/20/e35d0dd8-5ada-44be-94c8-6f5848d9d582.png" alt="">
+              		</a>
+              	</div>
+  	        </div>
+  	        <div class="swiper-pagination"></div>
+      </section>
+
+
+    	<div class="postCenter module-wrapper">
+    		 <div class="title clearfix">
+    		 	<p class="text"><span></span>资讯中心</p>
+    		 	<a href="javascript:;" class="J_navSwitch  checkMore" tab="post">查看更多></a>
+    		 </div>
+    		 <div class="postBtn clearfix">
+    		 	<a class="postItem current" href="javascript:;"  data-id="24144">时政要闻</a>
+    		 	<a class="postItem" href="javascript:;" data-id="24143">思政咨讯</a>
+    		 </div>
+    		 <div class="postCon clearfix" id="J_postCon">
+    		 	  <!-- <div class="firstCon">
+    		 	  	  <a href="">
+    		 	  	  	<img src="http://pic6.ablesky.cn/content/pic/album/2018/11/15/5a8b5978-27d6-4f78-b43e-bc03a21be36c.png" alt="">
+    		 	  	  	<p>精彩精彩精彩精彩精彩精彩精彩精彩精彩</p>
+    		 	  	  </a>    		 	  	 
+    		 	  </div> -->
+    		 </div>
+
+    	</div>
+
+    	<div class="policy-course module-wrapper">
+    		<div class="title clearfix">
+    		 	<p class="text"><span></span>形势与政策</p>
+    		 	<a href="javascript:;" class="checkMore J_navSwitch "  tab="course"  catename="形势与政策"  cateId ='546577'>查看更多></a>
+    		 </div>
+    		 <div class="m-course j-course-face" id="J_policyCourse">
+    	       <!--  <ul class="m-c-list">
+                 <li>
+                   <a href="/wap/course/detail/1693452">
+                       <div class="img-con">
+                           <img src="http://pic6.ablesky.cn/content/pic/album/2018/11/15/5a8b5978-27d6-4f78-b43e-bc03a21be36c.png">
+                       </div>
+                       <span class="title">女士穿着礼仪</span>
+                   </a>
+                   </li>
+                   <li>
+                       <a href="/wap/course/detail/1691895">
+                           <div class="img-con">
+                               <img src="http://pic6.ablesky.cn/content/pic/album/2018/11/15/5a8b5978-27d6-4f78-b43e-bc03a21be36c.png">                       
+                           </div>
+                           <span class="title">了解女性的情绪情感</span>
+                       </a>
+                   </li>
+           </ul>  -->                                
+    	    </div>
+    	</div>
+
+    	<div class="teacher module-wrapper">
+    		<div class="title clearfix">
+    		 	<p class="text"><span></span>思政名师</p>
+    		 	<a href="javascript:;" class="checkMore J_navSwitch"   tab="teacher" >查看更多></a>
+    		 </div>
+    		  <div class="moudule-content J_teacher" id="J_teacher">
+    		  		
+    	           <!--  <dl>
+           		  			<dt>
+           	  					<a href="course/toTeacherDetail?teacherId=48157">
+           	  						<img src="http://pic4.ablesky.cn/content/pic/teacherphoto/2018/09/27/0f5b12b5-0d15-45de-bfcb-f16609c25c3b.JPG">
+           						</a>
+           		  			</dt>
+    	               <dd>
+    	                   <p class="name"><a href="course/toTeacherDetail?teacherId=48157">名字名字</a></p>
+    	               </dd>
+    	           </dl> -->
+
+    		  </div>
+    	</div>
+
+
+    	<div class="ad_banner module-wrapper">
+    		  <a href="javascript:;"><img src="http://pic3.ablesky.cn/content/pic/album/2018/11/15/cd2dff20-06d1-4fda-8e02-6129a46fc56a.png" alt=""></a>
+    	</div>
+
+    	<div class="hot-course module-wrapper" >
+    		<div class="title clearfix">
+    		 	<p class="text"><span></span>热点专题课</p>
+    		 	<a href="javaScript:;" class="J_navSwitch  checkMore"  tab="course" cateid="546579"  catename="热点专题课">查看更多></a>
+    		 </div>
+    		 <div class="m-course j-course-face" id="J_hotCourse">
+                            
+    	    </div>
+    	</div>
+
+    	<div class="school module-wrapper">
+    		<div class="title clearfix">
+    		 	<p class="text"><span></span>合作院校</p>
+    		 </div>
+    		  <div class="J_school">
+    		    <div class="spacs" style="width: 100%;height: 1.42rem"></div>
+    		  	<ul class="clearfix">
+    		  		<li>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/9c69955a-4084-42d3-917e-e343fb06c361.png" alt=""></a>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/d68c0c55-613d-4a73-9ea9-5d222446d427.png" alt=""></a>
+    		  		</li>
+    		  		<li>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/f32adc93-8a47-4983-bbe5-d210a42709fe.png" alt=""></a>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/f617d5cb-387b-4661-81ac-eb3e274c0482.png" alt=""></a>
+    		  		</li>
+    		  		<li>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/66dcbf18-0a5a-4d6e-844a-bfc37a8d855c.png" alt=""></a>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/70834e17-7a63-473d-83a1-f08655d13947.png" alt=""></a>
+    		  		</li>
+    		  		<li>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/d1ad1938-a567-41b1-ac8f-f548c8ad98c7.png" alt=""></a>
+    		  			<a href="javascript:;"><img src="http://pic5.ablesky.cn/content/pic/album/2018/11/12/f90975a6-bbe2-4d33-b36e-3bf8e6ceb9d6.png" alt=""></a>
+    		  		</li>
+    		  		<li>
+    		  			<a href="javascript:;"><img src="http://pic2.ablesky.cn/content/pic/album/2018/11/08/77b0ee5d-6dc5-4fad-894a-f75f71a22a85.png" alt=""></a>
+    		  			<a href="javascript:;"><img src="http://pic5.ablesky.cn/content/pic/album/2018/11/12/4c65afad-5023-4f9a-92b8-bffdedc9d3aa.png" alt=""></a>
+    		  		</li>
+    		  	</ul>
+
+    		  </div>
+    	</div>
+
+</div>
+
+<div class="list-wrapper" id="listView"></div>
+<script src="https://js.ablesky.cn/stata/js_optimize/wap/lib/swiper_f6b65fd6.js"  defer type="text/javascript"></script>
+<script src="https://js.ablesky.cn/stata/js_optimize/lib/require-jquery_dfffa55c.js" defer type="text/javascript"></script>
+<script>
+window.onload=function(){
+/*判断是不是在app内部   app内部隐藏登录注册和头像等信息*/
+ 
+ var ua = navigator.userAgent.toLowerCase();	
+ var isApp = false;
+ if (/ableskyapp/i.test(navigator.userAgent)) {
+		isApp = true;
+  }
+
+ if (/wangxiaoketang/i.test(navigator.userAgent)) {
+		isApp = true;
+  }
+
+if(isApp){
+	$('.j-login-item').hide();
+	$('.j-classCenter').hide();
+	$('.isGuest').hide();
+	$('.isUser').hide();
+}
+ 
+/*判断是否登录*/
+
+  var ref =  encodeURIComponent(window.location.href);
+   var loginUrl = '/wap/login.do?fromurl=' + ref; 
+   if(!isApp){
+   		$('#j-login-item').attr('href',loginUrl);
+	    $.ajax({
+	        url:'/account.do?action=getAccountDetail',
+	        type:'get',
+	        dataType:'json',
+	        success:function(data){
+	        	    var userName = data.result.username;
+	        	    if(data.result.username != 'guest'){
+	    	    	   $('.j-login-item').hide();
+				       $('.j-classCenter').show();
+				       $('.isGuest').hide();
+				       $('.isUser').show();		
+	        	    }
+	             
+	           }
+	    });
+   }
+
+
+
+
+/*登录跳转*/
+var chref = window.location.href;
+var url = '/wap/toLogin?fromurl=' + chref;
+var loginObj = $("#J_login");
+if(loginObj){
+	loginObj.attr("href",url);
+}
+
+/*初始化页面*/
+var apiURL = {
+    getCourseUrl:'/ajax/orgdata/getCourseData',
+    getTeacherUrl:'/ajax/orgdata/getTeacherData',
+    dynamicUrl: '/ajax/orgdata/getZXData',
+    rankUrl:'/ajax/orgdata/getStudentStudyData',
+    countUrl:'/ajax/orgdata/getCourseStatisticData'
+		};
+var orgId = '33068';
+var $J_postCon = $('#J_postCon');
+var $J_policyCourse = $('#J_policyCourse');
+var $J_teacher = $('#J_teacher');
+var $J_hotCourse = $('#J_hotCourse');
+
+requestZX();
+requestForms();
+requestTeacher();
+requestHotCourse();
+
+
+/*轮播图*/
+var mySwiper = new Swiper ('.swiper-container', {
+  autoplay:3000,
+  pagination: '.swiper-pagination',
+  autoplayDisableOnInteraction:false,
+  loop: false,
+  spaceBetween: 30
+});
+
+/*时政要闻 24144    思政资讯24143*/      
+var $postItem = $('.postItem');
+
+ $postItem.click(function(){
+           var cid = $(this).data('id');
+            $postItem.removeClass('current');
+            $(this).addClass('current');
+	      $.ajax({
+	            url:apiURL.dynamicUrl,
+	            type:'get',
+	            dataType:'json',
+	            data:{
+	            	 orgId:orgId,
+	                 limit:5,
+	                 titleId:cid,
+	            },
+	            success:function(data){
+	                if(data.success){
+	                  renderSZ(data)
+	                }
+	            }
+	        });
+        });
+
+
+function requestZX(){
+	 $.ajax({
+            url:'/ajax/orgdata/getZXData',
+            type:'get',
+            dataType:'json',
+            data:{
+            	 orgId:orgId,
+                 titleId:24144,
+                 limit:5
+            },
+            success:function(data){
+                if(data.success){
+                  renderSZ(data);
+                }
+            }
+        });
+}
+
+function renderSZ(data){
+	var renderStr='';
+	var data = data.result.list;
+	renderStr +='<div class="firstCon">'
+	renderStr +='<a  href="/wap/postDetail?postId='+data[0].id+'">'
+	renderStr +='<img src="'+data[0].photoUrl+'" alt="">'
+	renderStr +='<p>'+data[0].titleName+'</p>'
+	renderStr +='</a>'
+	renderStr +='</div>'
+	renderStr +='<div class="seconedCon">'
+	renderStr +='<a  href="/wap/postDetail?postId='+data[1].id+'">'
+	renderStr +='<img src="'+data[1].photoUrl+'" alt="">'
+	renderStr +='<p>'+data[1].titleName+'</p>'
+	renderStr +='</a>'
+	renderStr +='</div>'
+	renderStr +='<div class="otherCon">'
+	$.each(data,function(index,ele){
+					 var link = '/wap/postDetail?postId='+ele.id;
+					if(index>=2){
+						renderStr +='<a  href="'+link+'">'
+						renderStr +='<img src="'+ele.photoUrl+'" alt="">'
+						renderStr +='<div class="text">'
+						renderStr +='<p class="post-title">'+ele.titleName+'</p>'
+						renderStr +='<p class="post-con">'+ele.summary+'</p>'
+						renderStr +='</div>'
+						renderStr +='</a>'
+					}											
+				})
+
+	renderStr +='</div>'
+	$J_postCon.html(renderStr);
+}
+
+/*热点专题课*/ //546580
+function requestHotCourse(){
+		$.ajax({
+            url:apiURL.getCourseUrl,
+            type:'get',
+            dataType:'json',
+            data:{
+            	 orgId:orgId,
+                 limit:4,
+                 categoryId:'546580',
+            },
+            success:function(data){
+                if(data.success){
+                  renderHotCourse(data)
+                }
+            }
+        });
+
+}
+
+function renderHotCourse(data){
+
+	var renderStr='';
+	var data = data.result.list;
+		$.each(data,function(index,ele){	
+			if(index == 0 || index == 2){
+				renderStr += '<ul class="m-c-list">'
+			}
+			renderStr += '<li>'
+			renderStr += '<a href="/kecheng/detail_'+ele.id+'">'
+			renderStr += '<div class="img-con">'
+			renderStr += '<img src="'+ele.photoUrl+'">'
+			renderStr += '</div>'
+			renderStr += '<span class="title">'+ele.title+'</span>'
+			renderStr += '</a>'
+			renderStr += '</li>'
+			renderStr += '<li>'
+			if(index == 1 || index == 3){
+				renderStr += '</ul>'
+			}
+
+		})
+	$J_hotCourse.html(renderStr);
+}
+
+/*思政名师*/
+function requestTeacher(){
+	 $.ajax({
+            url:apiURL.getTeacherUrl,
+            type:'get',
+            dataType:'json',
+            data:{
+            	 orgId:orgId,
+                 limit:8
+            },
+            success:function(data){
+                if(data.success){
+                  renderTeacher(data);
+                  if($('#checkAllTeacher')){
+                  	$('#checkAllTeacher').click(function(event) {
+                  		 tabClick();
+                  		 initTeacher();
+                  		 $('#J_tab_teacher').addClass('active');
+                  	});
+                  }
+
+                }
+            }
+        });
+}
+
+function renderTeacher(data){
+	var renderStr='';
+	var data = data.result.list;
+		$.each(data,function(index,ele){
+			renderStr += '<dl>'
+			renderStr += '<dt>'
+			renderStr += '<a href="course/toTeacherDetail?teacherId='+ele.id+'">'
+			renderStr += '<img src="'+ele.teacherPhotoPath+'">'
+			renderStr += '</a>'
+			renderStr += '</dt>'
+			renderStr += '<dd>'
+			renderStr += '<p class="name"><a href="course/toTeacherDetail?teacherId='+ele.id+'">'+ele.name+'</a></p>'
+			renderStr += '</dd>'
+			renderStr += '</dl>'									
+		})
+		renderStr += '<dl>'
+		renderStr += '<dt>'
+		renderStr += '<a  href="javascript:;" class="checkMore J_navSwitch" id="checkAllTeacher" tab="teacher">'
+		renderStr += '<img src="http://pic5.ablesky.cn/content/pic/album/2018/11/15/080e8e72-d3e6-4309-a091-53afc9a97c40.png">'
+		renderStr += '</a>'
+		renderStr += '</dt>'
+		renderStr += '</dl>'
+		$J_teacher.html(renderStr);
+}
+
+
+
+/*形式与政策 */   //546577
+function requestForms(){
+	$.ajax({
+            url:apiURL.getCourseUrl,
+            type:'get',
+            dataType:'json',
+            data:{
+            	 orgId:orgId,
+                 limit:4,
+                 categoryId:'546577',
+            },
+            success:function(data){
+                if(data.success){
+                  renderForms(data)
+                }
+            }
+        });
+}
+
+
+function renderForms(data){
+var renderStr='';
+var data = data.result.list;
+	$.each(data,function(index,ele){	
+		if(index == 0 || index == 2){
+			renderStr += '<ul class="m-c-list">'
+		}	
+		renderStr += '<li>'
+		renderStr += '<a href="/kecheng/detail_'+ele.id+'">'
+		renderStr += '<div class="img-con">'
+		renderStr += '<img src="'+ele.photoUrl+'">'
+		renderStr += '</div>'
+		renderStr += '<span class="title">'+ele.title+'</span>'
+		renderStr += '</a>'
+		renderStr += '</li>'	
+		if(index==1 || index ==3){
+			renderStr += '</ul>'
+		}
+			
+	})
+$J_policyCourse.html(renderStr);
+}
+
+/*-----------------------dataList------------------------------*/
+	var isOnline = false;
+	var doc = document;
+	function DataList(opt){
+		this.params = opt.params || {};
+		this.url   = opt.url;
+		this.total = 0;
+		this.fnItemTpl = opt.fnItemTpl;
+		this.renderAfter = typeof opt.renderAfter === 'function' ? opt.renderAfter :function(){};
+		this.renderBefore = typeof opt.renderBefore === 'function' ? opt.renderBefore :function(){};
+		this.target =  opt.target;
+		this.offsetNode = opt.offsetNode;
+		this.oAjax = null;
+		this.dataType = opt.dataType || 'json';
+		this.jsonp = opt.jsonp || 'callback';
+		this.limit = opt.limit ? opt.limit : 20;
+		this.pageType = opt.pageType || 'limit';
+        this.start = 0;
+        this.params.limit = this.limit;
+        if(this.pageType === 'limit'){
+            this.params.start = this.start;
+		}else{
+            this.params.curPage = 1;
+		}
+
+		this.ajaxProps = opt.ajaxProps  || 'result.list';
+		this.sListClass = opt.sListClass || '';
+		this.totalProps = opt.totalProps || 'totalCount';
+		this.timer = null;
+		this.resizeTimer = null;
+		this.domMap = {
+	        N_courseWrap: null,
+	        N_listBar: null,
+	        N_loadBar:null
+		};
+		this.statusMap = {
+			isLoading:false,
+			ajaxOff:false//当 无数据时关闭ajax请求开关
+		};
+		this.isFirstLoad = true;
+		this.init();
+		
+		
+	}
+	var proto = DataList.prototype;
+	proto.init = function(){
+		var _self = this,offset,h,clientHeight;	
+		var mListHtml =[
+		    '<ul class="m-list '+_self.sListClass+'" ></ul> ',
+			'<div class="m-data-load">',
+				'<div class="data-load-item data-load-empty">',
+					'<div class="load-empty-wrapper">',
+						'<div class="load-empty-content">',
+							'<div class="empty-img"></div>',
+							'<p>没有符合要求的内容</p>',
+						'</div>',
+					'</div>',
+				'</div>',
+                '<div class="data-load-item data-load-offline">暂无网络连接</div>',
+				'<div class="data-load-item data-load-noMore">没有更多了</div>',
+				'<div class="data-load-item data-load-loading">数据加载中...</div>',
+				'<div class="data-load-item data-load-error">数据加载出错</div>',
+			'</div>'
+		].join('');
+		_self.target.html(mListHtml);
+		_self.domMap.N_courseWrap = $('.m-list');
+		_self.domMap.N_listBar = $('.j-list-bar');
+		_self.domMap.N_loadBar = $('.m-data-load');
+		_self.setLoadEmptyHeight(_self.getLoadEmptyHeight());
+		this.load();
+		window.addEventListener('scroll',scroll);
+		window.addEventListener('resize',resize);
+		this.removeWinEvents = function(){
+            window.removeEventListener('scroll',scroll);
+            window.removeEventListener('resize',resize);
+		}
+		function resize(){
+            if(_self.resizeTimer){
+                clearTimeout(_self.resizeTimer);
+            }
+            _self.resizeTimer= setTimeout(function(){
+                _self.setLoadEmptyHeight(_self.getLoadEmptyHeight());
+            },200);
+		}
+        function scroll(){
+            if(_self.timer){
+                clearTimeout(_self.timer );
+            }
+            _self.timer = setTimeout(function(){
+                var docHeight = document.documentElement.offsetHeight || document.body.offsetHeight,
+                    clientHeight = document.documentElement.clientHeight || document.body.clientHeight,
+                    scrollTop = (document.documentElement.scrollTop || document.body.scrollTop);
+                if(scrollTop + clientHeight + 110 >docHeight ){
+                    _self.load();
+                }
+            },200);
+        }
+	}
+	proto.getLoadEmptyHeight = function(){
+		var _self = this,offset,clientHeight;
+        offset = offsetTop(_self.target);
+        clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        return clientHeight - offset;
+	};
+	proto.setLoadEmptyHeight = function(height){
+		var _self = this;
+		//$('.data-load-empty',_self.domMap.N_loadBar).style.height = height+'px';
+	};
+
+	proto.load = function(){
+		var _self = this;
+		if(_self.statusMap.isLoading || _self.statusMap.ajaxOff ){
+			return;
+		}
+        _self.loadBefore();
+		if(_self.dataType === 'json'){
+            _self.oAjax = $.get(_self.url ,_self.params,cb, 'json');
+		}else{
+
+		  var  o2url = function (o) {
+                var url = '',
+                    keys = Object.keys(o);
+                keys.forEach(function (v, i) {
+                    url += '&' + v + '=' + encodeURIComponent(o[v]);
+                });
+                return url;
+            };
+
+          var concatURL = function(url, data){
+                var parm = '';
+                if (data) {
+                    parm = o2url(data);
+                    url = url.toString();
+                    if (url.indexOf('?') === -1) {
+                    	parm = parm.replace('&', '?');
+                    }
+                    url += parm;
+                }
+                return url;
+          }
+
+          var addScriptTag = function (url, text, name, error) {
+                var s = doc.createElement('script'),
+                    r = new Date().getTime();
+                if (url) {
+                    s.src = concatURL(url, {r: r});
+                    s.setAttribute('data-name', name);
+                    error ? s.onerror = error : '';
+                } else {
+                    s.text = text;
+                }
+                doc.body.appendChild(s);
+                return s;
+            }
+
+          var FnJsonP = function(url, data, fn, timeout,callbackName,error){          	
+			        var r = new Date().getTime(),
+			            random = parseInt(Math.random()*10000),
+			            callbackFn = 'jsonp_' + r+random,
+			            s = null,
+			            obj = {},
+			            timer = 0;
+			        if(typeof timeout !== 'number'){
+			        	callbackName = timeout;
+			        	timeout = undefined;
+			        }
+			        if (timeout === undefined) {
+			        	timeout = 10000;
+			        } 
+			        if(typeof callbackName !== 'string'){
+			        	callbackName = 'callback'; 
+			        }
+			        if (data) {
+			            data[callbackName] = callbackFn;
+			        } else {
+			            data = {};
+			            data[callbackName] = callbackFn;
+			        }
+			        url = concatURL(url, data);
+			        w[callbackFn] = function (res) {
+			        	clearTimeout(timer);
+			        	fn(res);
+			            w[callbackFn] = null;
+			        };
+			        
+			        s = addScriptTag(url, '', 'jsonp',error);
+			        
+			        obj.url = url;
+			        obj.script = s;
+			        obj.callback = callbackFn;
+			        obj.abort = function () {
+			        	clearTimeout(timer);
+			        	window[this.callback] = function () {};
+			        };
+			        obj.ontimeout = function () {};
+			        timer = setTimeout(function () {
+			        	obj.abort();
+			        	obj.ontimeout();       
+			        }, timeout);
+
+			        return obj;
+			    
+	          }
+
+            _self.oAjax = FnJsonP(_self.url,_self.params,cb,6000,_self.jsonp);
+           // _self.oAjax = $.jsonp(_self.url,_self.params,cb,6000,_self.jsonp);
+		}
+
+		function cb(data){
+            var props = _self.ajaxProps.split('.'),oList = [],temp = {};
+            //data = list;
+            temp = data;
+            for(var i=0;i<props.length;i++){
+
+                temp =  temp[props[i]];
+                if(temp){//temp不能为undefined 或者null必须为对象
+                    oList = temp;
+				}else{
+                	oList = [];
+                	break;
+				}
+
+            }
+
+            if(Object.prototype.toString.call(oList) === '[object Array]'){
+            	_self.renderBefore(data);
+                _self._render(oList);
+                _self.renderAfter(oList);
+                _self.total = data[_self.totalProps];
+                _self.loadAfter(true);
+            }else{
+                _self.loadAfter(false);
+            }
+		}
+	};
+	//刷新课程列表函数
+	proto.refresh = function(){
+		var _self = this;
+		if(_self.params.start){
+            _self.params.start=0;
+		}
+		if(_self.params.curPage){
+            _self.params.curPage = 1;
+		}
+		_self.isFirstLoad = true;
+		_self.empty();
+		_self.load();
+	};
+	
+	//清空课程列表
+	proto.empty = function(){
+
+		var _self = this;
+		if(_self.oAjax && typeof _self.oAjax.abort === 'function'){
+			_self.oAjax.abort();
+		}
+		_self.domMap.N_courseWrap.html('');
+		_self.domMap.N_loadBar.attr('class','m-data-load');
+		_self.statusMap.ajaxOff = false;
+		_self.statusMap.isLoading = false;
+	}
+	
+	proto.loadBefore = function(){
+		var _self = this;
+		isOnline = window.navigator.onLine;
+		if(!isOnline){
+			_self.domMap.N_loadBar.attr('class','m-data-load offline');
+           // _self.domMap.N_loadBar.className="m-data-load offline";
+		    return;
+        }
+		_self.statusMap.isLoading = true;
+		//_self.domMap.N_loadBar.className="m-data-load loading";
+		_self.domMap.N_loadBar.attr('class','m-data-load loading');
+	};
+	//每次加载成功后执行函数参数f布尔值表示返回结果是否符合预期即是否可以取到data.resultList.list属性
+    proto.loadAfter = function(f){
+    	//return;
+        var _self = this, s,start,curPage,sClass='';
+        var total, pageType = _self.pageType;      
+        
+        var limit = _self.params.limit ? _self.params.limit : 20;
+        _self.statusMap.isLoading = false;
+        if(!f){
+        	_self.domMap.N_loadBar.attr('class','m-data-load error');
+            //_self.domMap.N_loadBar.className="m-data-load error";
+			//s = _self.domMap.N_loadBar.offsetHeight;//触发浏览器重绘
+			s = _self.domMap.N_loadBar[0].offsetHeight();
+            return;
+		}
+
+        total = _self.total;
+		if(total > 0 ){
+			if(pageType == 'limit'){
+				start = _self.params.start ? _self.params.start : 0;
+                if(start + limit < total){
+                  //  _self.domMap.N_loadBar.className="m-data-load";
+                   _self.domMap.N_loadBar.attr('class','m-data-load');
+                    _self.params.start = start+limit;
+                }else{
+                	sClass = _self.isFirstLoad ? "m-data-load" : "m-data-load noMore";
+					//_self.domMap.N_loadBar.className=sClass;
+					_self.domMap.N_loadBar.attr('class',sClass);
+					_self.statusMap.ajaxOff = true;
+                }
+			}else{
+				curPage = _self.params.curPage ? _self.params.curPage : 1;
+				if(curPage*limit <total){
+                   // _self.domMap.N_loadBar.className="m-data-load";
+                   _self.domMap.N_loadBar.attr('class','m-data-load');
+                    _self.params.curPage = curPage + 1;
+				}else{
+                    sClass = _self.isFirstLoad ? "m-data-load" : "m-data-load noMore";
+                   // _self.domMap.N_loadBar.className=sClass;
+                   _self.domMap.N_loadBar.attr('class',sClass);
+                    //_self.domMap.N_loadBar.className="m-data-load noMore";
+                    _self.statusMap.ajaxOff = true;
+				}
+			}
+		}else{
+			_self.domMap.N_loadBar.attr('class','m-data-load empty');
+           // _self.domMap.N_loadBar.className="m-data-load empty";
+            _self.statusMap.ajaxOff = true;
+		}
+		_self.isFirstLoad = false;
+		s = _self.domMap.N_loadBar.offsetHeight;//触发浏览器重绘
+    };
+	proto._render = function(list) {
+		var _self = this;
+		var domHtml = '';
+		list.forEach(function(v,i,input){
+			domHtml += _self.fnItemTpl(v,i,input);
+		});
+	    _self.domMap.N_courseWrap[0].insertAdjacentHTML('beforeEnd',domHtml);
+	};
+	proto.destroy = function(){
+        this.target.remove();
+        if(typeof this.removeWinEvents() === 'function'){
+            this.removeWinEvents();
+			delete this.removeWinEvents;
+		}
+        delete this.params ;
+        delete this.jsonp;
+        delete this.dataType;
+        delete this.limit;
+        delete this.start;
+        delete this.renderAfter;
+        delete this.url;
+        delete this.total;
+        delete this.fnItemTpl ;
+        delete this.target ;
+        delete this.totalProps;
+        delete this.offsetNode;
+        delete this.oAjax;
+        delete this.ajaxProps;
+        delete this.sListClass;
+        delete this.pageType;
+        delete this.timer;
+        delete this.resizeTimer;
+        delete this.domMap;
+        delete this.statusMap;
+	}
+
+    //获取节点到页面顶端的距离函数 obj 参数为 节点元素
+    function offsetTop(obj){
+        var top = obj.offsetTop;
+        var oParent = obj.offsetParent;
+        while(oParent != null){
+            top += oParent.offsetTop;
+            oParent = oParent.offsetParent;
+        }
+        return top;
+    }
+    //获取节点css样式
+    function getStyle(ele,attr){
+         return window.getComputedStyle(ele,null)[attr];
+    }
+    function scrollBtm(){
+
+	}
+
+/*------------------------tpl--------------------------
+*/
+    
+    function courseTpl(v){
+        var price =  v.price == 0 ? '免费' :'￥' + v.price;
+        var title = util.htmlEncode(v.title);
+        var s = [
+            '<li class="c-list-item">',
+                '<div class="img-cover">',
+                    '<a href="/wap/course/detail/'+v.id+'" >',
+                        '<img src="'+v.coursePhoto+'">',
+                    '</a>',
+                '</div>',
+                '<a class="course-des" href="/wap/course/detail/'+v.id+'" >',
+                    '<div >',
+                        '<p class="title">'+title+'</p>',
+                        '<div class="course-info">',
+                            '<span class="contentCnt">'+v.contentCnt+'课时</span>',
+                            '<span class="price">'+price+'</span>',
+                        '</div>',
+                    '</div>',
+                '</a>',
+            '</li>'
+        ].join('');
+        return s;
+    }
+    function classReportTpl(v){
+        var price =  v.price == 0 ? '免费' : '￥' + v.price;
+        var title = util.htmlEncode(v.title);
+        var url =  v.courseType ==='package' ? '/wap/course/netClassDetail/'+v.serviceId :
+                  v.courseType ==='presell_package' ? '/wap/course/presellClassDetail/'+v.serviceId :
+                  v.courseType ==='faceteach' ? '/wap/course/faceClassDetail/'+v.serviceId :'';
+        var  courseType =  v.courseType ==='package' ? '网络' :
+                   v.courseType ==='presell_package' ? '预售' :
+                   v.courseType ==='faceteach' ? '面授' :'其他';
+        var courseTypeStr = '<span class="'+v.courseType+'">'+courseType+'</span>'+'<span class="separate"></span>';
+        var contentCountStr =  v.contentCount+'课程';
+        if(v.courseType === 'faceteach'){
+            if(v.contentCount > 0){
+                contentCountStr =  v.contentCount+'课次';
+            }else{
+                contentCountStr = '';
+            }
+        }
+        var s = [
+            '<li class="c-list-item">',
+                '<div class="img-cover">',
+                    '<a href="'+url+'" >',
+                        '<img src="'+v.coursePhotoUrl+'">',
+                    '</a>',
+                '</div>',
+                '<a class="course-des" href="'+url+'" >',
+                    '<div >',
+                        '<p class="title">',
+                            courseTypeStr,
+                            '<span>'+title+'</span>',
+                        '</p>',
+                        '<div class="course-info">',
+                            '<span class="contentCnt">'+contentCountStr+'</span>',
+                            '<span class="price">'+price+'</span>',
+                        '</div>',
+                    '</div>',
+                '</a>',
+            '</li>'
+        ].join('');
+        return s;
+    }
+    function noticeTpl(v){
+        var sClass = v.photoShow ? 'has-cover-notic' : 'no-cover-notic';
+        var title = util.htmlEncode(v.titleName);
+        var coverHTMLStr = '';
+        if(v.photoShow){
+            coverHTMLStr = [
+                '<div class="img-wrapper">',
+                '<a href="/wap/postDetail?postId='+v.id+'">',
+                '<img src="'+v.photoUrl+'" alt="" width="100%" height="100%">',
+                '</a>',
+                '</div>',
+            ].join('');
+        }
+        var s = [
+            '<li class="'+sClass+'">',
+                coverHTMLStr,
+                '<div class="con">',
+                    '<a href="/wap/postDetail?postId='+v.id+'">',
+                    '<p class="title">'+title+'</p>',
+                    '<p class="time">'+v.appShowTime+'</p>',
+                    '</a>',
+                '</div>',
+            '</li>',
+        ].join('');
+        return s;
+    }
+
+     function teacherTpl(v){
+		 var url = "/wap/course/toTeacherDetail?teacherId="+v.id;
+		 var avatar = v.photoUrl;
+		 var name = v.name===null||v.name===undefined?'':util.htmlEncode(v.name);
+		 var des = v.description===null||v.description===undefined?'':v.description;
+		  var s = [
+			'<div class="t-list-item">',
+				'<a class="J_jump" href="'+url+'">',
+				'<div class="avatar">',
+					'<img  src="'+avatar+'" />',
+				'</div>',
+				'<div class="info">',
+					'<div class="name">'+name+'</div>',
+					'<p class="des">'+des+'</p>',
+				'</div>',
+				'</a>',
+			'</div>'
+         ].join('');
+         return s;
+	 }
+
+
+/*------------------------util--------------------------
+*/
+var util = {
+		extend : function (target, source) {
+		    for (var p in source) {
+		        if (source.hasOwnProperty(p)) {
+		            target[p] = source[p];
+		        }
+		    }
+		    
+		    return target;
+		},
+		qs : function(selector, context) {
+	        context = context || document;
+	        return context.querySelector(selector);
+	    },
+
+	    qsa: function(selector, context) {
+	        context = context || document;
+	        return context.querySelectorAll(selector);
+	    },
+	    //DOM , DOM
+	    N_insertAfter : function(newN,targetN) {
+	    	var parent = targetN.parentNode;
+	    	if(parent.lastChild === targetN){
+	    		parent.appendChild(newN);
+	    	}else{
+	    		parent.insertBefore(newN,targetN.nextSibling);
+	    	}
+	    	
+	    },
+	    N_empty : function(ele) {
+	    	if(!ele){
+	    		return ;
+	    	}
+	    	ele = typeof ele === 'string' ? util.qs(ele) : ele;
+	        while(ele.hasChildNodes()) //当div下还存在子节点时 循环继续
+	        {
+	        	ele.removeChild(ele.firstChild);
+	        }
+	    },
+	    //N_parents(string|DOM,exp,string|DOM)
+		N_parents : function (ele,exp,context){
+	    	
+	    	if(!ele || !exp){
+	    		return ;
+	    	}
+			var pars = [], o_ele = ele, r_ele = /^(?:#|\.)?([\w\-]*)/;
+			//fix
+			ele = typeof ele === 'string' ? util.qs(ele) : ele;
+			context = context || document;
+			context = typeof context === 'string' ? util.qs(context) : context;
+			
+			while ((ele = ele.parentNode) && (context ?  !ele.isEqualNode(context) : ele.nodeType !== 9) ){
+				if(typeof exp === 'object' && ele.isEqualNode(exp)){
+					pars.push(ele);
+				}
+				if(typeof exp === 'string' ){
+					exp = exp.trim() ;
+					var  mc = exp.match(r_ele), mc_exp = mc[1] ? mc[1].toUpperCase() :  mc[1];
+					if(mc_exp === ele.id || ele.classList.contains(mc_exp) || ele.tagName === mc_exp){
+						pars.push(ele);
+					}
+				}
+			}
+			return pars ;
+		},
+		//N_siblings(DOM,string|DOM)
+		N_siblings : function(ele,context) {
+			var sibs = sibs_arr = [] , i = 0 , len, ele_tagName = false;
+			//fix
+			context = typeof context === 'string' ? util.qs(context) : context ;
+			//ele 为 dom
+			if(ele && typeof ele === 'object' && ele.nodeType ===1 ){
+				ele_tagName = ele.tagName;
+				context = context ? context : ele.parentNode;
+				sibs = context.querySelectorAll(ele_tagName) ||context.children;
+				for(i = 0,len = sibs.length; i < len ; i++){
+					if(ele!==sibs[i]){
+						sibs_arr.push(sibs[i]);
+					}
+				}
+			}
+			return sibs_arr;
+		},
+		//N_index(string|DOM,number) return DOM |　　N_index(string|DOM,string|DOM) no return
+		N_index : function(ele,context,nindex){
+			if(!ele){
+				//error tip!
+				return ;
+			}
+			var ele_tagName, ele_sibs = [], ele_index, ele_isObj = false ,rback;
+			
+			//ele 为 dom
+			if(ele && typeof ele === 'object' && ele.nodeType ===1 ){
+				ele_isObj = true;
+				ele_tagName = ele.tagName;
+			}
+			
+			//fix context 为dom
+			context = typeof context === 'string' ? util.qs(context) : context ;
+			
+			ele_index =   nindex;
+
+			//获取ele 下标为ele_index int 必须保证ele 为dom
+			if(ele_isObj && (typeof context === 'number') ){
+				ele_index =   context;
+				context = ele.parentNode;
+				ele_sibs = context.children;
+			}
+			
+			
+			ele_sibs = context.querySelectorAll(ele_tagName ? ele_tagName : ele );
+			
+			//赋值 ele 下标index
+			[].forEach.call(ele_sibs,function(el, index){
+				el.index = index;
+				if( ele_isObj && el === ele ||  ele_index === index){
+					rback = {
+							index : index,
+							ele : ele
+					};
+				}
+			})
+			
+			//获取ele 下标为 ele_index 的 dom
+			if(rback){
+				return rback;
+			}
+			
+			
+		},
+		//遍历nodelist
+		nodeEach:function(ele,fn){
+			if(!ele){
+				return;
+			}
+			ele = typeof ele === 'string' ? util.qsa(ele) : ele;
+			Array.prototype.forEach.call(ele,fn);
+			
+		},
+		getStyle:function(ele,attr){
+			 return window.getComputedStyle(ele,null)[attr];
+		},
+		//获取节点到页面顶端的距离函数 ele 参数为 节点元素
+		getOffsetTop:function(ele){
+            var top = ele.offsetTop;
+            var oParent = ele.offsetParent;
+            while(oParent != null){
+                top += oParent.offsetTop;
+                oParent = oParent.offsetParent;
+            }
+            return top;
+		},
+		//从Url获取参数
+		queryString: function queryString(key) {
+			var result, uri = window.location.search, re = new RegExp('(?:[?|&]|^)' + key + '=([^&?]*)', 'ig');
+			return (result = re.exec(uri)) ? result[1] : null;
+		},
+		htmlEncode:function(s){
+			return s.replace(/[<>"']/g, function (v) {
+				switch (v) {
+					case '<':
+						return '<';
+					case '>':
+						return '>';
+					case '"':
+						return '"';
+					//case "'":
+					//	return ''';
+				}
+			});
+		},
+		htmlDecode:function(s){
+			return s.replace(/<|>|'/g, function (v) {
+				switch (v) {
+					case '<':
+						return '<';
+					case '>':
+						return '>';
+					case "'":
+						return "'";
+				}
+			});
+		},
+		htmlFilter:function(s){
+			return s.replace(/[<>"']/g, '');
+		},
+		tap:function(dom,callBack){
+            var isMove=false;
+            var startX = 0;
+            var startY = 0;
+            var startTime = 0;
+            var delayTime=1000;
+            dom.addEventListener("touchstart",function(event){
+                //记录开始时间
+				isMove = false;
+				var touches = event.touches;
+                startX = touches[0].clientX;
+                startY = touches[0].clientY;
+                startTime=Date.now();
+
+            });
+            dom.addEventListener("touchmove",function(event){
+                //如果发生了移动就改变isMove的值
+				var deltaY,deltaX;
+                var touches = event.touches;
+				 deltaY = Math.abs(touches[0].clientY - startY);
+                 deltaX = Math.abs(touches[0].clientX - startX);
+                 if(deltaY>30|| deltaX>30){
+                     isMove=true;
+				 }
+            });
+            dom.addEventListener("touchend",function(event){
+                //如果发生了移动或者触摸超过1000ms就不执行回调
+                if(isMove) return;
+                if(Date.now()-startTime>delayTime) return;
+                callBack.call(this,event);
+
+            });
+        }
+		
+};
+
+    
+
+/*---------------------cateTree--------------*/
+
+	function CateTree(opt){
+		//this.oTarget = opt.oTarget;
+        this.rootTree = [];
+        this.cateLevel  = opt.cateLevel ;
+		this.offsetNode = opt.offsetNode;
+		this.cateName = opt.cateName!== undefined ? opt.cateName : '分类';
+		this.cateId   = opt.cateId || 0;
+		this.isCourse = opt.isCourse !== undefined ? opt.isCourse : true;
+		this.orgId    = opt.orgId;
+		this.fnCateSelected = typeof opt.fnCateSelected === 'function' ? opt.fnCateSelected : function(){console.log(99)};
+		this.fnLoadCateCb = typeof opt.fnLoadCateCb ==='function' ? opt.fnLoadCateCb :function(){};
+        this.maskHideCb = typeof opt.maskHideCb  === 'function' ?　opt.maskHideCb : function(){console.log('hide')};
+        this.maskShowCb = typeof opt.maskShowCb  === 'function' ?　opt.maskShowCb : function(){console.log('show')};
+        this.init();
+        
+	}
+	var proto = CateTree.prototype,w=window,doc = document;
+	proto.getCateId = function(){
+		return this.cateId;
+	};
+    proto.getCateName = function(){
+        return this.cateName;
+    };
+    proto.setCateId = function(id){
+        this.cateId = id;
+    };
+    proto.setCateName = function(name){
+       this.cateName = name;
+    };
+    proto.maskHide = function(){
+        var _self = this;
+        var cateMasking = $('#cateMasking');
+        var sortMasking = $('#sortMasking');
+        if(cateMasking){
+            cateMasking.addClass('mask-hidden');
+        }
+        if(sortMasking){
+            sortMasking.addClass('mask-hidden');
+        }
+        _self._screenUnlock();
+        _self.maskHideCb(_self);
+    };
+
+    proto.maskShow = function(){
+        var _self = this;
+        _self._showMaskBefore();
+        var cateMasking = $('#cateMasking');
+        var sortMasking = $('#sortMasking');
+        if(cateMasking){
+            cateMasking.removeClass('mask-hidden');
+        }
+        if(sortMasking){
+            sortMasking.removeClass('mask-hidden');
+        }
+        _self._screenLock();
+        _self.maskShowCb(_self);
+    };
+    proto._showMaskBefore = function(){
+        var _self = this;
+        var oMask =$('#cateMasking');
+        var offset = _self.offsetNode.offset().top;
+        var offsetNode = _self.offsetNode;
+        var h = parseInt(offsetNode.css('height'));
+        oMask.css('top',offset+h+'px');
+        _self.refreshTree();
+    };
+    proto._screenUnlock = function(){
+        $('body').css('height','auto');
+        $('body').css('overflow','visible');
+        $('html').css('height','auto');
+        $('html').css('overflow','visible');
+    }
+    proto._screenLock = function(){
+        var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        $('body').css('height',clientHeight +'px');
+        $('body').css('overflow','hidden');
+        $('body').css('height',clientHeight +'px');
+        $('body').css('overflow','hidden');
+
+    }
+    proto.destroy =function() {
+    	var cateMasking = $('#cateMasking');
+        if(cateMasking){
+            cateMasking.remove();
+        }
+        this._screenUnlock();
+        delete this.rootTree;
+        delete this.offsetNode;
+        delete this.cateName;
+        delete this.cateId;
+        delete this.isCourse;
+        delete this.orgId;
+        delete this.fnCateSelected;
+        delete this.maskHideCb;
+        delete this.maskShowCb;
+    }
+    proto.init = function(){
+        var _self = this;
+        _self.loadMaskData(0,_self.firstLoadCb);
+    }
+    proto.bindEvents = function(){
+        var _self = this;
+        var oMask = $("#cateMasking");
+       oMask.click(function(e){
+            var t = $(e.target);
+            if(t.hasClass('cate-item')){
+                var cateId = t.attr('cateid');
+                var cateName = util.htmlDecode(t.attr('catename'));
+                _self.setCateId(cateId);
+                _self.setCateName(cateName);
+                if(!t.hasClass('hasChild')){
+                    _self.fnCateSelected(_self);
+                    _self.maskHide();
+                }else{
+                    _self.getChildTree(cateId,cateName);
+                }
+            }
+            if(t.hasClass('masking')){
+                _self.maskHide();
+            }
+        });
+
+    };
+
+    proto.loadMaskData = function(cateId,cb){
+        var _self = this;
+        var url = '/org/app/course/getCategory';
+        var data = {
+            organizationId:_self.orgId,
+            categoryId:cateId,
+            isCourse:_self.isCourse
+        }
+        $.get(url, data, function(data){
+            cb(_self,data);
+        }, 'json');
+    };
+    proto.getMaskTpl = function(list){
+        var _self = this;
+        var level = _self.cateLevel;
+
+        var oHtml = [];
+        oHtml.push('<li class="cate-item" cateid="'+_self.getCateId()+'" catename="'+util.htmlEncode(_self.getCateName())+'">全部</li>');
+        list.forEach(function(v){
+            var sClass = '';
+            if(level === 0){
+                sClass = v.hasChild ? 'hasChild' : '';
+            }
+            var s = [
+                '<li class="cate-item '+sClass+'" cateid="'+v.id+'" catename="'+util.htmlEncode(v.categoryName)+'">',
+                util.htmlEncode(v.categoryName),
+                '</li>'
+            ].join('');
+            oHtml.push(s);
+        });
+        return oHtml.join('');
+    };
+    proto.firstLoadCb = function(_self,data){
+        _self.fnLoadCateCb(data,_self);
+        if(data.category && data.category.list){
+            _self.rootTree = data.category.list;
+            if(data.category.list.length>0){
+                var s = [
+                    '<div class="m-masking masking mask-hidden" id="cateMasking">',
+                        '<ul class="cate-wrapper">',
+                            _self.getMaskTpl(data.category.list),
+                        '</ul>',
+                        '<div class="mask-bottom">',
+                            '<span class="u-icon-point"></span>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+                document.getElementsByTagName("body")[0].insertAdjacentHTML('beforeEnd',s);
+                _self.bindEvents();
+            }
+        }
+    };
+    proto.refreshTree = function(){
+        var _self = this;
+        _self.cateId = 0;
+        _self.cateName = '分类';
+        var rootTree = _self.getMaskTpl(_self.rootTree);
+        $('#cateMasking .cate-wrapper').html(rootTree);
+    }
+
+    proto.getChildTree = function(cateId,cateName){
+        var _self = this;
+        _self.setCateId(cateId);
+        _self.setCateName(cateName);
+        _self.loadMaskData(cateId,_self.getChildTreeCb);
+    };
+
+    proto.getChildTreeCb = function(_self,data){
+        if(data.category && data.category.list){
+            if(data.category.list.length>0){
+            	 var categoryList = _self.getMaskTpl(
+                    data.category.list);
+                $('#cateMasking .cate-wrapper').html(categoryList) ;
+            }
+        }
+    };
+
+    //获取节点到页面顶端的距离函数 obj 参数为 节点元素
+    function offsetTop(obj){
+        var top = obj.offsetTop;
+        var oParent = obj.offsetParent;
+        while(oParent != null){
+            top += oParent.offsetTop;
+            oParent = oParent.offsetParent;
+        }
+        return top;
+    }
+    //获取节点css样式
+    function getStyle(ele,attr){
+       return window.getComputedStyle(ele,null)[attr];
+    }
+
+
+/*--------------------sort-------------------------*/
+
+	function Sort(opt){
+		//this.oTarget = opt.oTarget;
+		this.offsetNode = opt.offsetNode;
+		this.oMask = null;
+		this.sortName = opt.sortName!== undefined ? opt.sortName : '排序';
+		this.isCourse = opt.isCourse !== undefined ? opt.isCourse : true;
+		this.fnSelected = typeof opt.fnSelected === 'function' ?　 opt.fnSelected　: function(){console.log(99)};
+        this.maskHideCb = typeof opt.maskHideCb  === 'function' ?　 opt.maskHideCb 　: function(){console.log(99)};
+        this.maskShowCb = typeof opt.maskShowCb  === 'function' ?　 opt.maskShowCb 　: function(){};
+        this.init();
+	}
+	var proto  = Sort.prototype;
+
+    proto.getMaskContent = function(){
+        var s = [
+            '<div class="m-masking masking mask-hidden" id="sortMasking">',
+                '<ul class="sort-wrapper mask-content m-mask-list">',
+                    '<li class="sortType m-list-item" sort="">综合</li>',
+                    '<li class="sortType m-list-item" sort="time">最新</li>',
+                    '<li class="sortType m-list-item" sort="play">人气</li>',
+                    '<li class="sortType m-list-item" sort="free">免费</li>',
+                    '<li class="sortType m-list-item" sort="price">价格</li>',
+                '</ul>',
+                '<div class="mask-bottom">',
+                    '<span class="u-icon-point"></span>',
+                '</div>',
+            '</div>'
+        ].join('');
+        return s;
+    };
+    proto.init = function(){
+        var _self = this;
+        var body = document.getElementsByTagName("body")[0] ;
+        body.insertAdjacentHTML('beforeEnd',_self.getMaskContent());
+        _self.oMask = $("#sortMasking");
+        _self.bindEvents();
+    };
+    proto.bindEvents = function(){
+        var _self = this;
+        var oMask = $('#sortMasking');
+        oMask.click(function(e){
+            var t = $(e.target);
+            if(t.hasClass('masking')){
+                _self.maskHide();
+            }
+            if(t.hasClass('sortType')){
+               _self.fnSelected(_self,t);
+               _self.maskHide();
+               $('#sortMasking .sortType').each(function(index, el) {
+                  	$(el).removeClass('active');
+               });
+               t.addClass('active');
+            }
+        });
+    }
+
+    proto.maskHide = function(){
+        var _self = this;
+        _self.oMask.addClass('mask-hidden');
+        _self._screenUnlock();
+        _self.maskHideCb(_self);
+
+    };
+    proto.maskShow = function(){
+        var _self = this;
+        _self._maskShowBefore();
+        _self.oMask.removeClass('mask-hidden');
+        _self._screenLock();
+        _self.maskShowCb(_self);
+    };
+    proto._maskShowBefore = function(){
+
+    	 var _self = this;
+        var oMask =$('#sortMasking');
+        var offset = _self.offsetNode.offset().top;
+        var offsetNode = _self.offsetNode;
+        var h = parseInt(offsetNode.css('height'));
+        oMask.css('top',offset+h+'px');
+       // _self.refreshTree();
+    }
+    proto._screenUnlock = function(){
+        $('body').css('height','auto');
+        $('body').css('overflow','visible');
+        $('html').css('height','auto');
+        $('html').css('overflow','visible');
+    }
+    proto._screenLock = function(){
+        var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        $('body').css('height',clientHeight+'px');
+        $('body').css('overflow','hidden');
+        $('html').css('height',clientHeight+'px');
+        $('html').css('overflow','hidden');
+/*
+        $('body').style.height = clientHeight +'px';
+        $('body').style.overflow = 'hidden';
+        $('html').style.height = clientHeight +'px';
+        $('html').style.overflow = 'hidden';*/
+    }
+    proto.destroy =function() {
+        if(this.oMask){
+            this.oMask.remove();
+        }
+        this._screenUnlock();
+        delete this.offsetNode;
+        delete this.oMask;
+        delete this.sortName;
+        delete this.isCourse;
+        delete this.fnSelected;
+        delete this.maskHideCb;
+        delete this.maskShowCb ;
+    }
+
+
+    //获取节点到页面顶端的距离函数 obj 参数为 节点元素
+    function offsetTop(obj){
+        var top = obj.offsetTop;
+        var oParent = obj.offsetParent;
+        while(oParent != null){
+            top += oParent.offsetTop;
+            oParent = oParent.offsetParent;
+        }
+        return top;
+    }
+    //获取节点css样式
+    function getStyle(ele,attr){
+
+       return window.getComputedStyle(ele,null)[attr];
+    }
+
+
+function initPost(){
+        oParams = {
+            start:0,
+            limit:20,
+            orgId:orgId
+        };
+        var oListView = document.getElementById('listView')
+
+        oListView.innerHTML = [
+            '<div id="listWrap">',
+            '</div>'
+        ].join('');
+      oList = new DataList({
+            target:$("#listWrap"),
+            sListClass:'m-notic-list',
+            ajaxProps:'orgPostList.list',
+            totalProps:'totalCount',
+            offsetNode: $('#navWrap'),
+            url:'/wap/ajax/getPostsList',
+            params:oParams,
+            fnItemTpl:noticeTpl
+        });
+    }
+
+function initTeacher(){
+	 var oListView = document.getElementById('listView')
+
+        oListView.innerHTML = [
+            '<div id="listWrap">',
+            '</div>'
+        ].join('');
+		 oList = new DataList({
+	        target:$("#listWrap"),
+	        url:'/teacherInfo.do?action=getTeacherListByOrg',
+	        ajaxProps:'list',
+	        totalProps:'totalCount',
+	        offsetNode: $('#navWrap'),
+	        sListClass:'m-course-list',
+	        params:{
+	        	orgId:orgId
+	        },
+	        fnItemTpl:teacherTpl,
+	        renderAfter: function(data){
+	        	/*console.log(data);
+	        	if(isAbleskyApp && data.length > 0)
+	        		$.bindAppLink('.J_jump',function(ele){
+	        		    ele.classList.remove('J_jump');
+	            });*/
+	        }
+	    });
+}
+
+
+function initCourse(cateId,cateName,sortType){
+        oParams = {
+            orgId:orgId,
+            categoryId:cateId,
+            sort:sortType,
+            cateName:cateName,
+            src:"wap"
+        };
+        var oListView = document.getElementById('listView');
+        var sortStr = sortType === 'time' ? '最新' :
+                      sortType === 'play' ? '人气' :
+                      sortType === 'free' ? '免费' :
+                      sortType === 'price' ? '价格' : '排序';
+        if(sortType === 'price'){
+            oParams.dir = 'asc';
+        }else{
+            oParams.dir = '';
+        }
+        if(sortType === 'free'){
+            oParams.free = true;
+        }else{
+            oParams.free = '';
+        }
+        oListView.innerHTML = [
+            '<div class="m-filter-box" id="filterWrap">',
+                '<ul class="m-filter-wrap">',
+                '<li class="filter-item disabled" id="cateFilter"><a><span class="text" id="cateFilterText">'+cateName+'</span><i class="m-filter-icon" ></i></a></li>',
+                '<li class="filter-item" id="sortFilter"><a><span class="text" id="sortFilterText">'+sortStr+'</span><i class="m-filter-icon" ></i></a></li>',
+                '</ul>',
+            '</div>',
+            '<div id="listWrap">',
+            '</div>'
+        ].join('');
+       oTree = new CateTree({
+            //oTarget:$('#cateFilter'),
+            orgId:orgId,
+            cateLevel:0,
+            offsetNode:$('#filterWrap'),
+            isCourse:true,
+            fnCateSelected:function(_self){
+                var cateId = _self.getCateId(),cateName = _self.getCateName();
+                oParams.categoryId =cateId;
+                var cateFilterText = document.getElementById('cateFilterText');
+                cateFilterText.innerText = cateName;
+                oList.refresh();
+            },
+            fnLoadCateCb:function(data){
+                if(data.category && data.category.list){
+                    if(data.category.list.length > 0){
+                        $('#cateFilter').removeClass('disabled');
+                    }else{
+                    	  $('#cateFilter').addClass('disabled');
+                    }
+                }
+            },
+            maskHideCb:function(_self){
+                $('#cateFilter').removeClass('active');
+            }
+        });
+      oList = new DataList({
+            target:$("#listWrap"),
+            dataType:'jsonp',
+            jsonp:'callback',
+            offsetNode: $('#filterWrap'),
+            url:'http://mobile.ablesky.com/organization.do?action=getCourseForCategory',
+            params:oParams,
+            fnItemTpl:courseTpl
+        });
+
+        oSort = new Sort({
+            offsetNode:$('#filterWrap'),
+            fnSelected:function(_self,node){
+                var sort = node.attr('sort');
+                oParams.sort = sort;
+                if(sort === 'price'){
+                    oParams.dir = 'asc';
+                }else{
+                    oParams.dir = '';
+                }
+                if(sort === 'free'){
+                    oParams.free = true;
+                }else{
+                    oParams.free = '';
+                }
+                var sortFilterText = $('#sortFilterText')
+                var nodeText = node.text();
+                sortFilterText.html(nodeText) ;
+                oList.refresh();
+            },
+            maskHideCb:function(_self){
+                $('#sortFilter').removeClass('active');
+            }
+        });
+        $("#cateFilter").click(function(){
+            if($(this).hasClass('disabled')){
+                return;
+            }
+            oSort.maskHide();
+            if($(this).hasClass('active')){
+            	
+                $(this).removeClass('active');
+                oTree.maskHide();
+            }else{
+            	
+            	$("#filterWrap .filter-item").each(function(index, el) {
+            	$(el).removeClass('active')
+            	});	
+
+                 $(this).addClass('active');
+                oTree.maskShow();
+            }
+
+        });
+        $("#sortFilter").on('click',function(){
+        	if($(this).hasClass('disabled')){
+                return;
+            }
+            oTree.maskHide();
+            if($(this).hasClass('active')){
+  
+                 $(this).removeClass('active');
+                oSort.maskHide();
+            }else{
+                $("#filterWrap .filter-item").each(function(index, el) {
+            		$(el).removeClass('active')
+            	});	
+                $(this).addClass('active');
+                oSort.maskShow();
+            }
+        });
+}
+
+
+
+
+function initIndex(){
+        $("#indexView").css('display' , 'block');
+	}
+
+var oTree=null,oList=null,oSort = null,oFilter=null;
+
+$('.J_navSwitch').each(function(index, el) {
+	  el.addEventListener('click',tabClick);
+});
+/*tab切换*/
+function tabClick(){
+
+	var tab = $(this).attr('tab');
+
+	if($(this).hasClass('active')){
+		return;
+	}
+    var cateId =  $(this).attr('cateid'),
+        cateName = $(this).attr('catename'),
+        sortType = $(this).attr('sort');
+        cateId = cateId  ? cateId:0;
+        cateName = cateName  ? cateName : '分类';
+        sortType = sortType  ? sortType : '';
+
+    destroyListView();
+    $('#navWrap .J_navSwitch').removeClass('active');
+	$('#navWrap .J_navSwitch[tab='+tab+']').addClass('active');
+
+    var oh =$('#navWrap').offsetHeight;//触发浏览器reflow
+
+    if(tab != 'index'){
+        $("#indexView").css('display','none');
+    }
+    if (tab == 'index') {
+    	 $("#indexView").css('display','block');
+    	 return;
+    }
+    if(tab == 'course'){
+        initCourse(cateId,cateName,sortType);
+        return;
+    }
+
+    if(tab == 'post'){
+        initPost();
+        return;
+    }
+    if(tab == 'teacher'){
+        initTeacher();
+        return;
+    }
+}
+
+
+function destroyListView(){
+		if(oTree){
+			oTree.destroy();
+			oTree = null;
+		}
+		if(oSort){
+            oSort.destroy();
+            oSort = null;
+		}
+        if(oList){
+            oList.destroy();
+            oList = null;
+        }
+        if(oFilter){
+            oFilter.destroy();
+            oFilter = null;
+        }
+        $('#listView').html('');
+	}
+
+
+
+/*导航固定定位*/
+var scoll = 0,t = 0;  	  
+    $(window).scroll(function(e){  
+    	scoll = $(this).scrollTop();    
+    	var height=$('.top').outerHeight();
+    	var navH = $('.m-nav-wrap').height() ;
+            if(t <= scoll){           
+               	if (scoll > height){
+               		console.log(height);
+
+       		    	if(isApp){
+       		    		$('.top').css({
+	               			"position":"fixed",
+	               			"top":"0",
+	               			"left":"0",
+	               			"z-index":"5000"
+	               		});
+	               		$('.m-nav-wrap').css({
+	               			"position":"fixed",
+	               			"top":height,
+	               			"left":"0",
+	               			"z-index":"5000"
+	               		});		
+
+			    	}else{
+			    		$('.m-nav-wrap').css({
+	               			"position":"fixed",
+	               			"top":"0",
+	               			"left":"0",
+	               			"z-index":"5000"
+	               		});	
+			    	}
+
+               	}
+               }else{ 
+
+               	if(isApp){
+
+               		if(scoll<(height)){
+               		$('.top').css({
+               			"position":"static",
+ 
+               		});	
+               		$('.m-nav-wrap').css({
+               			"position":"static",
+  
+               		});	}
+
+               	}else{
+
+	           		if(scoll<(height-navH)){
+	               		$('.m-nav-wrap').css({
+	               			"position":"static",
+	               		});	
+	               	} 
+               	}			
+               }
+
+            setTimeout(function(){t = scoll;},0);            
+    }) 	
+}
+</script>
+
+<script src="https://js.ablesky.cn/stata/js_optimize/wap/lib/swiper_f6b65fd6.js"  defer type="text/javascript"></script>
+<script src="https://js.ablesky.cn/stata/js_optimize/lib/require-jquery_dfffa55c.js" defer type="text/javascript"></script>

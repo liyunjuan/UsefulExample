@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function addHandler(target,eventType,handler){
+				if(target.addEventlistener){
+					addHandler = function(target,eventType,handler){
+						target.addEventListener(eventType,handler,false);
+					}
+				}else{
+					addHandler = function(target,eventType,handler){
+						target.attachEvent(target,eventType,handler);
+					}
+				}
+				addHandler(target,eventType,handler);
+			}
+			
+			function removeHandler(target,eventType,handler){
+				if(target.removeEventlistener){
+					removeHandler = function(target,eventType,handler){
+						target.removeEventListener(eventType,handler,false);
+					}
+				}else{
+					removeHandler = function(target,eventType,handler){
+						target.detachEvent(target,eventType,handler);
+					}
+				}
+				removeHandler(target,eventType,handler);
+			}
+		</script>
+	</body>
+</html>

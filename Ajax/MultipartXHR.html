@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//客户端
+		var req = new XMLHttpRequest();		
+		req.open('GET','roolup_image.pht',true);
+		rep.onreadystatechange = function(){
+			if(req.readyState === 4){
+				simpleImage(req.responseText);
+			}
+		}
+		req.send(null);
+		
+		//服务器端
+		$images = array('kitten.jpg','sunset.jpg,'baby.jpg');
+		foreache($images ad $image){
+			$image_fh = fopen($image,'r');
+			$image_data = fread($image_fh,filesize($image));
+			fclose($image_fh);
+				$payloads[] = base64_encode($image_data);
+		}
+		$newline = char($;
+			echo implode($newline,$payloads);
+			
+		//客户端
+		function simpleImage(imageString){
+			var imageData = imageString.splite("\u0001");
+			var imageElement;
+			
+			for(var i=0,len=imageData.length;i<len;i++){
+				imageElement = document.createElement('img');
+				imageElement.src = "data:image/jpeg;base64"+imageData[i];
+				document.getElementById('container').appendChild(imageElement);
+			}
+		}
+		
+		
+	</script>
+</html>
