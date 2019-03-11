@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function outPut(s){
+				document.writeln(s);
+			}
+			var a = 'lashou';
+			var b = a;
+			outPut(b); //'lashou'
+			a = '拉手';
+			outPut(a);//拉手
+			var a_array = [1,2,3];
+			var b_array = a_array;
+			outPut(b_array);//[1,2,3]
+			a_array[3] = 4;
+			outPut(a_array);//[1,2,3,4]
+			outPut(b_array);//[1,2,3,4]
+			
+			String.prototype.spacify = function(){
+				return this.split('').join(' ');
+			}
+		</script>
+	</body>
+</html>

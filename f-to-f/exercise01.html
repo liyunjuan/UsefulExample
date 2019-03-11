@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			bar();
+			var foo = function bar(name){
+				console.log('hello' + name);
+				console.log(bar);
+			}
+			alert(typeof bar);
+			foo('world');
+//			console.log(bar);
+			console.log(foo.toString());
+			bar();
+		</script>
+	</body>
+</html>

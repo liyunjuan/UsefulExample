@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="">
+			<div id="div1"></div>
+			<div id="div2"></div>
+			<div id="div3"></div>
+			<div id="div4"></div>
+			<div id="div2"></div>
+			<div id="div1"></div>
+			<div id="div5"></div>
+			<div id="div6"></div>
+			<div id="div1"></div>
+			<div id="div1"></div>
+		</form>
+		
+		<script type="text/javascript">
+			var obj = document.querySelectorAll('form div');
+			for(var i=0,len=obj.length;i<len;i++){
+				var str = obj[i].getAttribute('id');
+				var s = 1;
+				for(var j=i+1,len=obj.length;j<len;j++){
+					if(obj[j].getAttribute('id') == str){
+						s++;
+					}
+				}
+				if(s>1){
+					alert('id为'+str+'的元素出现了'+s+'次');
+				}
+			}
+		</script>
+	</body>
+</html>

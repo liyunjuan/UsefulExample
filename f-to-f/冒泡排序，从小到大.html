@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,42,12,21,22,123,12323];
+			function func(arr){
+				for(var i=0;i<arr.length;i++){
+					for(var j=0;j<arr.length-i;j++){
+						if(arr[j]>arr[j+1]){
+							var c = arr[j];
+							arr[j] = arr[j+1];
+							arr[j+1] = c;
+						}
+					}
+				}
+				return arr.join();
+			}
+			
+			console.log(func(arr));
+		</script>
+	</body>
+</html>

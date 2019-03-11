@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var User = {
+				count:1,
+				getCount:function(){
+					return this.count;
+				}
+			}
+			console.log(User.getCount());
+			var func = User.getCount;
+			console.log(func());
+		</script>
+	</body>
+</html>

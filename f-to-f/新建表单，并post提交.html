@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.onload = function(){
+				var o_form = document.createElement('form');
+				o_form.setAttribute('method','post');
+				o_form.setAttribute('action','http://123.0.0.1/save.php');
+				var o_input = document.createElement('input');
+				o_form.appendChild(o_input);
+				document.body.appendChild(o_form);
+				o_input.value = 'cxs';
+				o_form.submit();
+			}
+		</script>
+	</body>
+</html>

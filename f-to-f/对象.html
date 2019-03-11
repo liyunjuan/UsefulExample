@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {proto:{a:1,b:2}};
+			function F(){}
+			F.prototype = obj.proto;
+			var f = new F();
+			obj.proto.c = 3;
+			obj.proto = {a:-1,b:-2};
+			alert(f.a);//1
+			alert(f.c);//3
+			delete F.prototype['a'];
+			alert(f.a);//undefined
+			alert(obj.proto.a);//-1
+		</script>
+	</body>
+</html>

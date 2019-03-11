@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="list">
+			<li>item</li>
+			<li>item</li>
+			<li>item</li>
+			<li>item</li>
+			<li>item</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var items = document.querySelectorAll('#list>li');
+			for(var i=0;i<items.length;i++){
+				(function(){
+					items[i].style.color = 'red';
+				})(i)
+			}
+		</script>
+	</body>
+</html>
