@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//用Symbol.iterator让对象可以遍历，必须有一个next()方法
+			const obj = {
+				name:'lyj',
+				age:24,
+				[Symbol.iterator]:function(){
+					let age = 24
+					const iterator = {
+						next(){
+							return {
+								value:age,
+								done:age++ > 25
+							}
+						}
+					}
+					return iterator
+				}
+			}
+			
+			for(let key of obj){
+				console.log(key)
+			}
+		</script>
+	</body>
+</html>

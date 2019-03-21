@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="" name="" id="" value="aaaa" />
+		<script type="text/javascript">
+			function back(ele,event){
+				var event = event || window.event;
+				if(event.keyCode == 13){
+					event.returnValue = false;
+					ele.value += '{{enter}}';
+					return false;
+				}
+			}
+			document.querySelector('input').addEventListener('keypress',function(event){
+				var $this = this;
+				console.log(event)
+				back($this,event)
+			});
+		</script>
+	</body>
+</html>

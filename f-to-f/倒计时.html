@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>www.jb51.net JS倒计时</title>
+		<style type="text/css">
+			.container{
+				background: pink;
+				width: 392px;
+				padding: 20px;
+				background: #000;
+			}
+			.top{
+				display: flex;
+				width: 392px;
+				justify-content: space-between;
+			}
+			.top span{
+				display: inline-block;
+				width: 78px;
+				height: 86px;
+				line-height: 86px;
+				text-align: center;
+				font-size: 40px;
+				font-weight: bold;
+				border-radius: 5px;
+				background: rgba(255,255,255,0.3);
+				color: #fff;
+			}
+			.top p{
+				height: 86px;
+				line-height: 86px;
+				font-size: 40px;
+				font-weight: bold;
+				display: inline-block;
+				color: #fff;
+				margin: 0;
+			}
+			.bottom{
+				display: flex;
+				width: 392px;
+				background: rgba(255,255,255,0.3);
+				justify-content: space-between;
+				margin-top: 15px;
+			}
+			.bottom span{
+				display: inline-block;
+				width: 78px;
+				text-align: center;
+				font-size: 20px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+
+
+		<div class="container">
+			<div class="top">
+				<span class="big J_day">1</span><p>:</p>
+				<span class="big J_hour">5</span><p>:</p>
+				<span class="big J_min">5</span><p>:</p>
+				<span class="big J_sec">5</span>
+			</div>
+			<div class="bottom">
+				<span class="normal">天</span>
+				<span class="normal">时</span>
+				<span class="normal">分</span>
+				<span class="normal">秒</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload=clock;
+			function clock(){
+				console.log(2222)
+				var today=new Date(),//当前时间
+				    h=today.getHours(),
+				    m=today.getMinutes(),
+				    s=today.getSeconds();
+				  var stopTime=new Date("Apr 1 2019 00:00:00"),//结束时间
+				    stopH=stopTime.getHours(),
+				    stopM=stopTime.getMinutes(),
+				    stopS=stopTime.getSeconds();
+				  var shenyu=stopTime.getTime()-today.getTime(),//倒计时毫秒数
+				    shengyuD=parseInt(shenyu/(60*60*24*1000)),//转换为天
+				    D=parseInt(shenyu)-parseInt(shengyuD*60*60*24*1000),//除去天的毫秒数
+				    shengyuH=parseInt(D/(60*60*1000)),//除去天的毫秒数转换成小时
+				    H=D-shengyuH*60*60*1000,//除去天、小时的毫秒数
+				    shengyuM=parseInt(H/(60*1000)),//除去天的毫秒数转换成分钟
+				    M=H-shengyuM*60*1000;//除去天、小时、分的毫秒数
+				    S=parseInt((shenyu-shengyuD*60*60*24*1000-shengyuH*60*60*1000-shengyuM*60*1000)/1000)//除去天、小时、分的毫秒数转化为秒
+//				    document.getElementById("div").innerHTML=(shengyuD+"天"+shengyuH+"时"+shengyuM+"分"+S+"秒"+"<br>");
+				    document.querySelector('.J_day').innerHTML= shengyuD;
+				    document.querySelector('.J_hour').innerHTML= shengyuH < 10 ? '0' + shengyuH : shengyuD;
+				    document.querySelector('.J_min').innerHTML= shengyuM < 10 ? '0' + shengyuM : shengyuM;
+				    document.querySelector('.J_sec').innerHTML= S < 10 ? '0'+S : S;
+				    // setTimeout("clock()",500);
+				    setTimeout(clock,500);
+			}
+		</script>
+	</body>
+
+</html>

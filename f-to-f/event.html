@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				cursor: pointer;
+				box-shadow: 5px 5px 5px 5px red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">验证事件</div>
+		<script type="text/javascript">
+			window.onload = function(){
+				var obj = document.querySelector('.main');
+				obj.onclick = function(e){
+					console.log(e || window.event)
+				}
+			}
+		</script>
+	</body>
+</html>
