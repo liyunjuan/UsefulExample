@@ -8,7 +8,7 @@
 			.container{
 				background: pink;
 				width: 392px;
-				padding: 20px;
+				padding: 20px 30px;
 				background: #000;
 			}
 			.top{
@@ -93,7 +93,7 @@
 				    S=parseInt((shenyu-shengyuD*60*60*24*1000-shengyuH*60*60*1000-shengyuM*60*1000)/1000)//除去天、小时、分的毫秒数转化为秒
 //				    document.getElementById("div").innerHTML=(shengyuD+"天"+shengyuH+"时"+shengyuM+"分"+S+"秒"+"<br>");
 				    document.querySelector('.J_day').innerHTML= shengyuD;
-				    document.querySelector('.J_hour').innerHTML= shengyuH < 10 ? '0' + shengyuH : shengyuD;
+				    document.querySelector('.J_hour').innerHTML= shengyuH < 10 ? '0' + shengyuH : shengyuH;
 				    document.querySelector('.J_min').innerHTML= shengyuM < 10 ? '0' + shengyuM : shengyuM;
 				    document.querySelector('.J_sec').innerHTML= S < 10 ? '0'+S : S;
 				    // setTimeout("clock()",500);

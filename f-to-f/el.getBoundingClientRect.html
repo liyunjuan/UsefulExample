@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.main{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				margin-bottom: 1000px;
+			}
+			.sec{
+				width: 100px;
+				height: 100px;
+				background: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main"></div>
+		<div class="sec"></div>
+		<script type="text/javascript">
+			document.querySelector('.main').onclick = function(e){
+				const {top,height,left,width} = this.getBoundingClientRect();
+				const w = window.innerWidth || document.documentElement.clientWidth;
+				const h = window.innerHeight || document.documentElement.clientHeight
+				if(top <= h && (top+height) >= 0 && left <= w && (left+width) >=0){
+					console.log(111111111)
+				}else{
+					console.log(222222222)
+				}
+			}
+		</script>
+	</body>
+</html>

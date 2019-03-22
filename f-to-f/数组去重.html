@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//这种方式改变了数组的原来顺序
+			function merge(arr){
+				if(!Array.isArray(arr) || arr.length == 0) return [];
+				arr.sort();
+				var ret = [arr[0]];
+				for(var i=0,j=i+1;j<arr.length;j++){
+					if(arr[i] != arr[j]){
+						ret.push(arr[j]);
+						i = j;
+					}
+				}
+				return ret;
+			}
+			
+			var arr = [1,3,4,2,5,7,5,4,5];
+			
+			//也改变了顺序
+			function merge1(arr){
+				if(!Array.isArray(arr) || arr.length == 0) return [];
+				
+				var ret = {};
+				for(var i=0;j<arr.length;j++){
+					ret[arr[i]] = i;
+				}
+				
+				return Object.keys(ret);
+			}
+			
+			//
+			function merge2(arr){
+				if(!Array.isArray(arr) || arr.length == 0) return [];
+				var ret = [];
+				for(var i=0;i<arr.length;i++){
+					if(ret.indexOf(arr[i]) == -1){
+						ret.push(arr[i]);
+					}
+				}
+				return ret;
+			}
+			console.log(merge2(arr))
+			
+			//Es6的方法
+			console.log([...new Set(arr)])
+			console.log(Array.from(new Set(arr)))
+			console.log( (arr+'.').replace(/(\d,)\1+/ig,'$1').split(',').slice(0,-1) )
+			
+			
+		</script>
+	</body>
+</html>
