@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <child v-on:getValueByChild="getValueByChild"></child>
+    <input type="text" @click="bindValue">
+            bindValue(){
+            this.emit('gerValueByChild',this.name)
+      }
+
+    this.$router.push({path:'/',query:{id:111}})
+    this.$route.query.id
+
+</script>
+</body>
+</html>
