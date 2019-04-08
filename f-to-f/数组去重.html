@@ -35,7 +35,7 @@
 			}
 			
 			//
-			function merge2(arr){
+			function unique(arr){
 				if(!Array.isArray(arr) || arr.length == 0) return [];
 				var ret = [];
 				for(var i=0;i<arr.length;i++){
@@ -45,12 +45,17 @@
 				}
 				return ret;
 			}
-			console.log(merge2(arr))
+			console.log(unique(arr))
 			
 			//Es6的方法
 			console.log([...new Set(arr)])
 			console.log(Array.from(new Set(arr)))
 			console.log( (arr+'.').replace(/(\d,)\1+/ig,'$1').split(',').slice(0,-1) )
+
+            function unique_es6(arr){
+			    var newArr = arr.filter((v,i,arr) => {return arr.indexOf(arr[v]) === i});
+			    return newArr;
+            }
 			
 			
 		</script>

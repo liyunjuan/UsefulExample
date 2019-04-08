@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = 'www';
+    function getName(){
+        console.log(this.name);
+    }
+    var o = {
+        name:'ooo',
+        getName:getName
+    };
+
+    // o.getName();
+    //
+    // var f = o.getName;
+    // f();
+    //
+    // getName();
+
+    function Foo(){
+        var i=0;
+        return function(){
+            document.write(i++);
+        }
+    }
+    var f1=Foo();
+    // f2=Foo();
+    // f1();
+    // f1();
+    // f2();
+
+    var A={n:4399};
+    var B=function(){
+        this.n=9999
+    };
+    var C=function(){
+        var n=8888;
+    };
+    B.prototype=A;
+    C.prototype=A;
+    var b=new B();
+    var c=new C();
+    A.n++;
+    // console.log(b.n);
+    //
+    // console.log(c.n);
+
+    var color='green';
+    var test4399={
+        color:'blue',
+        getColor:function(){
+            var color='red';
+            alert(this.color);
+        }
+    }
+    var getColor=test4399.getColor;
+    // getColor();
+
+    function test(){
+        var n=4399;
+        function add(){
+            n++;
+            console.log(n);
+        }
+        return {
+            n:n,
+            add:add
+        }
+    }
+    var result=test();       
+    var result2=test();      
+
+    // result.add();                
+    //
+    // result.add();              
+    // console.log(result.n);  
+    // result2.add();
+
+    (
+        function(){
+            for(var i=0;i<10;i++){
+
+            }
+        }
+    )();
+    // console.log(i)
+
+    for(let j=o;j<10;j++){
+
+    }
+    // console.log(j)
+
+    function fn(){
+        console.log(5)
+        fn()
+    }
+    // fn()  //这个会无限循环，报错
+
+    var a = 12
+    function fn1(){
+        console.log(a)
+        return 4;
+        var a = 45;
+    }
+    // fn1()//
+
+    var a = 100;
+    function text() {
+        var b = 2*a;
+        var a = 200;
+        var c = a/2;
+        console.log(b)
+        console.log(c)
+    }
+    // text();
+
+    var obj = {
+        val:2,
+        dbl:function(){
+            var val = 45
+            console.log(this)
+            this.val *=2;
+            console.log(val)
+            console.log(this.val)
+        }
+    }
+
+    // var ff = obj.dbl();
+    var fn2 = obj.dbl;
+    // fn2();
+
+    !function(){
+        // console.log(a)
+        var a = 5;
+        function a(){}
+        // console.log(a)
+        function b(){}
+        b = 6;
+        // console.log(b)
+        var cc = d = b;
+    }();
+    // console.log(d)
+    // console.log(cc)
+
+    var length = 10
+    function fn3(){
+        console.log(this)
+        console.log(this.length)
+    }
+    var obj = {
+        length:5,
+        method:function(fn){
+            fn()
+            console.log(arguments[0])
+            arguments[0]()
+        }
+    }
+    // obj.method(fn3)  //解析：https://www.cnblogs.com/coolslider/p/5315290.html
+
+    var i = 10
+    function aa(){
+        i = 20;
+        console.log(i)
+        for(var i=0;i<6;i++){
+            console.log(i)
+        }
+
+        console.log(this.i)
+        console.log(i)
+    }
+    // aa()
+    // console.log(i)
+
+    var b = 10;
+    function bbb(){
+        console.log(b)
+    }
+    function ccc(){
+        var b = 20;
+        bbb()
+    }
+    // ccc()
+
+    function Foo(){
+        getName = function(){console.log(1)}
+        console.log(this)
+        console.log(222)
+        return this;
+    }
+    Foo.getName = function(){console.log(2)}
+    Foo.prototype.getName = function(){console.log(3)}
+    var getName = function(){console.log(4)}
+    function getName(){console.log(5)}
+    // Foo.getName()
+    // getName()
+    // Foo()
+    // getName()
+
+    var func = []
+    for(var i=0;i<10;i++){
+        func.push(function(){return i})
+    }
+    func.forEach(function(func){
+        console.log(func())
+    })
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

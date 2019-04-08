@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = 'www'
+    var obj = {
+        name:'ooo',
+        getName(){
+            this.name = 'bbb';
+            return function(){
+                return this.name;
+            }
+        }
+    }
+    var res = obj.getName().call(this)
+    console.log(res)
+</script>
+</body>
+</html>

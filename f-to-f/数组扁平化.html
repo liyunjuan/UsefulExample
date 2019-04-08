@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组扁平化</title>
+</head>
+<body>
+<script>
+    function flat(arr){
+        var newArr = [];
+        for(var i=0;i<arr.length;i++){
+            if(arr[i] instanceof Array){
+                newArr = newArr.concat(flat(arr[i]));
+            }else{
+                newArr.push(arr[i]);
+            }
+        }
+    }
+
+    const flat_es6 = arr => arr.reduce((a,b) => a.concat(Array.isArray(b) ? flat_es6(b) : b),[])
+</script>
+</body>
+</html>

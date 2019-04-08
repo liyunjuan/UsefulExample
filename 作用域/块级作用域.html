@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES5中只有全局作用域和函数作用域，ES6中新增块级作用域</title>
+</head>
+<body>
+<script>
+    function f1(){
+        let n=5;
+        if(true){
+            let n = 10;
+        }
+        console.log(n)
+    }
+    f1()
+</script>
+</body>
+</html>

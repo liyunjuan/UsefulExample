@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>call()、apply() 以及 bind()</title>
+</head>
+<body>
+  <div id="box">我是一个盒子！</div>
+  
+  <script>
+    window.onload = function() {
+      var fn = {
+        num: 2,
+        fun: function() {
+          document.getElementById("box").onclick = (function() {
+            console.log(this.num);
+          }).bind(this);
+          // }).call(this);
+          // }).apply(this);
+        }
+        /*
+         * 这里的 this 是 fun，所以可以正确地访问 num,
+         * 如果使用 bind()，会在点击之后打印 2；
+         * 如果使用 call() 或者 apply()，那么在刷新网页的时候就会打印 2
+        */
+      }
+      fn.fun();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>源窗口</title>
+</head>
+<body>
+<button id="btn">打开新窗口跨域交换数据</button>
+<p>我接收到来自新窗口的数据为：<span id="msg" style="color: red;"></span></p>
+<script>
+    document.getElementById('btn').onclick = function () {
+        var newWindow = window.open('https://wenyang12.github.io/demo/postmsg/index.html');
+            //注册监听信息事件，看看是否有数据发送过来
+            window.addEventListener('message', function (e) {
+                console.log(3333)
+                if (e.data === 'true') {//要是新窗口有数据返回过来，说明新窗口已经完全加载。然后才能够给新窗口发送数据
+                    e.source.postMessage('hello world!', e.origin);//给新窗口发送数据
+                    console.log(e);//打印新窗口返回来的数据
+                    document.getElementById('msg').innerHTML = e.data;
+                }
+            });
+    };
+</script>
+</body>
+</html>

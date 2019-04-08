@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		当前车速：<meter max="300" min="20" value="220"></meter>
+		
+		<script type="text/javascript">
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(successCallback,failCallback);
+			}else{
+				alert('您的浏览器不支持地理定位');
+			}
+			function successCallback(position){
+				var longitude = position.coords.longitude;
+				var latitude = position.coors.latitude;
+				alert('经度：'+longitude+'，纬度：'+latitude);
+			}
+			function failCallback(error){
+				console.log(error)
+				alert('获取地理位置失败');
+			}
+		</script>
+	</body>
+</html>

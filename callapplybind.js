@@ -42,4 +42,5 @@ var bbb = d.fun;
 
 //======//bind方法和call、apply方法有些不同，但是不管怎么说它们都可以用来改变this的指向。
 console.log('---------bind------');
-b.bind(a);//不会打印东西--对，这就是bind和call、apply方法的不同，实际上bind方法返回的是一个修改过后的函数。
+var xx = b.bind(a);//不会打印东西--对，这就是bind和call、apply方法的不同，实际上bind方法返回的是一个修改过后的函数。
+xx();
