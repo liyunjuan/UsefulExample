@@ -11,12 +11,16 @@
             flex-wrap:wrap;
             align-items:center;
             justify-content: space-between;
-            width: 700px;
+            width: 500px;
             height: 300px;
             background: #0b8d5a;
             padding: 0 25px;
             box-sizing: border-box;
         }
+        /*.big::after{*/
+            /*content: '';*/
+            /*width: 100px;*/
+        /*}*/
         .big .one{
             /*flex:1;*/
             width: 100px;
@@ -27,6 +31,47 @@
         .big .one.zero{
             height: 0;
         }
+        .big_two{
+            display: flex;
+            /*width: 600px;*/
+            height: 300px;
+            background: #0C96F1;
+            margin-top: 20px;
+        }
+        .big_two .left{
+            width: 150px;
+            background: pink;
+        }
+        .big_two .middle{
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .big_two .right{
+            width: 200px;
+            background: orchid;
+        }
+        .big_three{
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            width: 300px;
+            background: yellowgreen;
+        }
+        .big_three .left{
+            height: 300px;
+            background: #0b8d5a;
+        }
+        .big_three .middle{
+            flex: 1;
+            overflow-x: scroll;
+        }
+        .big_three .right{
+            height: 200px;
+            background: olive;
+        }
+
     </style>
 </head>
 <body>
@@ -38,20 +83,18 @@
     <div class="one"></div>
     <div class="one"></div>
     <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
-    <div class="one"></div>
     <div class="one zero"></div>
     <div class="one zero"></div>
-    <div class="one zero"></div>
-    <div class="one zero"></div>
-    <div class="one zero"></div>
-    <div class="one zero"></div>
+</div>
+<div class="big_two">
+    <div class="left"></div>
+    <div class="middle">嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈</div>
+    <div class="right"></div>
+</div>
+<div class="big_three">
+    <div class="left"></div>
+    <div class="middle">嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈嘿嘿嘿哈哈哈哈哈哈哈哈</div>
+    <div class="right"></div>
 </div>
 </body>
 </html>

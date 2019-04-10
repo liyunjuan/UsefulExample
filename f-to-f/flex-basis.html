@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .big{
+            display:-webkit-flex;
+            display: flex;
+            width: 600px;
+            height: 100px;
+            background: olive;
+            align-items: center;
+            margin:0;padding:0;
+        }
+        .big .one{
+            height: 80px;
+        }
+        .big .one:first-child{
+            background: pink;
+            width: 350px;
+            /*flex-grow: 1;*/
+            /*flex-shrink: 2;*/
+            -webkit-flex-shrink:2;
+
+        }
+        .big .one:nth-child(2){
+            background: yellow;
+            width: 100px;
+            /*flex-grow: 1;*/
+            /*flex-shrink: 1;*/
+            -webkit-flex-shrink:1;
+        }
+        .big .one:nth-child(3){
+            background: rosybrown;
+            width: 200px;
+            /*flex-basis: 30%;*/
+            /*flex-grow: 2;*/
+            /*flex-shrink: 1;*/
+            -webkit-flex-shrink:1;
+        }
+        .big .one:nth-child(4){
+            background: gold;
+            width: 50px;
+            /*flex-basis: 30%;*/
+            /*flex-grow: 6;*/
+            /*flex-shrink: 3;*/
+            -webkit-flex-shrink:3;
+        }
+        /*#flex{display:-webkit-flex;display:flex;width:400px;margin:0;padding:0;list-style:none;}*/
+        /*#flex li{width:200px;}*/
+        /*#flex li:nth-child(1){background:#888;}*/
+        /*#flex li:nth-child(2){background:#ccc;}*/
+        /*#flex li:nth-child(3){-webkit-flex-shrink:3;flex-shrink:3;background:#aaa;}*/
+    </style>
+</head>
+<body>
+<!--<ul id="flex">-->
+    <!--<li>a</li>-->
+    <!--<li>b</li>-->
+    <!--<li>c</li>-->
+<!--</ul>-->
+<div class="big">
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+    <div class="one"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function aa(s){
+        var newStr = s.replace(/-/g,'').replace(/\s+/g,'');
+        var len = newStr.length;
+        var len_a = len%3,len_b = parseInt(len/3);
+        var res = '';
+        if(len_a == 0){
+            for(var i=1;i<=len_b;i++){
+                res += newStr.slice(3*i-3,i*3) + '-';
+            }
+        }else if(len_a == 1){
+            var new_str = newStr.slice(0,-4);
+            for(var i=1;i<=len_b-1;i++){
+                res += new_str.slice(3*i-3,i*3) + '-';
+            }
+            res += newStr.slice(newStr.length-4,newStr.length-2) + '-' + newStr.slice(newStr.length-2,newStr.length) + '-';
+        }else{
+            var new_str = newStr.slice(0,-2);
+            for(var i=1;i<=len_b;i++){
+                res += new_str.slice(3*i-3,i*3) + '-';
+            }
+            res += newStr.slice(newStr.length-2,newStr.length) + '-';
+        }
+        return res.slice(0,-1);
+    }
+    aa('00-44 48 5555 8334');
+</script>
+</body>
+</html>
