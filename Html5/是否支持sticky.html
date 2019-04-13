@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isSupportSticky() {
+        var vendorList = ['','-webkit-','-ms-','-moz-','-o-'],
+            vendorListLength = vendorList.length,
+            stickyElement = document.createElement('div');
+        for(var i=0;i<vendorListLength;i++){
+            stickyElement.style.position = vendorList[i] = 'sticky';
+            if(stickyElement.style.position !== ''){
+                return true;
+            }
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

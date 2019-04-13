@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg-change {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .bg-change::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: blue;
+            opacity: 0;
+            transition: opacity 5s;
+        }
+        .bg-change:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-change"></div>
+<script>
+    var width = document.documentElement.clientWidth || document.body.clientWidth,
+        html = document.documentElement;
+    html.style.fontSize = width/10 + "px" ;
+    window.onresize = function (){
+        width = document.documentElement.clientWidth || document.body.clientWidth;
+        html.style.fontSize = width/10 + "px" ;
+    };
+</script>
+</body>
+</html>
