@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let info = [];
+    function howDog(count){
+        return new Promise(function(resolve,reject){
+            if(count === '一只狗'){
+                resolve('一只狗');
+            }else{
+                reject('我没注意过呀');
+            }
+        })
+    }
+    function howCat(count){
+        return new Promise(function(resolve,reject){
+            if(count === '一只狗'){
+                resolve('还有一只猫');
+            }else{
+                reject('我没注意过呀');
+            }
+        })
+    }
+    function knowed(count){
+        return new Promise(function(resolve,reject){
+            info.push(count);
+            console.log(count);
+            resolve(count);
+        })
+    }
+    function noknowed(reason){
+        // return new Promise(function(resolve,reject){
+        //     console.log('理由：'+reason);
+        //     reject();
+        // })
+        console.log('理由：'+reason);
+        // return Promise.resolve('我真的没注意');
+        return Promise.reject('我真的没注意');
+    }
+    function whynoknowed(resaon){
+        console.log('不知道理由:'+resaon)
+    }
+    howDog('擦擦擦').then(knowed,noknowed).then(howCat,whynoknowed).then(knowed).then(knowed);
+
+    var sum = 0;
+    function add(num){
+        return new Promise(function(resolve,reject){
+            console.log(sum)
+            if(num){
+                sum += num;
+            }
+            resolve(sum);
+        })
+    }
+    // add(1).then(add).then(add).then(add).then(add).then(add)
+    
+    // function howDog(count) {
+    //     return new Promise(function (resolve,reject) {
+    //         if(count === '一只狗'){
+    //             resolve('一只狗');
+    //         }else{
+    //             resolve('不知道');
+    //         }
+    //     })
+    // }
+    // howDog().then(function (n) {
+    //     console.log(n);
+    // },function(n){
+    //     console.log(n)
+    // })
+
+
+</script>
+</body>
+</html>

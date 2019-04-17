@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数字</title>
+</head>
+<body>
+<script>
+    function test(resolve,reject){
+        var timeout = Math.random() *2;
+        console.log('set timeout to '+timeout + 'seconds');
+        setTimeout(function(){
+            if(timeout<1){
+                console.log('call resolve()...');
+                resolve('200 ok');
+            }else{
+                console.log('call reject()...');
+                reject('timout in '+timeout+'seconds');
+            }
+        },timeout*1000)
+    }
+    var p1 = new Promise(test);
+    var p2 = p1.then(function(result){
+        console.log('成功'+result)
+    },function(reason){
+        console.log('失败'+reason)
+    })
+    // var p3 = p2.catch(function(reason){
+    //     console.log('失败'+reason)
+    // })
+</script>
+</body>
+</html>

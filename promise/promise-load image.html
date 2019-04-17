@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加载图片</title>
+</head>
+<body>
+<script>
+    const preloadImage = function(path){
+        return new Promise(function(resolve,reject){
+            const image = new image();
+            image.onload = resolve;
+            image.onerror = reject;
+            image.src = path;
+        });
+    };
+</script>
+</body>
+</html>

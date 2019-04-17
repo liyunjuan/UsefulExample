@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>取消回调</title>
+</head>
+<body>
+<script>
+    let info = [];
+    async function howDog(count){
+        return new Promise(function(resolve,reject){
+            if(count === '一只狗'){
+                resolve('一只狗');
+            }else{
+                reject('我没注意过呀');
+            }
+        })
+    }
+    function howCat(count){
+        return new Promise(function(resolve,reject){
+            if(count === '一只狗'){
+                resolve('还有一只猫');
+            }else{
+                reject('我没注意过呀');
+            }
+        })
+    }
+    function knowed(count){
+        return new Promise(function(resolve,reject){
+            info.push(count);
+            console.log(count);
+            resolve(count);
+        })
+    }
+    function noknowed(reason){
+        // return new Promise(function(resolve,reject){
+        //     console.log('理由：'+reason);
+        //     reject();
+        // })
+        console.log('理由：'+reason);
+        return Promise.resolve('你想机智狗就几只狗');
+    }
+    function whynoknowed(resaon){
+        console.log('不知道理由:'+resaon)
+    }
+    let p = await howDog('一只狗');
+    console.log(p)
+
+
+
+</script>
+</body>
+</html>
