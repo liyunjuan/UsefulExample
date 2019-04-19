@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	if(!Promise.first){
+		Promise.first = function(prs){
+			return new Promise(function(resolve,reject){
+				prs.forEache(function(pr){
+					Promise.resolve(pr)
+						.then(resolve)
+				});
+			});
+		};
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function mergeSort(arr){
+			var len = arr.length;
+			if(len < 2){
+				return arr;
+			}
+			var middle = Math.floor(len/2),
+				left = arr.slice(0,middle),
+				right = arr.slice(middle);
+			return merge(mergeSort(left),mergeSort(right));
+		}
+var count = 1;
+		function merge(left,right){
+			console.log(count)
+			count ++;
+			console.log('left:'+left)
+			console.log('right:'+right)
+			var result = [];
+
+			while(left.length>0 && right.length>0){
+				if(left[0] <= right[0]){
+					result.push(left.shift());
+				}else{
+					result.push(right.shift());
+				}
+			}
+
+			while(left.length){
+				result.push(left.shift());
+			}
+
+			while(right.length){
+				result.push(right.shift());
+			}
+			console.log(result)
+			return result;
+		}
+
+		var x = mergeSort([1,3,3,53,343,454,2342,4,6,23]);
+		console.log(x);
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	if(!Promise.observe){
+		Promise.observe = function(pr,cb){
+			pr.then(
+				function fulfilled(msg){
+					// 安排异步回调
+					Promise.resolve(msg).then(cb);
+				}，
+				function rejected(err){
+					Promise.resolve(err).then(cb);
+				}	
+			);
+			// 返回最初的pr
+			return pr;
+		};
+	}
+</script>
+</body>
+</html>
